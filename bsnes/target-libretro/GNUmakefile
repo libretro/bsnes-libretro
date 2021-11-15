@@ -24,6 +24,8 @@ obj/libretro.o: target-libretro/libretro.cpp
 all: $(objects)
 ifeq ($(platform),linux)
 	$(strip $(compiler) -o out/bsnes_libretro.so -shared $(objects) -Wl,--no-undefined -Wl,--version-script=target-libretro/link.T -lgomp -Wl,-Bdynamic $(options))
+else ifeq ($(platform),haiku)
+	$(strip $(compiler) -o out/bsnes_libretro.so -shared $(objects) -Wl,--no-undefined -Wl,--version-script=target-libretro/link.T -lgomp -Wl,-Bdynamic $(options))
 else ifeq ($(platform),windows)
 	$(strip $(compiler) -o out/bsnes_libretro.dll -shared $(objects) -Wl,--no-undefined -Wl,--version-script=target-libretro/link.T -lgomp -Wl,-Bdynamic $(options))
 else ifeq ($(platform),libnx)

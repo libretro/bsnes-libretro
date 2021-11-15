@@ -267,11 +267,7 @@ inline auto directory::copy(const string& source, const string& target) -> bool 
   }
 #else
   inline auto directoryIsFolder(DIR* dp, struct dirent* ep) -> bool {
-#if defined(PLATFORM_HAIKU)
-    struct stat sp = {0};
-    fstatat(dirfd(dp), ep->d_name, &sp, 0);
-    return S_ISDIR(sp.st_mode);
-#else
+#if defined(PLATFORM_MACOS) || defined(PLATFORM_LINUX) || defined(PLATFORM_BSD)
     if(ep->d_type == DT_DIR) return true;
     if(ep->d_type == DT_LNK || ep->d_type == DT_UNKNOWN) {
       //symbolic links must be resolved to determine type
@@ -279,8 +275,16 @@ inline auto directory::copy(const string& source, const string& target) -> bool 
       fstatat(dirfd(dp), ep->d_name, &sp, 0);
       return S_ISDIR(sp.st_mode);
     }
-    return false;
+#else // strictly POSIX systems
+    struct stat sp = {0};
+    stat(ep->d_name, &sp);
+    if S_ISDIR(sp.st_mode) return true;
+    if (S_ISLNK(sp.st_mode) || not S_ISREG(sp.st_mode)) {
+      fstatat(dirfd(dp), ep->d_name, &sp, 0);
+      return S_ISDIR(sp.st_mode);
+    }
 #endif
+    return false;
   }
 
   inline auto directory::create(const string& pathname, uint permissions) -> bool {

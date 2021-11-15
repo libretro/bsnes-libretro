@@ -154,6 +154,11 @@ ifeq ($(platform),bsd)
   options += -lstdc++ -lm
 endif
 
+# haiku settings
+ifeq ($(platform),haiku)
+  options += -lroot
+endif
+
 # threading support
 ifeq ($(threaded),true)
   ifneq ($(filter $(platform),linux bsd),)
