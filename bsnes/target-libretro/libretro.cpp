@@ -555,9 +555,12 @@ static void set_environment_info(retro_environment_t cb)
 
 void retro_set_environment(retro_environment_t cb)
 {
+	static bool categories_supported = false;
+
 	environ_cb = cb;
 
-	libretro_set_core_options(environ_cb);
+	libretro_set_core_options(environ_cb,
+							  &categories_supported);
 
 	retro_log_callback log = {};
 	if (environ_cb(RETRO_ENVIRONMENT_GET_LOG_INTERFACE, &log) && log.log)

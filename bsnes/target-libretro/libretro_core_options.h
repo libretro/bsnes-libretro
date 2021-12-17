@@ -13,9 +13,10 @@
 
 /*
  ********************************
- * VERSION: 1.3
+ * VERSION: 2.0
  ********************************
  *
+ * - 2.0: Add support for core options v2 interface
  * - 1.3: Move translations to libretro_core_options_intl.h
  *        - libretro_core_options_intl.h includes BOM and utf-8
  *          fix for MSVC 2010-2013
@@ -48,11 +49,55 @@ extern "C" {
  * - Will be used as a fallback for any missing entries in
  *   frontend language definition */
 
-struct retro_core_option_definition option_defs_us[] = {
+
+struct retro_core_option_v2_category option_cats_us[] = {
+   {
+      "video",
+      "Video",
+      "Change video output settings."
+   },
+   {
+      "audio",
+      "Audio",
+      "Change audio output settings."
+   },
+   {
+      "mode7",
+      "HD Mode 7",
+      "Change settings regarding Mode 7 graphics emulation."
+   },
+   {
+      "sgb",
+      "Super Game Boy",
+      "Change settings regarding the Super Game Boy emulation."
+   },
+   {
+      "lightgun",
+      "Light Gun",
+      "Change (touchscreen) light gun settings."
+   },
+   {
+      "overclock",
+      "Over-/Downclocking",
+      "Change the speed of the emulated hardware."
+   },
+   {
+      "hack",
+      "Emulation Hacks",
+      "Apply emulation hacks and hotfixes."
+   },
+
+   { NULL, NULL, NULL },
+};
+
+struct retro_core_option_v2_definition option_defs_us[] = {
    {
       "bsnes_aspect_ratio",
       "Preferred Aspect Ratio",
+      NULL,
       "Choose the preferred content aspect ratio. This will only apply when RetroArch's aspect ratio is set to 'Core provided' in the Video settings.",
+      NULL,
+      "video",
       {
          { "Auto", NULL },
          { "8:7",  "Pixel Perfect" },
@@ -66,7 +111,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_ppu_show_overscan",
       "Crop Overscan",
+      NULL,
       "Remove the borders at the top and bottom of the screen, typically unused by games and hidden by the bezel of a standard-definition television.",
+      NULL,
+      "video",
       {
          { "OFF", "8 Pixels" },
          { "ON",  "disabled" },
@@ -77,10 +125,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_blur_emulation",
       "Blur Emulation",
-      "Simulates the limited horizontal resolution of SDTVs by blurring together horizontally-adjacent pixels. Some games depend on this to emulate a transparency effect.",
+      NULL,
+      "Simulate the limited horizontal resolution of SDTVs by blurring together horizontally-adjacent pixels. Some games depend on this to emulate a transparency effect.",
+      NULL,
+      "video",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -88,10 +139,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_hotfixes",
       "Hotfixes",
-      "Even commercially licensed and officially released software sometimes shipped with bugs. This option will correct certain issues that occurred even on real hardware.",
+      NULL,
+      "Even commercially licensed and officially released software is sometimes shipped with bugs. This option will correct certain issues that occurred even on real hardware.",
+      NULL,
+      "hack",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -99,7 +153,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_entropy",
       "Entropy (randomization)",
-      "Determines the level of randomization of the memory and registers. If set to None, all memory and registers are initialized to constant values at startup. Low randomization provides the most accurate representation of a real system. High randomizes as much as possible.",
+      NULL,
+      "Choose the level of randomization of the memory and registers. If set to None, all memory and registers are initialized to constant values at startup. Low randomization provides the most accurate representation of a real system. High randomizes as much as possible.",
+      NULL,
+      NULL,
       {
          { "Low",  NULL },
          { "High", NULL },
@@ -111,7 +168,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_cpu_overclock",
       "Overclocking - CPU",
-      "Overclocks or downclocks the CPU. Setting this value above 100% may help reduce loading times and remove slowdown. Use with caution as it may also cause certain games to crash or exhibit issues.",
+      "CPU",
+      "Overclock or downclock the CPU. Setting this value above 100% may reduce loading times and remove slowdown. Use with caution as it may also cause some games to crash or exhibit other issues.",
+      NULL,
+      "overclock",
       {
          { "10",  "10%"  },
          { "20",  "20%"  },
@@ -122,7 +182,7 @@ struct retro_core_option_definition option_defs_us[] = {
          { "70",  "70%"  },
          { "80",  "80%"  },
          { "90",  "90%"  },
-         { "100", "100%" },
+         { "100", "100% (Default)" },
          { "110", "110%" },
          { "120", "120%" },
          { "130", "130%" },
@@ -160,10 +220,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_cpu_fastmath",
       "CPU Fast Math",
-      "CPU multiplication and division take time to complete on a real SNES. Older emulators did not simulate these delays and provided results immediately. Some older ROM hacks do not wait for math operations to complete and need this hack.",
+      NULL,
+      "Provide computation results immediately. CPU multiplication and division take time to complete on a real SNES. Older emulators did not simulate these delays and thus some older ROM hacks do not wait for math operations to complete and need this hack.",
+      NULL,
+      "hack",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -171,7 +234,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_cpu_sa1_overclock",
       "Overclocking - SA-1 Coprocessor",
-      "Overclocks or downclocks the Super Accelerator 1 (SA-1) chip. Setting this value above 100% may help obtain higher performance in games that support the SA-1 chip. Use with caution as it may also cause certain games to crash or exhibit issues.",
+      "SA-1 Coprocessor",
+      "Overclock or downclock the Super Accelerator 1 (SA-1) chip. Setting this value above 100% may improve performance in games that support the SA-1 chip. Use with caution, as it may also cause some games to crash or exhibit other issues.",
+      NULL,
+      "overclock",
       {
          { "10",  "10%"  },
          { "20",  "20%"  },
@@ -182,7 +248,7 @@ struct retro_core_option_definition option_defs_us[] = {
          { "70",  "70%"  },
          { "80",  "80%"  },
          { "90",  "90%"  },
-         { "100", "100%" },
+         { "100", "100% (Default)" },
          { "110", "110%" },
          { "120", "120%" },
          { "130", "130%" },
@@ -220,7 +286,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_cpu_sfx_overclock",
       "Overclocking - SuperFX Coprocessor",
-      "Overclocks or downclocks the SuperFX coprocessor. Setting this value above 100% may help obtain higher performance in games that support the SuperFX. Use with caution as it may also cause certain games to crash or exhibit issues.",
+      "SuperFX Coprocessor",
+      "Overclock or downclock the SuperFX coprocessor. Setting this value above 100% may improve performance in games that support the SuperFX. Use with caution, as it may also cause some games to crash or exhibit other issues.",
+      NULL,
+      "overclock",
       {
          { "10",  "10%"  },
          { "20",  "20%"  },
@@ -231,7 +300,7 @@ struct retro_core_option_definition option_defs_us[] = {
          { "70",  "70%"  },
          { "80",  "80%"  },
          { "90",  "90%"  },
-         { "100", "100%" },
+         { "100", "100% (Default)" },
          { "110", "110%" },
          { "120", "120%" },
          { "130", "130%" },
@@ -309,7 +378,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_ppu_fast",
       "PPU (Video) - Fast Mode",
-      "Enables faster emulation of the PPU at the cost of a minor reduction of accuracy. It is recommended to leave this active.",
+      "PPU - Fast Mode",
+      "Enable faster emulation of the PPU at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
+      NULL,
+      "video",
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -320,7 +392,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_ppu_deinterlace",
       "PPU (Video) - Deinterlace",
-      "Deinterlaces all games by rendering internally at 480p. Performance penalty is almost non-existent, so it is recommended to leave this active.",
+      "PPU - Deinterlace",
+      "Deinterlace all games by rendering internally at 480p. Performance penalty is almost non-existent, so it is recommended to leave this on.",
+      NULL,
+      "video",
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -331,10 +406,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_ppu_no_sprite_limit",
       "PPU (Video) - No Sprite Limit",
-      "Removes any limit to the number of sprites that can be drawn simultaneously on screen. May cause issues with certain games.",
+      "PPU - No Sprite Limit",
+      "Remove any limit to the number of sprites that can be drawn simultaneously on screen. May cause issues with some games.",
+      NULL,
+      "video",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -342,10 +420,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_ppu_no_vram_blocking",
       "PPU (Video) - No VRAM Blocking",
-      "Emulates a bug in older releases of ZSNES and Snes9x, where VRAM blocking was not emulated. A few older ROM hacks relied on this behavior and will render graphics incorrectly if not enabled. This option is extremely inaccurate and hurts PPU speed, so it is recommended to leave it disabled unless you need to play a game that is otherwise incompatible with this core.",
+      NULL,
+      "Emulate a bug in older releases of ZSNES and Snes9x, where VRAM blocking was not emulated. A few older ROM hacks relied on this behavior and will render graphics incorrectly if this is not enabled. This option is extremely inaccurate and hurts PPU speed, so it is recommended to leave it disabled unless you need to play a game that is otherwise incompatible with this core.",
+      NULL,
+      "hack",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -353,7 +434,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_mode7_scale",
       "HD Mode 7 - Scale",
-      "Allows to increase the horizontal and vertical resolution of the Mode 7 graphics used in certain games.",
+      "Scale",
+      "Increase the horizontal and vertical resolution of the Mode 7 graphics used in certain games.",
+      NULL,
+      "mode7",
       {
          { "1x", "240p (1x)"  },
          { "2x", "480p (2x)"  },
@@ -370,7 +454,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_mode7_perspective",
       "HD Mode 7 - Perspective Correction",
-      "Corrects the perspective of the Mode 7 graphics used in certain games by working around some limitations of the integer math used by the SNES.",
+      "Perspective Correction",
+      "Correct the perspective of the Mode 7 graphics used in certain games by working around some limitations of the integer math used by the SNES.",
+      NULL,
+      "mode7",
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -381,10 +468,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_mode7_supersample",
       "HD Mode 7 - Supersampling",
-      "Allows to supersample the Mode 7 graphics used in certain games. Combined with higher Mode 7 scale factors, it produces an effect similar to anti-aliasing.",
+      "Supersampling",
+      "Supersample the Mode 7 graphics used in certain games. Combined with higher Mode 7 scale factors, it produces an effect similar to anti-aliasing.",
+      NULL,
+      "mode7",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -392,7 +482,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_mode7_mosaic",
       "HD Mode 7 - HD->SD Mosaic",
-      "Determines whether the mosaic effect should be shown when upscaling the Mode 7 graphics used in certain games.",
+      "HD->SD Mosaic",
+      "Show the mosaic effect of Mode 7 graphics even when upscaling them.",
+      NULL,
+      "mode7",
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -403,7 +496,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_dsp_fast",
       "DSP (Audio) - Fast Mode",
-      "Enables faster emulation of the DSP at the cost of a minor reduction of accuracy. It is recommended to leave this active.",
+      "DSP - Fast Mode",
+      "Enable faster emulation of the DSP at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
+      NULL,
+      "audio",
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -414,10 +510,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_dsp_cubic",
       "DSP (Audio) - Cubic Interpolation",
-      "Applies cubic interpolation to the sound, preserving more of the high range.",
+      "DSP - Cubic Interpolation",
+      "Apply cubic interpolation to the sound, preserving more of the high range.",
+      NULL,
+      "audio",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -425,10 +524,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_dsp_echo_shadow",
       "DSP (Audio) - Echo Shadow RAM",
-      "Emulates a bug in ZSNES where echo RAM was treated as separate from APU RAM. Many older ROM hacks for Super Mario World relied on this behavior and will crash without enabling this. This option is extremely inaccurate and should not be enabled unless required.",
+      "DSP - Echo Shadow RAM",
+      "Emulate a bug in ZSNES where echo RAM was treated as separate from APU RAM. Many older ROM hacks for Super Mario World relied on this behavior and will crash without this. This option is extremely inaccurate and should not be enabled unless required.",
+      NULL,
+      "audio",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -436,7 +538,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_coprocessor_delayed_sync",
       "Coprocessors - Fast Mode",
-      "Enables faster emulation of the coprocessors at the cost of a minor reduction of accuracy. It is recommended to leave this active.",
+      NULL,
+      "Enable faster emulation of the coprocessors at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
+      NULL,
+      NULL,
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -447,7 +552,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_coprocessor_prefer_hle",
       "Coprocessors - Prefer HLE",
+      NULL,
       "When this option is enabled, less accurate HLE emulation will always be used when available. If disabled, HLE will only be used when LLE firmware is missing.",
+      NULL,
+      NULL,
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -457,8 +565,11 @@ struct retro_core_option_definition option_defs_us[] = {
    },
    {
       "bsnes_sgb_bios",
-      "Preferred Super Game Boy BIOS (Requires Restart)",
-      "Allows to choose the preferred Super Game Boy BIOS to be used with compatible titles. Requires a restart to take effect.",
+      "Preferred Super Game Boy BIOS (Restart Required)",
+      NULL,
+      "Choose the preferred Super Game Boy BIOS to be used with compatible titles.",
+      NULL,
+      "sgb",
       {
          { "SGB1.sfc", "Super Game Boy (SGB1.sfc)"   },
          { "SGB2.sfc", "Super Game Boy 2 (SGB2.sfc)" },
@@ -469,7 +580,10 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_run_ahead_frames",
       "Internal Run-Ahead",
-      "Simulates the system ahead of time and rolls back to reduce input latency. Has very high system requirements.",
+      NULL,
+      "Simulate the system ahead of time and roll back to reduce input latency. Has very high system requirements.",
+      NULL,
+      NULL,
       {
          { "OFF", "disabled" },
          { "1",   "1 frame"  },
@@ -482,8 +596,11 @@ struct retro_core_option_definition option_defs_us[] = {
    },
    {
       "bsnes_touchscreen_lightgun",
-      "Touchscreen Lightgun",
-      "Enables Super Scope input for touchscreen devices.",
+      "Touchscreen Light Gun",
+      NULL,
+      "Enable Super Scope input for touchscreen devices.",
+      NULL,
+      "lightgun",
       {
          { "ON",  "enabled"  },
          { "OFF", "disabled" },
@@ -494,10 +611,13 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_touchscreen_lightgun_superscope_reverse",
       "Super Scope Reverse Trigger Buttons",
-      "Allows to reverse the Super Scope trigger and cursor buttons with the touchscreen lightgun.",
+      NULL,
+      "Reverse the Super Scope trigger and cursor buttons with the touchscreen lightgun.",
+      NULL,
+      "lightgun",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -505,16 +625,24 @@ struct retro_core_option_definition option_defs_us[] = {
    {
       "bsnes_hide_sgb_border",
       "Hide SGB Border",
-      "Allows hiding the border when playing Super GameBoy games. Only works when 'Crop Overscan' is enabled",
+      NULL,
+      "Hide the border when playing Super GameBoy games. Only works when 'Crop Overscan' is enabled",
+      NULL,
+      "sgb",
       {
-         { "ON",  "enabled"  },
          { "OFF", "disabled" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
    },
 
-   { NULL, NULL, NULL, {{0}}, NULL },
+   { NULL, NULL, NULL, NULL, NULL, NULL, {{0}}, NULL },
+};
+
+struct retro_core_options_v2 options_us = {
+   option_cats_us,
+   option_defs_us
 };
 
 /*
@@ -524,32 +652,31 @@ struct retro_core_option_definition option_defs_us[] = {
 */
 
 #ifndef HAVE_NO_LANGEXTRA
-struct retro_core_option_definition *option_defs_intl[RETRO_LANGUAGE_LAST] = {
-   option_defs_us, /* RETRO_LANGUAGE_ENGLISH */
-   NULL,           /* RETRO_LANGUAGE_JAPANESE */
-   NULL,           /* RETRO_LANGUAGE_FRENCH */
-   NULL,           /* RETRO_LANGUAGE_SPANISH */
-   NULL,           /* RETRO_LANGUAGE_GERMAN */
-   option_defs_it, /* RETRO_LANGUAGE_ITALIAN */
-   NULL,           /* RETRO_LANGUAGE_DUTCH */
-   NULL,           /* RETRO_LANGUAGE_PORTUGUESE_BRAZIL */
-   NULL,           /* RETRO_LANGUAGE_PORTUGUESE_PORTUGAL */
-   NULL,           /* RETRO_LANGUAGE_RUSSIAN */
-   NULL,           /* RETRO_LANGUAGE_KOREAN */
-   NULL,           /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
-   NULL,           /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
-   NULL,           /* RETRO_LANGUAGE_ESPERANTO */
-   NULL,           /* RETRO_LANGUAGE_POLISH */
-   NULL,           /* RETRO_LANGUAGE_VIETNAMESE */
-   NULL,           /* RETRO_LANGUAGE_ARABIC */
-   NULL,           /* RETRO_LANGUAGE_GREEK */
-   NULL,           /* RETRO_LANGUAGE_TURKISH */
-   NULL,           /* RETRO_LANGUAGE_SLOVAK */
-   NULL,           /* RETRO_LANGUAGE_PERSIAN */
-   NULL,           /* RETRO_LANGUAGE_HEBREW */
-   NULL,           /* RETRO_LANGUAGE_ASTURIAN */
-   NULL,           /* RETRO_LANGUAGE_FINNISH */
-
+struct retro_core_options_v2 *options_intl[RETRO_LANGUAGE_LAST] = {
+   &options_us, /* RETRO_LANGUAGE_ENGLISH */
+   &options_ja,      /* RETRO_LANGUAGE_JAPANESE */
+   &options_fr,      /* RETRO_LANGUAGE_FRENCH */
+   &options_es,      /* RETRO_LANGUAGE_SPANISH */
+   &options_de,      /* RETRO_LANGUAGE_GERMAN */
+   &options_it,      /* RETRO_LANGUAGE_ITALIAN */
+   &options_nl,      /* RETRO_LANGUAGE_DUTCH */
+   &options_pt_br,   /* RETRO_LANGUAGE_PORTUGUESE_BRAZIL */
+   &options_pt_pt,   /* RETRO_LANGUAGE_PORTUGUESE_PORTUGAL */
+   &options_ru,      /* RETRO_LANGUAGE_RUSSIAN */
+   &options_ko,      /* RETRO_LANGUAGE_KOREAN */
+   &options_cht,     /* RETRO_LANGUAGE_CHINESE_TRADITIONAL */
+   &options_chs,     /* RETRO_LANGUAGE_CHINESE_SIMPLIFIED */
+   &options_eo,      /* RETRO_LANGUAGE_ESPERANTO */
+   &options_pl,      /* RETRO_LANGUAGE_POLISH */
+   &options_vn,      /* RETRO_LANGUAGE_VIETNAMESE */
+   &options_ar,      /* RETRO_LANGUAGE_ARABIC */
+   &options_el,      /* RETRO_LANGUAGE_GREEK */
+   &options_tr,      /* RETRO_LANGUAGE_TURKISH */
+   &options_sv,      /* RETRO_LANGUAGE_SLOVAK */
+   &options_fa,      /* RETRO_LANGUAGE_PERSIAN */
+   &options_he,      /* RETRO_LANGUAGE_HEBREW */
+   &options_ast,     /* RETRO_LANGUAGE_ASTURIAN */
+   &options_fi,      /* RETRO_LANGUAGE_FINNISH */
 };
 #endif
 
@@ -567,124 +694,250 @@ struct retro_core_option_definition *option_defs_intl[RETRO_LANGUAGE_LAST] = {
  *   be as painless as possible for core devs)
  */
 
-static INLINE void libretro_set_core_options(retro_environment_t environ_cb)
+static INLINE void libretro_set_core_options(retro_environment_t environ_cb,
+      bool *categories_supported)
 {
-   unsigned version = 0;
+   unsigned version  = 0;
+#ifndef HAVE_NO_LANGEXTRA
+   unsigned language = 0;
+#endif
 
-   if (!environ_cb)
+   if (!environ_cb || !categories_supported)
       return;
 
-   if (environ_cb(RETRO_ENVIRONMENT_GET_CORE_OPTIONS_VERSION, &version) && (version >= 1))
+   *categories_supported = false;
+
+   if (!environ_cb(RETRO_ENVIRONMENT_GET_CORE_OPTIONS_VERSION, &version))
+      version = 0;
+
+   if (version >= 2)
    {
 #ifndef HAVE_NO_LANGEXTRA
-      struct retro_core_options_intl core_options_intl;
-      unsigned language = 0;
+      struct retro_core_options_v2_intl core_options_intl;
 
-      core_options_intl.us    = option_defs_us;
+      core_options_intl.us    = &options_us;
       core_options_intl.local = NULL;
 
       if (environ_cb(RETRO_ENVIRONMENT_GET_LANGUAGE, &language) &&
           (language < RETRO_LANGUAGE_LAST) && (language != RETRO_LANGUAGE_ENGLISH))
-         core_options_intl.local = option_defs_intl[language];
+         core_options_intl.local = options_intl[language];
 
-      environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_INTL, &core_options_intl);
+      *categories_supported = environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_V2_INTL,
+            &core_options_intl);
 #else
-      environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS, &option_defs_us);
+      *categories_supported = environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_V2,
+            &options_us);
 #endif
    }
    else
    {
-      size_t i;
+      size_t i, j;
+      size_t option_index              = 0;
       size_t num_options               = 0;
+      struct retro_core_option_definition
+            *option_v1_defs_us         = NULL;
+#ifndef HAVE_NO_LANGEXTRA
+      size_t num_options_intl          = 0;
+      struct retro_core_option_v2_definition
+            *option_defs_intl          = NULL;
+      struct retro_core_option_definition
+            *option_v1_defs_intl       = NULL;
+      struct retro_core_options_intl
+            core_options_v1_intl;
+#endif
       struct retro_variable *variables = NULL;
       char **values_buf                = NULL;
 
-      /* Determine number of options */
-      for (;;)
+      /* Determine total number of options */
+      while (true)
       {
-         if (!option_defs_us[num_options].key)
+         if (option_defs_us[num_options].key)
+            num_options++;
+         else
             break;
-         num_options++;
       }
 
-      /* Allocate arrays */
-      variables  = (struct retro_variable *)calloc(num_options + 1, sizeof(struct retro_variable));
-      values_buf = (char **)calloc(num_options, sizeof(char *));
-
-      if (!variables || !values_buf)
-         goto error;
-
-      /* Copy parameters from option_defs_us array */
-      for (i = 0; i < num_options; i++)
+      if (version >= 1)
       {
-         const char *key                        = option_defs_us[i].key;
-         const char *desc                       = option_defs_us[i].desc;
-         const char *default_value              = option_defs_us[i].default_value;
-         struct retro_core_option_value *values = option_defs_us[i].values;
-         size_t buf_len                         = 3;
-         size_t default_index                   = 0;
+         /* Allocate US array */
+         option_v1_defs_us = (struct retro_core_option_definition *)
+               calloc(num_options + 1, sizeof(struct retro_core_option_definition));
 
-         values_buf[i] = NULL;
-
-         if (desc)
+         /* Copy parameters from option_defs_us array */
+         for (i = 0; i < num_options; i++)
          {
-            size_t num_values = 0;
+            struct retro_core_option_v2_definition *option_def_us = &option_defs_us[i];
+            struct retro_core_option_value *option_values         = option_def_us->values;
+            struct retro_core_option_definition *option_v1_def_us = &option_v1_defs_us[i];
+            struct retro_core_option_value *option_v1_values      = option_v1_def_us->values;
 
-            /* Determine number of values */
-            for (;;)
+            option_v1_def_us->key           = option_def_us->key;
+            option_v1_def_us->desc          = option_def_us->desc;
+            option_v1_def_us->info          = option_def_us->info;
+            option_v1_def_us->default_value = option_def_us->default_value;
+
+            /* Values must be copied individually... */
+            while (option_values->value)
             {
-               if (!values[num_values].value)
+               option_v1_values->value = option_values->value;
+               option_v1_values->label = option_values->label;
+
+               option_values++;
+               option_v1_values++;
+            }
+         }
+
+#ifndef HAVE_NO_LANGEXTRA
+         if (environ_cb(RETRO_ENVIRONMENT_GET_LANGUAGE, &language) &&
+             (language < RETRO_LANGUAGE_LAST) && (language != RETRO_LANGUAGE_ENGLISH) &&
+             options_intl[language])
+            option_defs_intl = options_intl[language]->definitions;
+
+         if (option_defs_intl)
+         {
+            /* Determine number of intl options */
+            while (true)
+            {
+               if (option_defs_intl[num_options_intl].key)
+                  num_options_intl++;
+               else
                   break;
-
-               /* Check if this is the default value */
-               if (default_value)
-                  if (strcmp(values[num_values].value, default_value) == 0)
-                     default_index = num_values;
-
-               buf_len += strlen(values[num_values].value);
-               num_values++;
             }
 
-            /* Build values string */
-            if (num_values > 0)
+            /* Allocate intl array */
+            option_v1_defs_intl = (struct retro_core_option_definition *)
+                  calloc(num_options_intl + 1, sizeof(struct retro_core_option_definition));
+
+            /* Copy parameters from option_defs_intl array */
+            for (i = 0; i < num_options_intl; i++)
             {
-               size_t j;
+               struct retro_core_option_v2_definition *option_def_intl = &option_defs_intl[i];
+               struct retro_core_option_value *option_values           = option_def_intl->values;
+               struct retro_core_option_definition *option_v1_def_intl = &option_v1_defs_intl[i];
+               struct retro_core_option_value *option_v1_values        = option_v1_def_intl->values;
 
-               buf_len += num_values - 1;
-               buf_len += strlen(desc);
+               option_v1_def_intl->key           = option_def_intl->key;
+               option_v1_def_intl->desc          = option_def_intl->desc;
+               option_v1_def_intl->info          = option_def_intl->info;
+               option_v1_def_intl->default_value = option_def_intl->default_value;
 
-               values_buf[i] = (char *)calloc(buf_len, sizeof(char));
-               if (!values_buf[i])
-                  goto error;
-
-               strcpy(values_buf[i], desc);
-               strcat(values_buf[i], "; ");
-
-               /* Default value goes first */
-               strcat(values_buf[i], values[default_index].value);
-
-               /* Add remaining values */
-               for (j = 0; j < num_values; j++)
+               /* Values must be copied individually... */
+               while (option_values->value)
                {
-                  if (j != default_index)
-                  {
-                     strcat(values_buf[i], "|");
-                     strcat(values_buf[i], values[j].value);
-                  }
+                  option_v1_values->value = option_values->value;
+                  option_v1_values->label = option_values->label;
+
+                  option_values++;
+                  option_v1_values++;
                }
             }
          }
 
-         variables[i].key   = key;
-         variables[i].value = values_buf[i];
+         core_options_v1_intl.us    = option_v1_defs_us;
+         core_options_v1_intl.local = option_v1_defs_intl;
+
+         environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_INTL, &core_options_v1_intl);
+#else
+         environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS, option_v1_defs_us);
+#endif
+      }
+      else
+      {
+         /* Allocate arrays */
+         variables  = (struct retro_variable *)calloc(num_options + 1,
+               sizeof(struct retro_variable));
+         values_buf = (char **)calloc(num_options, sizeof(char *));
+
+         if (!variables || !values_buf)
+            goto error;
+
+         /* Copy parameters from option_defs_us array */
+         for (i = 0; i < num_options; i++)
+         {
+            const char *key                        = option_defs_us[i].key;
+            const char *desc                       = option_defs_us[i].desc;
+            const char *default_value              = option_defs_us[i].default_value;
+            struct retro_core_option_value *values = option_defs_us[i].values;
+            size_t buf_len                         = 3;
+            size_t default_index                   = 0;
+
+            values_buf[i] = NULL;
+
+            if (desc)
+            {
+               size_t num_values = 0;
+
+               /* Determine number of values */
+               while (true)
+               {
+                  if (values[num_values].value)
+                  {
+                     /* Check if this is the default value */
+                     if (default_value)
+                        if (strcmp(values[num_values].value, default_value) == 0)
+                           default_index = num_values;
+
+                     buf_len += strlen(values[num_values].value);
+                     num_values++;
+                  }
+                  else
+                     break;
+               }
+
+               /* Build values string */
+               if (num_values > 0)
+               {
+                  buf_len += num_values - 1;
+                  buf_len += strlen(desc);
+
+                  values_buf[i] = (char *)calloc(buf_len, sizeof(char));
+                  if (!values_buf[i])
+                     goto error;
+
+                  strcpy(values_buf[i], desc);
+                  strcat(values_buf[i], "; ");
+
+                  /* Default value goes first */
+                  strcat(values_buf[i], values[default_index].value);
+
+                  /* Add remaining values */
+                  for (j = 0; j < num_values; j++)
+                  {
+                     if (j != default_index)
+                     {
+                        strcat(values_buf[i], "|");
+                        strcat(values_buf[i], values[j].value);
+                     }
+                  }
+               }
+            }
+
+            variables[option_index].key   = key;
+            variables[option_index].value = values_buf[i];
+            option_index++;
+         }
+
+         /* Set variables */
+         environ_cb(RETRO_ENVIRONMENT_SET_VARIABLES, variables);
       }
 
-      /* Set variables */
-      environ_cb(RETRO_ENVIRONMENT_SET_VARIABLES, variables);
-
 error:
-
       /* Clean up */
+
+      if (option_v1_defs_us)
+      {
+         free(option_v1_defs_us);
+         option_v1_defs_us = NULL;
+      }
+
+#ifndef HAVE_NO_LANGEXTRA
+      if (option_v1_defs_intl)
+      {
+         free(option_v1_defs_intl);
+         option_v1_defs_intl = NULL;
+      }
+#endif
+
       if (values_buf)
       {
          for (i = 0; i < num_options; i++)
