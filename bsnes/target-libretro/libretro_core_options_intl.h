@@ -8640,7 +8640,7 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_4_3_ES NULL
 #define OPTION_VAL_NTSC_ES NULL
 #define OPTION_VAL_PAL_ES NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_ES "Recortar barrido adicional (overscan)"
+#define BSNES_PPU_SHOW_OVERSCAN_LABEL_ES "Recortar sobrebarrido"
 #define BSNES_PPU_SHOW_OVERSCAN_INFO_0_ES "Elimina los bordes superior e inferior de la pantalla, que normalmente no son utilizados por los juegos y son ocultados por el marco de un televisor de definición estándar."
 #define OPTION_VAL_OFF_ES "8 píxeles"
 #define BSNES_BLUR_EMULATION_LABEL_ES "Emular difuminado"
@@ -8802,7 +8802,7 @@ struct retro_core_options_v2 options_eo = {
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_ES "Invertir gatillos del Super Scope"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_ES "Invierte los botones de gatillo y cursor del Super Scope en la pantalla táctil."
 #define BSNES_HIDE_SGB_BORDER_LABEL_ES "Ocultar borde del Super Game Boy"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_ES "Oculta el borde mientras se ejecuten juegos para Super Game Boy. Esta opción solo funcionará si el «Recorte de barrido adicional» también está activado."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_ES "Oculta el borde mientras se ejecuten juegos para Super Game Boy. Esta opción solo funcionará si «Recortar sobrebarrido» también está activada."
 
 struct retro_core_option_v2_category option_cats_es[] = {
    {
@@ -15643,17 +15643,17 @@ struct retro_core_options_v2 options_it = {
 #define CATEGORY_VIDEO_INFO_0_JA "ビデオ出力の設定を変更します."
 #define CATEGORY_AUDIO_LABEL_JA "オーディオのドライバ"
 #define CATEGORY_AUDIO_INFO_0_JA "オーディオ出力の設定を変更します."
-#define CATEGORY_MODE7_LABEL_JA NULL
-#define CATEGORY_MODE7_INFO_0_JA NULL
-#define CATEGORY_SGB_LABEL_JA NULL
-#define CATEGORY_SGB_INFO_0_JA NULL
-#define CATEGORY_LIGHTGUN_LABEL_JA NULL
+#define CATEGORY_MODE7_LABEL_JA "HDモード7"
+#define CATEGORY_MODE7_INFO_0_JA "Mode7グラフィックエミュレーションに関する設定を変更します。"
+#define CATEGORY_SGB_LABEL_JA "スーパーゲームボーイ"
+#define CATEGORY_SGB_INFO_0_JA "スーパーゲームボーイエミュレーションに関する設定を変更します。"
+#define CATEGORY_LIGHTGUN_LABEL_JA "ライトガン"
 #define CATEGORY_LIGHTGUN_INFO_0_JA NULL
 #define CATEGORY_OVERCLOCK_LABEL_JA NULL
-#define CATEGORY_OVERCLOCK_INFO_0_JA NULL
+#define CATEGORY_OVERCLOCK_INFO_0_JA "エミュレートされたハードウェアの速度を変更します。"
 #define CATEGORY_HACK_LABEL_JA "エミュレーションハック"
-#define CATEGORY_HACK_INFO_0_JA NULL
-#define BSNES_ASPECT_RATIO_LABEL_JA NULL
+#define CATEGORY_HACK_INFO_0_JA "エミュレーションハックとホットフィックスを適用します。"
+#define BSNES_ASPECT_RATIO_LABEL_JA "優先アスペクト比"
 #define BSNES_ASPECT_RATIO_INFO_0_JA NULL
 #define OPTION_VAL_AUTO_JA "自動"
 #define OPTION_VAL_8_7_JA NULL
@@ -15662,19 +15662,19 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_PAL_JA NULL
 #define BSNES_PPU_SHOW_OVERSCAN_LABEL_JA NULL
 #define BSNES_PPU_SHOW_OVERSCAN_INFO_0_JA NULL
-#define OPTION_VAL_OFF_JA NULL
-#define BSNES_BLUR_EMULATION_LABEL_JA NULL
-#define BSNES_BLUR_EMULATION_INFO_0_JA NULL
+#define OPTION_VAL_OFF_JA "8 ピクセル"
+#define BSNES_BLUR_EMULATION_LABEL_JA "ぼかしのエミュレーション"
+#define BSNES_BLUR_EMULATION_INFO_0_JA "SDTVの限られた水平方向の隣接するピクセルを一緒にぼかして、水平方向の解像度をシミュレートします。いくつかのゲームはこれに依存して透明効果をエミュレートします。"
 #define BSNES_HOTFIXES_LABEL_JA NULL
 #define BSNES_HOTFIXES_INFO_0_JA NULL
-#define BSNES_ENTROPY_LABEL_JA NULL
+#define BSNES_ENTROPY_LABEL_JA "エントロピー(ランダム化)"
 #define BSNES_ENTROPY_INFO_0_JA NULL
-#define OPTION_VAL_LOW_JA NULL
-#define OPTION_VAL_HIGH_JA NULL
+#define OPTION_VAL_LOW_JA "低"
+#define OPTION_VAL_HIGH_JA "高"
 #define OPTION_VAL_NONE_JA "なし"
-#define BSNES_CPU_OVERCLOCK_LABEL_JA NULL
+#define BSNES_CPU_OVERCLOCK_LABEL_JA "オーバークロック - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_JA NULL
-#define BSNES_CPU_OVERCLOCK_INFO_0_JA NULL
+#define BSNES_CPU_OVERCLOCK_INFO_0_JA "CPUをオーバークロックまたはダウンクロックします。この値を100%以上に設定すると、ロード時間が短縮され、遅くなります。 ゲームがクラッシュしたり、その他の問題が発生する可能性があるため、注意して使用してください。"
 #define OPTION_VAL_10_JA NULL
 #define OPTION_VAL_20_JA NULL
 #define OPTION_VAL_30_JA NULL
@@ -15684,7 +15684,7 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_70_JA NULL
 #define OPTION_VAL_80_JA NULL
 #define OPTION_VAL_90_JA NULL
-#define OPTION_VAL_100_JA NULL
+#define OPTION_VAL_100_JA "100% (デフォルト)"
 #define OPTION_VAL_110_JA NULL
 #define OPTION_VAL_120_JA NULL
 #define OPTION_VAL_130_JA NULL
@@ -15765,12 +15765,12 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_800_JA NULL
 #define BSNES_PPU_FAST_LABEL_JA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_JA NULL
-#define BSNES_PPU_FAST_INFO_0_JA NULL
+#define BSNES_PPU_FAST_INFO_0_JA "精度の軽減を犠牲にしてPPUのより高速なエミュレーションを可能にします。これをオンにすることをお勧めします。"
 #define BSNES_PPU_DEINTERLACE_LABEL_JA NULL
 #define BSNES_PPU_DEINTERLACE_LABEL_CAT_JA NULL
-#define BSNES_PPU_DEINTERLACE_INFO_0_JA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_JA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_JA NULL
+#define BSNES_PPU_DEINTERLACE_INFO_0_JA "480pで内部的にレンダリングすることにより、すべてのゲームを解除します。パフォーマンスペナルティはほぼ存在しませんので、このままにすることをお勧めします。"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_JA "PPU (Video) - スプライト制限なし"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_JA "PPU - スプライト制限なし"
 #define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_JA NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_JA NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_JA NULL
@@ -15785,8 +15785,8 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_6X_JA NULL
 #define OPTION_VAL_7X_JA NULL
 #define OPTION_VAL_8X_JA NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_JA NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_JA NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_JA "HDモード7 - 視点補正"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_JA "視点補正"
 #define BSNES_MODE7_PERSPECTIVE_INFO_0_JA NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_JA NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_JA NULL
@@ -25809,9 +25809,9 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_HOTFIXES_INFO_0_SV NULL
 #define BSNES_ENTROPY_LABEL_SV NULL
 #define BSNES_ENTROPY_INFO_0_SV NULL
-#define OPTION_VAL_LOW_SV NULL
-#define OPTION_VAL_HIGH_SV NULL
-#define OPTION_VAL_NONE_SV NULL
+#define OPTION_VAL_LOW_SV "Låg"
+#define OPTION_VAL_HIGH_SV "Hög"
+#define OPTION_VAL_NONE_SV "Ingen"
 #define BSNES_CPU_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SV NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SV NULL
