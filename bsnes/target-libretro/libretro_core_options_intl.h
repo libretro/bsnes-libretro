@@ -14938,10 +14938,10 @@ struct retro_core_options_v2 options_id = {
 #define BSNES_CPU_FASTMATH_LABEL_IT "Accelerazione del Calcolo Matematico della CPU"
 #define BSNES_CPU_FASTMATH_INFO_0_IT "Le operazioni di moltiplicazione e divisione impongono un certo tempo di elaborazione alla CPU di un vero SNES. I vecchi emulatori non simulavano questo ritardo e restituivano immediatamente il risultato. Alcune ROM hack non attendono il completamento delle operazioni matematiche e pertanto richiedono l'utilizzo di questo espediente."
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_IT "Overclocking - Coprocessore SA-1"
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_IT NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_IT "Coprocessore SA-1"
 #define BSNES_CPU_SA1_OVERCLOCK_INFO_0_IT "Applica un overclock o downclock al chip Super Accelerator 1 (SA-1). Impostare questo valore oltre il 100% può incrementare le prestazioni nei giochi che supportano il chip SA-1. Da usare con cautela, in quanto potrebbe causare in alcuni giochi delle anomalie o un blocco totale."
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_IT "Overclocking - Coprocessore SuperFX"
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_IT NULL
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_IT "Coprocessore SuperFX"
 #define BSNES_CPU_SFX_OVERCLOCK_INFO_0_IT "Applica un overclock o downclock al coprocessore SuperFX. Impostare questo valore oltre il 100% può incrementare le prestazioni nei giochi che supportano il SuperFX. Da usare con cautela, in quanto potrebbe causare in alcuni giochi delle anomalie o un blocco totale."
 #define OPTION_VAL_410_IT NULL
 #define OPTION_VAL_420_IT NULL
@@ -22689,8 +22689,8 @@ struct retro_core_options_v2 options_ro = {
 #define BSNES_HOTFIXES_INFO_0_RU NULL
 #define BSNES_ENTROPY_LABEL_RU NULL
 #define BSNES_ENTROPY_INFO_0_RU NULL
-#define OPTION_VAL_LOW_RU NULL
-#define OPTION_VAL_HIGH_RU NULL
+#define OPTION_VAL_LOW_RU "Низкое"
+#define OPTION_VAL_HIGH_RU "Высокое"
 #define OPTION_VAL_NONE_RU "Отключено"
 #define BSNES_CPU_OVERCLOCK_LABEL_RU NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_RU NULL
@@ -25802,7 +25802,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_PAL_SV NULL
 #define BSNES_PPU_SHOW_OVERSCAN_LABEL_SV NULL
 #define BSNES_PPU_SHOW_OVERSCAN_INFO_0_SV NULL
-#define OPTION_VAL_OFF_SV NULL
+#define OPTION_VAL_OFF_SV "8 pixlar"
 #define BSNES_BLUR_EMULATION_LABEL_SV NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SV NULL
 #define BSNES_HOTFIXES_LABEL_SV NULL
