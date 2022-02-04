@@ -18760,7 +18760,7 @@ struct retro_core_options_v2 options_nl = {
 /* RETRO_LANGUAGE_NO */
 
 #define CATEGORY_VIDEO_LABEL_NO NULL
-#define CATEGORY_VIDEO_INFO_0_NO "Endre videoutdata innstillinger."
+#define CATEGORY_VIDEO_INFO_0_NO "Endre innstillinger for video utdata."
 #define CATEGORY_AUDIO_LABEL_NO "Lyd"
 #define CATEGORY_AUDIO_INFO_0_NO "Endre innstillinger for lydutgang."
 #define CATEGORY_MODE7_LABEL_NO NULL
@@ -28899,10 +28899,10 @@ struct retro_core_options_v2 options_uk = {
 
 /* RETRO_LANGUAGE_VAL */
 
-#define CATEGORY_VIDEO_LABEL_VAL NULL
-#define CATEGORY_VIDEO_INFO_0_VAL NULL
-#define CATEGORY_AUDIO_LABEL_VAL NULL
-#define CATEGORY_AUDIO_INFO_0_VAL NULL
+#define CATEGORY_VIDEO_LABEL_VAL "Vídeo"
+#define CATEGORY_VIDEO_INFO_0_VAL "Canvia els ajustos d'eixida de vídeo."
+#define CATEGORY_AUDIO_LABEL_VAL "Àudio"
+#define CATEGORY_AUDIO_INFO_0_VAL "Canvia els ajustos d'eixida d'àudio."
 #define CATEGORY_MODE7_LABEL_VAL NULL
 #define CATEGORY_MODE7_INFO_0_VAL NULL
 #define CATEGORY_SGB_LABEL_VAL NULL
