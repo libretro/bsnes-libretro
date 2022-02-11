@@ -6294,7 +6294,7 @@ struct retro_core_options_v2 options_da = {
 #define CATEGORY_HACK_LABEL_DE "Emulations-Hacks"
 #define CATEGORY_HACK_INFO_0_DE NULL
 #define BSNES_ASPECT_RATIO_LABEL_DE NULL
-#define BSNES_ASPECT_RATIO_INFO_0_DE NULL
+#define BSNES_ASPECT_RATIO_INFO_0_DE "Das bevorzugte Seitenverhältnis des Inhalts auswählen. Dies wird nur angewendet, wenn das Seitenverhältnis von RetroArch in den Videoeinstellungen auf \"Core-bestimmtes Seitenverhältnis\" eingestellt ist."
 #define OPTION_VAL_AUTO_DE "Automatisch"
 #define OPTION_VAL_8_7_DE "Pixelgenau"
 #define OPTION_VAL_4_3_DE NULL
@@ -28931,7 +28931,7 @@ struct retro_core_options_v2 options_uk = {
 #define BSNES_ENTROPY_INFO_0_VAL NULL
 #define OPTION_VAL_LOW_VAL NULL
 #define OPTION_VAL_HIGH_VAL NULL
-#define OPTION_VAL_NONE_VAL NULL
+#define OPTION_VAL_NONE_VAL "Cap"
 #define BSNES_CPU_OVERCLOCK_LABEL_VAL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_VAL NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_VAL NULL
