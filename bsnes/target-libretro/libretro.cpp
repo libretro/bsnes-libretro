@@ -713,21 +713,67 @@ void retro_cheat_reset()
 void retro_cheat_set(unsigned index, bool enabled, const char *code)
 {
 	string cheat = string(code);
-	bool decoded = false;
+	int chl = 0;
 
 	if (program->gameBoy.program)
 	{
-		decoded = decodeGB(cheat);
+		return;
 	}
 	else
 	{
-		decoded = decodeSNES(cheat);
-	}
-
-	if (enabled && decoded)
-	{
-		cheatList.append(cheat);
-		emulator->cheats(cheatList);
+		if(code[4u] == '-') {
+			for(;;) {
+				string code1 = {cheat.slice((0 + chl), 4), cheat.slice((5 + chl), 4)};
+				code1.transform("DF4709156BC8A23E", "df4709156bc8a23e");
+				code1.transform("df4709156bc8a23e", "0123456789abcdef");
+				uint32_t r = toHex(code1);
+				uint address =
+				(!!(r & 0x002000) << 23) | (!!(r & 0x001000) << 22)
+				| (!!(r & 0x000800) << 21) | (!!(r & 0x000400) << 20)
+				| (!!(r & 0x000020) << 19) | (!!(r & 0x000010) << 18)
+				| (!!(r & 0x000008) << 17) | (!!(r & 0x000004) << 16)
+				| (!!(r & 0x800000) << 15) | (!!(r & 0x400000) << 14)
+				| (!!(r & 0x200000) << 13) | (!!(r & 0x100000) << 12)
+				| (!!(r & 0x000002) << 11) | (!!(r & 0x000001) << 10)
+				| (!!(r & 0x008000) <<  9) | (!!(r & 0x004000) <<  8)
+				| (!!(r & 0x080000) <<  7) | (!!(r & 0x040000) <<  6)
+				| (!!(r & 0x020000) <<  5) | (!!(r & 0x010000) <<  4)
+				| (!!(r & 0x000200) <<  3) | (!!(r & 0x000100) <<  2)
+				| (!!(r & 0x000080) <<  1) | (!!(r & 0x000040) <<  0);
+				uint data = r >> 24;
+				code1 = {hex(address, 6L), "=", hex(data, 2L)};
+				cheatList.append(code1);
+				emulator->cheats(cheatList);
+				if(code[(9 + chl)] != '+') {
+					return;
+				}
+				chl = (chl + 10);
+			}
+		}
+		else if(code[8u] == '+') {
+			for(;;) {
+				string code1 = {cheat.slice((0 + chl), 8)};
+				uint32_t r = toHex(code1);
+				uint address = r >> 8;
+				uint data = r & 0xff;
+				code1 = {hex(address, 6L), "=", hex(data, 2L)};
+				cheatList.append(code1);
+				emulator->cheats(cheatList);
+				if(code[(8 + chl)] != '+') {
+					return;
+				}
+				chl = (chl + 9);
+			}
+		}
+		else {
+			string code1 = {cheat.slice((0 + chl), 8)};
+			uint32_t r = toHex(code1);
+			uint address = r >> 8;
+			uint data = r & 0xff;
+			code1 = {hex(address, 6L), "=", hex(data, 2L)};
+			cheatList.append(code1);
+			emulator->cheats(cheatList);
+		}
 	}
 }
 
