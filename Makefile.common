@@ -30,6 +30,7 @@ SOURCES_C   += $(CORE_DIR)/libco/libco.c \
 					$(GB_DIR)/Core/timing.c \
 
 SOURCES_CXX += \
+					$(BSNES_DIR)/target-libretro/program.cpp \
 					$(BSNES_DIR)/target-libretro/libretro.cpp \
 					$(BSNES_DIR)/emulator/emulator.cpp \
 					$(BSNES_DIR)/filter/filter.cpp \

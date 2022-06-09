@@ -17,14 +17,27 @@ using namespace nall;
 #include <heuristics/game-boy.cpp>
 #include <heuristics/bs-memory.cpp>
 
-#include "resources.hpp"
+#include "program.h"
 
 #include "libretro.h"
+extern retro_environment_t environ_cb;
+extern retro_video_refresh_t video_cb;
+extern retro_audio_sample_t audio_cb;
+extern retro_audio_sample_batch_t audio_batch_cb;
+extern retro_input_poll_t input_poll;
+extern retro_input_state_t input_state;
+extern retro_log_printf_t libretro_print;
+extern void audio_queue(int16_t left, int16_t right);
+
 #define RETRO_DEVICE_LIGHTGUN_SUPER_SCOPE  RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_LIGHTGUN, 0)
 
 static Emulator::Interface *emulator;
+struct Program;
+static Program *program = nullptr;
 
-static bool sgb_border_disabled = false;
+extern bool sgb_border_disabled;
+extern bool retro_pointer_enabled;
+extern bool retro_pointer_superscope_reverse_buttons;
 
 // Touchscreen Lightgun Support
 static const int POINTER_PRESSED_CYCLES = 4;  // For touchscreen sensitivity
@@ -44,8 +57,6 @@ struct retro_pointer_state
 };
 
 static retro_pointer_state retro_pointer = { 0, 0, false, false, false, false };
-static bool retro_pointer_enabled = false;
-static bool retro_pointer_superscope_reverse_buttons = false;
 static void input_update_pointer_lightgun( unsigned port, unsigned gun_device)
 {
 	int x, y;
@@ -166,76 +177,16 @@ static int input_handle_touchscreen_lightgun( unsigned port, unsigned gun_device
 	} 
 }
 
-struct Program : Emulator::Platform
+
+Program::Program(Emulator::Interface * emu)
 {
-	Program();
-	~Program();
-	
-	auto open(uint id, string name, vfs::file::mode mode, bool required) -> shared_pointer<vfs::file> override;
-	auto load(uint id, string name, string type, vector<string> options = {}) -> Emulator::Platform::Load override;
-	auto videoFrame(const uint16* data, uint pitch, uint width, uint height, uint scale) -> void override;
-	auto audioFrame(const double* samples, uint channels) -> void override;
-	auto inputPoll(uint port, uint device, uint input) -> int16 override;
-	auto inputRumble(uint port, uint device, uint input, bool enable) -> void override;
-	
-	auto load() -> void;
-	auto loadFile(string location) -> vector<uint8_t>;
-	auto loadSuperFamicom(string location) -> bool;
-	auto loadGameBoy(string location) -> bool;
-	auto loadBSMemory(string location) -> bool;
-
-	auto save() -> void;
-
-	auto openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>;
-	auto openRomGameBoy(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>;
-	auto openRomBSMemory(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>;
-	
-	auto hackPatchMemory(vector<uint8_t>& data) -> void;
-	
-	string base_name;
-
-	bool overscan = false;
-
-public:	
-	struct Game {
-		explicit operator bool() const { return (bool)location; }
-		
-		string option;
-		string location;
-		string manifest;
-		Markup::Node document;
-		boolean patched;
-		boolean verified;
-	};
-
-	struct SuperFamicom : Game {
-		string title;
-		string region;
-		vector<uint8_t> program;
-		vector<uint8_t> data;
-		vector<uint8_t> expansion;
-		vector<uint8_t> firmware;
-	} superFamicom;
-
-	struct GameBoy : Game {
-		vector<uint8_t> program;
-	} gameBoy;
-
-	struct BSMemory : Game {
-		vector<uint8_t> program;
-	} bsMemory;
-};
-
-static Program *program = nullptr;
-
-Program::Program()
-{
+	program = this;
+	emulator = emu;
 	Emulator::platform = this;
 }
 
 Program::~Program()
 {
-	delete emulator;
 }
 
 auto Program::save() -> void

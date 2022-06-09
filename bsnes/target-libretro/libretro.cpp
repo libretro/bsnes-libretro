@@ -1,14 +1,22 @@
 #include <cassert>
 #include "libretro.h"
 #include "libretro_core_options.h"
+#include <emulator/emulator.hpp>
+#include <sfc/interface/interface.hpp>
+#include "program.h"
 
-static retro_environment_t environ_cb;
-static retro_video_refresh_t video_cb;
-static retro_audio_sample_t audio_cb;
-static retro_audio_sample_batch_t audio_batch_cb;
-static retro_input_poll_t input_poll;
-static retro_input_state_t input_state;
-static retro_log_printf_t libretro_print;
+retro_environment_t environ_cb;
+retro_video_refresh_t video_cb;
+retro_audio_sample_t audio_cb;
+retro_audio_sample_batch_t audio_batch_cb;
+retro_input_poll_t input_poll;
+retro_input_state_t input_state;
+retro_log_printf_t libretro_print;
+
+struct Program *program = nullptr;
+bool sgb_border_disabled = false;
+bool retro_pointer_enabled = false;
+bool retro_pointer_superscope_reverse_buttons = false;
 
 #define SAMPLERATE 48000
 #define AUDIOBUFSIZE (SAMPLERATE/50) * 2
@@ -18,7 +26,7 @@ static uint16_t audio_buffer_max = AUDIOBUFSIZE;
 
 static int run_ahead_frames = 0;
 
-static void audio_queue(int16_t left, int16_t right)
+void audio_queue(int16_t left, int16_t right)
 {
 	audio_buffer[audio_buffer_index++] = left;
 	audio_buffer[audio_buffer_index++] = right;
@@ -30,7 +38,7 @@ static void audio_queue(int16_t left, int16_t right)
 	}
 }
 
-#include "program.cpp"
+static unique_pointer<Emulator::Interface> emulator;
 
 static string sgb_bios;
 static vector<string> cheatList;
@@ -597,12 +605,13 @@ void retro_set_input_state(retro_input_state_t cb)
 void retro_init()
 {
 	emulator = new SuperFamicom::Interface;
-	program = new Program;
+	program = new Program(emulator.data());
 }
 
 void retro_deinit()
 {
 	delete program;
+	emulator.reset();
 }
 
 unsigned retro_api_version()
