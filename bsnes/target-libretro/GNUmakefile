@@ -16,7 +16,7 @@ else ifeq ($(platform), libnx)
 	name := bsnes_libretro_libnx
 endif
 
-objects := libretro $(objects)
+objects := libretro program $(objects)
 objects := $(patsubst %,obj/%.o,$(objects))
 
 obj/libretro.o: target-libretro/libretro.cpp
