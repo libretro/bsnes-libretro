@@ -12,6 +12,7 @@ ifneq ($(GIT_VERSION)," unknown")
 endif
 
 SRCFILES := $(SRCDIR)/bsnes/target-libretro/libretro.cpp \
+				$(SRCDIR)/bsnes/target-libretro/program.cpp \
 				$(SRCDIR)/bsnes/emulator/emulator.cpp \
 				$(SRCDIR)/libco/libco.c \
 				$(SRCDIR)/bsnes/filter/filter.cpp \
