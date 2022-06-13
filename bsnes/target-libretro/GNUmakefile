@@ -20,6 +20,7 @@ objects := libretro $(objects)
 objects := $(patsubst %,obj/%.o,$(objects))
 
 obj/libretro.o: target-libretro/libretro.cpp
+obj/program.o:  target-libretro/program.cpp
 
 all: $(objects)
 ifeq ($(platform),linux)
