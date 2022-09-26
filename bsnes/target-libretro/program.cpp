@@ -602,7 +602,10 @@ auto Program::loadFile(string location) -> vector<uint8_t>
 
 auto Program::loadSuperFamicom(string location) -> bool
 {
+	string manifest;
 	vector<uint8_t> rom;
+
+	manifest = file::read({Location::notsuffix(location), ".bml"});
 	rom = loadFile(location);
 
 	if(rom.size() < 0x8000) return false;
@@ -620,7 +623,7 @@ auto Program::loadSuperFamicom(string location) -> bool
 
 	superFamicom.title = heuristics.title();
 	superFamicom.region = heuristics.videoRegion();
-	superFamicom.manifest = heuristics.manifest();
+	superFamicom.manifest = manifest ? manifest : heuristics.manifest();
 
 	hackPatchMemory(rom);
 	superFamicom.document = BML::unserialize(superFamicom.manifest);
@@ -651,7 +654,10 @@ auto Program::loadSuperFamicom(string location) -> bool
 }
 
 auto Program::loadGameBoy(string location) -> bool {
+	string manifest;
 	vector<uint8_t> rom;
+
+	manifest = file::read({Location::notsuffix(location), ".bml"});
 	rom = loadFile(location);
 
 	if (rom.size() < 0x4000) return false;
@@ -659,7 +665,7 @@ auto Program::loadGameBoy(string location) -> bool {
 	auto heuristics = Heuristics::GameBoy(rom, location);
 	auto sha256 = Hash::SHA256(rom).digest();
 
-	gameBoy.manifest = heuristics.manifest();
+	gameBoy.manifest = manifest ? manifest : heuristics.manifest();
 	gameBoy.document = BML::unserialize(gameBoy.manifest);
 	gameBoy.location = location;
 	gameBoy.program = rom;
@@ -668,7 +674,10 @@ auto Program::loadGameBoy(string location) -> bool {
 }
 
 auto Program::loadBSMemory(string location) -> bool {
+	string manifest;
 	vector<uint8_t> rom;
+
+	manifest = file::read({Location::notsuffix(location), ".bml"});
 	rom = loadFile(location);
 
 	if (rom.size() < 0x8000) return false;
@@ -676,7 +685,7 @@ auto Program::loadBSMemory(string location) -> bool {
 	auto heuristics = Heuristics::BSMemory(rom, location);
 	auto sha256 = Hash::SHA256(rom).digest();
 
-	bsMemory.manifest = heuristics.manifest();
+	bsMemory.manifest = manifest ? manifest : heuristics.manifest();
 	bsMemory.document = BML::unserialize(bsMemory.manifest);
 	bsMemory.location = location;
 
