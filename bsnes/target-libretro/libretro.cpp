@@ -44,6 +44,8 @@ static string sgb_bios;
 static vector<string> cheatList;
 static int aspect_ratio_mode = 0;
 
+static bool ppu_fast_options = true;
+
 #define RETRO_DEVICE_JOYPAD_MULTITAP       RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_JOYPAD, 0)
 #define RETRO_DEVICE_LIGHTGUN_SUPER_SCOPE  RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_LIGHTGUN, 0)
 #define RETRO_DEVICE_LIGHTGUN_JUSTIFIER    RETRO_DEVICE_SUBCLASS(RETRO_DEVICE_LIGHTGUN, 1)
@@ -83,6 +85,48 @@ static double get_aspect_ratio()
 		return (ratio / 240) * 224;
 	else
 		return ratio;
+}
+
+static bool update_option_visibility(void)
+{
+	struct retro_core_option_display option_display;
+	struct retro_variable var;
+	bool updated = false;
+
+	// Show/hide core options that only work if 'PPU - Fast Mode' is enabled
+	bool ppu_fast_options_prev = ppu_fast_options;
+
+	ppu_fast_options = true;
+	var.key = "bsnes_ppu_fast";
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value && !strcmp(var.value, "OFF"))
+		ppu_fast_options = false;
+
+	if (ppu_fast_options != ppu_fast_options_prev)
+	{
+		option_display.visible = ppu_fast_options;
+
+		option_display.key = "bsnes_ppu_deinterlace";
+		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+		option_display.key = "bsnes_ppu_no_sprite_limit";
+		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+		option_display.key = "bsnes_mode7_scale";
+		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+		option_display.key = "bsnes_mode7_perspective";
+		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+		option_display.key = "bsnes_mode7_supersample";
+		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+		option_display.key = "bsnes_mode7_mosaic";
+		environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_DISPLAY, &option_display);
+
+		updated = true;
+	}
+
+	return updated;
 }
 
 static void update_variables(void)
@@ -393,6 +437,8 @@ static void update_variables(void)
 			sgb_border_disabled = false;
 
 	}
+
+	update_option_visibility();
 }
 
 void update_geometry(void)
@@ -569,6 +615,10 @@ void retro_set_environment(retro_environment_t cb)
 
 	libretro_set_core_options(environ_cb,
 							  &categories_supported);
+
+	struct retro_core_options_update_display_callback update_display_cb;
+	update_display_cb.callback = update_option_visibility;
+	environ_cb(RETRO_ENVIRONMENT_SET_CORE_OPTIONS_UPDATE_DISPLAY_CALLBACK, &update_display_cb);
 
 	retro_log_callback log = {};
 	if (environ_cb(RETRO_ENVIRONMENT_GET_LOG_INTERFACE, &log) && log.log)

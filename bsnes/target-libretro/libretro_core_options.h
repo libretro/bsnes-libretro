@@ -67,6 +67,16 @@ struct retro_core_option_v2_category option_cats_us[] = {
       "Change settings regarding Mode 7 graphics emulation."
    },
    {
+      "hack",
+      "Emulation Hacks and Enhancements",
+      "Apply emulation hacks, enhancements and hotfixes."
+   },
+   {
+      "overclock",
+      "Over-/Downclocking",
+      "Change the speed of the emulated hardware."
+   },
+   {
       "sgb",
       "Super Game Boy",
       "Change settings regarding the Super Game Boy emulation."
@@ -75,16 +85,6 @@ struct retro_core_option_v2_category option_cats_us[] = {
       "lightgun",
       "Light Gun",
       "Change (touchscreen) light gun settings."
-   },
-   {
-      "overclock",
-      "Over-/Downclocking",
-      "Change the speed of the emulated hardware."
-   },
-   {
-      "hack",
-      "Emulation Hacks",
-      "Apply emulation hacks and hotfixes."
    },
 
    { NULL, NULL, NULL },
@@ -137,6 +137,211 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "OFF"
    },
    {
+      "bsnes_ppu_fast",
+      "PPU (Video) - Fast Mode",
+      "PPU - Fast Mode",
+      "Enable faster emulation of the PPU at the cost of a minor reduction of accuracy. It is recommended to leave this on. NOTE: this must be enabled for the 'Deinterlace', 'No Sprite Limit' and the 'HD Mode 7' options to work.",
+      NULL,
+      "video",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_ppu_deinterlace",
+      "PPU (Video) - Deinterlace",
+      "PPU - Deinterlace",
+      "Deinterlace all games by rendering internally at 480p. Performance penalty is almost non-existent, so it is recommended to leave this on.",
+      NULL,
+      "video",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_ppu_no_sprite_limit",
+      "PPU (Video) - No Sprite Limit",
+      "PPU - No Sprite Limit",
+      "Remove any limit to the number of sprites that can be drawn simultaneously on screen. May cause issues with some games.",
+      NULL,
+      "video",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_ppu_no_vram_blocking",
+      "PPU (Video) - No VRAM Blocking",
+      "PPU - No VRAM Blocking",
+      "Emulate a bug in older releases of ZSNES and Snes9x, where VRAM blocking was not emulated. A few older ROM hacks relied on this behavior and will render graphics incorrectly if this is not enabled. This option is extremely inaccurate and hurts PPU speed, so it is recommended to leave it disabled unless you need to play a game that is otherwise incompatible with this core.",
+      NULL,
+      "video",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_dsp_fast",
+      "DSP (Audio) - Fast Mode",
+      "DSP - Fast Mode",
+      "Enable faster emulation of the DSP at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
+      NULL,
+      "audio",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_dsp_cubic",
+      "DSP (Audio) - Cubic Interpolation",
+      "DSP - Cubic Interpolation",
+      "Apply cubic interpolation to the sound, preserving more of the high range.",
+      NULL,
+      "audio",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_dsp_echo_shadow",
+      "DSP (Audio) - Echo Shadow RAM",
+      "DSP - Echo Shadow RAM",
+      "Emulate a bug in ZSNES where echo RAM was treated as separate from APU RAM. Many older ROM hacks for Super Mario World relied on this behavior and will crash without this. This option is extremely inaccurate and should not be enabled unless required.",
+      NULL,
+      "audio",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_mode7_scale",
+      "HD Mode 7 - Scale",
+      "Scale",
+      "Increase the horizontal and vertical resolution of the Mode 7 graphics used in certain games.",
+      NULL,
+      "mode7",
+      {
+         { "1x", "240p (1x)"  },
+         { "2x", "480p (2x)"  },
+         { "3x", "720p (3x)"  },
+         { "4x", "960p (4x)"  },
+         { "5x", "1200p (5x)" },
+         { "6x", "1440p (6x)" },
+         { "7x", "1680p (7x)" },
+         { "8x", "1920p (8x)" },
+         { NULL, NULL },
+      },
+      "1x"
+   },
+   {
+      "bsnes_mode7_perspective",
+      "HD Mode 7 - Perspective Correction",
+      "Perspective Correction",
+      "Correct the perspective of the Mode 7 graphics used in certain games by working around some limitations of the integer math used by the SNES.",
+      NULL,
+      "mode7",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_mode7_supersample",
+      "HD Mode 7 - Supersampling",
+      "Supersampling",
+      "Supersample the Mode 7 graphics used in certain games. Combined with higher Mode 7 scale factors, it produces an effect similar to anti-aliasing.",
+      NULL,
+      "mode7",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_mode7_mosaic",
+      "HD Mode 7 - HD->SD Mosaic",
+      "HD->SD Mosaic",
+      "Show the mosaic effect of Mode 7 graphics even when upscaling them.",
+      NULL,
+      "mode7",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_run_ahead_frames",
+      "Internal Run-Ahead",
+      NULL,
+      "Simulate the system ahead of time and roll back to reduce input latency. Has very high system requirements.",
+      NULL,
+      "hack",
+      {
+         { "OFF", "disabled" },
+         { "1",   "1 frame"  },
+         { "2",   "2 frames" },
+         { "3",   "3 frames" },
+         { "4",   "4 frames" },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_coprocessor_delayed_sync",
+      "Coprocessors - Fast Mode",
+      NULL,
+      "Enable faster emulation of the coprocessors at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
+      NULL,
+      "hack",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_coprocessor_prefer_hle",
+      "Coprocessors - Prefer HLE",
+      NULL,
+      "When this option is enabled, less accurate HLE emulation will always be used when available. If disabled, HLE will only be used when LLE firmware is missing.",
+      NULL,
+      "hack",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
       "bsnes_hotfixes",
       "Hotfixes",
       NULL,
@@ -156,7 +361,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       NULL,
       "Choose the level of randomization of the memory and registers. If set to None, all memory and registers are initialized to constant values at startup. Low randomization provides the most accurate representation of a real system. High randomizes as much as possible.",
       NULL,
-      NULL,
+      "hack",
       {
          { "Low",  NULL },
          { "High", NULL },
@@ -164,6 +369,20 @@ struct retro_core_option_v2_definition option_defs_us[] = {
          { NULL, NULL },
       },
       "Low"
+   },
+   {
+      "bsnes_cpu_fastmath",
+      "CPU Fast Math",
+      NULL,
+      "Provide computation results immediately. CPU multiplication and division take time to complete on a real SNES. Older emulators did not simulate these delays and thus some older ROM hacks do not wait for math operations to complete and need this hack.",
+      NULL,
+      "hack",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
    },
    {
       "bsnes_cpu_overclock",
@@ -216,20 +435,6 @@ struct retro_core_option_v2_definition option_defs_us[] = {
          { NULL, NULL },
       },
       "100"
-   },
-   {
-      "bsnes_cpu_fastmath",
-      "CPU Fast Math",
-      NULL,
-      "Provide computation results immediately. CPU multiplication and division take time to complete on a real SNES. Older emulators did not simulate these delays and thus some older ROM hacks do not wait for math operations to complete and need this hack.",
-      NULL,
-      "hack",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
    },
    {
       "bsnes_cpu_sa1_overclock",
@@ -376,194 +581,6 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "100"
    },
    {
-      "bsnes_ppu_fast",
-      "PPU (Video) - Fast Mode",
-      "PPU - Fast Mode",
-      "Enable faster emulation of the PPU at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
-      NULL,
-      "video",
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
-      "bsnes_ppu_deinterlace",
-      "PPU (Video) - Deinterlace",
-      "PPU - Deinterlace",
-      "Deinterlace all games by rendering internally at 480p. Performance penalty is almost non-existent, so it is recommended to leave this on.",
-      NULL,
-      "video",
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
-      "bsnes_ppu_no_sprite_limit",
-      "PPU (Video) - No Sprite Limit",
-      "PPU - No Sprite Limit",
-      "Remove any limit to the number of sprites that can be drawn simultaneously on screen. May cause issues with some games.",
-      NULL,
-      "video",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
-   },
-   {
-      "bsnes_ppu_no_vram_blocking",
-      "PPU (Video) - No VRAM Blocking",
-      NULL,
-      "Emulate a bug in older releases of ZSNES and Snes9x, where VRAM blocking was not emulated. A few older ROM hacks relied on this behavior and will render graphics incorrectly if this is not enabled. This option is extremely inaccurate and hurts PPU speed, so it is recommended to leave it disabled unless you need to play a game that is otherwise incompatible with this core.",
-      NULL,
-      "hack",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
-   },
-   {
-      "bsnes_mode7_scale",
-      "HD Mode 7 - Scale",
-      "Scale",
-      "Increase the horizontal and vertical resolution of the Mode 7 graphics used in certain games.",
-      NULL,
-      "mode7",
-      {
-         { "1x", "240p (1x)"  },
-         { "2x", "480p (2x)"  },
-         { "3x", "720p (3x)"  },
-         { "4x", "960p (4x)"  },
-         { "5x", "1200p (5x)" },
-         { "6x", "1440p (6x)" },
-         { "7x", "1680p (7x)" },
-         { "8x", "1920p (8x)" },
-         { NULL, NULL },
-      },
-      "1x"
-   },
-   {
-      "bsnes_mode7_perspective",
-      "HD Mode 7 - Perspective Correction",
-      "Perspective Correction",
-      "Correct the perspective of the Mode 7 graphics used in certain games by working around some limitations of the integer math used by the SNES.",
-      NULL,
-      "mode7",
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
-      "bsnes_mode7_supersample",
-      "HD Mode 7 - Supersampling",
-      "Supersampling",
-      "Supersample the Mode 7 graphics used in certain games. Combined with higher Mode 7 scale factors, it produces an effect similar to anti-aliasing.",
-      NULL,
-      "mode7",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
-   },
-   {
-      "bsnes_mode7_mosaic",
-      "HD Mode 7 - HD->SD Mosaic",
-      "HD->SD Mosaic",
-      "Show the mosaic effect of Mode 7 graphics even when upscaling them.",
-      NULL,
-      "mode7",
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
-      "bsnes_dsp_fast",
-      "DSP (Audio) - Fast Mode",
-      "DSP - Fast Mode",
-      "Enable faster emulation of the DSP at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
-      NULL,
-      "audio",
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
-      "bsnes_dsp_cubic",
-      "DSP (Audio) - Cubic Interpolation",
-      "DSP - Cubic Interpolation",
-      "Apply cubic interpolation to the sound, preserving more of the high range.",
-      NULL,
-      "audio",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
-   },
-   {
-      "bsnes_dsp_echo_shadow",
-      "DSP (Audio) - Echo Shadow RAM",
-      "DSP - Echo Shadow RAM",
-      "Emulate a bug in ZSNES where echo RAM was treated as separate from APU RAM. Many older ROM hacks for Super Mario World relied on this behavior and will crash without this. This option is extremely inaccurate and should not be enabled unless required.",
-      NULL,
-      "audio",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
-   },
-   {
-      "bsnes_coprocessor_delayed_sync",
-      "Coprocessors - Fast Mode",
-      NULL,
-      "Enable faster emulation of the coprocessors at the cost of a minor reduction of accuracy. It is recommended to leave this on.",
-      NULL,
-      NULL,
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
-      "bsnes_coprocessor_prefer_hle",
-      "Coprocessors - Prefer HLE",
-      NULL,
-      "When this option is enabled, less accurate HLE emulation will always be used when available. If disabled, HLE will only be used when LLE firmware is missing.",
-      NULL,
-      NULL,
-      {
-         { "ON",  "enabled"  },
-         { "OFF", "disabled" },
-         { NULL, NULL },
-      },
-      "ON"
-   },
-   {
       "bsnes_sgb_bios",
       "Preferred Super Game Boy BIOS (Restart Required)",
       NULL,
@@ -578,18 +595,15 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "SGB1.sfc"
    },
    {
-      "bsnes_run_ahead_frames",
-      "Internal Run-Ahead",
+      "bsnes_hide_sgb_border",
+      "Hide SGB Border",
       NULL,
-      "Simulate the system ahead of time and roll back to reduce input latency. Has very high system requirements.",
+      "Hide the border when playing Super Game Boy games. Only works when 'Crop Overscan' is enabled.",
       NULL,
-      NULL,
+      "sgb",
       {
          { "OFF", "disabled" },
-         { "1",   "1 frame"  },
-         { "2",   "2 frames" },
-         { "3",   "3 frames" },
-         { "4",   "4 frames" },
+         { "ON",  "enabled"  },
          { NULL, NULL },
       },
       "OFF"
@@ -615,20 +629,6 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Reverse the Super Scope trigger and cursor buttons with the touchscreen lightgun.",
       NULL,
       "lightgun",
-      {
-         { "OFF", "disabled" },
-         { "ON",  "enabled"  },
-         { NULL, NULL },
-      },
-      "OFF"
-   },
-   {
-      "bsnes_hide_sgb_border",
-      "Hide SGB Border",
-      NULL,
-      "Hide the border when playing Super Game Boy games. Only works when 'Crop Overscan' is enabled.",
-      NULL,
-      "sgb",
       {
          { "OFF", "disabled" },
          { "ON",  "enabled"  },
