@@ -3166,7 +3166,7 @@ struct retro_core_options_v2 options_chs = {
 #define CATEGORY_VIDEO_LABEL_CHT "顯示"
 #define CATEGORY_VIDEO_INFO_0_CHT "變更影像輸出的設定。"
 #define CATEGORY_AUDIO_LABEL_CHT "音效"
-#define CATEGORY_AUDIO_INFO_0_CHT "更改聲音輸出設定"
+#define CATEGORY_AUDIO_INFO_0_CHT "變更音效相關的設定。"
 #define CATEGORY_MODE7_LABEL_CHT NULL
 #define CATEGORY_MODE7_INFO_0_CHT NULL
 #define CATEGORY_HACK_LABEL_CHT NULL
@@ -3211,7 +3211,7 @@ struct retro_core_options_v2 options_chs = {
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_CHT NULL
 #define BSNES_DSP_ECHO_SHADOW_INFO_0_CHT NULL
 #define BSNES_MODE7_SCALE_LABEL_CHT NULL
-#define BSNES_MODE7_SCALE_LABEL_CAT_CHT "刻度"
+#define BSNES_MODE7_SCALE_LABEL_CAT_CHT "縮放"
 #define BSNES_MODE7_SCALE_INFO_0_CHT NULL
 #define OPTION_VAL_1X_CHT "240p (1倍)"
 #define OPTION_VAL_2X_CHT "480p (2倍)"
