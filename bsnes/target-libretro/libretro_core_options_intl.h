@@ -25048,7 +25048,7 @@ struct retro_core_options_v2 options_ru = {
 #define BSNES_ASPECT_RATIO_LABEL_SK NULL
 #define BSNES_ASPECT_RATIO_INFO_0_SK NULL
 #define OPTION_VAL_AUTO_SK NULL
-#define OPTION_VAL_8_7_SK NULL
+#define OPTION_VAL_8_7_SK "Bodovo presné"
 #define OPTION_VAL_4_3_SK NULL
 #define OPTION_VAL_NTSC_SK NULL
 #define OPTION_VAL_PAL_SK NULL
