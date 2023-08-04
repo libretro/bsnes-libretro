@@ -906,6 +906,7 @@ bool retro_load_game_special(unsigned game_type,
 			libretro_print(RETRO_LOG_INFO, "SGB ROM: %s\n", info[1].path);
 			program->gameBoy.location = info[0].path;
 			program->superFamicom.location = info[1].path;
+			program->base_name = info[0].path;
 		}
 		break;
 		case RETRO_GAME_TYPE_BSX:
@@ -914,6 +915,7 @@ bool retro_load_game_special(unsigned game_type,
 			libretro_print(RETRO_LOG_INFO, "BS-X BIOS ROM: %s\n", info[1].path);
 			program->bsMemory.location = info[0].path;
 			program->superFamicom.location = info[1].path;
+			program->base_name = info[0].path;
 		}
 		break;
 		default:
