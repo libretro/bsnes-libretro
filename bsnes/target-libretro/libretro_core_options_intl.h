@@ -2385,7 +2385,7 @@ struct retro_core_options_v2 options_be = {
 #define CATEGORY_VIDEO_LABEL_CA "Vídeo"
 #define CATEGORY_VIDEO_INFO_0_CA "Canviar opcions de sortida de vídeo."
 #define CATEGORY_AUDIO_LABEL_CA "Àudio"
-#define CATEGORY_AUDIO_INFO_0_CA "Canviar opcions de sortida de l'àudio."
+#define CATEGORY_AUDIO_INFO_0_CA "Canvia les opcions de sortida de l'àudio."
 #define CATEGORY_MODE7_LABEL_CA NULL
 #define CATEGORY_MODE7_INFO_0_CA NULL
 #define CATEGORY_HACK_LABEL_CA NULL
