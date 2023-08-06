@@ -77,6 +77,14 @@ extern "C" {
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_AR NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_AR NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_AR NULL
+#define BSNES_VIDEO_FILTER_LABEL_AR NULL
+#define BSNES_VIDEO_FILTER_LABEL_CAT_AR NULL
+#define BSNES_VIDEO_FILTER_INFO_0_AR NULL
+#define OPTION_VAL_VIDEO_FILTER_NONE NULL
+#define OPTION_VAL_VIDEO_FILTER_NTSC_RF NULL
+#define OPTION_VAL_VIDEO_FILTER_NTSC_COMPOSITE NULL
+#define OPTION_VAL_VIDEO_FILTER_NTSC_SVIDEO NULL
+#define OPTION_VAL_VIDEO_FILTER_NTSC_RGB NULL
 #define BSNES_DSP_FAST_LABEL_AR NULL
 #define BSNES_DSP_FAST_LABEL_CAT_AR NULL
 #define BSNES_DSP_FAST_INFO_0_AR NULL
@@ -309,6 +317,23 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_AR,
+      BSNES_VIDEO_FILTER_LABEL_CAT_AR,
+      BSNES_VIDEO_FILTER_INFO_0_AR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_VIDEO_FILTER_NONE  },
+         { "NTSC (RF)", OPTION_VAL_VIDEO_FILTER_NTSC_RF  },
+         { "NTSC (Composite)", OPTION_VAL_VIDEO_FILTER_NTSC_COMPOSITE  },
+         { "NTSC (S-Video)", OPTION_VAL_VIDEO_FILTER_NTSC_SVIDEO  },
+         { "NTSC (RGB)", OPTION_VAL_VIDEO_FILTER_NTSC_RGB },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",

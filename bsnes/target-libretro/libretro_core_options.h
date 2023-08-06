@@ -137,6 +137,23 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "OFF"
    },
    {
+      "bsnes_video_filter",
+      "Filter",
+      "Filter",
+      "Choose between no filtering and blargg's NTSC filter with options for RF, Composite, S-Video, or RGB",
+      NULL,
+      "video",
+      {
+         { "None", "None" },
+         { "NTSC (RF)", "NTSC (RF)" },
+         { "NTSC (Composite)", "NTSC (Composite)" },
+         { "NTSC (S-Video)", "NTSC (S-Video)" },
+         { "NTSC (RGB)", "NTSC (RGB)" },
+         { NULL, NULL },
+      },
+      "None"
+   },
+   {
       "bsnes_ppu_fast",
       "PPU (Video) - Fast Mode",
       "PPU - Fast Mode",

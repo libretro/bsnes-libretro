@@ -15,14 +15,14 @@ struct Program : Emulator::Platform
 {
 	Program(Emulator::Interface * emu);
 	~Program();
-	
+
 	auto open(uint id, string name, vfs::file::mode mode, bool required) -> shared_pointer<vfs::file> override;
 	auto load(uint id, string name, string type, vector<string> options = {}) -> Emulator::Platform::Load override;
 	auto videoFrame(const uint16* data, uint pitch, uint width, uint height, uint scale) -> void override;
 	auto audioFrame(const double* samples, uint channels) -> void override;
 	auto inputPoll(uint port, uint device, uint input) -> int16 override;
 	auto inputRumble(uint port, uint device, uint input, bool enable) -> void override;
-	
+
 	auto load() -> void;
 	auto loadFile(string location) -> vector<uint8_t>;
 	auto loadSuperFamicom(string location) -> bool;
@@ -34,17 +34,18 @@ struct Program : Emulator::Platform
 	auto openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>;
 	auto openRomGameBoy(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>;
 	auto openRomBSMemory(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>;
-	
+
 	auto hackPatchMemory(vector<uint8_t>& data) -> void;
-	
+	auto updateVideoPalette() -> void;
+
 	string base_name;
 
 	bool overscan = false;
 
-public:	
+public:
 	struct Game {
 		explicit operator bool() const { return (bool)location; }
-		
+
 		string option;
 		string location;
 		string manifest;
@@ -69,4 +70,11 @@ public:
 	struct BSMemory : Game {
 		vector<uint8_t> program;
 	} bsMemory;
+
+	uint32_t palette[32768];
+	uint32_t paletteDimmed[32768];
+	uint32_t videoOut[2304*2160];
+
+	Filter::Render filterRender;
+	Filter::Size filterSize;
 };
