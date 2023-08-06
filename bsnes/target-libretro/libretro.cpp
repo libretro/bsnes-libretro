@@ -438,6 +438,33 @@ static void update_variables(void)
 
 	}
 
+	var.key = "bsnes_video_filter";
+	var.value = NULL;
+
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
+	{
+		if (strcmp(var.value, "None") == 0) {
+			program->filterRender = &Filter::None::render;
+			program->filterSize = &Filter::None::size;
+		}
+		else if (strcmp(var.value, "NTSC (RF)") == 0) {
+			program->filterRender = &Filter::NTSC_RF::render;
+			program->filterSize = &Filter::NTSC_RF::size;
+		}
+		else if (strcmp(var.value, "NTSC (Composite)") == 0) {
+			program->filterRender = &Filter::NTSC_Composite::render;
+			program->filterSize = &Filter::NTSC_Composite::size;
+		}
+		else if (strcmp(var.value, "NTSC (S-Video)") == 0) {
+			program->filterRender = &Filter::NTSC_SVideo::render;
+			program->filterSize = &Filter::NTSC_SVideo::size;
+		}
+		else if (strcmp(var.value, "NTSC (RGB)") == 0) {
+			program->filterRender = &Filter::NTSC_RGB::render;
+			program->filterSize = &Filter::NTSC_RGB::size;
+		}
+	}
+
 	update_option_visibility();
 }
 
@@ -838,13 +865,14 @@ void retro_cheat_set(unsigned index, bool enabled, const char *code)
 
 bool retro_load_game(const retro_game_info *game)
 {
-	// bsnes uses 0RGB1555 internally but it is deprecated
-	// let software conversion happen in frontend
-	/*retro_pixel_format fmt = RETRO_PIXEL_FORMAT_0RGB1555;
+	retro_pixel_format fmt = RETRO_PIXEL_FORMAT_XRGB8888;
 	if (!environ_cb(RETRO_ENVIRONMENT_SET_PIXEL_FORMAT, &fmt))
-		return false;*/
+		return false;
 
 	emulator->configure("Audio/Frequency", SAMPLERATE);
+	program->filterRender = &Filter::None::render;
+	program->filterSize = &Filter::None::size;
+	program->updateVideoPalette();
 
 	update_variables();
 
