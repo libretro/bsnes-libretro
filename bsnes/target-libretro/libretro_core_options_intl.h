@@ -65,6 +65,13 @@ extern "C" {
 #define OPTION_VAL_OFF_AR NULL
 #define BSNES_BLUR_EMULATION_LABEL_AR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_AR NULL
+#define BSNES_VIDEO_FILTER_LABEL_AR "الفلتر"
+#define BSNES_VIDEO_FILTER_INFO_0_AR NULL
+#define OPTION_VAL_NONE_AR "لاشيء"
+#define OPTION_VAL_NTSC_RF_AR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_AR NULL
+#define OPTION_VAL_NTSC_S_VIDEO_AR NULL
+#define OPTION_VAL_NTSC_RGB_AR NULL
 #define BSNES_PPU_FAST_LABEL_AR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_AR NULL
 #define BSNES_PPU_FAST_INFO_0_AR NULL
@@ -77,14 +84,6 @@ extern "C" {
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_AR NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_AR NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_AR NULL
-#define BSNES_VIDEO_FILTER_LABEL_AR NULL
-#define BSNES_VIDEO_FILTER_LABEL_CAT_AR NULL
-#define BSNES_VIDEO_FILTER_INFO_0_AR NULL
-#define OPTION_VAL_VIDEO_FILTER_NONE NULL
-#define OPTION_VAL_VIDEO_FILTER_NTSC_RF NULL
-#define OPTION_VAL_VIDEO_FILTER_NTSC_COMPOSITE NULL
-#define OPTION_VAL_VIDEO_FILTER_NTSC_SVIDEO NULL
-#define OPTION_VAL_VIDEO_FILTER_NTSC_RGB NULL
 #define BSNES_DSP_FAST_LABEL_AR NULL
 #define BSNES_DSP_FAST_LABEL_CAT_AR NULL
 #define BSNES_DSP_FAST_INFO_0_AR NULL
@@ -130,7 +129,6 @@ extern "C" {
 #define BSNES_ENTROPY_INFO_0_AR NULL
 #define OPTION_VAL_LOW_AR NULL
 #define OPTION_VAL_HIGH_AR NULL
-#define OPTION_VAL_NONE_AR "لاشيء"
 #define BSNES_CPU_FASTMATH_LABEL_AR NULL
 #define BSNES_CPU_FASTMATH_INFO_0_AR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_AR NULL
@@ -321,16 +319,16 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
    {
       "bsnes_video_filter",
       BSNES_VIDEO_FILTER_LABEL_AR,
-      BSNES_VIDEO_FILTER_LABEL_CAT_AR,
+      BSNES_VIDEO_FILTER_LABEL_AR,
       BSNES_VIDEO_FILTER_INFO_0_AR,
       NULL,
       "video",
       {
-         { "None", OPTION_VAL_VIDEO_FILTER_NONE  },
-         { "NTSC (RF)", OPTION_VAL_VIDEO_FILTER_NTSC_RF  },
-         { "NTSC (Composite)", OPTION_VAL_VIDEO_FILTER_NTSC_COMPOSITE  },
-         { "NTSC (S-Video)", OPTION_VAL_VIDEO_FILTER_NTSC_SVIDEO  },
-         { "NTSC (RGB)", OPTION_VAL_VIDEO_FILTER_NTSC_RGB },
+         { "None", OPTION_VAL_NONE_AR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_AR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_AR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_AR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_AR },
          { NULL, NULL },
       },
       "None"
@@ -871,6 +869,13 @@ struct retro_core_options_v2 options_ar = {
 #define OPTION_VAL_OFF_AST NULL
 #define BSNES_BLUR_EMULATION_LABEL_AST NULL
 #define BSNES_BLUR_EMULATION_INFO_0_AST NULL
+#define BSNES_VIDEO_FILTER_LABEL_AST NULL
+#define BSNES_VIDEO_FILTER_INFO_0_AST NULL
+#define OPTION_VAL_NONE_AST NULL
+#define OPTION_VAL_NTSC_RF_AST NULL
+#define OPTION_VAL_NTSC_COMPOSITE_AST NULL
+#define OPTION_VAL_NTSC_S_VIDEO_AST NULL
+#define OPTION_VAL_NTSC_RGB_AST NULL
 #define BSNES_PPU_FAST_LABEL_AST NULL
 #define BSNES_PPU_FAST_LABEL_CAT_AST NULL
 #define BSNES_PPU_FAST_INFO_0_AST NULL
@@ -928,7 +933,6 @@ struct retro_core_options_v2 options_ar = {
 #define BSNES_ENTROPY_INFO_0_AST NULL
 #define OPTION_VAL_LOW_AST NULL
 #define OPTION_VAL_HIGH_AST NULL
-#define OPTION_VAL_NONE_AST NULL
 #define BSNES_CPU_FASTMATH_LABEL_AST NULL
 #define BSNES_CPU_FASTMATH_INFO_0_AST NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_AST NULL
@@ -1115,6 +1119,23 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_AST,
+      BSNES_VIDEO_FILTER_LABEL_AST,
+      BSNES_VIDEO_FILTER_INFO_0_AST,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_AST },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_AST },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_AST },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_AST },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_AST },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -1652,6 +1673,13 @@ struct retro_core_options_v2 options_ast = {
 #define OPTION_VAL_OFF_BE NULL
 #define BSNES_BLUR_EMULATION_LABEL_BE NULL
 #define BSNES_BLUR_EMULATION_INFO_0_BE NULL
+#define BSNES_VIDEO_FILTER_LABEL_BE "Фільтр"
+#define BSNES_VIDEO_FILTER_INFO_0_BE NULL
+#define OPTION_VAL_NONE_BE NULL
+#define OPTION_VAL_NTSC_RF_BE NULL
+#define OPTION_VAL_NTSC_COMPOSITE_BE NULL
+#define OPTION_VAL_NTSC_S_VIDEO_BE NULL
+#define OPTION_VAL_NTSC_RGB_BE NULL
 #define BSNES_PPU_FAST_LABEL_BE NULL
 #define BSNES_PPU_FAST_LABEL_CAT_BE NULL
 #define BSNES_PPU_FAST_INFO_0_BE NULL
@@ -1709,7 +1737,6 @@ struct retro_core_options_v2 options_ast = {
 #define BSNES_ENTROPY_INFO_0_BE NULL
 #define OPTION_VAL_LOW_BE NULL
 #define OPTION_VAL_HIGH_BE NULL
-#define OPTION_VAL_NONE_BE NULL
 #define BSNES_CPU_FASTMATH_LABEL_BE NULL
 #define BSNES_CPU_FASTMATH_INFO_0_BE NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_BE NULL
@@ -1896,6 +1923,23 @@ struct retro_core_option_v2_definition option_defs_be[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_BE,
+      BSNES_VIDEO_FILTER_LABEL_BE,
+      BSNES_VIDEO_FILTER_INFO_0_BE,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_BE },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_BE },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_BE },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_BE },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_BE },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -2433,6 +2477,13 @@ struct retro_core_options_v2 options_be = {
 #define OPTION_VAL_OFF_CA NULL
 #define BSNES_BLUR_EMULATION_LABEL_CA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CA NULL
+#define BSNES_VIDEO_FILTER_LABEL_CA NULL
+#define BSNES_VIDEO_FILTER_INFO_0_CA NULL
+#define OPTION_VAL_NONE_CA "Cap"
+#define OPTION_VAL_NTSC_RF_CA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_CA NULL
+#define OPTION_VAL_NTSC_S_VIDEO_CA NULL
+#define OPTION_VAL_NTSC_RGB_CA NULL
 #define BSNES_PPU_FAST_LABEL_CA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CA NULL
 #define BSNES_PPU_FAST_INFO_0_CA NULL
@@ -2490,7 +2541,6 @@ struct retro_core_options_v2 options_be = {
 #define BSNES_ENTROPY_INFO_0_CA NULL
 #define OPTION_VAL_LOW_CA NULL
 #define OPTION_VAL_HIGH_CA NULL
-#define OPTION_VAL_NONE_CA "Cap"
 #define BSNES_CPU_FASTMATH_LABEL_CA NULL
 #define BSNES_CPU_FASTMATH_INFO_0_CA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CA NULL
@@ -2677,6 +2727,23 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_CA,
+      BSNES_VIDEO_FILTER_LABEL_CA,
+      BSNES_VIDEO_FILTER_INFO_0_CA,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_CA },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_CA },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_CA },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_CA },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_CA },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -3214,6 +3281,13 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_OFF_CHS NULL
 #define BSNES_BLUR_EMULATION_LABEL_CHS NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CHS NULL
+#define BSNES_VIDEO_FILTER_LABEL_CHS "过滤器"
+#define BSNES_VIDEO_FILTER_INFO_0_CHS NULL
+#define OPTION_VAL_NONE_CHS "无"
+#define OPTION_VAL_NTSC_RF_CHS NULL
+#define OPTION_VAL_NTSC_COMPOSITE_CHS NULL
+#define OPTION_VAL_NTSC_S_VIDEO_CHS NULL
+#define OPTION_VAL_NTSC_RGB_CHS NULL
 #define BSNES_PPU_FAST_LABEL_CHS NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CHS NULL
 #define BSNES_PPU_FAST_INFO_0_CHS NULL
@@ -3271,7 +3345,6 @@ struct retro_core_options_v2 options_ca = {
 #define BSNES_ENTROPY_INFO_0_CHS NULL
 #define OPTION_VAL_LOW_CHS "低"
 #define OPTION_VAL_HIGH_CHS "高"
-#define OPTION_VAL_NONE_CHS "无"
 #define BSNES_CPU_FASTMATH_LABEL_CHS NULL
 #define BSNES_CPU_FASTMATH_INFO_0_CHS NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CHS NULL
@@ -3458,6 +3531,23 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_CHS,
+      BSNES_VIDEO_FILTER_LABEL_CHS,
+      BSNES_VIDEO_FILTER_INFO_0_CHS,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_CHS },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_CHS },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_CHS },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_CHS },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_CHS },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -3995,6 +4085,13 @@ struct retro_core_options_v2 options_chs = {
 #define OPTION_VAL_OFF_CHT "8像素"
 #define BSNES_BLUR_EMULATION_LABEL_CHT NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CHT NULL
+#define BSNES_VIDEO_FILTER_LABEL_CHT "過濾器"
+#define BSNES_VIDEO_FILTER_INFO_0_CHT NULL
+#define OPTION_VAL_NONE_CHT "無"
+#define OPTION_VAL_NTSC_RF_CHT NULL
+#define OPTION_VAL_NTSC_COMPOSITE_CHT NULL
+#define OPTION_VAL_NTSC_S_VIDEO_CHT NULL
+#define OPTION_VAL_NTSC_RGB_CHT NULL
 #define BSNES_PPU_FAST_LABEL_CHT NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CHT NULL
 #define BSNES_PPU_FAST_INFO_0_CHT NULL
@@ -4052,7 +4149,6 @@ struct retro_core_options_v2 options_chs = {
 #define BSNES_ENTROPY_INFO_0_CHT NULL
 #define OPTION_VAL_LOW_CHT "低"
 #define OPTION_VAL_HIGH_CHT "高"
-#define OPTION_VAL_NONE_CHT "無"
 #define BSNES_CPU_FASTMATH_LABEL_CHT NULL
 #define BSNES_CPU_FASTMATH_INFO_0_CHT NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CHT "CPU 超頻中"
@@ -4239,6 +4335,23 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_CHT,
+      BSNES_VIDEO_FILTER_LABEL_CHT,
+      BSNES_VIDEO_FILTER_INFO_0_CHT,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_CHT },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_CHT },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_CHT },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_CHT },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_CHT },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -4776,6 +4889,13 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_OFF_CS "8 Pixelu"
 #define BSNES_BLUR_EMULATION_LABEL_CS "Emulace Rozostření"
 #define BSNES_BLUR_EMULATION_INFO_0_CS "Simuluje omezené horizontální rozlišení televizorů SDTV rozmazáním horizontálně sousedících pixelů. Některé hry na tom závisejí, aby napodobily efekt průhlednosti."
+#define BSNES_VIDEO_FILTER_LABEL_CS "Filtr"
+#define BSNES_VIDEO_FILTER_INFO_0_CS "Vyberte si mezi filtrem bez filtrování a filtrem NTSC společnosti Blargg s možnostmi pro RF, kompozitní, S-Video nebo RGB"
+#define OPTION_VAL_NONE_CS "Žádná"
+#define OPTION_VAL_NTSC_RF_CS NULL
+#define OPTION_VAL_NTSC_COMPOSITE_CS "NTSC (Kompozitní)"
+#define OPTION_VAL_NTSC_S_VIDEO_CS NULL
+#define OPTION_VAL_NTSC_RGB_CS NULL
 #define BSNES_PPU_FAST_LABEL_CS "PPU (Video) - Rychlý Režim"
 #define BSNES_PPU_FAST_LABEL_CAT_CS "PPU - Rychlý Režim"
 #define BSNES_PPU_FAST_INFO_0_CS "Umožňuje rychlejší emulaci PPU za cenu menšího snížení přesnosti. Doporučujeme ponechat tuto funkci zapnutou. POZNÁMKA: tato funkce musí být zapnutá, aby fungovaly možnosti \"Odstranění prokladu\", \"Žádný limit spritu\" a \"HD režim 7\"."
@@ -4833,7 +4953,6 @@ struct retro_core_options_v2 options_cht = {
 #define BSNES_ENTROPY_INFO_0_CS "Zvolte úroveň náhodné volby paměti a registrů. Pokud je nastavena hodnota žádná, jsou všechny paměti a registry při spuštění inicializovány na konstantní hodnoty. Nízká úroveň náhodné v. poskytuje nejpřesnější reprezentaci skutečného systému. Vysoká náhodná v. co nejvíce."
 #define OPTION_VAL_LOW_CS "Nízká"
 #define OPTION_VAL_HIGH_CS "Vysoká"
-#define OPTION_VAL_NONE_CS "Žádná"
 #define BSNES_CPU_FASTMATH_LABEL_CS "Rychlé Výpočty CPU"
 #define BSNES_CPU_FASTMATH_INFO_0_CS "Okamžitě poskytněte výsledky výpočtů. Násobení a dělení procesorem trvá na skutečném SNESu dlouho. Starší emulátory tyto prodlevy nesimulovaly, a proto některé starší ROM hacky nečekají na dokončení matematických operací a potřebují tento hack."
 #define BSNES_CPU_OVERCLOCK_LABEL_CS "Přetaktování - CPU"
@@ -5020,6 +5139,23 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_CS,
+      BSNES_VIDEO_FILTER_LABEL_CS,
+      BSNES_VIDEO_FILTER_INFO_0_CS,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_CS },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_CS },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_CS },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_CS },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_CS },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -5557,6 +5693,13 @@ struct retro_core_options_v2 options_cs = {
 #define OPTION_VAL_OFF_CY NULL
 #define BSNES_BLUR_EMULATION_LABEL_CY NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CY NULL
+#define BSNES_VIDEO_FILTER_LABEL_CY NULL
+#define BSNES_VIDEO_FILTER_INFO_0_CY NULL
+#define OPTION_VAL_NONE_CY "Dim"
+#define OPTION_VAL_NTSC_RF_CY NULL
+#define OPTION_VAL_NTSC_COMPOSITE_CY NULL
+#define OPTION_VAL_NTSC_S_VIDEO_CY NULL
+#define OPTION_VAL_NTSC_RGB_CY NULL
 #define BSNES_PPU_FAST_LABEL_CY NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CY NULL
 #define BSNES_PPU_FAST_INFO_0_CY NULL
@@ -5614,7 +5757,6 @@ struct retro_core_options_v2 options_cs = {
 #define BSNES_ENTROPY_INFO_0_CY NULL
 #define OPTION_VAL_LOW_CY NULL
 #define OPTION_VAL_HIGH_CY NULL
-#define OPTION_VAL_NONE_CY "Dim"
 #define BSNES_CPU_FASTMATH_LABEL_CY NULL
 #define BSNES_CPU_FASTMATH_INFO_0_CY NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CY NULL
@@ -5801,6 +5943,23 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_CY,
+      BSNES_VIDEO_FILTER_LABEL_CY,
+      BSNES_VIDEO_FILTER_INFO_0_CY,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_CY },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_CY },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_CY },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_CY },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_CY },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -6338,6 +6497,13 @@ struct retro_core_options_v2 options_cy = {
 #define OPTION_VAL_OFF_DA NULL
 #define BSNES_BLUR_EMULATION_LABEL_DA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_DA NULL
+#define BSNES_VIDEO_FILTER_LABEL_DA NULL
+#define BSNES_VIDEO_FILTER_INFO_0_DA NULL
+#define OPTION_VAL_NONE_DA NULL
+#define OPTION_VAL_NTSC_RF_DA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_DA NULL
+#define OPTION_VAL_NTSC_S_VIDEO_DA NULL
+#define OPTION_VAL_NTSC_RGB_DA NULL
 #define BSNES_PPU_FAST_LABEL_DA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_DA NULL
 #define BSNES_PPU_FAST_INFO_0_DA NULL
@@ -6395,7 +6561,6 @@ struct retro_core_options_v2 options_cy = {
 #define BSNES_ENTROPY_INFO_0_DA NULL
 #define OPTION_VAL_LOW_DA NULL
 #define OPTION_VAL_HIGH_DA NULL
-#define OPTION_VAL_NONE_DA NULL
 #define BSNES_CPU_FASTMATH_LABEL_DA NULL
 #define BSNES_CPU_FASTMATH_INFO_0_DA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_DA NULL
@@ -6582,6 +6747,23 @@ struct retro_core_option_v2_definition option_defs_da[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_DA,
+      BSNES_VIDEO_FILTER_LABEL_DA,
+      BSNES_VIDEO_FILTER_INFO_0_DA,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_DA },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_DA },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_DA },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_DA },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_DA },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -7108,7 +7290,7 @@ struct retro_core_options_v2 options_da = {
 #define CATEGORY_LIGHTGUN_LABEL_DE "Lightgun"
 #define CATEGORY_LIGHTGUN_INFO_0_DE "Einstellungen für (Touchscreen-)Lightgun ändern."
 #define BSNES_ASPECT_RATIO_LABEL_DE "Bevorzugtes Seitenverhältnis"
-#define BSNES_ASPECT_RATIO_INFO_0_DE "Das bevorzugte Seitenverhältnis des Inhalts auswählen. Dies wird nur angewendet, wenn das Seitenverhältnis von RetroArch in den Videoeinstellungen auf \"Core-bestimmtes Seitenverhältnis\" eingestellt ist."
+#define BSNES_ASPECT_RATIO_INFO_0_DE "Das bevorzugte Seitenverhältnis des Inhalts auswählen. Dies wird nur angewendet, wenn das Seitenverhältnis von RetroArch in den Videoeinstellungen auf \"Wie von Core vorgesehen\" eingestellt ist."
 #define OPTION_VAL_AUTO_DE "Automatisch"
 #define OPTION_VAL_8_7_DE "Pixelgenau"
 #define OPTION_VAL_4_3_DE NULL
@@ -7119,6 +7301,13 @@ struct retro_core_options_v2 options_da = {
 #define OPTION_VAL_OFF_DE "8 Pixel"
 #define BSNES_BLUR_EMULATION_LABEL_DE "Unschärfe-Emulation"
 #define BSNES_BLUR_EMULATION_INFO_0_DE "Die begrenzte horizontale Auflösung von SDTVs simulieren, indem horizontal benachbarte Pixel miteinander verwischt werden. Einige Spiele nutzen das, um einen Transparenzeffekt zu simulieren."
+#define BSNES_VIDEO_FILTER_LABEL_DE NULL
+#define BSNES_VIDEO_FILTER_INFO_0_DE "Wählt zwischen keiner Filterung und blarggs NTSC-Filter mit Optionen für RF, Composite, S-Video oder RGB"
+#define OPTION_VAL_NONE_DE "Keine"
+#define OPTION_VAL_NTSC_RF_DE NULL
+#define OPTION_VAL_NTSC_COMPOSITE_DE NULL
+#define OPTION_VAL_NTSC_S_VIDEO_DE NULL
+#define OPTION_VAL_NTSC_RGB_DE NULL
 #define BSNES_PPU_FAST_LABEL_DE NULL
 #define BSNES_PPU_FAST_LABEL_CAT_DE NULL
 #define BSNES_PPU_FAST_INFO_0_DE "Aktiviert eine schnellere Emulation der PPU auf Kosten einer geringfügigen Reduktion der Genauigkeit. Es wird empfohlen, dies angeschaltet zu lassen. HINWEIS: Dies muss für die Optionen 'Deinterlace', 'Ohne Sprite-Begrenzung' und 'HD Modus 7' aktiviert sein."
@@ -7173,10 +7362,9 @@ struct retro_core_options_v2 options_da = {
 #define BSNES_HOTFIXES_LABEL_DE NULL
 #define BSNES_HOTFIXES_INFO_0_DE "Selbst kommerziell lizenzierte und offiziell freigegebene Software wird manchmal mit Fehlern ausgeliefert. Mit dieser Option werden bestimmte Probleme behoben, die auch auf echter Hardware auftreten."
 #define BSNES_ENTROPY_LABEL_DE "Entropie (Randomisierung)"
-#define BSNES_ENTROPY_INFO_0_DE "Grad der Randomisierung des Speichers und der Register wählen. Bei der Einstellung „Keine“ werden alle Speicher und Register beim Start auf konstante Werte initialisiert. Niedrige Randomisierung bietet die genaueste Darstellung eines echten Systems. Hoch randomisiert so viel wie möglich."
+#define BSNES_ENTROPY_INFO_0_DE "Grad der Randomisierung des Speichers und der Register wählen. Bei der Einstellung „Keine“ werden alle Speicher und Register beim Start auf konstante Werte initialisiert. Niedrige Randomisierung bietet die genaueste Darstellung eines echten Systems. „Hoch\" randomisiert so viel wie möglich."
 #define OPTION_VAL_LOW_DE "Niedrig"
 #define OPTION_VAL_HIGH_DE "Hoch"
-#define OPTION_VAL_NONE_DE "Keine"
 #define BSNES_CPU_FASTMATH_LABEL_DE "CPU Fast-Math"
 #define BSNES_CPU_FASTMATH_INFO_0_DE "Sofortige Bereitstellung von Berechnungsergebnissen. CPU-Multiplikationen und -Divisionen benötigen auf einem echten SNES einige Zeit, um abgeschlossen zu werden. Ältere Emulatoren simulieren diese Verzögerungen nicht und deshalb warten einige ältere ROM-Hacks nicht auf das Ende von mathematischen Operationen und benötigen diesen Hack."
 #define BSNES_CPU_OVERCLOCK_LABEL_DE "Übertaktung - CPU"
@@ -7273,7 +7461,7 @@ struct retro_core_options_v2 options_da = {
 #define OPTION_VAL_SGB1_SFC_DE NULL
 #define OPTION_VAL_SGB2_SFC_DE NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_DE "SGB-Rand ausblenden"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_DE "Rand aus, wenn Sie Super Game Boy-Spiele spielen. Funktioniert nur, wenn „Overscan zuschneiden“ aktiviert ist."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_DE "Den Rand ausblenden, wenn Super Game Boy-Spiele gespielt werden. Funktioniert nur, wenn „Overscan zuschneiden“ aktiviert ist."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_DE "Touchscreen-Lightgun"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_DE "Eingabegerät Super Scope für Touchscreen-Geräte akrtivieren."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_DE "Super-Scope-Triggertasten tauschen"
@@ -7363,6 +7551,23 @@ struct retro_core_option_v2_definition option_defs_de[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_DE,
+      BSNES_VIDEO_FILTER_LABEL_DE,
+      BSNES_VIDEO_FILTER_INFO_0_DE,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_DE },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_DE },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_DE },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_DE },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_DE },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -7900,6 +8105,13 @@ struct retro_core_options_v2 options_de = {
 #define OPTION_VAL_OFF_EL NULL
 #define BSNES_BLUR_EMULATION_LABEL_EL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_EL NULL
+#define BSNES_VIDEO_FILTER_LABEL_EL "Φίλτρα"
+#define BSNES_VIDEO_FILTER_INFO_0_EL NULL
+#define OPTION_VAL_NONE_EL "Κανείς"
+#define OPTION_VAL_NTSC_RF_EL NULL
+#define OPTION_VAL_NTSC_COMPOSITE_EL NULL
+#define OPTION_VAL_NTSC_S_VIDEO_EL NULL
+#define OPTION_VAL_NTSC_RGB_EL NULL
 #define BSNES_PPU_FAST_LABEL_EL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_EL NULL
 #define BSNES_PPU_FAST_INFO_0_EL NULL
@@ -7957,7 +8169,6 @@ struct retro_core_options_v2 options_de = {
 #define BSNES_ENTROPY_INFO_0_EL NULL
 #define OPTION_VAL_LOW_EL NULL
 #define OPTION_VAL_HIGH_EL NULL
-#define OPTION_VAL_NONE_EL "Κανείς"
 #define BSNES_CPU_FASTMATH_LABEL_EL NULL
 #define BSNES_CPU_FASTMATH_INFO_0_EL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_EL NULL
@@ -8144,6 +8355,23 @@ struct retro_core_option_v2_definition option_defs_el[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_EL,
+      BSNES_VIDEO_FILTER_LABEL_EL,
+      BSNES_VIDEO_FILTER_INFO_0_EL,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_EL },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_EL },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_EL },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_EL },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_EL },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -8681,6 +8909,13 @@ struct retro_core_options_v2 options_el = {
 #define OPTION_VAL_OFF_EN NULL
 #define BSNES_BLUR_EMULATION_LABEL_EN NULL
 #define BSNES_BLUR_EMULATION_INFO_0_EN "Simulate the limited horizontal resolution of SD-TVs by blurring together horizontally-adjacent pixels. Some games depend on this to emulate a transparency effect."
+#define BSNES_VIDEO_FILTER_LABEL_EN NULL
+#define BSNES_VIDEO_FILTER_INFO_0_EN NULL
+#define OPTION_VAL_NONE_EN NULL
+#define OPTION_VAL_NTSC_RF_EN NULL
+#define OPTION_VAL_NTSC_COMPOSITE_EN NULL
+#define OPTION_VAL_NTSC_S_VIDEO_EN NULL
+#define OPTION_VAL_NTSC_RGB_EN NULL
 #define BSNES_PPU_FAST_LABEL_EN NULL
 #define BSNES_PPU_FAST_LABEL_CAT_EN NULL
 #define BSNES_PPU_FAST_INFO_0_EN NULL
@@ -8738,7 +8973,6 @@ struct retro_core_options_v2 options_el = {
 #define BSNES_ENTROPY_INFO_0_EN "Choose the level of randomisation of the memory and registers. If set to None, all memory and registers are initialised to constant values at start-up. Low randomisation provides the most accurate representation of a real system. High randomises as much as possible."
 #define OPTION_VAL_LOW_EN NULL
 #define OPTION_VAL_HIGH_EN NULL
-#define OPTION_VAL_NONE_EN NULL
 #define BSNES_CPU_FASTMATH_LABEL_EN NULL
 #define BSNES_CPU_FASTMATH_INFO_0_EN "Provide computation results immediately. CPU multiplication and division take time to complete on a real SNES. Older emulators did not simulate these delays and thus some older ROM hacks do not wait for maths operations to complete and need this hack."
 #define BSNES_CPU_OVERCLOCK_LABEL_EN "Over-clocking - CPU"
@@ -8925,6 +9159,23 @@ struct retro_core_option_v2_definition option_defs_en[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_EN,
+      BSNES_VIDEO_FILTER_LABEL_EN,
+      BSNES_VIDEO_FILTER_INFO_0_EN,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_EN },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_EN },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_EN },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_EN },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_EN },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -9462,6 +9713,13 @@ struct retro_core_options_v2 options_en = {
 #define OPTION_VAL_OFF_EO NULL
 #define BSNES_BLUR_EMULATION_LABEL_EO NULL
 #define BSNES_BLUR_EMULATION_INFO_0_EO NULL
+#define BSNES_VIDEO_FILTER_LABEL_EO NULL
+#define BSNES_VIDEO_FILTER_INFO_0_EO NULL
+#define OPTION_VAL_NONE_EO NULL
+#define OPTION_VAL_NTSC_RF_EO NULL
+#define OPTION_VAL_NTSC_COMPOSITE_EO NULL
+#define OPTION_VAL_NTSC_S_VIDEO_EO NULL
+#define OPTION_VAL_NTSC_RGB_EO NULL
 #define BSNES_PPU_FAST_LABEL_EO NULL
 #define BSNES_PPU_FAST_LABEL_CAT_EO NULL
 #define BSNES_PPU_FAST_INFO_0_EO NULL
@@ -9519,7 +9777,6 @@ struct retro_core_options_v2 options_en = {
 #define BSNES_ENTROPY_INFO_0_EO NULL
 #define OPTION_VAL_LOW_EO NULL
 #define OPTION_VAL_HIGH_EO NULL
-#define OPTION_VAL_NONE_EO NULL
 #define BSNES_CPU_FASTMATH_LABEL_EO NULL
 #define BSNES_CPU_FASTMATH_INFO_0_EO NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_EO NULL
@@ -9706,6 +9963,23 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_EO,
+      BSNES_VIDEO_FILTER_LABEL_EO,
+      BSNES_VIDEO_FILTER_INFO_0_EO,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_EO },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_EO },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_EO },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_EO },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_EO },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -10243,6 +10517,13 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_OFF_ES "8 píxeles"
 #define BSNES_BLUR_EMULATION_LABEL_ES "Emular difuminado"
 #define BSNES_BLUR_EMULATION_INFO_0_ES "Simula la limitación de la resolución horizontal de un televisor SD difuminando los píxeles que sean adyacentes horizontalmente. Algunos juegos necesitan este efecto para simular un efecto de transparencia."
+#define BSNES_VIDEO_FILTER_LABEL_ES "Filtro"
+#define BSNES_VIDEO_FILTER_INFO_0_ES "Aplica o no el filtro NTSC de blargg, con opciones para simular una señal RF, de vídeo compuesto, S-Video o RGB."
+#define OPTION_VAL_NONE_ES "Ninguna"
+#define OPTION_VAL_NTSC_RF_ES NULL
+#define OPTION_VAL_NTSC_COMPOSITE_ES "NTSC (Compuesto)"
+#define OPTION_VAL_NTSC_S_VIDEO_ES NULL
+#define OPTION_VAL_NTSC_RGB_ES NULL
 #define BSNES_PPU_FAST_LABEL_ES "PPU (vídeo): modo rápido"
 #define BSNES_PPU_FAST_LABEL_CAT_ES "PPU: modo rápido"
 #define BSNES_PPU_FAST_INFO_0_ES "Habilita una emulación más rápida de la PPU con una leve reducción de precisión. Se recomienda dejar esta opción activada. NOTA: esta opción debe estar activada para que funcionen las opciones «Desentrelazado», «Desactivar límite de sprites» y «Modo 7 en alta definición (HD)»."
@@ -10300,7 +10581,6 @@ struct retro_core_options_v2 options_eo = {
 #define BSNES_ENTROPY_INFO_0_ES "Selecciona el nivel de aleatoriedad de la memoria y los registros. En caso de seleccionar Ninguna, toda la memoria y los registros se iniciarán al arrancar con unos valores constantes. Una aleatorización baja ofrece la representación más fidedigna de un sistema real. La opción Alta producirá unos valores lo más aleatorios posibles."
 #define OPTION_VAL_LOW_ES "Baja"
 #define OPTION_VAL_HIGH_ES "Alta"
-#define OPTION_VAL_NONE_ES "Ninguna"
 #define BSNES_CPU_FASTMATH_LABEL_ES "Acelerar cálculos matemáticos de la CPU"
 #define BSNES_CPU_FASTMATH_INFO_0_ES "Produce los resultados de computación de forma inmediata. Las multiplicaciones y divisiones vía CPU tardan un tiempo en llevarse a cabo en una SNES real. Los emuladores más antiguos no simulaban estos retrasos, por lo que ciertos «romhacks» antiguos no esperan a que se completen los cálculos matemáticos y necesitan esta corrección."
 #define BSNES_CPU_OVERCLOCK_LABEL_ES "Velocidad de la CPU"
@@ -10487,6 +10767,23 @@ struct retro_core_option_v2_definition option_defs_es[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_ES,
+      BSNES_VIDEO_FILTER_LABEL_ES,
+      BSNES_VIDEO_FILTER_INFO_0_ES,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_ES },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_ES },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_ES },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_ES },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_ES },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -11024,6 +11321,13 @@ struct retro_core_options_v2 options_es = {
 #define OPTION_VAL_OFF_FA NULL
 #define BSNES_BLUR_EMULATION_LABEL_FA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_FA NULL
+#define BSNES_VIDEO_FILTER_LABEL_FA NULL
+#define BSNES_VIDEO_FILTER_INFO_0_FA NULL
+#define OPTION_VAL_NONE_FA "هیچکدام"
+#define OPTION_VAL_NTSC_RF_FA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_FA NULL
+#define OPTION_VAL_NTSC_S_VIDEO_FA NULL
+#define OPTION_VAL_NTSC_RGB_FA NULL
 #define BSNES_PPU_FAST_LABEL_FA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_FA NULL
 #define BSNES_PPU_FAST_INFO_0_FA NULL
@@ -11081,7 +11385,6 @@ struct retro_core_options_v2 options_es = {
 #define BSNES_ENTROPY_INFO_0_FA NULL
 #define OPTION_VAL_LOW_FA NULL
 #define OPTION_VAL_HIGH_FA NULL
-#define OPTION_VAL_NONE_FA "هیچکدام"
 #define BSNES_CPU_FASTMATH_LABEL_FA NULL
 #define BSNES_CPU_FASTMATH_INFO_0_FA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_FA NULL
@@ -11268,6 +11571,23 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_FA,
+      BSNES_VIDEO_FILTER_LABEL_FA,
+      BSNES_VIDEO_FILTER_INFO_0_FA,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_FA },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_FA },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_FA },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_FA },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_FA },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -11805,6 +12125,13 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_OFF_FI NULL
 #define BSNES_BLUR_EMULATION_LABEL_FI NULL
 #define BSNES_BLUR_EMULATION_INFO_0_FI NULL
+#define BSNES_VIDEO_FILTER_LABEL_FI "Suodatin"
+#define BSNES_VIDEO_FILTER_INFO_0_FI NULL
+#define OPTION_VAL_NONE_FI "Ei mitään"
+#define OPTION_VAL_NTSC_RF_FI NULL
+#define OPTION_VAL_NTSC_COMPOSITE_FI NULL
+#define OPTION_VAL_NTSC_S_VIDEO_FI NULL
+#define OPTION_VAL_NTSC_RGB_FI NULL
 #define BSNES_PPU_FAST_LABEL_FI NULL
 #define BSNES_PPU_FAST_LABEL_CAT_FI NULL
 #define BSNES_PPU_FAST_INFO_0_FI NULL
@@ -11862,7 +12189,6 @@ struct retro_core_options_v2 options_fa = {
 #define BSNES_ENTROPY_INFO_0_FI NULL
 #define OPTION_VAL_LOW_FI "Matala"
 #define OPTION_VAL_HIGH_FI "Korkea"
-#define OPTION_VAL_NONE_FI "Ei mitään"
 #define BSNES_CPU_FASTMATH_LABEL_FI NULL
 #define BSNES_CPU_FASTMATH_INFO_0_FI NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_FI NULL
@@ -12049,6 +12375,23 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_FI,
+      BSNES_VIDEO_FILTER_LABEL_FI,
+      BSNES_VIDEO_FILTER_INFO_0_FI,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_FI },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_FI },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_FI },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_FI },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_FI },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -12586,6 +12929,13 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_OFF_FR "8 pixels"
 #define BSNES_BLUR_EMULATION_LABEL_FR "Émulation du flou"
 #define BSNES_BLUR_EMULATION_INFO_0_FR "Simuler la résolution horizontale limitée des télévisions définition SD en floutant les pixels horizontalement adjacents. Certains jeux dépendent de cela pour émuler un effet de transparence."
+#define BSNES_VIDEO_FILTER_LABEL_FR "Filtre"
+#define BSNES_VIDEO_FILTER_INFO_0_FR "Choisissez entre aucun filtre et le filtre NTSC de blargg avec des options RF, Composite, S-Vidéo ou RVB"
+#define OPTION_VAL_NONE_FR "Aucune"
+#define OPTION_VAL_NTSC_RF_FR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_FR NULL
+#define OPTION_VAL_NTSC_S_VIDEO_FR "NTSC (S-Vidéo)"
+#define OPTION_VAL_NTSC_RGB_FR "NTSC (RVB)"
 #define BSNES_PPU_FAST_LABEL_FR "PPU (vidéo) - mode rapide"
 #define BSNES_PPU_FAST_LABEL_CAT_FR "PPU - mode rapide"
 #define BSNES_PPU_FAST_INFO_0_FR "Activer l'émulation plus rapide du PPU au prix d'une réduction mineure de la précision. Il est recommandé de laisser cette option activée. REMARQUE : ceci doit être activé pour que les options 'Désentrelacer', 'Aucune limite de sprites' et 'Mode 7 HD' puissent fonctionner."
@@ -12643,7 +12993,6 @@ struct retro_core_options_v2 options_fi = {
 #define BSNES_ENTROPY_INFO_0_FR "Choisir le niveau de randomisation de la mémoire et des registres. Si défini sur Aucune, toute la mémoire et tous les registres sont initialisés à des valeurs constantes au démarrage. La faible randomisation fournit la représentation la plus précise d'un système réel. La randomisation élevée est aussi aléatoire que possible."
 #define OPTION_VAL_LOW_FR "Faible"
 #define OPTION_VAL_HIGH_FR "Élevée"
-#define OPTION_VAL_NONE_FR "Aucune"
 #define BSNES_CPU_FASTMATH_LABEL_FR "Calculs rapides du processeur"
 #define BSNES_CPU_FASTMATH_INFO_0_FR "Fournir les résultats des calculs immédiatement. La multiplication et la division par le processeur prennent du temps pour se terminer sur une SNES réelle. Les émulateurs plus anciens ne simulaient pas ces retards, donc certains hacks de ROM plus anciens n'attendent pas que les opérations mathématiques se terminent et ont besoin de ce hack."
 #define BSNES_CPU_OVERCLOCK_LABEL_FR "Overclocking - processeur"
@@ -12830,6 +13179,23 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_FR,
+      BSNES_VIDEO_FILTER_LABEL_FR,
+      BSNES_VIDEO_FILTER_INFO_0_FR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_FR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_FR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_FR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_FR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_FR },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -13367,6 +13733,13 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_OFF_GL NULL
 #define BSNES_BLUR_EMULATION_LABEL_GL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_GL NULL
+#define BSNES_VIDEO_FILTER_LABEL_GL NULL
+#define BSNES_VIDEO_FILTER_INFO_0_GL NULL
+#define OPTION_VAL_NONE_GL "Ningún"
+#define OPTION_VAL_NTSC_RF_GL NULL
+#define OPTION_VAL_NTSC_COMPOSITE_GL NULL
+#define OPTION_VAL_NTSC_S_VIDEO_GL NULL
+#define OPTION_VAL_NTSC_RGB_GL NULL
 #define BSNES_PPU_FAST_LABEL_GL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_GL NULL
 #define BSNES_PPU_FAST_INFO_0_GL NULL
@@ -13424,7 +13797,6 @@ struct retro_core_options_v2 options_fr = {
 #define BSNES_ENTROPY_INFO_0_GL NULL
 #define OPTION_VAL_LOW_GL NULL
 #define OPTION_VAL_HIGH_GL NULL
-#define OPTION_VAL_NONE_GL "Ningún"
 #define BSNES_CPU_FASTMATH_LABEL_GL NULL
 #define BSNES_CPU_FASTMATH_INFO_0_GL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_GL NULL
@@ -13611,6 +13983,23 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_GL,
+      BSNES_VIDEO_FILTER_LABEL_GL,
+      BSNES_VIDEO_FILTER_INFO_0_GL,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_GL },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_GL },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_GL },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_GL },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_GL },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -14148,6 +14537,13 @@ struct retro_core_options_v2 options_gl = {
 #define OPTION_VAL_OFF_HE NULL
 #define BSNES_BLUR_EMULATION_LABEL_HE NULL
 #define BSNES_BLUR_EMULATION_INFO_0_HE NULL
+#define BSNES_VIDEO_FILTER_LABEL_HE NULL
+#define BSNES_VIDEO_FILTER_INFO_0_HE NULL
+#define OPTION_VAL_NONE_HE NULL
+#define OPTION_VAL_NTSC_RF_HE NULL
+#define OPTION_VAL_NTSC_COMPOSITE_HE NULL
+#define OPTION_VAL_NTSC_S_VIDEO_HE NULL
+#define OPTION_VAL_NTSC_RGB_HE NULL
 #define BSNES_PPU_FAST_LABEL_HE NULL
 #define BSNES_PPU_FAST_LABEL_CAT_HE NULL
 #define BSNES_PPU_FAST_INFO_0_HE NULL
@@ -14205,7 +14601,6 @@ struct retro_core_options_v2 options_gl = {
 #define BSNES_ENTROPY_INFO_0_HE NULL
 #define OPTION_VAL_LOW_HE NULL
 #define OPTION_VAL_HIGH_HE NULL
-#define OPTION_VAL_NONE_HE NULL
 #define BSNES_CPU_FASTMATH_LABEL_HE NULL
 #define BSNES_CPU_FASTMATH_INFO_0_HE NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_HE NULL
@@ -14392,6 +14787,23 @@ struct retro_core_option_v2_definition option_defs_he[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_HE,
+      BSNES_VIDEO_FILTER_LABEL_HE,
+      BSNES_VIDEO_FILTER_INFO_0_HE,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_HE },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_HE },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_HE },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_HE },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_HE },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -14929,6 +15341,13 @@ struct retro_core_options_v2 options_he = {
 #define OPTION_VAL_OFF_HR NULL
 #define BSNES_BLUR_EMULATION_LABEL_HR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_HR NULL
+#define BSNES_VIDEO_FILTER_LABEL_HR NULL
+#define BSNES_VIDEO_FILTER_INFO_0_HR NULL
+#define OPTION_VAL_NONE_HR NULL
+#define OPTION_VAL_NTSC_RF_HR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_HR NULL
+#define OPTION_VAL_NTSC_S_VIDEO_HR NULL
+#define OPTION_VAL_NTSC_RGB_HR NULL
 #define BSNES_PPU_FAST_LABEL_HR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_HR NULL
 #define BSNES_PPU_FAST_INFO_0_HR NULL
@@ -14986,7 +15405,6 @@ struct retro_core_options_v2 options_he = {
 #define BSNES_ENTROPY_INFO_0_HR NULL
 #define OPTION_VAL_LOW_HR NULL
 #define OPTION_VAL_HIGH_HR NULL
-#define OPTION_VAL_NONE_HR NULL
 #define BSNES_CPU_FASTMATH_LABEL_HR NULL
 #define BSNES_CPU_FASTMATH_INFO_0_HR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_HR NULL
@@ -15173,6 +15591,23 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_HR,
+      BSNES_VIDEO_FILTER_LABEL_HR,
+      BSNES_VIDEO_FILTER_INFO_0_HR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_HR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_HR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_HR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_HR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_HR },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -15710,6 +16145,13 @@ struct retro_core_options_v2 options_hr = {
 #define OPTION_VAL_OFF_HU "8 pixel"
 #define BSNES_BLUR_EMULATION_LABEL_HU "Elmosás emulálása"
 #define BSNES_BLUR_EMULATION_INFO_0_HU "Az SDTV korlátozott vízszintes felbontásának szimulálása a vízszintesen szomszédos képpontok összemosásával. Néhány játék hagyatkozik erre átlátszósági effektek céljából."
+#define BSNES_VIDEO_FILTER_LABEL_HU "Szűrő"
+#define BSNES_VIDEO_FILTER_INFO_0_HU "blargg NTSC szűrője RF modulált, kompozit, S-Video, vagy RGB módban, vagy szűrés nélkül"
+#define OPTION_VAL_NONE_HU "Nincs"
+#define OPTION_VAL_NTSC_RF_HU "NTSC (RF modulált)"
+#define OPTION_VAL_NTSC_COMPOSITE_HU "NTSC (Kompozit)"
+#define OPTION_VAL_NTSC_S_VIDEO_HU NULL
+#define OPTION_VAL_NTSC_RGB_HU NULL
 #define BSNES_PPU_FAST_LABEL_HU "PPU (Video) - gyors mód"
 #define BSNES_PPU_FAST_LABEL_CAT_HU "PPU - gyors mód"
 #define BSNES_PPU_FAST_INFO_0_HU "A PPU gyorsabb emulációja, a pontosság kis csökkenése árán. Ajánlott bekapcsolva hagyni. Figyelem: ez a beállítás szükséges a deinterlace, sprite limit eltávolítása, és a HD Mode 7 opciókhoz."
@@ -15767,7 +16209,6 @@ struct retro_core_options_v2 options_hr = {
 #define BSNES_ENTROPY_INFO_0_HU "A memória és regiszterek véletlenszerűségének szintje. Nincs esetén minden memória és regiszter konstans értéket kap indításkor. Az alacsony véletlenszerűség hasonlít legjobban a valódi rendszerre. A magas véletlenszerűség a lehető legtöbb véletlen értéket generálja."
 #define OPTION_VAL_LOW_HU "Alacsony"
 #define OPTION_VAL_HIGH_HU "Magas"
-#define OPTION_VAL_NONE_HU "Nincs"
 #define BSNES_CPU_FASTMATH_LABEL_HU "CPU gyors matematikai műveletek"
 #define BSNES_CPU_FASTMATH_INFO_0_HU "A számítási műveletek eredménye azonnal rendelkezésre áll. A CPU alapú szorzás és osztás egy valódi SNES-en időt vesz igénybe. Régebbi emulátorok ezeket a késleltetéseket nem emulálták, így néhány régebbi ROM hack nem vár ezekre és szükséges hozzájuk ez a trükk."
 #define BSNES_CPU_OVERCLOCK_LABEL_HU "Túlhajtás - CPU"
@@ -15954,6 +16395,23 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_HU,
+      BSNES_VIDEO_FILTER_LABEL_HU,
+      BSNES_VIDEO_FILTER_INFO_0_HU,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_HU },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_HU },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_HU },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_HU },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_HU },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -16491,6 +16949,13 @@ struct retro_core_options_v2 options_hu = {
 #define OPTION_VAL_OFF_ID NULL
 #define BSNES_BLUR_EMULATION_LABEL_ID NULL
 #define BSNES_BLUR_EMULATION_INFO_0_ID NULL
+#define BSNES_VIDEO_FILTER_LABEL_ID NULL
+#define BSNES_VIDEO_FILTER_INFO_0_ID NULL
+#define OPTION_VAL_NONE_ID "Tak ada"
+#define OPTION_VAL_NTSC_RF_ID NULL
+#define OPTION_VAL_NTSC_COMPOSITE_ID NULL
+#define OPTION_VAL_NTSC_S_VIDEO_ID NULL
+#define OPTION_VAL_NTSC_RGB_ID NULL
 #define BSNES_PPU_FAST_LABEL_ID NULL
 #define BSNES_PPU_FAST_LABEL_CAT_ID NULL
 #define BSNES_PPU_FAST_INFO_0_ID NULL
@@ -16548,7 +17013,6 @@ struct retro_core_options_v2 options_hu = {
 #define BSNES_ENTROPY_INFO_0_ID NULL
 #define OPTION_VAL_LOW_ID NULL
 #define OPTION_VAL_HIGH_ID NULL
-#define OPTION_VAL_NONE_ID "Tak ada"
 #define BSNES_CPU_FASTMATH_LABEL_ID NULL
 #define BSNES_CPU_FASTMATH_INFO_0_ID NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_ID NULL
@@ -16735,6 +17199,23 @@ struct retro_core_option_v2_definition option_defs_id[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_ID,
+      BSNES_VIDEO_FILTER_LABEL_ID,
+      BSNES_VIDEO_FILTER_INFO_0_ID,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_ID },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_ID },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_ID },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_ID },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_ID },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -17272,6 +17753,13 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_OFF_IT "8 Pixel"
 #define BSNES_BLUR_EMULATION_LABEL_IT "Emulazione della Sfocatura"
 #define BSNES_BLUR_EMULATION_INFO_0_IT "Simula la risoluzione orizzontale limitata dei televisori a definizione standard, sfumando i pixel adiacenti. Alcuni giochi dipendono da questa opzione per poter riprodurre un effetto trasparenza."
+#define BSNES_VIDEO_FILTER_LABEL_IT "Filtra"
+#define BSNES_VIDEO_FILTER_INFO_0_IT "Scegli tra nessun filtro e il filtro NTSC di blargg con opzioni per RF, Composite, S-Video o RGB"
+#define OPTION_VAL_NONE_IT "Nessuna"
+#define OPTION_VAL_NTSC_RF_IT NULL
+#define OPTION_VAL_NTSC_COMPOSITE_IT "NTSC Composito"
+#define OPTION_VAL_NTSC_S_VIDEO_IT NULL
+#define OPTION_VAL_NTSC_RGB_IT NULL
 #define BSNES_PPU_FAST_LABEL_IT "PPU (Video) - Modalità Rapida"
 #define BSNES_PPU_FAST_LABEL_CAT_IT NULL
 #define BSNES_PPU_FAST_INFO_0_IT "Abilita l'emulazione più veloce della PPU al costo di una minore riduzione di accuratezza. Si consiglia di lasciarla accesa. NOTA: questo deve essere abilitato per le opzioni 'Deinterlace', 'No Sprite Limit' e 'HD Mode 7' per funzionare."
@@ -17329,7 +17817,6 @@ struct retro_core_options_v2 options_id = {
 #define BSNES_ENTROPY_INFO_0_IT "Determina il livello di randomizzazione della memoria e dei registri. Se impostata su 'Nessuna', memoria e registri saranno inizializzati con valori costanti all'avvio. Una bassa randomizzazione produce la rappresentazione più accurata del sistema originale. Se impostata su 'Alta', configura memorie e registri con valori quanto più possibile casuali."
 #define OPTION_VAL_LOW_IT "Bassa"
 #define OPTION_VAL_HIGH_IT "Alta"
-#define OPTION_VAL_NONE_IT "Nessuna"
 #define BSNES_CPU_FASTMATH_LABEL_IT "Accelerazione del Calcolo Matematico della CPU"
 #define BSNES_CPU_FASTMATH_INFO_0_IT "Le operazioni di moltiplicazione e divisione impongono un certo tempo di elaborazione alla CPU di un vero SNES. I vecchi emulatori non simulavano questo ritardo e restituivano immediatamente il risultato. Alcune ROM hack non attendono il completamento delle operazioni matematiche e pertanto richiedono l'utilizzo di questo espediente."
 #define BSNES_CPU_OVERCLOCK_LABEL_IT NULL
@@ -17516,6 +18003,23 @@ struct retro_core_option_v2_definition option_defs_it[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_IT,
+      BSNES_VIDEO_FILTER_LABEL_IT,
+      BSNES_VIDEO_FILTER_INFO_0_IT,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_IT },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_IT },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_IT },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_IT },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_IT },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -18053,6 +18557,13 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_OFF_JA "8 ピクセル"
 #define BSNES_BLUR_EMULATION_LABEL_JA "ぼかしのエミュレーション"
 #define BSNES_BLUR_EMULATION_INFO_0_JA "SDTVの限られた水平方向の隣接するピクセルを一緒にぼかして、水平方向の解像度をシミュレートします。いくつかのゲームはこれに依存して透明効果をエミュレートします。"
+#define BSNES_VIDEO_FILTER_LABEL_JA "フィルタ"
+#define BSNES_VIDEO_FILTER_INFO_0_JA NULL
+#define OPTION_VAL_NONE_JA "なし"
+#define OPTION_VAL_NTSC_RF_JA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_JA NULL
+#define OPTION_VAL_NTSC_S_VIDEO_JA NULL
+#define OPTION_VAL_NTSC_RGB_JA NULL
 #define BSNES_PPU_FAST_LABEL_JA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_JA NULL
 #define BSNES_PPU_FAST_INFO_0_JA NULL
@@ -18110,7 +18621,6 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_ENTROPY_INFO_0_JA NULL
 #define OPTION_VAL_LOW_JA "低"
 #define OPTION_VAL_HIGH_JA "高"
-#define OPTION_VAL_NONE_JA "なし"
 #define BSNES_CPU_FASTMATH_LABEL_JA NULL
 #define BSNES_CPU_FASTMATH_INFO_0_JA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_JA "オーバークロック - CPU"
@@ -18297,6 +18807,23 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_JA,
+      BSNES_VIDEO_FILTER_LABEL_JA,
+      BSNES_VIDEO_FILTER_INFO_0_JA,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_JA },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_JA },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_JA },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_JA },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_JA },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -18834,6 +19361,13 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_OFF_KO "8 픽셀"
 #define BSNES_BLUR_EMULATION_LABEL_KO "블러 에뮬레이션"
 #define BSNES_BLUR_EMULATION_INFO_0_KO "오래된 TV의 낮은 가로 해상도로 인해 발생하는 가로로 인접한 픽셀들 사이의 흐림 효과를 흉내냅니다. 일부 게임은 이 기능을 활용해 반투명 효과를 구현합니다."
+#define BSNES_VIDEO_FILTER_LABEL_KO "필터"
+#define BSNES_VIDEO_FILTER_INFO_0_KO NULL
+#define OPTION_VAL_NONE_KO "없음"
+#define OPTION_VAL_NTSC_RF_KO NULL
+#define OPTION_VAL_NTSC_COMPOSITE_KO NULL
+#define OPTION_VAL_NTSC_S_VIDEO_KO NULL
+#define OPTION_VAL_NTSC_RGB_KO NULL
 #define BSNES_PPU_FAST_LABEL_KO "PPU (비디오) - 빠르게"
 #define BSNES_PPU_FAST_LABEL_CAT_KO "PPU - 빠르게"
 #define BSNES_PPU_FAST_INFO_0_KO "약간의 정확도를 희생하여 PPU 에뮬레이션을 좀 더 빠르게 실행합니다. 이 옵션은 활성화해두는 것이 권장됩니다. 주의: '디인터레이스', '스프라이트 제한 해제', 'HD Mode 7'을 사용하려면 이 옵션이 활성화되어 있어야 합니다."
@@ -18891,7 +19425,6 @@ struct retro_core_options_v2 options_ja = {
 #define BSNES_ENTROPY_INFO_0_KO "메모리와 레지스터의 난수화 강도를 선택합니다. 없음으로 설정할 경우, 코어가 시작될 때 메모리와 레지스터의 모든 값이 특정한 상수값으로 초기화됩니다. 낮음은 실제 시스템을 가장 비슷하게 흉내냅니다. 높음은 난수화할 수 있는 모든 값을 난수화합니다."
 #define OPTION_VAL_LOW_KO "낮음"
 #define OPTION_VAL_HIGH_KO "높음"
-#define OPTION_VAL_NONE_KO "없음"
 #define BSNES_CPU_FASTMATH_LABEL_KO "CPU 빠른 수연산"
 #define BSNES_CPU_FASTMATH_INFO_0_KO "연산 결과를 즉시 제공합니다. 실제 SNES에서 CPU 곱셈과 나눗셈은 연산에 꽤 긴 시간이 걸렸습니다. 오래된 에뮬레이터들은 이 지연을 무시하고 즉시 결과를 제공했으며 일부 오래된 ROM 핵들은 이 행동에 의존하여 수연산의 완료를 기다리지 않았으므로 이 핵을 필요로 합니다."
 #define BSNES_CPU_OVERCLOCK_LABEL_KO "오버클러킹 - CPU"
@@ -19078,6 +19611,23 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_KO,
+      BSNES_VIDEO_FILTER_LABEL_KO,
+      BSNES_VIDEO_FILTER_INFO_0_KO,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_KO },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_KO },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_KO },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_KO },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_KO },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -19615,6 +20165,13 @@ struct retro_core_options_v2 options_ko = {
 #define OPTION_VAL_OFF_NL NULL
 #define BSNES_BLUR_EMULATION_LABEL_NL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_NL NULL
+#define BSNES_VIDEO_FILTER_LABEL_NL NULL
+#define BSNES_VIDEO_FILTER_INFO_0_NL NULL
+#define OPTION_VAL_NONE_NL "Geen"
+#define OPTION_VAL_NTSC_RF_NL NULL
+#define OPTION_VAL_NTSC_COMPOSITE_NL NULL
+#define OPTION_VAL_NTSC_S_VIDEO_NL NULL
+#define OPTION_VAL_NTSC_RGB_NL NULL
 #define BSNES_PPU_FAST_LABEL_NL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_NL NULL
 #define BSNES_PPU_FAST_INFO_0_NL NULL
@@ -19672,7 +20229,6 @@ struct retro_core_options_v2 options_ko = {
 #define BSNES_ENTROPY_INFO_0_NL NULL
 #define OPTION_VAL_LOW_NL NULL
 #define OPTION_VAL_HIGH_NL NULL
-#define OPTION_VAL_NONE_NL "Geen"
 #define BSNES_CPU_FASTMATH_LABEL_NL NULL
 #define BSNES_CPU_FASTMATH_INFO_0_NL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_NL NULL
@@ -19859,6 +20415,23 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_NL,
+      BSNES_VIDEO_FILTER_LABEL_NL,
+      BSNES_VIDEO_FILTER_INFO_0_NL,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_NL },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_NL },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_NL },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_NL },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_NL },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -20396,6 +20969,13 @@ struct retro_core_options_v2 options_nl = {
 #define OPTION_VAL_OFF_NO NULL
 #define BSNES_BLUR_EMULATION_LABEL_NO NULL
 #define BSNES_BLUR_EMULATION_INFO_0_NO NULL
+#define BSNES_VIDEO_FILTER_LABEL_NO NULL
+#define BSNES_VIDEO_FILTER_INFO_0_NO NULL
+#define OPTION_VAL_NONE_NO "Ingen"
+#define OPTION_VAL_NTSC_RF_NO NULL
+#define OPTION_VAL_NTSC_COMPOSITE_NO NULL
+#define OPTION_VAL_NTSC_S_VIDEO_NO NULL
+#define OPTION_VAL_NTSC_RGB_NO NULL
 #define BSNES_PPU_FAST_LABEL_NO NULL
 #define BSNES_PPU_FAST_LABEL_CAT_NO NULL
 #define BSNES_PPU_FAST_INFO_0_NO NULL
@@ -20453,7 +21033,6 @@ struct retro_core_options_v2 options_nl = {
 #define BSNES_ENTROPY_INFO_0_NO NULL
 #define OPTION_VAL_LOW_NO NULL
 #define OPTION_VAL_HIGH_NO NULL
-#define OPTION_VAL_NONE_NO "Ingen"
 #define BSNES_CPU_FASTMATH_LABEL_NO NULL
 #define BSNES_CPU_FASTMATH_INFO_0_NO NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_NO NULL
@@ -20640,6 +21219,23 @@ struct retro_core_option_v2_definition option_defs_no[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_NO,
+      BSNES_VIDEO_FILTER_LABEL_NO,
+      BSNES_VIDEO_FILTER_INFO_0_NO,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_NO },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_NO },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_NO },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_NO },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_NO },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -21177,6 +21773,13 @@ struct retro_core_options_v2 options_no = {
 #define OPTION_VAL_OFF_OR NULL
 #define BSNES_BLUR_EMULATION_LABEL_OR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_OR NULL
+#define BSNES_VIDEO_FILTER_LABEL_OR NULL
+#define BSNES_VIDEO_FILTER_INFO_0_OR NULL
+#define OPTION_VAL_NONE_OR NULL
+#define OPTION_VAL_NTSC_RF_OR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_OR NULL
+#define OPTION_VAL_NTSC_S_VIDEO_OR NULL
+#define OPTION_VAL_NTSC_RGB_OR NULL
 #define BSNES_PPU_FAST_LABEL_OR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_OR NULL
 #define BSNES_PPU_FAST_INFO_0_OR NULL
@@ -21234,7 +21837,6 @@ struct retro_core_options_v2 options_no = {
 #define BSNES_ENTROPY_INFO_0_OR NULL
 #define OPTION_VAL_LOW_OR NULL
 #define OPTION_VAL_HIGH_OR NULL
-#define OPTION_VAL_NONE_OR NULL
 #define BSNES_CPU_FASTMATH_LABEL_OR NULL
 #define BSNES_CPU_FASTMATH_INFO_0_OR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_OR NULL
@@ -21421,6 +22023,23 @@ struct retro_core_option_v2_definition option_defs_or[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_OR,
+      BSNES_VIDEO_FILTER_LABEL_OR,
+      BSNES_VIDEO_FILTER_INFO_0_OR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_OR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_OR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_OR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_OR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_OR },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -21958,6 +22577,13 @@ struct retro_core_options_v2 options_or = {
 #define OPTION_VAL_OFF_PL NULL
 #define BSNES_BLUR_EMULATION_LABEL_PL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_PL NULL
+#define BSNES_VIDEO_FILTER_LABEL_PL "Filtr"
+#define BSNES_VIDEO_FILTER_INFO_0_PL "Wybierz między bez filtrowania a dużym filtrem NTSC z opcjami dla RF, Kompozytu, S-Video lub RGB"
+#define OPTION_VAL_NONE_PL "Brak"
+#define OPTION_VAL_NTSC_RF_PL NULL
+#define OPTION_VAL_NTSC_COMPOSITE_PL "NTSC (kompozyt)"
+#define OPTION_VAL_NTSC_S_VIDEO_PL "NTSC (S-wideo)"
+#define OPTION_VAL_NTSC_RGB_PL NULL
 #define BSNES_PPU_FAST_LABEL_PL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_PL NULL
 #define BSNES_PPU_FAST_INFO_0_PL "Włącz szybszą emulację PPU kosztem niewielkiego zmniejszenia dokładności. Zaleca się, aby to zostawić. UWAGA: to musi być włączone dla opcji 'Deinterlace', 'No Sprite Limit' i 'HD Mode 7' do działania."
@@ -22015,7 +22641,6 @@ struct retro_core_options_v2 options_or = {
 #define BSNES_ENTROPY_INFO_0_PL NULL
 #define OPTION_VAL_LOW_PL "Niski"
 #define OPTION_VAL_HIGH_PL "Wysoki"
-#define OPTION_VAL_NONE_PL "Brak"
 #define BSNES_CPU_FASTMATH_LABEL_PL NULL
 #define BSNES_CPU_FASTMATH_INFO_0_PL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_PL NULL
@@ -22202,6 +22827,23 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_PL,
+      BSNES_VIDEO_FILTER_LABEL_PL,
+      BSNES_VIDEO_FILTER_INFO_0_PL,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_PL },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_PL },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_PL },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_PL },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_PL },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -22739,6 +23381,13 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_OFF_PT_BR NULL
 #define BSNES_BLUR_EMULATION_LABEL_PT_BR "Emulação do desfoque"
 #define BSNES_BLUR_EMULATION_INFO_0_PT_BR "Simula a resolução horizontal limitada dos SDTVs, desfocando os pixels horizontalmente adjetivos. Alguns jogos dependem disso para emular um efeito de transparência."
+#define BSNES_VIDEO_FILTER_LABEL_PT_BR "Filtro"
+#define BSNES_VIDEO_FILTER_INFO_0_PT_BR NULL
+#define OPTION_VAL_NONE_PT_BR "Nenhuma"
+#define OPTION_VAL_NTSC_RF_PT_BR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_PT_BR NULL
+#define OPTION_VAL_NTSC_S_VIDEO_PT_BR NULL
+#define OPTION_VAL_NTSC_RGB_PT_BR NULL
 #define BSNES_PPU_FAST_LABEL_PT_BR "Modo rápido - PPU (vídeo)"
 #define BSNES_PPU_FAST_LABEL_CAT_PT_BR "Modo rápido - PPU"
 #define BSNES_PPU_FAST_INFO_0_PT_BR NULL
@@ -22796,7 +23445,6 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_ENTROPY_INFO_0_PT_BR "Escolha o nível de aleatorização da memória e dos registros. Se ajustado para 'Nenhuma', toda a memória e registros são inicializados para valores constantes na inicialização. 'Baixa' aleatorização proporciona a representação mais precisa de um sistema real. ' Alta' irá aleatorizar o máximo possível."
 #define OPTION_VAL_LOW_PT_BR "Baixa"
 #define OPTION_VAL_HIGH_PT_BR "Alta"
-#define OPTION_VAL_NONE_PT_BR "Nenhuma"
 #define BSNES_CPU_FASTMATH_LABEL_PT_BR "Matemática rápida da CPU"
 #define BSNES_CPU_FASTMATH_INFO_0_PT_BR "Proporciona resultados de computação de imediato. A multiplicação e a divisão pela CPU leva tempo para ser completada em um SNES real. Os emuladores mais antigos não simulavam estes atrasos e, portanto, alguns hacks mais antigos de ROMs não esperam por operações matemáticas para completar e precisam deste hack."
 #define BSNES_CPU_OVERCLOCK_LABEL_PT_BR NULL
@@ -22983,6 +23631,23 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_PT_BR,
+      BSNES_VIDEO_FILTER_LABEL_PT_BR,
+      BSNES_VIDEO_FILTER_INFO_0_PT_BR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_PT_BR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_PT_BR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_PT_BR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_PT_BR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_PT_BR },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -23520,6 +24185,13 @@ struct retro_core_options_v2 options_pt_br = {
 #define OPTION_VAL_OFF_PT_PT NULL
 #define BSNES_BLUR_EMULATION_LABEL_PT_PT NULL
 #define BSNES_BLUR_EMULATION_INFO_0_PT_PT NULL
+#define BSNES_VIDEO_FILTER_LABEL_PT_PT "Filtro"
+#define BSNES_VIDEO_FILTER_INFO_0_PT_PT NULL
+#define OPTION_VAL_NONE_PT_PT "Nenhum"
+#define OPTION_VAL_NTSC_RF_PT_PT NULL
+#define OPTION_VAL_NTSC_COMPOSITE_PT_PT NULL
+#define OPTION_VAL_NTSC_S_VIDEO_PT_PT NULL
+#define OPTION_VAL_NTSC_RGB_PT_PT NULL
 #define BSNES_PPU_FAST_LABEL_PT_PT NULL
 #define BSNES_PPU_FAST_LABEL_CAT_PT_PT NULL
 #define BSNES_PPU_FAST_INFO_0_PT_PT NULL
@@ -23577,7 +24249,6 @@ struct retro_core_options_v2 options_pt_br = {
 #define BSNES_ENTROPY_INFO_0_PT_PT NULL
 #define OPTION_VAL_LOW_PT_PT NULL
 #define OPTION_VAL_HIGH_PT_PT NULL
-#define OPTION_VAL_NONE_PT_PT "Nenhum"
 #define BSNES_CPU_FASTMATH_LABEL_PT_PT NULL
 #define BSNES_CPU_FASTMATH_INFO_0_PT_PT NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_PT_PT NULL
@@ -23764,6 +24435,23 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_PT_PT,
+      BSNES_VIDEO_FILTER_LABEL_PT_PT,
+      BSNES_VIDEO_FILTER_INFO_0_PT_PT,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_PT_PT },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_PT_PT },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_PT_PT },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_PT_PT },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_PT_PT },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -24301,6 +24989,13 @@ struct retro_core_options_v2 options_pt_pt = {
 #define OPTION_VAL_OFF_RU NULL
 #define BSNES_BLUR_EMULATION_LABEL_RU NULL
 #define BSNES_BLUR_EMULATION_INFO_0_RU NULL
+#define BSNES_VIDEO_FILTER_LABEL_RU "Фильтр"
+#define BSNES_VIDEO_FILTER_INFO_0_RU NULL
+#define OPTION_VAL_NONE_RU "Отключено"
+#define OPTION_VAL_NTSC_RF_RU NULL
+#define OPTION_VAL_NTSC_COMPOSITE_RU NULL
+#define OPTION_VAL_NTSC_S_VIDEO_RU NULL
+#define OPTION_VAL_NTSC_RGB_RU NULL
 #define BSNES_PPU_FAST_LABEL_RU NULL
 #define BSNES_PPU_FAST_LABEL_CAT_RU NULL
 #define BSNES_PPU_FAST_INFO_0_RU NULL
@@ -24358,7 +25053,6 @@ struct retro_core_options_v2 options_pt_pt = {
 #define BSNES_ENTROPY_INFO_0_RU NULL
 #define OPTION_VAL_LOW_RU "Низкое"
 #define OPTION_VAL_HIGH_RU "Высокое"
-#define OPTION_VAL_NONE_RU "Отключено"
 #define BSNES_CPU_FASTMATH_LABEL_RU NULL
 #define BSNES_CPU_FASTMATH_INFO_0_RU NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_RU NULL
@@ -24545,6 +25239,23 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_RU,
+      BSNES_VIDEO_FILTER_LABEL_RU,
+      BSNES_VIDEO_FILTER_INFO_0_RU,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_RU },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_RU },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_RU },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_RU },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_RU },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -25082,6 +25793,13 @@ struct retro_core_options_v2 options_ru = {
 #define OPTION_VAL_OFF_SK "8 bodov"
 #define BSNES_BLUR_EMULATION_LABEL_SK NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SK NULL
+#define BSNES_VIDEO_FILTER_LABEL_SK "Filtrovať"
+#define BSNES_VIDEO_FILTER_INFO_0_SK NULL
+#define OPTION_VAL_NONE_SK "Žiadne"
+#define OPTION_VAL_NTSC_RF_SK NULL
+#define OPTION_VAL_NTSC_COMPOSITE_SK NULL
+#define OPTION_VAL_NTSC_S_VIDEO_SK NULL
+#define OPTION_VAL_NTSC_RGB_SK NULL
 #define BSNES_PPU_FAST_LABEL_SK NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SK NULL
 #define BSNES_PPU_FAST_INFO_0_SK NULL
@@ -25139,7 +25857,6 @@ struct retro_core_options_v2 options_ru = {
 #define BSNES_ENTROPY_INFO_0_SK NULL
 #define OPTION_VAL_LOW_SK "Nízke"
 #define OPTION_VAL_HIGH_SK "Vysoké"
-#define OPTION_VAL_NONE_SK "Žiadne"
 #define BSNES_CPU_FASTMATH_LABEL_SK NULL
 #define BSNES_CPU_FASTMATH_INFO_0_SK NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_SK NULL
@@ -25326,6 +26043,23 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_SK,
+      BSNES_VIDEO_FILTER_LABEL_SK,
+      BSNES_VIDEO_FILTER_INFO_0_SK,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_SK },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_SK },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_SK },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_SK },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_SK },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -25863,6 +26597,13 @@ struct retro_core_options_v2 options_sk = {
 #define OPTION_VAL_OFF_SR NULL
 #define BSNES_BLUR_EMULATION_LABEL_SR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SR NULL
+#define BSNES_VIDEO_FILTER_LABEL_SR NULL
+#define BSNES_VIDEO_FILTER_INFO_0_SR NULL
+#define OPTION_VAL_NONE_SR NULL
+#define OPTION_VAL_NTSC_RF_SR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_SR NULL
+#define OPTION_VAL_NTSC_S_VIDEO_SR NULL
+#define OPTION_VAL_NTSC_RGB_SR NULL
 #define BSNES_PPU_FAST_LABEL_SR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SR NULL
 #define BSNES_PPU_FAST_INFO_0_SR NULL
@@ -25920,7 +26661,6 @@ struct retro_core_options_v2 options_sk = {
 #define BSNES_ENTROPY_INFO_0_SR NULL
 #define OPTION_VAL_LOW_SR NULL
 #define OPTION_VAL_HIGH_SR NULL
-#define OPTION_VAL_NONE_SR NULL
 #define BSNES_CPU_FASTMATH_LABEL_SR NULL
 #define BSNES_CPU_FASTMATH_INFO_0_SR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_SR NULL
@@ -26107,6 +26847,23 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_SR,
+      BSNES_VIDEO_FILTER_LABEL_SR,
+      BSNES_VIDEO_FILTER_INFO_0_SR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_SR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_SR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_SR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_SR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_SR },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -26644,6 +27401,13 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_OFF_SV "8 pixlar"
 #define BSNES_BLUR_EMULATION_LABEL_SV NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SV NULL
+#define BSNES_VIDEO_FILTER_LABEL_SV NULL
+#define BSNES_VIDEO_FILTER_INFO_0_SV NULL
+#define OPTION_VAL_NONE_SV "Ingen"
+#define OPTION_VAL_NTSC_RF_SV NULL
+#define OPTION_VAL_NTSC_COMPOSITE_SV NULL
+#define OPTION_VAL_NTSC_S_VIDEO_SV NULL
+#define OPTION_VAL_NTSC_RGB_SV NULL
 #define BSNES_PPU_FAST_LABEL_SV NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SV NULL
 #define BSNES_PPU_FAST_INFO_0_SV NULL
@@ -26701,7 +27465,6 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_ENTROPY_INFO_0_SV NULL
 #define OPTION_VAL_LOW_SV "Låg"
 #define OPTION_VAL_HIGH_SV "Hög"
-#define OPTION_VAL_NONE_SV "Ingen"
 #define BSNES_CPU_FASTMATH_LABEL_SV NULL
 #define BSNES_CPU_FASTMATH_INFO_0_SV NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_SV NULL
@@ -26888,6 +27651,23 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_SV,
+      BSNES_VIDEO_FILTER_LABEL_SV,
+      BSNES_VIDEO_FILTER_INFO_0_SV,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_SV },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_SV },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_SV },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_SV },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_SV },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -27425,6 +28205,13 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_OFF_TR "8 Piksel"
 #define BSNES_BLUR_EMULATION_LABEL_TR "Bulanıklık Taklidi"
 #define BSNES_BLUR_EMULATION_INFO_0_TR "Yatay olarak bitişik pikselleri bulanıklaştırarak SDTV'lerin sınırlı yatay çözünürlüğünü taklit edin. Bazı oyunlar şeffaflık efektini taklit etmek için buna bağlıdır."
+#define BSNES_VIDEO_FILTER_LABEL_TR "Filtre"
+#define BSNES_VIDEO_FILTER_INFO_0_TR "RF, Kompozit, S-Video veya RGB seçenekleriyle filtrelemesiz ve blargg NTSC filtresi arasında seçim yapın"
+#define OPTION_VAL_NONE_TR "Yok"
+#define OPTION_VAL_NTSC_RF_TR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_TR "NTSC (Kompozit)"
+#define OPTION_VAL_NTSC_S_VIDEO_TR NULL
+#define OPTION_VAL_NTSC_RGB_TR NULL
 #define BSNES_PPU_FAST_LABEL_TR "PPU (Video) - Hızlı Kip"
 #define BSNES_PPU_FAST_LABEL_CAT_TR "PPU - Hızlı Kip"
 #define BSNES_PPU_FAST_INFO_0_TR "Doğrulukta küçük bir sapma ile PPU daha hızlı taklit etmesini etkinleştirin. Bunu açık bırakmanız önerilir. NOT: 'Deinterlace', 'No Sprite Limit' ve 'HD Mode 7' seçeneklerinin çalışması için bu etkinleştirilmelidir."
@@ -27482,7 +28269,6 @@ struct retro_core_options_v2 options_sv = {
 #define BSNES_ENTROPY_INFO_0_TR "Bellek ve kayıtların rastgelelik düzeyini seçin. Yok olarak ayarlanırsa, tüm bellek ve kayıtlar başlangıçta sabit değerlere başlatılır. Düşük rastgeleleştirme, gerçek bir sistemin en doğru temsilini sağlar. Mümkün olduğunca yüksek rasgele yapar."
 #define OPTION_VAL_LOW_TR "Düşük"
 #define OPTION_VAL_HIGH_TR "Yüksek"
-#define OPTION_VAL_NONE_TR "Yok"
 #define BSNES_CPU_FASTMATH_LABEL_TR "CPU Hızlı Hesaplama"
 #define BSNES_CPU_FASTMATH_INFO_0_TR "Hesaplama sonuçlarını hemen sağlayın. CPU çarpma ve bölme işleminin gerçek bir SNES'te tamamlanması zaman alır. Daha eski emulatörler bu gecikmeleri taklit etmedi ve bu nedenle bazı eski ROM geliştiricileri matematik işlemlerinin tamamlanmasını beklemez ve bu kesmeye ihtiyaç duyar."
 #define BSNES_CPU_OVERCLOCK_LABEL_TR "Hız Aşırtma - CPU"
@@ -27669,6 +28455,23 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_TR,
+      BSNES_VIDEO_FILTER_LABEL_TR,
+      BSNES_VIDEO_FILTER_INFO_0_TR,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_TR },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_TR },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_TR },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_TR },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_TR },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -28206,6 +29009,13 @@ struct retro_core_options_v2 options_tr = {
 #define OPTION_VAL_OFF_UK NULL
 #define BSNES_BLUR_EMULATION_LABEL_UK NULL
 #define BSNES_BLUR_EMULATION_INFO_0_UK NULL
+#define BSNES_VIDEO_FILTER_LABEL_UK "Фільтр"
+#define BSNES_VIDEO_FILTER_INFO_0_UK NULL
+#define OPTION_VAL_NONE_UK NULL
+#define OPTION_VAL_NTSC_RF_UK NULL
+#define OPTION_VAL_NTSC_COMPOSITE_UK NULL
+#define OPTION_VAL_NTSC_S_VIDEO_UK NULL
+#define OPTION_VAL_NTSC_RGB_UK NULL
 #define BSNES_PPU_FAST_LABEL_UK NULL
 #define BSNES_PPU_FAST_LABEL_CAT_UK NULL
 #define BSNES_PPU_FAST_INFO_0_UK NULL
@@ -28263,7 +29073,6 @@ struct retro_core_options_v2 options_tr = {
 #define BSNES_ENTROPY_INFO_0_UK NULL
 #define OPTION_VAL_LOW_UK NULL
 #define OPTION_VAL_HIGH_UK NULL
-#define OPTION_VAL_NONE_UK NULL
 #define BSNES_CPU_FASTMATH_LABEL_UK NULL
 #define BSNES_CPU_FASTMATH_INFO_0_UK NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_UK NULL
@@ -28450,6 +29259,23 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_UK,
+      BSNES_VIDEO_FILTER_LABEL_UK,
+      BSNES_VIDEO_FILTER_INFO_0_UK,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_UK },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_UK },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_UK },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_UK },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_UK },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -28987,6 +29813,13 @@ struct retro_core_options_v2 options_uk = {
 #define OPTION_VAL_OFF_VAL NULL
 #define BSNES_BLUR_EMULATION_LABEL_VAL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_VAL NULL
+#define BSNES_VIDEO_FILTER_LABEL_VAL NULL
+#define BSNES_VIDEO_FILTER_INFO_0_VAL NULL
+#define OPTION_VAL_NONE_VAL "Cap"
+#define OPTION_VAL_NTSC_RF_VAL NULL
+#define OPTION_VAL_NTSC_COMPOSITE_VAL NULL
+#define OPTION_VAL_NTSC_S_VIDEO_VAL NULL
+#define OPTION_VAL_NTSC_RGB_VAL NULL
 #define BSNES_PPU_FAST_LABEL_VAL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_VAL NULL
 #define BSNES_PPU_FAST_INFO_0_VAL NULL
@@ -29044,7 +29877,6 @@ struct retro_core_options_v2 options_uk = {
 #define BSNES_ENTROPY_INFO_0_VAL NULL
 #define OPTION_VAL_LOW_VAL NULL
 #define OPTION_VAL_HIGH_VAL NULL
-#define OPTION_VAL_NONE_VAL "Cap"
 #define BSNES_CPU_FASTMATH_LABEL_VAL NULL
 #define BSNES_CPU_FASTMATH_INFO_0_VAL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_VAL NULL
@@ -29231,6 +30063,23 @@ struct retro_core_option_v2_definition option_defs_val[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_VAL,
+      BSNES_VIDEO_FILTER_LABEL_VAL,
+      BSNES_VIDEO_FILTER_INFO_0_VAL,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_VAL },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_VAL },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_VAL },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_VAL },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_VAL },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
@@ -29768,6 +30617,13 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_OFF_VN NULL
 #define BSNES_BLUR_EMULATION_LABEL_VN NULL
 #define BSNES_BLUR_EMULATION_INFO_0_VN NULL
+#define BSNES_VIDEO_FILTER_LABEL_VN NULL
+#define BSNES_VIDEO_FILTER_INFO_0_VN NULL
+#define OPTION_VAL_NONE_VN "Không"
+#define OPTION_VAL_NTSC_RF_VN NULL
+#define OPTION_VAL_NTSC_COMPOSITE_VN NULL
+#define OPTION_VAL_NTSC_S_VIDEO_VN NULL
+#define OPTION_VAL_NTSC_RGB_VN NULL
 #define BSNES_PPU_FAST_LABEL_VN NULL
 #define BSNES_PPU_FAST_LABEL_CAT_VN NULL
 #define BSNES_PPU_FAST_INFO_0_VN NULL
@@ -29825,7 +30681,6 @@ struct retro_core_options_v2 options_val = {
 #define BSNES_ENTROPY_INFO_0_VN NULL
 #define OPTION_VAL_LOW_VN NULL
 #define OPTION_VAL_HIGH_VN NULL
-#define OPTION_VAL_NONE_VN "Không"
 #define BSNES_CPU_FASTMATH_LABEL_VN NULL
 #define BSNES_CPU_FASTMATH_INFO_0_VN NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_VN NULL
@@ -30012,6 +30867,23 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
          { NULL, NULL },
       },
       "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_VN,
+      BSNES_VIDEO_FILTER_LABEL_VN,
+      BSNES_VIDEO_FILTER_INFO_0_VN,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_VN },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_VN },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_VN },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_VN },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_VN },
+         { NULL, NULL },
+      },
+      "None"
    },
    {
       "bsnes_ppu_fast",
