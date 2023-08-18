@@ -24964,9 +24964,9 @@ struct retro_core_options_v2 options_pt_pt = {
 /* RETRO_LANGUAGE_RU */
 
 #define CATEGORY_VIDEO_LABEL_RU "Видео"
-#define CATEGORY_VIDEO_INFO_0_RU "Изменить настройки вывода изображения."
+#define CATEGORY_VIDEO_INFO_0_RU "Настройки вывода изображения."
 #define CATEGORY_AUDIO_LABEL_RU "Аудио"
-#define CATEGORY_AUDIO_INFO_0_RU "Изменить настройки вывода звука."
+#define CATEGORY_AUDIO_INFO_0_RU "Настройки вывода звука."
 #define CATEGORY_MODE7_LABEL_RU NULL
 #define CATEGORY_MODE7_INFO_0_RU NULL
 #define CATEGORY_HACK_LABEL_RU NULL
@@ -27405,7 +27405,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_VIDEO_FILTER_INFO_0_SV NULL
 #define OPTION_VAL_NONE_SV "Ingen"
 #define OPTION_VAL_NTSC_RF_SV NULL
-#define OPTION_VAL_NTSC_COMPOSITE_SV NULL
+#define OPTION_VAL_NTSC_COMPOSITE_SV "NTSC (Komposit)"
 #define OPTION_VAL_NTSC_S_VIDEO_SV NULL
 #define OPTION_VAL_NTSC_RGB_SV NULL
 #define BSNES_PPU_FAST_LABEL_SV NULL
