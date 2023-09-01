@@ -19362,10 +19362,10 @@ struct retro_core_options_v2 options_ja = {
 #define BSNES_BLUR_EMULATION_LABEL_KO "블러 에뮬레이션"
 #define BSNES_BLUR_EMULATION_INFO_0_KO "오래된 TV의 낮은 가로 해상도로 인해 발생하는 가로로 인접한 픽셀들 사이의 흐림 효과를 흉내냅니다. 일부 게임은 이 기능을 활용해 반투명 효과를 구현합니다."
 #define BSNES_VIDEO_FILTER_LABEL_KO "필터"
-#define BSNES_VIDEO_FILTER_INFO_0_KO NULL
+#define BSNES_VIDEO_FILTER_INFO_0_KO "필터링 없음과 RF, 컴포지트, S-Video 또는 RGB 옵션이 포함된 blargg의 NTSC 필터 중에서 선택"
 #define OPTION_VAL_NONE_KO "없음"
 #define OPTION_VAL_NTSC_RF_KO NULL
-#define OPTION_VAL_NTSC_COMPOSITE_KO NULL
+#define OPTION_VAL_NTSC_COMPOSITE_KO "NTSC (컴포지트)"
 #define OPTION_VAL_NTSC_S_VIDEO_KO NULL
 #define OPTION_VAL_NTSC_RGB_KO NULL
 #define BSNES_PPU_FAST_LABEL_KO "PPU (비디오) - 빠르게"
