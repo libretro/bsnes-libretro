@@ -1649,8 +1649,8 @@ struct retro_core_options_v2 options_ast = {
 
 #define CATEGORY_VIDEO_LABEL_BE "Відэа"
 #define CATEGORY_VIDEO_INFO_0_BE "Змяніць налады вываду відэа."
-#define CATEGORY_AUDIO_LABEL_BE "Аўдыё"
-#define CATEGORY_AUDIO_INFO_0_BE "Змяніць налады вываду аўдыё."
+#define CATEGORY_AUDIO_LABEL_BE "Аўдыя"
+#define CATEGORY_AUDIO_INFO_0_BE "Змяніць налады вываду аўдыя."
 #define CATEGORY_MODE7_LABEL_BE NULL
 #define CATEGORY_MODE7_INFO_0_BE NULL
 #define CATEGORY_HACK_LABEL_BE NULL
