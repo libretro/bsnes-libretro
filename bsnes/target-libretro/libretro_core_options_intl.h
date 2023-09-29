@@ -24978,7 +24978,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define CATEGORY_LIGHTGUN_LABEL_RU "Световой пистолет"
 #define CATEGORY_LIGHTGUN_INFO_0_RU NULL
 #define BSNES_ASPECT_RATIO_LABEL_RU "Предпочтительное соотношение сторон"
-#define BSNES_ASPECT_RATIO_INFO_0_RU "Выбор предпочтительного соотношения сторон контента. Учитывается только при установке соотношения сторон RetroArch на 'Core Provided' в настройках видео."
+#define BSNES_ASPECT_RATIO_INFO_0_RU NULL
 #define OPTION_VAL_AUTO_RU "Авто"
 #define OPTION_VAL_8_7_RU NULL
 #define OPTION_VAL_4_3_RU NULL
