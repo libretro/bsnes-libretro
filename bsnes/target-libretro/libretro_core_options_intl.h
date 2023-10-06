@@ -25067,7 +25067,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define OPTION_VAL_70_RU NULL
 #define OPTION_VAL_80_RU NULL
 #define OPTION_VAL_90_RU NULL
-#define OPTION_VAL_100_RU NULL
+#define OPTION_VAL_100_RU "100% (по умолчанию)"
 #define OPTION_VAL_110_RU NULL
 #define OPTION_VAL_120_RU NULL
 #define OPTION_VAL_130_RU NULL
@@ -27389,7 +27389,7 @@ struct retro_core_options_v2 options_sr = {
 #define CATEGORY_SGB_INFO_0_SV NULL
 #define CATEGORY_LIGHTGUN_LABEL_SV NULL
 #define CATEGORY_LIGHTGUN_INFO_0_SV NULL
-#define BSNES_ASPECT_RATIO_LABEL_SV NULL
+#define BSNES_ASPECT_RATIO_LABEL_SV "Föredragen bildförhållande"
 #define BSNES_ASPECT_RATIO_INFO_0_SV NULL
 #define OPTION_VAL_AUTO_SV "Automatiskt"
 #define OPTION_VAL_8_7_SV NULL
