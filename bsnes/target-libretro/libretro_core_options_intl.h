@@ -1650,7 +1650,7 @@ struct retro_core_options_v2 options_ast = {
 #define CATEGORY_VIDEO_LABEL_BE "Відэа"
 #define CATEGORY_VIDEO_INFO_0_BE "Змяніць налады вываду відэа."
 #define CATEGORY_AUDIO_LABEL_BE "Аўдыя"
-#define CATEGORY_AUDIO_INFO_0_BE "Змяніць налады вываду аўдыя."
+#define CATEGORY_AUDIO_INFO_0_BE "Змяніць налады вываду гука."
 #define CATEGORY_MODE7_LABEL_BE NULL
 #define CATEGORY_MODE7_INFO_0_BE NULL
 #define CATEGORY_HACK_LABEL_BE NULL
@@ -25030,7 +25030,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define OPTION_VAL_8X_RU NULL
 #define BSNES_MODE7_PERSPECTIVE_LABEL_RU "HD Mode 7 - Коррекция перспективы"
 #define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_RU "Коррекция перспективы"
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_RU "Исправляет перспективу для графики Mode 7 в играх с поддержкой данного режима путём обхода ограничений в целочисленных вычислениях SNES."
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_RU "Исправляет перспективу в играх, использующих Mode 7 путём обхода ограничений при операциях SNES с целыми числами."
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_RU "HD Mode 7 - Суперсэмплинг"
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_RU "Суперсэмплинг"
 #define BSNES_MODE7_SUPERSAMPLE_INFO_0_RU "Включает суперсэмплинг графики Mode 7 в играх с поддержкой данного режима. В комбинации с изменением масштаба Mode 7 обеспечивает эффект, схожий со сглаживанием."
@@ -25050,7 +25050,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define BSNES_HOTFIXES_LABEL_RU "Исправления"
 #define BSNES_HOTFIXES_INFO_0_RU "Даже коммерческое программное обеспечение может иметь ошибки. Данная опция исправляет некоторые критические баги, имеющие место на реальном оборудовании."
 #define BSNES_ENTROPY_LABEL_RU "Энтропия (рандомизация)"
-#define BSNES_ENTROPY_INFO_0_RU "Степень рандомизации памяти и регистров. При отключении настройки память и регистры при запуске принимают постоянные значения. Низкая рандомизация наиболее точно воспроизводит реальную систему. Высокая рандомизирует максимально."
+#define BSNES_ENTROPY_INFO_0_RU "Степень рандомизации памяти и регистров. Если откл., при запуске память и регистры принимают постоянные значения. Низкая рандомизация наиболее точно воспроизводит поведение реальной системы. Высокая рандомизирует максимально."
 #define OPTION_VAL_LOW_RU "Низкая"
 #define OPTION_VAL_HIGH_RU "Высокая"
 #define BSNES_CPU_FASTMATH_LABEL_RU "Ускорение вычислений CPU"
@@ -25797,7 +25797,7 @@ struct retro_core_options_v2 options_ru = {
 #define BSNES_VIDEO_FILTER_INFO_0_SK NULL
 #define OPTION_VAL_NONE_SK "Žiadne"
 #define OPTION_VAL_NTSC_RF_SK NULL
-#define OPTION_VAL_NTSC_COMPOSITE_SK NULL
+#define OPTION_VAL_NTSC_COMPOSITE_SK "NTSC (kompozitné)"
 #define OPTION_VAL_NTSC_S_VIDEO_SK NULL
 #define OPTION_VAL_NTSC_RGB_SK NULL
 #define BSNES_PPU_FAST_LABEL_SK NULL
@@ -25859,7 +25859,7 @@ struct retro_core_options_v2 options_ru = {
 #define OPTION_VAL_HIGH_SK "Vysoké"
 #define BSNES_CPU_FASTMATH_LABEL_SK NULL
 #define BSNES_CPU_FASTMATH_INFO_0_SK NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_SK NULL
+#define BSNES_CPU_OVERCLOCK_LABEL_SK "Pretaktovanie - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SK NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SK NULL
 #define OPTION_VAL_10_SK NULL
