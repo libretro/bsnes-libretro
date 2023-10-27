@@ -25038,7 +25038,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_RU "HD->SD Мозаика"
 #define BSNES_MODE7_MOSAIC_INFO_0_RU "Отображать эффект мозаики даже при апскейлинге графики в Mode 7."
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_RU "Встроенное забегание"
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_RU "Имитирует забегание и откат системы для снижения задержки ввода. Высокие системные требования."
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_RU "Эмуляция системы с опережением и последующим откатом для уменьшения задержки ввода. Высокие системные требования."
 #define OPTION_VAL_1_RU "1 кадр"
 #define OPTION_VAL_2_RU "2 кадра"
 #define OPTION_VAL_3_RU "3 кадра"
