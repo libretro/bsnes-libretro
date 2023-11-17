@@ -27392,7 +27392,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredragen bildförhållande"
 #define BSNES_ASPECT_RATIO_INFO_0_SV NULL
 #define OPTION_VAL_AUTO_SV "Automatiskt"
-#define OPTION_VAL_8_7_SV NULL
+#define OPTION_VAL_8_7_SV "Exakta Pixlar"
 #define OPTION_VAL_4_3_SV NULL
 #define OPTION_VAL_NTSC_SV NULL
 #define OPTION_VAL_PAL_SV NULL
