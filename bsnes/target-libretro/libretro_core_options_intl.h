@@ -27389,14 +27389,14 @@ struct retro_core_options_v2 options_sr = {
 #define CATEGORY_SGB_INFO_0_SV NULL
 #define CATEGORY_LIGHTGUN_LABEL_SV NULL
 #define CATEGORY_LIGHTGUN_INFO_0_SV NULL
-#define BSNES_ASPECT_RATIO_LABEL_SV "Föredragen bildförhållande"
-#define BSNES_ASPECT_RATIO_INFO_0_SV NULL
-#define OPTION_VAL_AUTO_SV "Automatiskt"
-#define OPTION_VAL_8_7_SV "Exakta Pixlar"
+#define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
+#define BSNES_ASPECT_RATIO_INFO_0_SV "Välj föredraget bildformat för innehåll. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
+#define OPTION_VAL_AUTO_SV NULL
+#define OPTION_VAL_8_7_SV "Perfekta Pixlar"
 #define OPTION_VAL_4_3_SV NULL
 #define OPTION_VAL_NTSC_SV NULL
 #define OPTION_VAL_PAL_SV NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_SV NULL
+#define BSNES_PPU_SHOW_OVERSCAN_LABEL_SV "Beskär Overscan"
 #define BSNES_PPU_SHOW_OVERSCAN_INFO_0_SV NULL
 #define OPTION_VAL_OFF_SV "8 pixlar"
 #define BSNES_BLUR_EMULATION_LABEL_SV NULL
@@ -27479,7 +27479,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_70_SV "70 %"
 #define OPTION_VAL_80_SV "80 %"
 #define OPTION_VAL_90_SV "90 %"
-#define OPTION_VAL_100_SV NULL
+#define OPTION_VAL_100_SV "100% (Standard)"
 #define OPTION_VAL_110_SV "110 %"
 #define OPTION_VAL_120_SV "120 %"
 #define OPTION_VAL_130_SV "130 %"
