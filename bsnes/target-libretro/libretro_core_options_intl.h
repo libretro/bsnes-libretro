@@ -1650,7 +1650,7 @@ struct retro_core_options_v2 options_ast = {
 #define CATEGORY_VIDEO_LABEL_BE "Відэа"
 #define CATEGORY_VIDEO_INFO_0_BE "Змяніць налады вываду відэа."
 #define CATEGORY_AUDIO_LABEL_BE "Аўдыя"
-#define CATEGORY_AUDIO_INFO_0_BE "Змяніць налады вываду гука."
+#define CATEGORY_AUDIO_INFO_0_BE "Змяніць налады вываду гуку."
 #define CATEGORY_MODE7_LABEL_BE NULL
 #define CATEGORY_MODE7_INFO_0_BE NULL
 #define CATEGORY_HACK_LABEL_BE NULL
@@ -27375,10 +27375,10 @@ struct retro_core_options_v2 options_sr = {
 
 /* RETRO_LANGUAGE_SV */
 
-#define CATEGORY_VIDEO_LABEL_SV "Bild"
-#define CATEGORY_VIDEO_INFO_0_SV "Ändra bildinställningar."
+#define CATEGORY_VIDEO_LABEL_SV NULL
+#define CATEGORY_VIDEO_INFO_0_SV "Ändra inställningar för videoutmatning."
 #define CATEGORY_AUDIO_LABEL_SV "Ljud"
-#define CATEGORY_AUDIO_INFO_0_SV "Ändra ljudinställningar."
+#define CATEGORY_AUDIO_INFO_0_SV "Ändra inställningar för ljudutgången."
 #define CATEGORY_MODE7_LABEL_SV NULL
 #define CATEGORY_MODE7_INFO_0_SV NULL
 #define CATEGORY_HACK_LABEL_SV NULL
@@ -27390,7 +27390,7 @@ struct retro_core_options_v2 options_sr = {
 #define CATEGORY_LIGHTGUN_LABEL_SV NULL
 #define CATEGORY_LIGHTGUN_INFO_0_SV NULL
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
-#define BSNES_ASPECT_RATIO_INFO_0_SV "Välj föredraget bildformat för innehåll. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
+#define BSNES_ASPECT_RATIO_INFO_0_SV "Välj det föredragna bildformatet för Innehållet. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
 #define OPTION_VAL_AUTO_SV NULL
 #define OPTION_VAL_8_7_SV "Perfekta Pixlar"
 #define OPTION_VAL_4_3_SV NULL
@@ -27430,7 +27430,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_SV NULL
 #define BSNES_DSP_ECHO_SHADOW_INFO_0_SV NULL
 #define BSNES_MODE7_SCALE_LABEL_SV NULL
-#define BSNES_MODE7_SCALE_LABEL_CAT_SV NULL
+#define BSNES_MODE7_SCALE_LABEL_CAT_SV "Skala"
 #define BSNES_MODE7_SCALE_INFO_0_SV NULL
 #define OPTION_VAL_1X_SV NULL
 #define OPTION_VAL_2X_SV NULL
@@ -27470,87 +27470,87 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_CPU_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SV NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SV NULL
-#define OPTION_VAL_10_SV "10 %"
-#define OPTION_VAL_20_SV "20 %"
-#define OPTION_VAL_30_SV "30 %"
-#define OPTION_VAL_40_SV "40 %"
-#define OPTION_VAL_50_SV "50 %"
-#define OPTION_VAL_60_SV "60 %"
-#define OPTION_VAL_70_SV "70 %"
-#define OPTION_VAL_80_SV "80 %"
-#define OPTION_VAL_90_SV "90 %"
+#define OPTION_VAL_10_SV NULL
+#define OPTION_VAL_20_SV NULL
+#define OPTION_VAL_30_SV NULL
+#define OPTION_VAL_40_SV NULL
+#define OPTION_VAL_50_SV NULL
+#define OPTION_VAL_60_SV NULL
+#define OPTION_VAL_70_SV NULL
+#define OPTION_VAL_80_SV NULL
+#define OPTION_VAL_90_SV NULL
 #define OPTION_VAL_100_SV "100% (Standard)"
-#define OPTION_VAL_110_SV "110 %"
-#define OPTION_VAL_120_SV "120 %"
-#define OPTION_VAL_130_SV "130 %"
-#define OPTION_VAL_140_SV "140 %"
-#define OPTION_VAL_150_SV "150 %"
-#define OPTION_VAL_160_SV "160 %"
-#define OPTION_VAL_170_SV "170 %"
-#define OPTION_VAL_180_SV "180 %"
-#define OPTION_VAL_190_SV "190 %"
-#define OPTION_VAL_200_SV "200 %"
-#define OPTION_VAL_210_SV "210 %"
-#define OPTION_VAL_220_SV "220 %"
-#define OPTION_VAL_230_SV "230 %"
-#define OPTION_VAL_240_SV "240 %"
-#define OPTION_VAL_250_SV "250 %"
-#define OPTION_VAL_260_SV "260 %"
-#define OPTION_VAL_270_SV "270 %"
-#define OPTION_VAL_280_SV "280 %"
-#define OPTION_VAL_290_SV "290 %"
-#define OPTION_VAL_300_SV "300 %"
-#define OPTION_VAL_310_SV "310 %"
-#define OPTION_VAL_320_SV "320 %"
-#define OPTION_VAL_330_SV "330 %"
-#define OPTION_VAL_340_SV "340 %"
-#define OPTION_VAL_350_SV "350 %"
-#define OPTION_VAL_360_SV "360 %"
-#define OPTION_VAL_370_SV "370 %"
-#define OPTION_VAL_380_SV "380 %"
-#define OPTION_VAL_390_SV "390 %"
-#define OPTION_VAL_400_SV "400 %"
+#define OPTION_VAL_110_SV NULL
+#define OPTION_VAL_120_SV NULL
+#define OPTION_VAL_130_SV NULL
+#define OPTION_VAL_140_SV NULL
+#define OPTION_VAL_150_SV NULL
+#define OPTION_VAL_160_SV NULL
+#define OPTION_VAL_170_SV NULL
+#define OPTION_VAL_180_SV NULL
+#define OPTION_VAL_190_SV NULL
+#define OPTION_VAL_200_SV NULL
+#define OPTION_VAL_210_SV NULL
+#define OPTION_VAL_220_SV NULL
+#define OPTION_VAL_230_SV NULL
+#define OPTION_VAL_240_SV NULL
+#define OPTION_VAL_250_SV NULL
+#define OPTION_VAL_260_SV NULL
+#define OPTION_VAL_270_SV NULL
+#define OPTION_VAL_280_SV NULL
+#define OPTION_VAL_290_SV NULL
+#define OPTION_VAL_300_SV NULL
+#define OPTION_VAL_310_SV NULL
+#define OPTION_VAL_320_SV NULL
+#define OPTION_VAL_330_SV NULL
+#define OPTION_VAL_340_SV NULL
+#define OPTION_VAL_350_SV NULL
+#define OPTION_VAL_360_SV NULL
+#define OPTION_VAL_370_SV NULL
+#define OPTION_VAL_380_SV NULL
+#define OPTION_VAL_390_SV NULL
+#define OPTION_VAL_400_SV NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_SV NULL
 #define BSNES_CPU_SA1_OVERCLOCK_INFO_0_SV NULL
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_SV NULL
 #define BSNES_CPU_SFX_OVERCLOCK_INFO_0_SV NULL
-#define OPTION_VAL_410_SV "410 %"
-#define OPTION_VAL_420_SV "420 %"
-#define OPTION_VAL_430_SV "430 %"
-#define OPTION_VAL_440_SV "440 %"
-#define OPTION_VAL_450_SV "450 %"
-#define OPTION_VAL_460_SV "460 %"
-#define OPTION_VAL_470_SV "470 %"
-#define OPTION_VAL_480_SV "480 %"
-#define OPTION_VAL_490_SV "490 %"
-#define OPTION_VAL_500_SV "500 %"
-#define OPTION_VAL_510_SV "510 %"
-#define OPTION_VAL_520_SV "520 %"
-#define OPTION_VAL_530_SV "530 %"
-#define OPTION_VAL_540_SV "540 %"
-#define OPTION_VAL_550_SV "550 %"
-#define OPTION_VAL_560_SV "560 %"
-#define OPTION_VAL_570_SV "570 %"
-#define OPTION_VAL_580_SV "580 %"
-#define OPTION_VAL_590_SV "590 %"
-#define OPTION_VAL_600_SV "600 %"
-#define OPTION_VAL_610_SV "610 %"
-#define OPTION_VAL_620_SV "620 %"
-#define OPTION_VAL_630_SV "630 %"
-#define OPTION_VAL_640_SV "640 %"
-#define OPTION_VAL_650_SV "650 %"
-#define OPTION_VAL_660_SV "660 %"
-#define OPTION_VAL_670_SV "670 %"
-#define OPTION_VAL_680_SV "680 %"
-#define OPTION_VAL_690_SV "690 %"
-#define OPTION_VAL_700_SV "700 %"
-#define OPTION_VAL_710_SV "710 %"
-#define OPTION_VAL_720_SV "720 %"
-#define OPTION_VAL_730_SV "730 %"
-#define OPTION_VAL_740_SV "740 %"
-#define OPTION_VAL_750_SV "750 %"
+#define OPTION_VAL_410_SV NULL
+#define OPTION_VAL_420_SV NULL
+#define OPTION_VAL_430_SV NULL
+#define OPTION_VAL_440_SV NULL
+#define OPTION_VAL_450_SV NULL
+#define OPTION_VAL_460_SV NULL
+#define OPTION_VAL_470_SV NULL
+#define OPTION_VAL_480_SV NULL
+#define OPTION_VAL_490_SV NULL
+#define OPTION_VAL_500_SV NULL
+#define OPTION_VAL_510_SV NULL
+#define OPTION_VAL_520_SV NULL
+#define OPTION_VAL_530_SV NULL
+#define OPTION_VAL_540_SV NULL
+#define OPTION_VAL_550_SV NULL
+#define OPTION_VAL_560_SV NULL
+#define OPTION_VAL_570_SV NULL
+#define OPTION_VAL_580_SV NULL
+#define OPTION_VAL_590_SV NULL
+#define OPTION_VAL_600_SV NULL
+#define OPTION_VAL_610_SV NULL
+#define OPTION_VAL_620_SV NULL
+#define OPTION_VAL_630_SV NULL
+#define OPTION_VAL_640_SV NULL
+#define OPTION_VAL_650_SV NULL
+#define OPTION_VAL_660_SV NULL
+#define OPTION_VAL_670_SV NULL
+#define OPTION_VAL_680_SV NULL
+#define OPTION_VAL_690_SV NULL
+#define OPTION_VAL_700_SV NULL
+#define OPTION_VAL_710_SV NULL
+#define OPTION_VAL_720_SV NULL
+#define OPTION_VAL_730_SV NULL
+#define OPTION_VAL_740_SV NULL
+#define OPTION_VAL_750_SV NULL
 #define OPTION_VAL_760_SV "760 %"
 #define OPTION_VAL_770_SV "770 %"
 #define OPTION_VAL_780_SV "780 %"
