@@ -15317,7 +15317,7 @@ struct retro_core_options_v2 options_he = {
 
 #define CATEGORY_VIDEO_LABEL_HR NULL
 #define CATEGORY_VIDEO_INFO_0_HR NULL
-#define CATEGORY_AUDIO_LABEL_HR NULL
+#define CATEGORY_AUDIO_LABEL_HR "Zvuk"
 #define CATEGORY_AUDIO_INFO_0_HR NULL
 #define CATEGORY_MODE7_LABEL_HR NULL
 #define CATEGORY_MODE7_INFO_0_HR NULL
@@ -27410,13 +27410,13 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_NTSC_RGB_SV NULL
 #define BSNES_PPU_FAST_LABEL_SV NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SV NULL
-#define BSNES_PPU_FAST_INFO_0_SV NULL
+#define BSNES_PPU_FAST_INFO_0_SV "Möjliggör snabbare emulering av PPU till bekostnad av en mindre minskning av noggrannheten. Rekommenderas att låta detta vara kvar som aktiv. OBS: Detta måste vara aktiverat för att alternativen 'Deinterlace', 'Ingen blockfigursgräns' och 'HD-läge 7' ska fungera."
 #define BSNES_PPU_DEINTERLACE_LABEL_SV NULL
 #define BSNES_PPU_DEINTERLACE_LABEL_CAT_SV NULL
 #define BSNES_PPU_DEINTERLACE_INFO_0_SV NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_SV NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_SV NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_SV NULL
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_SV "PPU (Video) - Ingen blockfigursgräns"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_SV "PPU - Ingen blockfigursgräns"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_SV "Ta bort alla begränsningar för antalet blockfigurer som kan ritas samtidigt på skärmen. Kan orsaka problem med vissa spel."
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_SV NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_SV NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_SV NULL
