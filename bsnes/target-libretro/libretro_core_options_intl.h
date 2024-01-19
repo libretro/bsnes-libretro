@@ -18531,22 +18531,22 @@ struct retro_core_options_v2 options_it = {
 
 /* RETRO_LANGUAGE_JA */
 
-#define CATEGORY_VIDEO_LABEL_JA "ビデオのドライバ"
-#define CATEGORY_VIDEO_INFO_0_JA "ビデオ出力の設定を変更します."
-#define CATEGORY_AUDIO_LABEL_JA "オーディオのドライバ"
-#define CATEGORY_AUDIO_INFO_0_JA "オーディオ出力の設定を変更します."
+#define CATEGORY_VIDEO_LABEL_JA "ビデオ"
+#define CATEGORY_VIDEO_INFO_0_JA "ビデオ出力の設定を変更します。"
+#define CATEGORY_AUDIO_LABEL_JA "オーディオ"
+#define CATEGORY_AUDIO_INFO_0_JA "オーディオ出力の設定を変更します。"
 #define CATEGORY_MODE7_LABEL_JA "HDモード7"
 #define CATEGORY_MODE7_INFO_0_JA "Mode7グラフィックエミュレーションに関する設定を変更します。"
-#define CATEGORY_HACK_LABEL_JA NULL
+#define CATEGORY_HACK_LABEL_JA "エミュレーションハックと拡張"
 #define CATEGORY_HACK_INFO_0_JA NULL
 #define CATEGORY_OVERCLOCK_LABEL_JA NULL
 #define CATEGORY_OVERCLOCK_INFO_0_JA "エミュレートされたハードウェアの速度を変更します。"
 #define CATEGORY_SGB_LABEL_JA "スーパーゲームボーイ"
-#define CATEGORY_SGB_INFO_0_JA "スーパーゲームボーイエミュレーションに関する設定を変更します。"
+#define CATEGORY_SGB_INFO_0_JA "スーパーゲームボーイのエミュレーションに関する設定を変更します。"
 #define CATEGORY_LIGHTGUN_LABEL_JA "ライトガン"
 #define CATEGORY_LIGHTGUN_INFO_0_JA NULL
 #define BSNES_ASPECT_RATIO_LABEL_JA "優先アスペクト比"
-#define BSNES_ASPECT_RATIO_INFO_0_JA "優先されるコンテンツのアスペクト比を選択します。RetroArch のアスペクト比がビデオ設定で [コア提供] に設定されている場合にのみ適用されます。"
+#define BSNES_ASPECT_RATIO_INFO_0_JA "コンテンツの優先アスペクト比を選択します。RetroArch のアスペクト比がビデオ設定で [コア提供] に設定されている場合にのみ適用されます。"
 #define OPTION_VAL_AUTO_JA "自動"
 #define OPTION_VAL_8_7_JA "ピクセルパーフェクト"
 #define OPTION_VAL_4_3_JA NULL
@@ -18714,9 +18714,9 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_800_JA NULL
 #define BSNES_SGB_BIOS_LABEL_JA NULL
 #define BSNES_SGB_BIOS_INFO_0_JA NULL
-#define OPTION_VAL_SGB1_SFC_JA NULL
-#define OPTION_VAL_SGB2_SFC_JA NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_JA NULL
+#define OPTION_VAL_SGB1_SFC_JA "スーパーゲームボーイ (SGB1.sfc)"
+#define OPTION_VAL_SGB2_SFC_JA "スーパーゲームボーイ2 (SGB2.sfc)"
+#define BSNES_HIDE_SGB_BORDER_LABEL_JA "SGB 外枠を隠す"
 #define BSNES_HIDE_SGB_BORDER_INFO_0_JA NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_JA "タッチスクリーンライトガン"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_JA NULL
