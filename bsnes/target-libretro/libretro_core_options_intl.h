@@ -18602,8 +18602,8 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_JA "HD モード 7 - スーパーサンプリング"
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_JA "スーパーサンプリング"
 #define BSNES_MODE7_SUPERSAMPLE_INFO_0_JA NULL
-#define BSNES_MODE7_MOSAIC_LABEL_JA NULL
-#define BSNES_MODE7_MOSAIC_LABEL_CAT_JA NULL
+#define BSNES_MODE7_MOSAIC_LABEL_JA "HD モード 7 - HD->SD モザイク"
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_JA "HD->SD モザイク"
 #define BSNES_MODE7_MOSAIC_INFO_0_JA NULL
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_JA "内部先行実行"
 #define BSNES_RUN_AHEAD_FRAMES_INFO_0_JA NULL
@@ -18712,8 +18712,8 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_780_JA NULL
 #define OPTION_VAL_790_JA NULL
 #define OPTION_VAL_800_JA NULL
-#define BSNES_SGB_BIOS_LABEL_JA NULL
-#define BSNES_SGB_BIOS_INFO_0_JA NULL
+#define BSNES_SGB_BIOS_LABEL_JA "優先するスーパーゲームボーイ BIOS (再起動が必要)"
+#define BSNES_SGB_BIOS_INFO_0_JA "互換性のあるタイトルで優先して使用するスーパーゲームボーイの BIOS を選択します。"
 #define OPTION_VAL_SGB1_SFC_JA "スーパーゲームボーイ (SGB1.sfc)"
 #define OPTION_VAL_SGB2_SFC_JA "スーパーゲームボーイ2 (SGB2.sfc)"
 #define BSNES_HIDE_SGB_BORDER_LABEL_JA "SGB 外枠を隠す"
