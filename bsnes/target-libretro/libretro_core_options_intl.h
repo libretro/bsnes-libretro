@@ -18715,11 +18715,11 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_SGB_BIOS_LABEL_JA "優先するスーパーゲームボーイ BIOS (再起動が必要)"
 #define BSNES_SGB_BIOS_INFO_0_JA "互換性のあるタイトルで優先して使用するスーパーゲームボーイの BIOS を選択します。"
 #define OPTION_VAL_SGB1_SFC_JA "スーパーゲームボーイ (SGB1.sfc)"
-#define OPTION_VAL_SGB2_SFC_JA "スーパーゲームボーイ2 (SGB2.sfc)"
+#define OPTION_VAL_SGB2_SFC_JA "スーパーゲームボーイ 2 (SGB2.sfc)"
 #define BSNES_HIDE_SGB_BORDER_LABEL_JA "SGB 外枠を隠す"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_JA NULL
+#define BSNES_HIDE_SGB_BORDER_INFO_0_JA "スーパーゲームボーイゲームをプレイ中に外枠を非表示にします。[オーバースキャンをトリミング] が有効化されている場合にのみ動作します。"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_JA "タッチスクリーンライトガン"
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_JA NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_JA "タッチスクリーンデバイスでスーパースコープ入力を有効にします。"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_JA NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_JA NULL
 
