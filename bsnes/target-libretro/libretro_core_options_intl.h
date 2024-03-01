@@ -18572,7 +18572,7 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_PPU_DEINTERLACE_INFO_0_JA "内部的に 480p でレンダリングすることで、すべてのゲームのインターレースを解除します。パフォーマンスへの影響はほぼ存在しないため、オンのままにしておくことを推奨します。"
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_JA "PPU (Video) - スプライト制限なし"
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_JA "PPU - スプライト制限なし"
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_JA NULL
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_JA "画面上に同時に描画できるスプライトの数の制限を解除します。一部のゲームで問題が発生する可能性があります。"
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_JA NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_JA NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_JA NULL
@@ -18712,7 +18712,7 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_780_JA NULL
 #define OPTION_VAL_790_JA NULL
 #define OPTION_VAL_800_JA NULL
-#define BSNES_SGB_BIOS_LABEL_JA "優先するスーパーゲームボーイ BIOS (再起動が必要)"
+#define BSNES_SGB_BIOS_LABEL_JA "優先スーパーゲームボーイ BIOS (再起動が必要)"
 #define BSNES_SGB_BIOS_INFO_0_JA "互換性のあるタイトルで優先して使用するスーパーゲームボーイの BIOS を選択します。"
 #define OPTION_VAL_SGB1_SFC_JA "スーパーゲームボーイ (SGB1.sfc)"
 #define OPTION_VAL_SGB2_SFC_JA "スーパーゲームボーイ 2 (SGB2.sfc)"
