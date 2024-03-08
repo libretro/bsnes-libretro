@@ -18536,7 +18536,7 @@ struct retro_core_options_v2 options_it = {
 #define CATEGORY_AUDIO_LABEL_JA "オーディオ"
 #define CATEGORY_AUDIO_INFO_0_JA "オーディオ出力の設定を変更します。"
 #define CATEGORY_MODE7_LABEL_JA "HD モード 7"
-#define CATEGORY_MODE7_INFO_0_JA "Mode 7 グラフィックエミュレーションに関する設定を変更します。"
+#define CATEGORY_MODE7_INFO_0_JA "モード 7 グラフィックエミュレーションに関する設定を変更します。"
 #define CATEGORY_HACK_LABEL_JA "エミュレーションハックと拡張"
 #define CATEGORY_HACK_INFO_0_JA "エミュレーションハック、拡張およびホットフィックスを適用します。"
 #define CATEGORY_OVERCLOCK_LABEL_JA "オーバー/ダウンクロック"
@@ -18555,7 +18555,7 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_PPU_SHOW_OVERSCAN_LABEL_JA "オーバースキャンをトリミング"
 #define BSNES_PPU_SHOW_OVERSCAN_INFO_0_JA "標準画質テレビのベゼルで隠された、ゲームでは通常使用されることのない画面上下の外枠を削除します。"
 #define OPTION_VAL_OFF_JA "8 ピクセル"
-#define BSNES_BLUR_EMULATION_LABEL_JA "ぼかしのエミュレーション"
+#define BSNES_BLUR_EMULATION_LABEL_JA "ぼかしエミュレーション"
 #define BSNES_BLUR_EMULATION_INFO_0_JA "水平方向に隣接するピクセルをぼかすことで、標準画質テレビの限られた水平解像度をシミュレートします。ゲームによっては、透明効果をエミュレートするためにこのオプションを有効にする必要があります。"
 #define BSNES_VIDEO_FILTER_LABEL_JA "フィルター"
 #define BSNES_VIDEO_FILTER_INFO_0_JA "RF、コンポジット、S端子および RGB のオプションを含む Blargg NTSC フィルターの有効化と無効化を選択します。"
@@ -18566,25 +18566,25 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_NTSC_RGB_JA NULL
 #define BSNES_PPU_FAST_LABEL_JA "PPU (ビデオ) - 高速モード"
 #define BSNES_PPU_FAST_LABEL_CAT_JA "PPU - 高速モード"
-#define BSNES_PPU_FAST_INFO_0_JA NULL
+#define BSNES_PPU_FAST_INFO_0_JA "精度をわずかに犠牲にして、PPU の高速エミュレーションを有効にします。オンのままにしておくことをお勧めします。注意: [インターレース解除]、[スプライト制限なし] および [HD モード7] を動作させるには、このオプションを有効にする必要があります。"
 #define BSNES_PPU_DEINTERLACE_LABEL_JA "PPU (ビデオ) - インターレース解除"
 #define BSNES_PPU_DEINTERLACE_LABEL_CAT_JA "PPU - インターレース解除"
 #define BSNES_PPU_DEINTERLACE_INFO_0_JA "内部的に 480p でレンダリングすることで、すべてのゲームのインターレースを解除します。パフォーマンスへの影響はほぼ存在しないため、オンのままにしておくことを推奨します。"
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_JA "PPU (Video) - スプライト制限なし"
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_JA "PPU - スプライト制限なし"
 #define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_JA "画面上に同時に描画できるスプライトの数の制限を解除します。一部のゲームで問題が発生する可能性があります。"
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_JA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_JA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_JA NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_JA "PPU (ビデオ) - VRAM ブロックなし"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_JA "PPU - VRAM ブロックなし"
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_JA "VRAM ブロックがエミュレートされていない古い ZSNES と Snes9X のバグをエミュレートします。一部の ROM ハックはこの動作に依存しており、有効にしない場合グラフィックが正しく描画されません。このオプションは非常に不正確であり、PPU 速度に悪影響を与えるため、必要な場合以外無効のままにしておくことをお勧めします。"
 #define BSNES_DSP_FAST_LABEL_JA "DSP (オーディオ) - 高速モード"
 #define BSNES_DSP_FAST_LABEL_CAT_JA "DSP - 高速モード"
-#define BSNES_DSP_FAST_INFO_0_JA NULL
+#define BSNES_DSP_FAST_INFO_0_JA "精度をわずかに犠牲にして DSP の高速エミュレーションを有効にします。オンのままにしておくことをお勧めします。"
 #define BSNES_DSP_CUBIC_LABEL_JA "DSP (オーディオ) - キュービック補間"
 #define BSNES_DSP_CUBIC_LABEL_CAT_JA "DSP - キュービック補間"
-#define BSNES_DSP_CUBIC_INFO_0_JA NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_JA NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_JA NULL
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_JA NULL
+#define BSNES_DSP_CUBIC_INFO_0_JA "サウンドにキュービック補完を適用し、より高い音域を維持します。"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_JA "DSP (オーディオ) - エコーシャドウ RAM"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_JA "DSP - エコーシャドウ RAM"
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_JA "エコー RAM が APU RAM とは別に扱われた ZSNES のバグをエミュレートします。スーパーマリオワールドの古い ROM ハックの多くはこの動作に依存しており、有効にしない場合ゲームがクラッシュします。このオプションは非常に不正確であり、必要がない限り有効にしないでください。"
 #define BSNES_MODE7_SCALE_LABEL_JA "HD モード 7 - 倍率"
 #define BSNES_MODE7_SCALE_LABEL_CAT_JA "倍率"
 #define BSNES_MODE7_SCALE_INFO_0_JA "特定のゲームで使用されるモード 7 グラフィックスの水平および垂直解像度を向上させます。"
@@ -18598,15 +18598,15 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_8X_JA NULL
 #define BSNES_MODE7_PERSPECTIVE_LABEL_JA "HD モード 7 - 視点補正"
 #define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_JA "視点補正"
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_JA NULL
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_JA "特定のゲームで使用されるモード 7 グラフィックスの視点を、スーパーファミコンで使用される整数演算の制限を回避することで補正します。"
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_JA "HD モード 7 - スーパーサンプリング"
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_JA "スーパーサンプリング"
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_JA NULL
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_JA "特定のゲームで使用されるモード 7 グラフィックをスーパーサンプリングします。より高い モード 7 表示倍率と組み合わせることで、アンチエイリアスと同様の効果を発揮します。"
 #define BSNES_MODE7_MOSAIC_LABEL_JA "HD モード 7 - HD->SD モザイク"
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_JA "HD->SD モザイク"
-#define BSNES_MODE7_MOSAIC_INFO_0_JA NULL
+#define BSNES_MODE7_MOSAIC_INFO_0_JA "モード 7 グラフィックスのモザイク効果をアップスケーリング時にも表示します。"
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_JA "内部先行実行"
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_JA NULL
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_JA "事前にシステムをシミュレートし、ロールバックすることで入力遅延を短縮します。非常に高いシステム要件を必要とします。"
 #define OPTION_VAL_1_JA "1 フレーム"
 #define OPTION_VAL_2_JA "2 フレーム"
 #define OPTION_VAL_3_JA "3 フレーム"
@@ -18616,13 +18616,13 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_COPROCESSOR_PREFER_HLE_LABEL_JA "コプロセッサ - HLE 優先"
 #define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_JA "このオプションを有効にすると、精度の低い HLE エミュレーションが利用可能な場合に常に使用されます。無効にすると、HLE は LLE ファームウェアが不足している場合にのみ使用されます。"
 #define BSNES_HOTFIXES_LABEL_JA "ホットフィックス"
-#define BSNES_HOTFIXES_INFO_0_JA NULL
+#define BSNES_HOTFIXES_INFO_0_JA "商業的にライセンスされ、正式に発売されたソフトウェアであっても、バグを含んだまま出荷されることがあります。このオプションは、実機で発生する特定の問題を修正します。"
 #define BSNES_ENTROPY_LABEL_JA "エントロピー (ランダム化)"
-#define BSNES_ENTROPY_INFO_0_JA NULL
+#define BSNES_ENTROPY_INFO_0_JA "メモリとレジスタのランダム化レベルを選択します。[なし] に設定すると、すべてのメモリとレジスタは起動時に一定の値に初期化されます。[低] に設定すると、実際のシステムを最も正確に再現し、[高] に設定すると、可能な限りランダム化します。"
 #define OPTION_VAL_LOW_JA "低"
 #define OPTION_VAL_HIGH_JA "高"
 #define BSNES_CPU_FASTMATH_LABEL_JA "CPU 高速計算"
-#define BSNES_CPU_FASTMATH_INFO_0_JA NULL
+#define BSNES_CPU_FASTMATH_INFO_0_JA "計算結果を即座に提供します。スーパーファミコン実機では、CPU 乗算や除算を一瞬で完了することはできません。古いエミュレータはこれらの遅延をシミュレートしなかったため、古い ROM ハックの一部にこのハックを必要とするものがあります。"
 #define BSNES_CPU_OVERCLOCK_LABEL_JA "オーバークロック - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_JA NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_JA "CPU をオーバークロックまたはダウンクロックします。この値を 100% 以上に設定すると、読み込み速度や実行速度の低下が軽減される場合があります。ゲームがクラッシュしたり、その他の問題が発生する可能性があるため、注意して使用してください。"
@@ -18668,10 +18668,10 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_400_JA NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_JA "オーバークロック - SA-1 コプロセッサ"
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_JA "SA-1 コプロセッサ"
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_JA NULL
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_JA "SA-1 拡張チップをオーバークロックまたはダウンクロックします。この値を 100% 以上に設定すると、SA-1 チップをサポートするゲームで実行速度が向上する可能性があります。一部のゲームがクラッシュしたり、他の問題が発生する可能性があるため、注意して使用してください。"
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_JA "オーバークロック - SuperFX コプロセッサ"
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_JA "SuperFX コプロセッサ"
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_JA NULL
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_JA "SuperFX コプロセッサをオーバークロックまたはダウンクロックします。この値を 100% 以上に設定すると、SuperFX をサポートするゲームで実行速度が改善される可能性があります。一部のゲームがクラッシュしたり、他の問題を引き起こす可能性があるため、注意して使用してください。"
 #define OPTION_VAL_410_JA NULL
 #define OPTION_VAL_420_JA NULL
 #define OPTION_VAL_430_JA NULL
@@ -18720,8 +18720,8 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_HIDE_SGB_BORDER_INFO_0_JA "スーパーゲームボーイゲームをプレイ中に外枠を非表示にします。[オーバースキャンをトリミング] が有効化されている場合にのみ動作します。"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_JA "タッチスクリーンライトガン"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_JA "タッチスクリーンデバイスでスーパースコープ入力を有効にします。"
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_JA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_JA NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_JA "スーパースコープのトリガーボタンを反転"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_JA "タッチスクリーンライトガンでスーパースコープのトリガーとカーソルボタンを反転します。"
 
 struct retro_core_option_v2_category option_cats_ja[] = {
    {
@@ -23361,87 +23361,87 @@ struct retro_core_options_v2 options_pl = {
 #define CATEGORY_AUDIO_INFO_0_PT_BR "Altera as configurações de saída de áudio."
 #define CATEGORY_MODE7_LABEL_PT_BR "Mode 7 HD"
 #define CATEGORY_MODE7_INFO_0_PT_BR "Altera as configurações relativas à emulação gráfica do Mode 7."
-#define CATEGORY_HACK_LABEL_PT_BR "Hacks de emulação e aprimoramentos"
-#define CATEGORY_HACK_INFO_0_PT_BR NULL
-#define CATEGORY_OVERCLOCK_LABEL_PT_BR NULL
+#define CATEGORY_HACK_LABEL_PT_BR "Hacks de emulação e otimizações"
+#define CATEGORY_HACK_INFO_0_PT_BR "Permite hacks de emulação, otimizações e correções."
+#define CATEGORY_OVERCLOCK_LABEL_PT_BR "Velocidade da CPU"
 #define CATEGORY_OVERCLOCK_INFO_0_PT_BR "Altera a velocidade do hardware emulado."
 #define CATEGORY_SGB_LABEL_PT_BR NULL
 #define CATEGORY_SGB_INFO_0_PT_BR "Altera as configurações relativas à emulação do Super Game Boy."
 #define CATEGORY_LIGHTGUN_LABEL_PT_BR "Pistola de luz"
 #define CATEGORY_LIGHTGUN_INFO_0_PT_BR "Altera as configurações da pistola de luz (tela sensível ao toque)."
-#define BSNES_ASPECT_RATIO_LABEL_PT_BR "Proporção de tela preferida"
-#define BSNES_ASPECT_RATIO_INFO_0_PT_BR "Escolhe a proporção de tela preferida do conteúdo. Isso se aplicará somente quando a proporção de tela do RetroArch estiver configurada como 'Fornecida pelo núcleo' nas configurações de vídeo."
+#define BSNES_ASPECT_RATIO_LABEL_PT_BR "Proporção de tela"
+#define BSNES_ASPECT_RATIO_INFO_0_PT_BR "Define a proporção de tela do conteúdo.\nOBSERVAÇÃO: requer \"Fornecida pelo núcleo\" ativada nas configurações de vídeo."
 #define OPTION_VAL_AUTO_PT_BR "Automática"
 #define OPTION_VAL_8_7_PT_BR "Pixel perfeito"
 #define OPTION_VAL_4_3_PT_BR NULL
 #define OPTION_VAL_NTSC_PT_BR NULL
 #define OPTION_VAL_PAL_PT_BR NULL
 #define BSNES_PPU_SHOW_OVERSCAN_LABEL_PT_BR "Cortar overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_PT_BR "Remova as bordas na parte superior e inferior da tela, normalmente não utilizadas por jogos e escondidas pela moldura de uma televisão de definição padrão."
-#define OPTION_VAL_OFF_PT_BR NULL
-#define BSNES_BLUR_EMULATION_LABEL_PT_BR "Emulação do desfoque"
-#define BSNES_BLUR_EMULATION_INFO_0_PT_BR "Simula a resolução horizontal limitada dos SDTVs, desfocando os pixels horizontalmente adjetivos. Alguns jogos dependem disso para emular um efeito de transparência."
+#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_PT_BR "Remove a borda superior e inferior da tela. Em uma televisão clássica, essas bordas são ocultadas pela moldura de televisão."
+#define OPTION_VAL_OFF_PT_BR "8 píxeis"
+#define BSNES_BLUR_EMULATION_LABEL_PT_BR "Emulação de desfoque"
+#define BSNES_BLUR_EMULATION_INFO_0_PT_BR "Simula a resolução horizontal limitada de uma SDTV, desfocando os píxeis horizontalmente adjacentes. Alguns jogos dependem do desfoque para emular um efeito de transparência."
 #define BSNES_VIDEO_FILTER_LABEL_PT_BR "Filtro"
-#define BSNES_VIDEO_FILTER_INFO_0_PT_BR NULL
-#define OPTION_VAL_NONE_PT_BR "Nenhuma"
+#define BSNES_VIDEO_FILTER_INFO_0_PT_BR "Define entre não usar filtro ou usar filtro NTSC do blargg's, com opções de RF, composto, S-Video ou RGB."
+#define OPTION_VAL_NONE_PT_BR "Nenhum"
 #define OPTION_VAL_NTSC_RF_PT_BR NULL
-#define OPTION_VAL_NTSC_COMPOSITE_PT_BR NULL
+#define OPTION_VAL_NTSC_COMPOSITE_PT_BR "NTSC (composto)"
 #define OPTION_VAL_NTSC_S_VIDEO_PT_BR NULL
 #define OPTION_VAL_NTSC_RGB_PT_BR NULL
-#define BSNES_PPU_FAST_LABEL_PT_BR "Modo rápido - PPU (vídeo)"
-#define BSNES_PPU_FAST_LABEL_CAT_PT_BR "Modo rápido - PPU"
-#define BSNES_PPU_FAST_INFO_0_PT_BR NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_PT_BR "Desentrelaçamento - PPU (vídeo)"
-#define BSNES_PPU_DEINTERLACE_LABEL_CAT_PT_BR "Desentrelaçamento - PPU"
-#define BSNES_PPU_DEINTERLACE_INFO_0_PT_BR "Desentrelaça todos os jogos, renderizando internamente a 480p. A penalidade de desempenho é quase inexistente, por isso é recomendável deixar isso ligado."
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_PT_BR "Sem limite de sprites - PPU (vídeo)"
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_PT_BR "Sem limite de sprites - PPU"
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_PT_BR "Remove qualquer limite para a quantidade de sprites que podem ser desenhados simultaneamente na tela. Pode causar problemas com alguns jogos."
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_PT_BR "Sem bloqueio da VRAM - PPU (vídeo)"
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_PT_BR NULL
+#define BSNES_PPU_FAST_LABEL_PT_BR "PPU (vídeo) — Modo rápido"
+#define BSNES_PPU_FAST_LABEL_CAT_PT_BR "PPU — Modo rápido"
+#define BSNES_PPU_FAST_INFO_0_PT_BR "Ativa uma emulação mais rápida do PPU ao custo de uma pequena redução de precisão.\nOBSERVAÇÃO: permite ativar \"Desentrelaçamento\", \"Sem limite de sprites\" e \"Mode 7 HD\"."
+#define BSNES_PPU_DEINTERLACE_LABEL_PT_BR "PPU (vídeo) — Desentrelaçamento"
+#define BSNES_PPU_DEINTERLACE_LABEL_CAT_PT_BR "PPU — Desentrelaçamento"
+#define BSNES_PPU_DEINTERLACE_INFO_0_PT_BR "Desentrelaça todos os jogos ao renderizar internamente a 480p. A penalidade de desempenho é quase inexistente."
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_PT_BR "PPU (vídeo) — Sem limite de sprites"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_PT_BR "PPU — Sem limite de sprites"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_PT_BR "Remove qualquer limite para a quantidade de sprites que podem ser desenhados simultaneamente na tela.\nOBSERVAÇÃO: pode causar problemas em alguns jogos."
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_PT_BR "PPU (vídeo) — Sem bloqueio de VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_PT_BR "PPU — Sem bloqueio de VRAM"
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_PT_BR "Emula um erro em versões antigas do ZSNES e do Snes9x, onde o bloqueio da VRAM não foi emulado. Alguns hacks mais antigos de ROMs se basearam neste comportamento e irão renderizar gráficos incorretamente se isto não for ativado. Esta opção é extremamente imprecisa e prejudica a velocidade da PPU, portanto é recomendável deixá-la desativada, a menos que você precise jogar um jogo que seja de outra forma incompatível com este núcleo."
-#define BSNES_DSP_FAST_LABEL_PT_BR "Modo rápido - DSP (áudio)"
-#define BSNES_DSP_FAST_LABEL_CAT_PT_BR "Modo rápido - DSP"
+#define BSNES_DSP_FAST_LABEL_PT_BR "DSP (áudio) — Modo rápido"
+#define BSNES_DSP_FAST_LABEL_CAT_PT_BR "DSP — Modo rápido"
 #define BSNES_DSP_FAST_INFO_0_PT_BR "Permite uma emulação mais rápida do DSP ao custo de uma pequena redução da precisão. É recomendável deixar isto ligado."
-#define BSNES_DSP_CUBIC_LABEL_PT_BR "Interpolação cúbica - DSP (áudio)"
-#define BSNES_DSP_CUBIC_LABEL_CAT_PT_BR "Interpolação cúbica - DSP"
+#define BSNES_DSP_CUBIC_LABEL_PT_BR "DSP (áudio) — Interpolação cúbica"
+#define BSNES_DSP_CUBIC_LABEL_CAT_PT_BR "DSP — Interpolação cúbica"
 #define BSNES_DSP_CUBIC_INFO_0_PT_BR "Aplica interpolação cúbica ao som, preservando mais a banda larga."
 #define BSNES_DSP_ECHO_SHADOW_LABEL_PT_BR "Sombra da RAM de eco - DSP (áudio)"
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_PT_BR "Sombra da RAM de eco - DSP"
 #define BSNES_DSP_ECHO_SHADOW_INFO_0_PT_BR "Emula um erro no ZSNES onde a RAM de eco foi tratada como separada da RAM da APU. Muitos hacks antigos de ROMs para o Super Mario World confiaram neste comportamento e terão um travamento sem isto. Esta opção é extremamente imprecisa e não deve ser habilitada, a menos que seja necessária."
-#define BSNES_MODE7_SCALE_LABEL_PT_BR "Escala - Mode 7 HD"
+#define BSNES_MODE7_SCALE_LABEL_PT_BR "Mode 7 HD — Escala"
 #define BSNES_MODE7_SCALE_LABEL_CAT_PT_BR "Escala"
-#define BSNES_MODE7_SCALE_INFO_0_PT_BR "Aumenta a resolução horizontal e vertical dos gráficos do Mode 7 usados em certos jogos."
-#define OPTION_VAL_1X_PT_BR NULL
-#define OPTION_VAL_2X_PT_BR NULL
-#define OPTION_VAL_3X_PT_BR NULL
-#define OPTION_VAL_4X_PT_BR NULL
-#define OPTION_VAL_5X_PT_BR NULL
-#define OPTION_VAL_6X_PT_BR NULL
-#define OPTION_VAL_7X_PT_BR NULL
-#define OPTION_VAL_8X_PT_BR NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_PT_BR "Correção da perspectiva - Mode 7 HD"
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_PT_BR "Correção da perspectiva"
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_PT_BR "Corrige a perspectiva dos gráficos do Mode 7 usados em certos jogos, trabalhando em torno de algumas limitações dos números inteiros usados pelo SNES."
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_PT_BR "Superamostragem - Mode 7 HD"
+#define BSNES_MODE7_SCALE_INFO_0_PT_BR "Aumenta a resolução horizontal e vertical dos gráficos do Mode 7 usado em alguns jogos."
+#define OPTION_VAL_1X_PT_BR "240p (padrão)"
+#define OPTION_VAL_2X_PT_BR "480p (200%)"
+#define OPTION_VAL_3X_PT_BR "720p (300%)"
+#define OPTION_VAL_4X_PT_BR "960p (400%)"
+#define OPTION_VAL_5X_PT_BR "1200p (500%)"
+#define OPTION_VAL_6X_PT_BR "1440p (600%)"
+#define OPTION_VAL_7X_PT_BR "1680p (700%)"
+#define OPTION_VAL_8X_PT_BR "1920p (800%)"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_PT_BR "Mode 7 HD — Correção de perspectiva"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_PT_BR "Correção de perspectiva"
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_PT_BR "Corrige a perspectiva dos gráficos do Mode 7 usado em alguns jogos, trabalhando em torno de algumas limitações dos números inteiros usados pelo SNES."
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_PT_BR "Mode 7 HD — Superamostragem"
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_PT_BR "Superamostragem"
 #define BSNES_MODE7_SUPERSAMPLE_INFO_0_PT_BR "Redimensiona os gráficos da Mode 7 usados em certos jogos. Combinado com fatores de escala superior ao Mode 7, produz um efeito semelhante ao anti-serrilhado."
-#define BSNES_MODE7_MOSAIC_LABEL_PT_BR "Mosaico HD->SD - Mode 7 HD"
-#define BSNES_MODE7_MOSAIC_LABEL_CAT_PT_BR "Mosaico HD->SD"
-#define BSNES_MODE7_MOSAIC_INFO_0_PT_BR "Mostra o efeito mosaico dos gráficos do Mode 7 mesmo ao ampliá-los."
+#define BSNES_MODE7_MOSAIC_LABEL_PT_BR "Mode 7 HD — Mosaico (HD → SD)"
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_PT_BR "Mosaico (HD → SD)"
+#define BSNES_MODE7_MOSAIC_INFO_0_PT_BR "Exibe o efeito mosaico dos gráficos do Mode 7 até mesmo ao mudar a escala."
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_PT_BR "Execução antecipada interna"
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_PT_BR "Simula o sistema antecipadamente e retrocede para reduzir a latência da entrada. Tem requisitos de sistema muito altos."
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_PT_BR "Simula o sistema antecipadamente e retrocede para reduzir a latência da entrada.\nOBSERVAÇÃO: requisitos de sistema muito altos."
 #define OPTION_VAL_1_PT_BR "1 quadro"
 #define OPTION_VAL_2_PT_BR "2 quadros"
 #define OPTION_VAL_3_PT_BR "3 quadros"
 #define OPTION_VAL_4_PT_BR "4 quadros"
-#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_PT_BR "Modo rápido - Coprocessadores"
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_PT_BR "Permite uma emulação mais rápida dos coprocessadores ao custo de uma pequena redução da precisão. É recomendável deixar isto ligado."
-#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_PT_BR "Preferir HLE - Coprocessadores"
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_PT_BR "Quando esta opção é ativada, sempre será usada uma emulação HLE menos precisa quando disponível. Se desativada, o HLE só será usado quando o firmware LLE estiver faltando."
-#define BSNES_HOTFIXES_LABEL_PT_BR NULL
-#define BSNES_HOTFIXES_INFO_0_PT_BR "Até mesmo os softwares comercialmente licenciados e lançados oficialmente às vezes vem com erros. Esta opção irá corrigir certos problemas que ocorreram mesmo no hardware real."
-#define BSNES_ENTROPY_LABEL_PT_BR "Entropia (aleatorização)"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_PT_BR "Coprocessadores — Modo rápido"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_PT_BR "Permite uma emulação mais rápida dos coprocessadores ao custo de uma pequena redução da precisão."
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_PT_BR "Coprocessadores — HLE"
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_PT_BR "Usa uma emulação HLE menos precisa quando disponível. Ao ser desligado, o HLE apenas será usado quando o firmware LLE estiver faltando."
+#define BSNES_HOTFIXES_LABEL_PT_BR "Correções"
+#define BSNES_HOTFIXES_INFO_0_PT_BR "Corrige alguns problemas que ocorrem até mesmo no hardware original."
+#define BSNES_ENTROPY_LABEL_PT_BR "Entropia (aleatoriedade)"
 #define BSNES_ENTROPY_INFO_0_PT_BR "Escolha o nível de aleatorização da memória e dos registros. Se ajustado para 'Nenhuma', toda a memória e registros são inicializados para valores constantes na inicialização. 'Baixa' aleatorização proporciona a representação mais precisa de um sistema real. ' Alta' irá aleatorizar o máximo possível."
 #define OPTION_VAL_LOW_PT_BR "Baixa"
 #define OPTION_VAL_HIGH_PT_BR "Alta"
@@ -23494,7 +23494,7 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_PT_BR "Coprocessador SA-1"
 #define BSNES_CPU_SA1_OVERCLOCK_INFO_0_PT_BR "Faça o overclock ou o downclock do chip do 'Super Accelerator 1' (SA-1). A definição deste valor acima de 100% pode melhorar o desempenho em jogos que suportam o chip SA-1. Use com cautela, pois pode também causar o travamento de alguns jogos ou apresentar outros problemas."
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_PT_BR "Overclock do coprocessador SuperFX"
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_PT_BR "Coprocessador SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_PT_BR "Coprocessador Super FX"
 #define BSNES_CPU_SFX_OVERCLOCK_INFO_0_PT_BR "Faça o overclock ou o downclock do coprocessador SuperFX. A definição deste valor acima de 100% pode melhorar o desempenho em jogos que suportam o SuperFX. Use com cautela, pois pode também causar o travamento de alguns jogos ou apresentar outros problemas."
 #define OPTION_VAL_410_PT_BR NULL
 #define OPTION_VAL_420_PT_BR NULL
@@ -23540,12 +23540,12 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_SGB_BIOS_INFO_0_PT_BR "Escolha a BIOS preferida do Super Game Boy para ser usada com títulos compatíveis."
 #define OPTION_VAL_SGB1_SFC_PT_BR NULL
 #define OPTION_VAL_SGB2_SFC_PT_BR NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_PT_BR "Ocultar bordas do Super GameBoy"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_PT_BR "Oculta a borda ao jogar Super Game Boy. Só funciona quando a opção 'Cortar Overscan' estiver ativo."
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_PT_BR "Pistola de luz com tela sensível ao toque"
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_PT_BR "Ativa a entrada 'Super Scope' para dispositivos com tela sensível ao toque."
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_PT_BR "Botões de disparo invertido na 'Super Scope'"
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_PT_BR "Inverte o gatilho e os botões de cursor da 'Super Scope' com a pistola de luz na tela sensível ao toque."
+#define BSNES_HIDE_SGB_BORDER_LABEL_PT_BR "Ocultar bordas"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_PT_BR "Oculta a borda ao jogar jogos de Super Game Boy.\nOBSERVAÇÃO: requer \"Cortar overscan\" ativada."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_PT_BR "Tela sensível ao toque"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_PT_BR "Ativa a entrada do Super Scope em dispositivos com tela sensível ao toque."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_PT_BR "Inverter botões do Super Scope"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_PT_BR "Inverte os botões de gatilho e cursor na tela sensível ao toque."
 
 struct retro_core_option_v2_category option_cats_pt_br[] = {
    {
