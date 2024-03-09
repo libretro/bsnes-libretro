@@ -4,7 +4,7 @@ bsnes
 ![bsnes logo](bsnes/target-bsnes/resource/logo.png)
 
 bsnes is a multi-platform Super Nintendo (Super Famicom) emulator, originally
-developed by [Near](https://near.sh), which focuses on performance,
+developed by Near, which focuses on performance,
 features, and ease of use.
 
 Unique Features
@@ -62,11 +62,10 @@ Links
 Nightly Builds
 --------------
 
-  - [Download](https://github.com/bsnes-emu/bsnes/releases/tag/nightly)
-  - ![Build status](https://api.cirrus-ci.com/github/bsnes-emu/bsnes.svg?task=windows-x86_64-binaries)
-  - ![Build status](https://api.cirrus-ci.com/github/bsnes-emu/bsnes.svg?task=macOS-x86_64-binaries)
-  - ![Build status](https://api.cirrus-ci.com/github/bsnes-emu/bsnes.svg?task=linux-x86_64-binaries)
-  - ![Build status](https://api.cirrus-ci.com/github/bsnes-emu/bsnes.svg?task=freebsd-x86_64-binaries)
+  - [Windows](https://github.com/bsnes-emu/bsnes/releases/download/nightly/bsnes-windows.zip)
+  - [macOS](https://github.com/bsnes-emu/bsnes/releases/download/nightly/bsnes-macos.zip)
+  - [Linux](https://github.com/bsnes-emu/bsnes/releases/download/nightly/bsnes-ubuntu.zip)
+  - [FreeBSD](https://api.cirrus-ci.com/v1/artifact/github/bsnes-emu/bsnes/freebsd-x86_64-binaries/bsnes-nightly/bsnes-nightly.zip)
 
 Preview
 -------
