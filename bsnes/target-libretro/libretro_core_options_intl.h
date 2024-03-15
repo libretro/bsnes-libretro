@@ -24246,7 +24246,7 @@ struct retro_core_options_v2 options_pt_br = {
 #define BSNES_HOTFIXES_LABEL_PT_PT NULL
 #define BSNES_HOTFIXES_INFO_0_PT_PT NULL
 #define BSNES_ENTROPY_LABEL_PT_PT NULL
-#define BSNES_ENTROPY_INFO_0_PT_PT NULL
+#define BSNES_ENTROPY_INFO_0_PT_PT "Escolha o nível de randomização da memória e dos registos. Se definido como Nenhum, toda a memória e registos são inicializados com valores constantes no arranque. A randomização baixa fornece a representação mais precisa de um sistema real. Elevada randomiza o máximo possível."
 #define OPTION_VAL_LOW_PT_PT NULL
 #define OPTION_VAL_HIGH_PT_PT NULL
 #define BSNES_CPU_FASTMATH_LABEL_PT_PT NULL
