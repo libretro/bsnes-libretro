@@ -518,8 +518,6 @@ auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_p
 
 	if(name == "save.ram")
 	{
-		string save_path;
-
 		auto suffix = Location::suffix(base_name);
 		auto base = Location::base(base_name.transform("\\", "/"));
 
@@ -543,8 +541,6 @@ auto Program::openRomGameBoy(string name, vfs::file::mode mode) -> shared_pointe
 
 	if(name == "save.ram")
 	{
-		string save_path;
-
 		auto suffix = Location::suffix(base_name);
 		auto base = Location::base(base_name.transform("\\", "/"));
 
@@ -559,8 +555,6 @@ auto Program::openRomGameBoy(string name, vfs::file::mode mode) -> shared_pointe
 
 	if(name == "time.rtc")
 	{
-		string save_path;
-
 		auto suffix = Location::suffix(base_name);
 		auto base = Location::base(base_name.transform("\\", "/"));
 
