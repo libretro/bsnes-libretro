@@ -975,14 +975,44 @@ unsigned retro_get_region()
 	return program->superFamicom.region == "NTSC" ? RETRO_REGION_NTSC : RETRO_REGION_PAL;
 }
 
-// Currently, there is no safe/sensible way to use the memory interface without severe hackery.
-// Rely on higan to load and save SRAM until there is really compelling reason not to.
-void *retro_get_memory_data(unsigned id)
-{
-	return nullptr;
+void* retro_get_memory_data(unsigned id) {
+	program->save();
+
+    FILE* file = fopen(program->save_path, "rb");
+    if (!file) {
+        return NULL;
+    }
+
+	fseek(file, 0, SEEK_END);
+	long size = ftell(file);
+	fseek(file, 0, SEEK_SET);
+
+	char* buffer = (char*)malloc(size);
+	if (!buffer) {
+		fclose(file);
+		return NULL;
+	}
+
+	size_t read_size = fread(buffer, 1, size, file);
+	fclose(file);
+
+    if (read_size == size) {
+        return buffer;
+    } else {
+        free(buffer);
+        return NULL;
+    }
 }
 
-size_t retro_get_memory_size(unsigned id)
-{
-	return 0;
+size_t retro_get_memory_size(unsigned id) {
+	program->save();
+
+    FILE* file = fopen(program->save_path, "rb");
+    if (!file) {
+        return 0;
+    }
+    fseek(file, 0, SEEK_END);
+    long size = ftell(file);
+    fclose(file);
+	return size;
 }
