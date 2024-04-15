@@ -976,25 +976,25 @@ unsigned retro_get_region()
 }
 
 void* retro_get_memory_data(unsigned id) {
-	program->save();
+    program->save();
 
     FILE* file = fopen(program->save_path, "rb");
     if (!file) {
         return NULL;
     }
 
-	fseek(file, 0, SEEK_END);
-	long size = ftell(file);
-	fseek(file, 0, SEEK_SET);
+    fseek(file, 0, SEEK_END);
+    long size = ftell(file);
+    fseek(file, 0, SEEK_SET);
 
-	char* buffer = (char*)malloc(size);
-	if (!buffer) {
-		fclose(file);
-		return NULL;
-	}
+    char* buffer = (char*)malloc(size);
+    if (!buffer) {
+        fclose(file);
+        return NULL;
+    }
 
-	size_t read_size = fread(buffer, 1, size, file);
-	fclose(file);
+    size_t read_size = fread(buffer, 1, size, file);
+    fclose(file);
 
     if (read_size == size) {
         return buffer;
@@ -1005,14 +1005,11 @@ void* retro_get_memory_data(unsigned id) {
 }
 
 size_t retro_get_memory_size(unsigned id) {
-	program->save();
+    program->save();
 
-    FILE* file = fopen(program->save_path, "rb");
-    if (!file) {
-        return 0;
+    struct stat st;
+    if (stat(program->save_path, &st) == 0) {
+        return st.st_size;
     }
-    fseek(file, 0, SEEK_END);
-    long size = ftell(file);
-    fclose(file);
-	return size;
+    return 0;
 }
