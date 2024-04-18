@@ -3929,6 +3929,8 @@ RETRO_API unsigned retro_get_region(void);
 /* Gets region of memory. */
 RETRO_API void *retro_get_memory_data(unsigned id);
 RETRO_API size_t retro_get_memory_size(unsigned id);
+RETRO_API const char* retro_store_save_path(void);
+RETRO_API void retro_load_external_save(const retro_game_info *game, void* data, size_t size);
 
 #ifdef __cplusplus
 }
