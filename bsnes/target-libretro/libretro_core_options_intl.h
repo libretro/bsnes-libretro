@@ -17733,10 +17733,10 @@ struct retro_core_options_v2 options_hu = {
 #define CATEGORY_AUDIO_INFO_0_ID "Ubah pengaturan keluaran audio."
 #define CATEGORY_MODE7_LABEL_ID NULL
 #define CATEGORY_MODE7_INFO_0_ID NULL
-#define CATEGORY_HACK_LABEL_ID NULL
+#define CATEGORY_HACK_LABEL_ID "Retasan dan Peningkatan Emulasi"
 #define CATEGORY_HACK_INFO_0_ID NULL
 #define CATEGORY_OVERCLOCK_LABEL_ID NULL
-#define CATEGORY_OVERCLOCK_INFO_0_ID NULL
+#define CATEGORY_OVERCLOCK_INFO_0_ID "Mengubah kecepatan emulasi peranti keras."
 #define CATEGORY_SGB_LABEL_ID NULL
 #define CATEGORY_SGB_INFO_0_ID NULL
 #define CATEGORY_LIGHTGUN_LABEL_ID NULL
