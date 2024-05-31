@@ -12908,13 +12908,13 @@ struct retro_core_options_v2 options_fa = {
 #define CATEGORY_AUDIO_LABEL_FI "Ääni"
 #define CATEGORY_AUDIO_INFO_0_FI "Muuta äänen ulostuloasetuksia."
 #define CATEGORY_MODE7_LABEL_FI NULL
-#define CATEGORY_MODE7_INFO_0_FI NULL
-#define CATEGORY_HACK_LABEL_FI NULL
-#define CATEGORY_HACK_INFO_0_FI NULL
-#define CATEGORY_OVERCLOCK_LABEL_FI NULL
-#define CATEGORY_OVERCLOCK_INFO_0_FI NULL
+#define CATEGORY_MODE7_INFO_0_FI "Muuta Mode 7 -grafiikan emulointia koskevia asetuksia."
+#define CATEGORY_HACK_LABEL_FI "Emulointikikat ja -parannukset"
+#define CATEGORY_HACK_INFO_0_FI "Ota käyttöön emulointikikkoja, -parannuksia ja -korjauksia."
+#define CATEGORY_OVERCLOCK_LABEL_FI "Yli-/Alikellotus"
+#define CATEGORY_OVERCLOCK_INFO_0_FI "Muuta emuloidun laitteiston nopeutta."
 #define CATEGORY_SGB_LABEL_FI NULL
-#define CATEGORY_SGB_INFO_0_FI NULL
+#define CATEGORY_SGB_INFO_0_FI "Muuta Super Game Boy -emulointia koskevia asetuksia."
 #define CATEGORY_LIGHTGUN_LABEL_FI "Valoase"
 #define CATEGORY_LIGHTGUN_INFO_0_FI NULL
 #define BSNES_ASPECT_RATIO_LABEL_FI "Ensisijainen kuvasuhde"
@@ -12926,24 +12926,24 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_PAL_FI NULL
 #define BSNES_PPU_SHOW_OVERSCAN_LABEL_FI NULL
 #define BSNES_PPU_SHOW_OVERSCAN_INFO_0_FI NULL
-#define OPTION_VAL_OFF_FI NULL
+#define OPTION_VAL_OFF_FI "8 pikseliä"
 #define BSNES_BLUR_EMULATION_LABEL_FI NULL
 #define BSNES_BLUR_EMULATION_INFO_0_FI NULL
 #define BSNES_VIDEO_FILTER_LABEL_FI "Suodatin"
-#define BSNES_VIDEO_FILTER_INFO_0_FI NULL
+#define BSNES_VIDEO_FILTER_INFO_0_FI "Valitse ilman suodatusta tai blarggin NTSC-suodatin, jossa on RF-, komposiitti-, S-Video- tai RGB-vaihtoehdot."
 #define OPTION_VAL_NONE_FI "Ei mitään"
 #define OPTION_VAL_NTSC_RF_FI NULL
-#define OPTION_VAL_NTSC_COMPOSITE_FI NULL
+#define OPTION_VAL_NTSC_COMPOSITE_FI "NTSC (komposiitti)"
 #define OPTION_VAL_NTSC_S_VIDEO_FI NULL
 #define OPTION_VAL_NTSC_RGB_FI NULL
-#define BSNES_PPU_FAST_LABEL_FI NULL
-#define BSNES_PPU_FAST_LABEL_CAT_FI NULL
+#define BSNES_PPU_FAST_LABEL_FI "PPU (video) - nopea tila"
+#define BSNES_PPU_FAST_LABEL_CAT_FI "PPU - nopea tila"
 #define BSNES_PPU_FAST_INFO_0_FI NULL
 #define BSNES_PPU_DEINTERLACE_LABEL_FI NULL
 #define BSNES_PPU_DEINTERLACE_LABEL_CAT_FI NULL
 #define BSNES_PPU_DEINTERLACE_INFO_0_FI NULL
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_FI NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_FI NULL
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_FI "PPU - Ei sprite rajoitusta"
 #define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_FI NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_FI NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_FI NULL
@@ -13090,10 +13090,10 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_SGB2_SFC_FI NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_FI NULL
 #define BSNES_HIDE_SGB_BORDER_INFO_0_FI NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_FI NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_FI NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_FI NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_FI NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_FI "Valoaseet kosketusnäytöllä"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_FI "Ota käyttöön Super Scope syöte kosketusnäyttöllä."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_FI "Käänteiset Super Scrope liipaisin painikkeet"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_FI "Käännä Super Scope liipasin- ja kohdistinpainikkeet kosketusnäytön valoaseelle."
 
 struct retro_core_option_v2_category option_cats_fi[] = {
    {
