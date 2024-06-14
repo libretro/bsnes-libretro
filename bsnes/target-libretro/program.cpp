@@ -250,6 +250,7 @@ auto Program::open(uint id, string name, vfs::file::mode mode, bool required) ->
 			result = openRomBSMemory(name, mode);
 		}
 	}
+
 	return result;
 }
 
@@ -490,34 +491,24 @@ auto Program::inputRumble(uint port, uint device, uint input, bool enable) -> vo
 
 auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_pointer<vfs::file>
 {
-	if(name == "program.rom" && mode == vfs::file::mode::read)
-	{
+	string firmware{};
+	if (name == "program.rom" && mode == vfs::file::mode::read) {
 		return vfs::memory::file::open(superFamicom.program.data(), superFamicom.program.size());
 	}
-
-	if(name == "data.rom" && mode == vfs::file::mode::read)
-	{
+	else if (name == "data.rom" && mode == vfs::file::mode::read) {
 		return vfs::memory::file::open(superFamicom.data.data(), superFamicom.data.size());
 	}
-
-	if(name == "expansion.rom" && mode == vfs::file::mode::read)
-	{
+	else if (name == "expansion.rom" && mode == vfs::file::mode::read) {
 		return vfs::memory::file::open(superFamicom.expansion.data(), superFamicom.expansion.size());
 	}
-
-	if(name == "msu1/data.rom")
-	{
+	else if (name == "msu1/data.rom") {
 		return vfs::fs::file::open({Location::notsuffix(superFamicom.location), ".msu"}, mode);
 	}
-
-	if(name.match("msu1/track*.pcm"))
-	{
+	else if (name.match("msu1/track*.pcm")) {
 		name.trimLeft("msu1/track", 1L);
 		return vfs::fs::file::open({Location::notsuffix(superFamicom.location), name}, mode);
 	}
-
-	if(name == "save.ram")
-	{
+	else if (name == "save.ram") {
 		string save_path;
 
 		auto suffix = Location::suffix(base_name);
@@ -530,6 +521,100 @@ auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_p
 			save_path = { base_name.trimRight(suffix, 1L), ".srm" };
 
 		return vfs::fs::file::open(save_path, mode);
+	}
+	else if (name == "time.rtc") {
+		string time_path;
+
+		auto suffix = Location::suffix(base_name);
+		auto base = Location::base(base_name.transform("\\", "/"));
+
+		const char *save = nullptr;
+		if (environ_cb && environ_cb(RETRO_ENVIRONMENT_GET_SAVE_DIRECTORY, &save) && save)
+			time_path = { string(save).transform("\\", "/"), "/", base.trimRight(suffix, 1L), ".rtc" };
+		else
+			time_path = { base_name.trimRight(suffix, 1L), ".rtc" };
+
+		return vfs::fs::file::open(time_path, mode);
+	}
+	else if (name == "download.ram") {
+		string psr_path;
+
+		auto suffix = Location::suffix(base_name);
+		auto base = Location::base(base_name.transform("\\", "/"));
+
+		const char *save = nullptr;
+		if (environ_cb && environ_cb(RETRO_ENVIRONMENT_GET_SAVE_DIRECTORY, &save) && save)
+			psr_path = { string(save).transform("\\", "/"), "/", base.trimRight(suffix, 1L), ".psr" };
+		else
+			psr_path = { base_name.trimRight(suffix, 1L), ".psr" };
+
+		return vfs::fs::file::open(psr_path, mode);
+	}
+	else if (name == "arm6.program.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0x28000) {
+			return vfs::memory::file::open(&superFamicom.firmware.data()[0x00000], 0x20000);
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Program,architecture=ARM6)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".program.rom");
+		}
+	}
+	else if (name == "arm6.data.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0x28000) {
+			return vfs::memory::file::open(&superFamicom.firmware.data()[0x20000], 0x08000);
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Data,architecture=ARM6)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".data.rom");
+		}
+	}
+	else if (name == "hg51bs169.data.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0xc00) {
+			return vfs::memory::file::open(superFamicom.firmware.data(), superFamicom.firmware.size());
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Data,architecture=HG51BS169)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".data.rom");
+		}
+	}
+	else if (name == "upd7725.program.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0x2000) {
+			return vfs::memory::file::open(&superFamicom.firmware.data()[0x0000], 0x1800);
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Program,architecture=uPD7725)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".program.rom");
+		}
+	}
+	else if (name == "upd7725.data.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0x2000) {
+			return vfs::memory::file::open(&superFamicom.firmware.data()[0x1800], 0x0800);
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Data,architecture=uPD7725)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".data.rom");
+		}
+	}
+	else if (name == "upd96050.program.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0xd000) {
+			return vfs::memory::file::open(&superFamicom.firmware.data()[0x0000], 0xc000);
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Program,architecture=uPD96050)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".program.rom");
+		}
+	}
+	else if (name == "upd96050.data.rom" && mode == vfs::file::mode::read) {
+		if (superFamicom.firmware.size() == 0xd000) {
+			return vfs::memory::file::open(&superFamicom.firmware.data()[0xc000], 0x1000);
+		}
+		if (auto memory = superFamicom.document["game/board/memory(type=ROM,content=Data,architecture=uPD96050)"]) {
+			firmware = string(memory["identifier"].text().downcase(), ".data.rom");
+		}
+	}
+
+	if (firmware) {
+		const char *system_dir;
+		environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system_dir);
+		string firmware_path = string(system_dir, '/', firmware).transform("\\", "/");
+
+		if (file::exists(firmware_path)) {
+			return vfs::fs::file::open(firmware_path, mode);
+		}
 	}
 
 	return {};
