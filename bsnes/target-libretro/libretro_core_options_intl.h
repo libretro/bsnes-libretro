@@ -12104,7 +12104,7 @@ struct retro_core_options_v2 options_es = {
 #define CATEGORY_AUDIO_LABEL_FA "صدا"
 #define CATEGORY_AUDIO_INFO_0_FA "تنظیمات خروجی صدا را تغییر دهید."
 #define CATEGORY_MODE7_LABEL_FA NULL
-#define CATEGORY_MODE7_INFO_0_FA NULL
+#define CATEGORY_MODE7_INFO_0_FA "تنظیمات مربوط به شبیه‌سازی گرافیکی حالت ۷ را تغییر دهید."
 #define CATEGORY_HACK_LABEL_FA NULL
 #define CATEGORY_HACK_INFO_0_FA NULL
 #define CATEGORY_OVERCLOCK_LABEL_FA NULL
@@ -12125,7 +12125,7 @@ struct retro_core_options_v2 options_es = {
 #define OPTION_VAL_OFF_FA NULL
 #define BSNES_BLUR_EMULATION_LABEL_FA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_FA NULL
-#define BSNES_VIDEO_FILTER_LABEL_FA NULL
+#define BSNES_VIDEO_FILTER_LABEL_FA "فیلتر"
 #define BSNES_VIDEO_FILTER_INFO_0_FA NULL
 #define OPTION_VAL_NONE_FA "هیچکدام"
 #define OPTION_VAL_NTSC_RF_FA NULL
@@ -12154,7 +12154,7 @@ struct retro_core_options_v2 options_es = {
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_FA NULL
 #define BSNES_DSP_ECHO_SHADOW_INFO_0_FA NULL
 #define BSNES_MODE7_SCALE_LABEL_FA NULL
-#define BSNES_MODE7_SCALE_LABEL_CAT_FA NULL
+#define BSNES_MODE7_SCALE_LABEL_CAT_FA "مقیاس"
 #define BSNES_MODE7_SCALE_INFO_0_FA NULL
 #define OPTION_VAL_1X_FA NULL
 #define OPTION_VAL_2X_FA NULL
