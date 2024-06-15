@@ -40,7 +40,7 @@ struct Program : Emulator::Platform
 
 	string base_name;
 
-	bool overscan = false;
+	bool overscan{false};
 
 public:
 	struct Game {
@@ -77,4 +77,8 @@ public:
 
 	Filter::Render filterRender;
 	Filter::Size filterSize;
+
+	double luminance{1.0};
+	double saturation{1.0};
+	double gamma{1.5};
 };

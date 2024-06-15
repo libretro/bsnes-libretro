@@ -465,6 +465,33 @@ static void update_variables(void)
 		}
 	}
 
+	var.key = "bsnes_video_luminance";
+	var.value = NULL;
+
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
+	{
+		int val = atoi(var.value);
+		program->luminance = val / 100.0;
+	}
+
+	var.key = "bsnes_video_saturation";
+	var.value = NULL;
+
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
+	{
+		int val = atoi(var.value);
+		program->saturation = val / 100.0;
+	}
+
+	var.key = "bsnes_video_gamma";
+	var.value = NULL;
+
+	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
+	{
+		int val = atoi(var.value);
+		program->gamma = val / 100.0;
+	}
+
 	update_option_visibility();
 }
 
@@ -763,6 +790,7 @@ void retro_run()
 	{
 		update_variables();
 		update_geometry();
+		program->updateVideoPalette();
 	}
 
 	bool is_fast_forwarding = false;

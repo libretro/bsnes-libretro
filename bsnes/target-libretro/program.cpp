@@ -808,10 +808,6 @@ auto Program::hackPatchMemory(vector<uint8_t>& data) -> void
 }
 
 auto Program::updateVideoPalette() -> void {
-  double luminance = 100.0 / 100.0;
-  double saturation = 100.0 / 100.0;
-  double gamma = 150.0 / 100.0;
-
   uint depth = 24;
 
   for(uint color : range(32768)) {
