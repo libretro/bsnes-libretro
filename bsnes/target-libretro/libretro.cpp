@@ -900,9 +900,9 @@ bool retro_load_game(const retro_game_info *game)
 	emulator->configure("Audio/Frequency", SAMPLERATE);
 	program->filterRender = &Filter::None::render;
 	program->filterSize = &Filter::None::size;
-	program->updateVideoPalette();
 
 	update_variables();
+	program->updateVideoPalette();
 
 	if (string(game->path).endsWith(".gb") || string(game->path).endsWith(".gbc"))
 	{
