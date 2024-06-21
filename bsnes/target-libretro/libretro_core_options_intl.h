@@ -72,6 +72,35 @@ extern "C" {
 #define OPTION_VAL_NTSC_COMPOSITE_AR NULL
 #define OPTION_VAL_NTSC_S_VIDEO_AR NULL
 #define OPTION_VAL_NTSC_RGB_AR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_AR NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_AR NULL
+#define OPTION_VAL_0_AR NULL
+#define OPTION_VAL_10_AR NULL
+#define OPTION_VAL_20_AR NULL
+#define OPTION_VAL_30_AR NULL
+#define OPTION_VAL_40_AR NULL
+#define OPTION_VAL_50_AR NULL
+#define OPTION_VAL_60_AR NULL
+#define OPTION_VAL_70_AR NULL
+#define OPTION_VAL_80_AR NULL
+#define OPTION_VAL_90_AR NULL
+#define OPTION_VAL_100_AR NULL
+#define BSNES_VIDEO_SATURATION_LABEL_AR NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_AR NULL
+#define OPTION_VAL_110_AR NULL
+#define OPTION_VAL_120_AR NULL
+#define OPTION_VAL_130_AR NULL
+#define OPTION_VAL_140_AR NULL
+#define OPTION_VAL_150_AR NULL
+#define OPTION_VAL_160_AR NULL
+#define OPTION_VAL_170_AR NULL
+#define OPTION_VAL_180_AR NULL
+#define OPTION_VAL_190_AR NULL
+#define OPTION_VAL_200_AR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_AR NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_AR NULL
+#define OPTION_VAL_100_O6_AR NULL
+#define OPTION_VAL_150_O6_AR NULL
 #define BSNES_PPU_FAST_LABEL_AR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_AR NULL
 #define BSNES_PPU_FAST_INFO_0_AR NULL
@@ -134,26 +163,6 @@ extern "C" {
 #define BSNES_CPU_OVERCLOCK_LABEL_AR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_AR NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_AR NULL
-#define OPTION_VAL_10_AR NULL
-#define OPTION_VAL_20_AR NULL
-#define OPTION_VAL_30_AR NULL
-#define OPTION_VAL_40_AR NULL
-#define OPTION_VAL_50_AR NULL
-#define OPTION_VAL_60_AR NULL
-#define OPTION_VAL_70_AR NULL
-#define OPTION_VAL_80_AR NULL
-#define OPTION_VAL_90_AR NULL
-#define OPTION_VAL_100_AR NULL
-#define OPTION_VAL_110_AR NULL
-#define OPTION_VAL_120_AR NULL
-#define OPTION_VAL_130_AR NULL
-#define OPTION_VAL_140_AR NULL
-#define OPTION_VAL_150_AR NULL
-#define OPTION_VAL_160_AR NULL
-#define OPTION_VAL_170_AR NULL
-#define OPTION_VAL_180_AR NULL
-#define OPTION_VAL_190_AR NULL
-#define OPTION_VAL_200_AR NULL
 #define OPTION_VAL_210_AR NULL
 #define OPTION_VAL_220_AR NULL
 #define OPTION_VAL_230_AR NULL
@@ -332,6 +341,85 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_AR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_AR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_AR },
+         { "10", OPTION_VAL_10_AR },
+         { "20", OPTION_VAL_20_AR },
+         { "30", OPTION_VAL_30_AR },
+         { "40", OPTION_VAL_40_AR },
+         { "50", OPTION_VAL_50_AR },
+         { "60", OPTION_VAL_60_AR },
+         { "70", OPTION_VAL_70_AR },
+         { "80", OPTION_VAL_80_AR },
+         { "90", OPTION_VAL_90_AR },
+         { "100", OPTION_VAL_100_AR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_AR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_AR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_AR },
+         { "10", OPTION_VAL_10_AR },
+         { "20", OPTION_VAL_20_AR },
+         { "30", OPTION_VAL_30_AR },
+         { "40", OPTION_VAL_40_AR },
+         { "50", OPTION_VAL_50_AR },
+         { "60", OPTION_VAL_60_AR },
+         { "70", OPTION_VAL_70_AR },
+         { "80", OPTION_VAL_80_AR },
+         { "90", OPTION_VAL_90_AR },
+         { "100", OPTION_VAL_100_AR },
+         { "110", OPTION_VAL_110_AR },
+         { "120", OPTION_VAL_120_AR },
+         { "130", OPTION_VAL_130_AR },
+         { "140", OPTION_VAL_140_AR },
+         { "150", OPTION_VAL_150_AR },
+         { "160", OPTION_VAL_160_AR },
+         { "170", OPTION_VAL_170_AR },
+         { "180", OPTION_VAL_180_AR },
+         { "190", OPTION_VAL_190_AR },
+         { "200", OPTION_VAL_200_AR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_AR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_AR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_AR },
+         { "110", OPTION_VAL_110_AR },
+         { "120", OPTION_VAL_120_AR },
+         { "130", OPTION_VAL_130_AR },
+         { "140", OPTION_VAL_140_AR },
+         { "150", OPTION_VAL_150_O6_AR },
+         { "160", OPTION_VAL_160_AR },
+         { "170", OPTION_VAL_170_AR },
+         { "180", OPTION_VAL_180_AR },
+         { "190", OPTION_VAL_190_AR },
+         { "200", OPTION_VAL_200_AR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -876,6 +964,35 @@ struct retro_core_options_v2 options_ar = {
 #define OPTION_VAL_NTSC_COMPOSITE_AST NULL
 #define OPTION_VAL_NTSC_S_VIDEO_AST NULL
 #define OPTION_VAL_NTSC_RGB_AST NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_AST NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_AST NULL
+#define OPTION_VAL_0_AST NULL
+#define OPTION_VAL_10_AST NULL
+#define OPTION_VAL_20_AST NULL
+#define OPTION_VAL_30_AST NULL
+#define OPTION_VAL_40_AST NULL
+#define OPTION_VAL_50_AST NULL
+#define OPTION_VAL_60_AST NULL
+#define OPTION_VAL_70_AST NULL
+#define OPTION_VAL_80_AST NULL
+#define OPTION_VAL_90_AST NULL
+#define OPTION_VAL_100_AST "100% (Por defeutu)"
+#define BSNES_VIDEO_SATURATION_LABEL_AST NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_AST NULL
+#define OPTION_VAL_110_AST NULL
+#define OPTION_VAL_120_AST NULL
+#define OPTION_VAL_130_AST NULL
+#define OPTION_VAL_140_AST NULL
+#define OPTION_VAL_150_AST NULL
+#define OPTION_VAL_160_AST NULL
+#define OPTION_VAL_170_AST NULL
+#define OPTION_VAL_180_AST NULL
+#define OPTION_VAL_190_AST NULL
+#define OPTION_VAL_200_AST NULL
+#define BSNES_VIDEO_GAMMA_LABEL_AST NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_AST NULL
+#define OPTION_VAL_100_O6_AST NULL
+#define OPTION_VAL_150_O6_AST NULL
 #define BSNES_PPU_FAST_LABEL_AST NULL
 #define BSNES_PPU_FAST_LABEL_CAT_AST NULL
 #define BSNES_PPU_FAST_INFO_0_AST NULL
@@ -938,26 +1055,6 @@ struct retro_core_options_v2 options_ar = {
 #define BSNES_CPU_OVERCLOCK_LABEL_AST NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_AST NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_AST NULL
-#define OPTION_VAL_10_AST NULL
-#define OPTION_VAL_20_AST NULL
-#define OPTION_VAL_30_AST NULL
-#define OPTION_VAL_40_AST NULL
-#define OPTION_VAL_50_AST NULL
-#define OPTION_VAL_60_AST NULL
-#define OPTION_VAL_70_AST NULL
-#define OPTION_VAL_80_AST NULL
-#define OPTION_VAL_90_AST NULL
-#define OPTION_VAL_100_AST "100% (Por defeutu)"
-#define OPTION_VAL_110_AST NULL
-#define OPTION_VAL_120_AST NULL
-#define OPTION_VAL_130_AST NULL
-#define OPTION_VAL_140_AST NULL
-#define OPTION_VAL_150_AST NULL
-#define OPTION_VAL_160_AST NULL
-#define OPTION_VAL_170_AST NULL
-#define OPTION_VAL_180_AST NULL
-#define OPTION_VAL_190_AST NULL
-#define OPTION_VAL_200_AST NULL
 #define OPTION_VAL_210_AST NULL
 #define OPTION_VAL_220_AST NULL
 #define OPTION_VAL_230_AST NULL
@@ -1136,6 +1233,85 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_AST,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_AST,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_AST },
+         { "10", OPTION_VAL_10_AST },
+         { "20", OPTION_VAL_20_AST },
+         { "30", OPTION_VAL_30_AST },
+         { "40", OPTION_VAL_40_AST },
+         { "50", OPTION_VAL_50_AST },
+         { "60", OPTION_VAL_60_AST },
+         { "70", OPTION_VAL_70_AST },
+         { "80", OPTION_VAL_80_AST },
+         { "90", OPTION_VAL_90_AST },
+         { "100", OPTION_VAL_100_AST },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_AST,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_AST,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_AST },
+         { "10", OPTION_VAL_10_AST },
+         { "20", OPTION_VAL_20_AST },
+         { "30", OPTION_VAL_30_AST },
+         { "40", OPTION_VAL_40_AST },
+         { "50", OPTION_VAL_50_AST },
+         { "60", OPTION_VAL_60_AST },
+         { "70", OPTION_VAL_70_AST },
+         { "80", OPTION_VAL_80_AST },
+         { "90", OPTION_VAL_90_AST },
+         { "100", OPTION_VAL_100_AST },
+         { "110", OPTION_VAL_110_AST },
+         { "120", OPTION_VAL_120_AST },
+         { "130", OPTION_VAL_130_AST },
+         { "140", OPTION_VAL_140_AST },
+         { "150", OPTION_VAL_150_AST },
+         { "160", OPTION_VAL_160_AST },
+         { "170", OPTION_VAL_170_AST },
+         { "180", OPTION_VAL_180_AST },
+         { "190", OPTION_VAL_190_AST },
+         { "200", OPTION_VAL_200_AST },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_AST,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_AST,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_AST },
+         { "110", OPTION_VAL_110_AST },
+         { "120", OPTION_VAL_120_AST },
+         { "130", OPTION_VAL_130_AST },
+         { "140", OPTION_VAL_140_AST },
+         { "150", OPTION_VAL_150_O6_AST },
+         { "160", OPTION_VAL_160_AST },
+         { "170", OPTION_VAL_170_AST },
+         { "180", OPTION_VAL_180_AST },
+         { "190", OPTION_VAL_190_AST },
+         { "200", OPTION_VAL_200_AST },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -1680,6 +1856,35 @@ struct retro_core_options_v2 options_ast = {
 #define OPTION_VAL_NTSC_COMPOSITE_BE NULL
 #define OPTION_VAL_NTSC_S_VIDEO_BE NULL
 #define OPTION_VAL_NTSC_RGB_BE NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_BE "Рэгуляванне колеру - яскравасць"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_BE "Рэгуляваць яскравасць"
+#define OPTION_VAL_0_BE "0 %"
+#define OPTION_VAL_10_BE "10 %"
+#define OPTION_VAL_20_BE "20 %"
+#define OPTION_VAL_30_BE "30 %"
+#define OPTION_VAL_40_BE "40 %"
+#define OPTION_VAL_50_BE "50 %"
+#define OPTION_VAL_60_BE "60 %"
+#define OPTION_VAL_70_BE "70 %"
+#define OPTION_VAL_80_BE "80 %"
+#define OPTION_VAL_90_BE "90 %"
+#define OPTION_VAL_100_BE "100 % (прадвызначана)"
+#define BSNES_VIDEO_SATURATION_LABEL_BE "Рэгуляванне колеру - насычанасць"
+#define BSNES_VIDEO_SATURATION_INFO_0_BE "Рэгуляваць насычанасць"
+#define OPTION_VAL_110_BE "110 %"
+#define OPTION_VAL_120_BE "120 %"
+#define OPTION_VAL_130_BE "130 %"
+#define OPTION_VAL_140_BE "140 %"
+#define OPTION_VAL_150_BE "150 %"
+#define OPTION_VAL_160_BE "160 %"
+#define OPTION_VAL_170_BE "170 %"
+#define OPTION_VAL_180_BE "180 %"
+#define OPTION_VAL_190_BE "190 %"
+#define OPTION_VAL_200_BE "200 %"
+#define BSNES_VIDEO_GAMMA_LABEL_BE "Рэгуляванне колеру - гама"
+#define BSNES_VIDEO_GAMMA_INFO_0_BE "Рэгуляваць гаму"
+#define OPTION_VAL_100_O6_BE "100 %"
+#define OPTION_VAL_150_O6_BE "150 % (прадвызначана)"
 #define BSNES_PPU_FAST_LABEL_BE NULL
 #define BSNES_PPU_FAST_LABEL_CAT_BE NULL
 #define BSNES_PPU_FAST_INFO_0_BE NULL
@@ -1742,26 +1947,6 @@ struct retro_core_options_v2 options_ast = {
 #define BSNES_CPU_OVERCLOCK_LABEL_BE NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_BE NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_BE NULL
-#define OPTION_VAL_10_BE "10 %"
-#define OPTION_VAL_20_BE "20 %"
-#define OPTION_VAL_30_BE "30 %"
-#define OPTION_VAL_40_BE "40 %"
-#define OPTION_VAL_50_BE "50 %"
-#define OPTION_VAL_60_BE "60 %"
-#define OPTION_VAL_70_BE "70 %"
-#define OPTION_VAL_80_BE "80 %"
-#define OPTION_VAL_90_BE "90 %"
-#define OPTION_VAL_100_BE "100 % (прадвызначана)"
-#define OPTION_VAL_110_BE "110 %"
-#define OPTION_VAL_120_BE "120 %"
-#define OPTION_VAL_130_BE "130 %"
-#define OPTION_VAL_140_BE "140 %"
-#define OPTION_VAL_150_BE "150 %"
-#define OPTION_VAL_160_BE "160 %"
-#define OPTION_VAL_170_BE "170 %"
-#define OPTION_VAL_180_BE "180 %"
-#define OPTION_VAL_190_BE "190 %"
-#define OPTION_VAL_200_BE "200 %"
 #define OPTION_VAL_210_BE "210 %"
 #define OPTION_VAL_220_BE "220 %"
 #define OPTION_VAL_230_BE "230 %"
@@ -1940,6 +2125,85 @@ struct retro_core_option_v2_definition option_defs_be[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_BE,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_BE,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_BE },
+         { "10", OPTION_VAL_10_BE },
+         { "20", OPTION_VAL_20_BE },
+         { "30", OPTION_VAL_30_BE },
+         { "40", OPTION_VAL_40_BE },
+         { "50", OPTION_VAL_50_BE },
+         { "60", OPTION_VAL_60_BE },
+         { "70", OPTION_VAL_70_BE },
+         { "80", OPTION_VAL_80_BE },
+         { "90", OPTION_VAL_90_BE },
+         { "100", OPTION_VAL_100_BE },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_BE,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_BE,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_BE },
+         { "10", OPTION_VAL_10_BE },
+         { "20", OPTION_VAL_20_BE },
+         { "30", OPTION_VAL_30_BE },
+         { "40", OPTION_VAL_40_BE },
+         { "50", OPTION_VAL_50_BE },
+         { "60", OPTION_VAL_60_BE },
+         { "70", OPTION_VAL_70_BE },
+         { "80", OPTION_VAL_80_BE },
+         { "90", OPTION_VAL_90_BE },
+         { "100", OPTION_VAL_100_BE },
+         { "110", OPTION_VAL_110_BE },
+         { "120", OPTION_VAL_120_BE },
+         { "130", OPTION_VAL_130_BE },
+         { "140", OPTION_VAL_140_BE },
+         { "150", OPTION_VAL_150_BE },
+         { "160", OPTION_VAL_160_BE },
+         { "170", OPTION_VAL_170_BE },
+         { "180", OPTION_VAL_180_BE },
+         { "190", OPTION_VAL_190_BE },
+         { "200", OPTION_VAL_200_BE },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_BE,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_BE,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_BE },
+         { "110", OPTION_VAL_110_BE },
+         { "120", OPTION_VAL_120_BE },
+         { "130", OPTION_VAL_130_BE },
+         { "140", OPTION_VAL_140_BE },
+         { "150", OPTION_VAL_150_O6_BE },
+         { "160", OPTION_VAL_160_BE },
+         { "170", OPTION_VAL_170_BE },
+         { "180", OPTION_VAL_180_BE },
+         { "190", OPTION_VAL_190_BE },
+         { "200", OPTION_VAL_200_BE },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -2484,6 +2748,35 @@ struct retro_core_options_v2 options_be = {
 #define OPTION_VAL_NTSC_COMPOSITE_BG NULL
 #define OPTION_VAL_NTSC_S_VIDEO_BG NULL
 #define OPTION_VAL_NTSC_RGB_BG NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_BG NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_BG NULL
+#define OPTION_VAL_0_BG NULL
+#define OPTION_VAL_10_BG NULL
+#define OPTION_VAL_20_BG NULL
+#define OPTION_VAL_30_BG NULL
+#define OPTION_VAL_40_BG NULL
+#define OPTION_VAL_50_BG NULL
+#define OPTION_VAL_60_BG NULL
+#define OPTION_VAL_70_BG NULL
+#define OPTION_VAL_80_BG NULL
+#define OPTION_VAL_90_BG NULL
+#define OPTION_VAL_100_BG NULL
+#define BSNES_VIDEO_SATURATION_LABEL_BG NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_BG NULL
+#define OPTION_VAL_110_BG NULL
+#define OPTION_VAL_120_BG NULL
+#define OPTION_VAL_130_BG NULL
+#define OPTION_VAL_140_BG NULL
+#define OPTION_VAL_150_BG NULL
+#define OPTION_VAL_160_BG NULL
+#define OPTION_VAL_170_BG NULL
+#define OPTION_VAL_180_BG NULL
+#define OPTION_VAL_190_BG NULL
+#define OPTION_VAL_200_BG NULL
+#define BSNES_VIDEO_GAMMA_LABEL_BG NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_BG NULL
+#define OPTION_VAL_100_O6_BG NULL
+#define OPTION_VAL_150_O6_BG NULL
 #define BSNES_PPU_FAST_LABEL_BG NULL
 #define BSNES_PPU_FAST_LABEL_CAT_BG NULL
 #define BSNES_PPU_FAST_INFO_0_BG NULL
@@ -2546,26 +2839,6 @@ struct retro_core_options_v2 options_be = {
 #define BSNES_CPU_OVERCLOCK_LABEL_BG NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_BG NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_BG NULL
-#define OPTION_VAL_10_BG NULL
-#define OPTION_VAL_20_BG NULL
-#define OPTION_VAL_30_BG NULL
-#define OPTION_VAL_40_BG NULL
-#define OPTION_VAL_50_BG NULL
-#define OPTION_VAL_60_BG NULL
-#define OPTION_VAL_70_BG NULL
-#define OPTION_VAL_80_BG NULL
-#define OPTION_VAL_90_BG NULL
-#define OPTION_VAL_100_BG NULL
-#define OPTION_VAL_110_BG NULL
-#define OPTION_VAL_120_BG NULL
-#define OPTION_VAL_130_BG NULL
-#define OPTION_VAL_140_BG NULL
-#define OPTION_VAL_150_BG NULL
-#define OPTION_VAL_160_BG NULL
-#define OPTION_VAL_170_BG NULL
-#define OPTION_VAL_180_BG NULL
-#define OPTION_VAL_190_BG NULL
-#define OPTION_VAL_200_BG NULL
 #define OPTION_VAL_210_BG NULL
 #define OPTION_VAL_220_BG NULL
 #define OPTION_VAL_230_BG NULL
@@ -2744,6 +3017,85 @@ struct retro_core_option_v2_definition option_defs_bg[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_BG,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_BG,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_BG },
+         { "10", OPTION_VAL_10_BG },
+         { "20", OPTION_VAL_20_BG },
+         { "30", OPTION_VAL_30_BG },
+         { "40", OPTION_VAL_40_BG },
+         { "50", OPTION_VAL_50_BG },
+         { "60", OPTION_VAL_60_BG },
+         { "70", OPTION_VAL_70_BG },
+         { "80", OPTION_VAL_80_BG },
+         { "90", OPTION_VAL_90_BG },
+         { "100", OPTION_VAL_100_BG },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_BG,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_BG,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_BG },
+         { "10", OPTION_VAL_10_BG },
+         { "20", OPTION_VAL_20_BG },
+         { "30", OPTION_VAL_30_BG },
+         { "40", OPTION_VAL_40_BG },
+         { "50", OPTION_VAL_50_BG },
+         { "60", OPTION_VAL_60_BG },
+         { "70", OPTION_VAL_70_BG },
+         { "80", OPTION_VAL_80_BG },
+         { "90", OPTION_VAL_90_BG },
+         { "100", OPTION_VAL_100_BG },
+         { "110", OPTION_VAL_110_BG },
+         { "120", OPTION_VAL_120_BG },
+         { "130", OPTION_VAL_130_BG },
+         { "140", OPTION_VAL_140_BG },
+         { "150", OPTION_VAL_150_BG },
+         { "160", OPTION_VAL_160_BG },
+         { "170", OPTION_VAL_170_BG },
+         { "180", OPTION_VAL_180_BG },
+         { "190", OPTION_VAL_190_BG },
+         { "200", OPTION_VAL_200_BG },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_BG,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_BG,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_BG },
+         { "110", OPTION_VAL_110_BG },
+         { "120", OPTION_VAL_120_BG },
+         { "130", OPTION_VAL_130_BG },
+         { "140", OPTION_VAL_140_BG },
+         { "150", OPTION_VAL_150_O6_BG },
+         { "160", OPTION_VAL_160_BG },
+         { "170", OPTION_VAL_170_BG },
+         { "180", OPTION_VAL_180_BG },
+         { "190", OPTION_VAL_190_BG },
+         { "200", OPTION_VAL_200_BG },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -3288,6 +3640,35 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_NTSC_COMPOSITE_CA NULL
 #define OPTION_VAL_NTSC_S_VIDEO_CA NULL
 #define OPTION_VAL_NTSC_RGB_CA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CA NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CA NULL
+#define OPTION_VAL_0_CA NULL
+#define OPTION_VAL_10_CA NULL
+#define OPTION_VAL_20_CA NULL
+#define OPTION_VAL_30_CA NULL
+#define OPTION_VAL_40_CA NULL
+#define OPTION_VAL_50_CA NULL
+#define OPTION_VAL_60_CA NULL
+#define OPTION_VAL_70_CA NULL
+#define OPTION_VAL_80_CA NULL
+#define OPTION_VAL_90_CA NULL
+#define OPTION_VAL_100_CA NULL
+#define BSNES_VIDEO_SATURATION_LABEL_CA NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_CA NULL
+#define OPTION_VAL_110_CA NULL
+#define OPTION_VAL_120_CA NULL
+#define OPTION_VAL_130_CA NULL
+#define OPTION_VAL_140_CA NULL
+#define OPTION_VAL_150_CA NULL
+#define OPTION_VAL_160_CA NULL
+#define OPTION_VAL_170_CA NULL
+#define OPTION_VAL_180_CA NULL
+#define OPTION_VAL_190_CA NULL
+#define OPTION_VAL_200_CA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CA NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_CA NULL
+#define OPTION_VAL_100_O6_CA NULL
+#define OPTION_VAL_150_O6_CA NULL
 #define BSNES_PPU_FAST_LABEL_CA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CA NULL
 #define BSNES_PPU_FAST_INFO_0_CA NULL
@@ -3350,26 +3731,6 @@ struct retro_core_options_v2 options_bg = {
 #define BSNES_CPU_OVERCLOCK_LABEL_CA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_CA NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_CA NULL
-#define OPTION_VAL_10_CA NULL
-#define OPTION_VAL_20_CA NULL
-#define OPTION_VAL_30_CA NULL
-#define OPTION_VAL_40_CA NULL
-#define OPTION_VAL_50_CA NULL
-#define OPTION_VAL_60_CA NULL
-#define OPTION_VAL_70_CA NULL
-#define OPTION_VAL_80_CA NULL
-#define OPTION_VAL_90_CA NULL
-#define OPTION_VAL_100_CA NULL
-#define OPTION_VAL_110_CA NULL
-#define OPTION_VAL_120_CA NULL
-#define OPTION_VAL_130_CA NULL
-#define OPTION_VAL_140_CA NULL
-#define OPTION_VAL_150_CA NULL
-#define OPTION_VAL_160_CA NULL
-#define OPTION_VAL_170_CA NULL
-#define OPTION_VAL_180_CA NULL
-#define OPTION_VAL_190_CA NULL
-#define OPTION_VAL_200_CA NULL
 #define OPTION_VAL_210_CA NULL
 #define OPTION_VAL_220_CA NULL
 #define OPTION_VAL_230_CA NULL
@@ -3548,6 +3909,85 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_CA,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_CA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CA },
+         { "10", OPTION_VAL_10_CA },
+         { "20", OPTION_VAL_20_CA },
+         { "30", OPTION_VAL_30_CA },
+         { "40", OPTION_VAL_40_CA },
+         { "50", OPTION_VAL_50_CA },
+         { "60", OPTION_VAL_60_CA },
+         { "70", OPTION_VAL_70_CA },
+         { "80", OPTION_VAL_80_CA },
+         { "90", OPTION_VAL_90_CA },
+         { "100", OPTION_VAL_100_CA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_CA,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_CA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CA },
+         { "10", OPTION_VAL_10_CA },
+         { "20", OPTION_VAL_20_CA },
+         { "30", OPTION_VAL_30_CA },
+         { "40", OPTION_VAL_40_CA },
+         { "50", OPTION_VAL_50_CA },
+         { "60", OPTION_VAL_60_CA },
+         { "70", OPTION_VAL_70_CA },
+         { "80", OPTION_VAL_80_CA },
+         { "90", OPTION_VAL_90_CA },
+         { "100", OPTION_VAL_100_CA },
+         { "110", OPTION_VAL_110_CA },
+         { "120", OPTION_VAL_120_CA },
+         { "130", OPTION_VAL_130_CA },
+         { "140", OPTION_VAL_140_CA },
+         { "150", OPTION_VAL_150_CA },
+         { "160", OPTION_VAL_160_CA },
+         { "170", OPTION_VAL_170_CA },
+         { "180", OPTION_VAL_180_CA },
+         { "190", OPTION_VAL_190_CA },
+         { "200", OPTION_VAL_200_CA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_CA,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_CA,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_CA },
+         { "110", OPTION_VAL_110_CA },
+         { "120", OPTION_VAL_120_CA },
+         { "130", OPTION_VAL_130_CA },
+         { "140", OPTION_VAL_140_CA },
+         { "150", OPTION_VAL_150_O6_CA },
+         { "160", OPTION_VAL_160_CA },
+         { "170", OPTION_VAL_170_CA },
+         { "180", OPTION_VAL_180_CA },
+         { "190", OPTION_VAL_190_CA },
+         { "200", OPTION_VAL_200_CA },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -4092,6 +4532,35 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_NTSC_COMPOSITE_CHS NULL
 #define OPTION_VAL_NTSC_S_VIDEO_CHS NULL
 #define OPTION_VAL_NTSC_RGB_CHS NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CHS NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CHS NULL
+#define OPTION_VAL_0_CHS NULL
+#define OPTION_VAL_10_CHS NULL
+#define OPTION_VAL_20_CHS NULL
+#define OPTION_VAL_30_CHS NULL
+#define OPTION_VAL_40_CHS NULL
+#define OPTION_VAL_50_CHS NULL
+#define OPTION_VAL_60_CHS NULL
+#define OPTION_VAL_70_CHS NULL
+#define OPTION_VAL_80_CHS NULL
+#define OPTION_VAL_90_CHS NULL
+#define OPTION_VAL_100_CHS NULL
+#define BSNES_VIDEO_SATURATION_LABEL_CHS NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_CHS NULL
+#define OPTION_VAL_110_CHS NULL
+#define OPTION_VAL_120_CHS NULL
+#define OPTION_VAL_130_CHS NULL
+#define OPTION_VAL_140_CHS NULL
+#define OPTION_VAL_150_CHS NULL
+#define OPTION_VAL_160_CHS NULL
+#define OPTION_VAL_170_CHS NULL
+#define OPTION_VAL_180_CHS NULL
+#define OPTION_VAL_190_CHS NULL
+#define OPTION_VAL_200_CHS NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CHS NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_CHS NULL
+#define OPTION_VAL_100_O6_CHS NULL
+#define OPTION_VAL_150_O6_CHS NULL
 #define BSNES_PPU_FAST_LABEL_CHS NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CHS NULL
 #define BSNES_PPU_FAST_INFO_0_CHS NULL
@@ -4154,26 +4623,6 @@ struct retro_core_options_v2 options_ca = {
 #define BSNES_CPU_OVERCLOCK_LABEL_CHS NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_CHS "处理器"
 #define BSNES_CPU_OVERCLOCK_INFO_0_CHS NULL
-#define OPTION_VAL_10_CHS NULL
-#define OPTION_VAL_20_CHS NULL
-#define OPTION_VAL_30_CHS NULL
-#define OPTION_VAL_40_CHS NULL
-#define OPTION_VAL_50_CHS NULL
-#define OPTION_VAL_60_CHS NULL
-#define OPTION_VAL_70_CHS NULL
-#define OPTION_VAL_80_CHS NULL
-#define OPTION_VAL_90_CHS NULL
-#define OPTION_VAL_100_CHS NULL
-#define OPTION_VAL_110_CHS NULL
-#define OPTION_VAL_120_CHS NULL
-#define OPTION_VAL_130_CHS NULL
-#define OPTION_VAL_140_CHS NULL
-#define OPTION_VAL_150_CHS NULL
-#define OPTION_VAL_160_CHS NULL
-#define OPTION_VAL_170_CHS NULL
-#define OPTION_VAL_180_CHS NULL
-#define OPTION_VAL_190_CHS NULL
-#define OPTION_VAL_200_CHS NULL
 #define OPTION_VAL_210_CHS NULL
 #define OPTION_VAL_220_CHS NULL
 #define OPTION_VAL_230_CHS NULL
@@ -4352,6 +4801,85 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_CHS,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_CHS,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CHS },
+         { "10", OPTION_VAL_10_CHS },
+         { "20", OPTION_VAL_20_CHS },
+         { "30", OPTION_VAL_30_CHS },
+         { "40", OPTION_VAL_40_CHS },
+         { "50", OPTION_VAL_50_CHS },
+         { "60", OPTION_VAL_60_CHS },
+         { "70", OPTION_VAL_70_CHS },
+         { "80", OPTION_VAL_80_CHS },
+         { "90", OPTION_VAL_90_CHS },
+         { "100", OPTION_VAL_100_CHS },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_CHS,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_CHS,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CHS },
+         { "10", OPTION_VAL_10_CHS },
+         { "20", OPTION_VAL_20_CHS },
+         { "30", OPTION_VAL_30_CHS },
+         { "40", OPTION_VAL_40_CHS },
+         { "50", OPTION_VAL_50_CHS },
+         { "60", OPTION_VAL_60_CHS },
+         { "70", OPTION_VAL_70_CHS },
+         { "80", OPTION_VAL_80_CHS },
+         { "90", OPTION_VAL_90_CHS },
+         { "100", OPTION_VAL_100_CHS },
+         { "110", OPTION_VAL_110_CHS },
+         { "120", OPTION_VAL_120_CHS },
+         { "130", OPTION_VAL_130_CHS },
+         { "140", OPTION_VAL_140_CHS },
+         { "150", OPTION_VAL_150_CHS },
+         { "160", OPTION_VAL_160_CHS },
+         { "170", OPTION_VAL_170_CHS },
+         { "180", OPTION_VAL_180_CHS },
+         { "190", OPTION_VAL_190_CHS },
+         { "200", OPTION_VAL_200_CHS },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_CHS,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_CHS,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_CHS },
+         { "110", OPTION_VAL_110_CHS },
+         { "120", OPTION_VAL_120_CHS },
+         { "130", OPTION_VAL_130_CHS },
+         { "140", OPTION_VAL_140_CHS },
+         { "150", OPTION_VAL_150_O6_CHS },
+         { "160", OPTION_VAL_160_CHS },
+         { "170", OPTION_VAL_170_CHS },
+         { "180", OPTION_VAL_180_CHS },
+         { "190", OPTION_VAL_190_CHS },
+         { "200", OPTION_VAL_200_CHS },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -4896,6 +5424,35 @@ struct retro_core_options_v2 options_chs = {
 #define OPTION_VAL_NTSC_COMPOSITE_CHT NULL
 #define OPTION_VAL_NTSC_S_VIDEO_CHT NULL
 #define OPTION_VAL_NTSC_RGB_CHT NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CHT NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CHT NULL
+#define OPTION_VAL_0_CHT NULL
+#define OPTION_VAL_10_CHT NULL
+#define OPTION_VAL_20_CHT NULL
+#define OPTION_VAL_30_CHT NULL
+#define OPTION_VAL_40_CHT NULL
+#define OPTION_VAL_50_CHT NULL
+#define OPTION_VAL_60_CHT NULL
+#define OPTION_VAL_70_CHT NULL
+#define OPTION_VAL_80_CHT NULL
+#define OPTION_VAL_90_CHT NULL
+#define OPTION_VAL_100_CHT "100% (預設)"
+#define BSNES_VIDEO_SATURATION_LABEL_CHT NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_CHT NULL
+#define OPTION_VAL_110_CHT NULL
+#define OPTION_VAL_120_CHT NULL
+#define OPTION_VAL_130_CHT NULL
+#define OPTION_VAL_140_CHT NULL
+#define OPTION_VAL_150_CHT NULL
+#define OPTION_VAL_160_CHT NULL
+#define OPTION_VAL_170_CHT NULL
+#define OPTION_VAL_180_CHT NULL
+#define OPTION_VAL_190_CHT NULL
+#define OPTION_VAL_200_CHT NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CHT NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_CHT NULL
+#define OPTION_VAL_100_O6_CHT NULL
+#define OPTION_VAL_150_O6_CHT NULL
 #define BSNES_PPU_FAST_LABEL_CHT NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CHT NULL
 #define BSNES_PPU_FAST_INFO_0_CHT NULL
@@ -4958,26 +5515,6 @@ struct retro_core_options_v2 options_chs = {
 #define BSNES_CPU_OVERCLOCK_LABEL_CHT "CPU 超頻中"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_CHT NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_CHT NULL
-#define OPTION_VAL_10_CHT NULL
-#define OPTION_VAL_20_CHT NULL
-#define OPTION_VAL_30_CHT NULL
-#define OPTION_VAL_40_CHT NULL
-#define OPTION_VAL_50_CHT NULL
-#define OPTION_VAL_60_CHT NULL
-#define OPTION_VAL_70_CHT NULL
-#define OPTION_VAL_80_CHT NULL
-#define OPTION_VAL_90_CHT NULL
-#define OPTION_VAL_100_CHT "100% (預設)"
-#define OPTION_VAL_110_CHT NULL
-#define OPTION_VAL_120_CHT NULL
-#define OPTION_VAL_130_CHT NULL
-#define OPTION_VAL_140_CHT NULL
-#define OPTION_VAL_150_CHT NULL
-#define OPTION_VAL_160_CHT NULL
-#define OPTION_VAL_170_CHT NULL
-#define OPTION_VAL_180_CHT NULL
-#define OPTION_VAL_190_CHT NULL
-#define OPTION_VAL_200_CHT NULL
 #define OPTION_VAL_210_CHT NULL
 #define OPTION_VAL_220_CHT NULL
 #define OPTION_VAL_230_CHT NULL
@@ -5156,6 +5693,85 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_CHT,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_CHT,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CHT },
+         { "10", OPTION_VAL_10_CHT },
+         { "20", OPTION_VAL_20_CHT },
+         { "30", OPTION_VAL_30_CHT },
+         { "40", OPTION_VAL_40_CHT },
+         { "50", OPTION_VAL_50_CHT },
+         { "60", OPTION_VAL_60_CHT },
+         { "70", OPTION_VAL_70_CHT },
+         { "80", OPTION_VAL_80_CHT },
+         { "90", OPTION_VAL_90_CHT },
+         { "100", OPTION_VAL_100_CHT },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_CHT,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_CHT,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CHT },
+         { "10", OPTION_VAL_10_CHT },
+         { "20", OPTION_VAL_20_CHT },
+         { "30", OPTION_VAL_30_CHT },
+         { "40", OPTION_VAL_40_CHT },
+         { "50", OPTION_VAL_50_CHT },
+         { "60", OPTION_VAL_60_CHT },
+         { "70", OPTION_VAL_70_CHT },
+         { "80", OPTION_VAL_80_CHT },
+         { "90", OPTION_VAL_90_CHT },
+         { "100", OPTION_VAL_100_CHT },
+         { "110", OPTION_VAL_110_CHT },
+         { "120", OPTION_VAL_120_CHT },
+         { "130", OPTION_VAL_130_CHT },
+         { "140", OPTION_VAL_140_CHT },
+         { "150", OPTION_VAL_150_CHT },
+         { "160", OPTION_VAL_160_CHT },
+         { "170", OPTION_VAL_170_CHT },
+         { "180", OPTION_VAL_180_CHT },
+         { "190", OPTION_VAL_190_CHT },
+         { "200", OPTION_VAL_200_CHT },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_CHT,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_CHT,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_CHT },
+         { "110", OPTION_VAL_110_CHT },
+         { "120", OPTION_VAL_120_CHT },
+         { "130", OPTION_VAL_130_CHT },
+         { "140", OPTION_VAL_140_CHT },
+         { "150", OPTION_VAL_150_O6_CHT },
+         { "160", OPTION_VAL_160_CHT },
+         { "170", OPTION_VAL_170_CHT },
+         { "180", OPTION_VAL_180_CHT },
+         { "190", OPTION_VAL_190_CHT },
+         { "200", OPTION_VAL_200_CHT },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -5700,6 +6316,35 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_NTSC_COMPOSITE_CS "NTSC (Kompozitní)"
 #define OPTION_VAL_NTSC_S_VIDEO_CS NULL
 #define OPTION_VAL_NTSC_RGB_CS NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CS NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CS NULL
+#define OPTION_VAL_0_CS NULL
+#define OPTION_VAL_10_CS NULL
+#define OPTION_VAL_20_CS NULL
+#define OPTION_VAL_30_CS NULL
+#define OPTION_VAL_40_CS NULL
+#define OPTION_VAL_50_CS NULL
+#define OPTION_VAL_60_CS NULL
+#define OPTION_VAL_70_CS NULL
+#define OPTION_VAL_80_CS NULL
+#define OPTION_VAL_90_CS NULL
+#define OPTION_VAL_100_CS "100% (výchozí)"
+#define BSNES_VIDEO_SATURATION_LABEL_CS NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_CS NULL
+#define OPTION_VAL_110_CS NULL
+#define OPTION_VAL_120_CS NULL
+#define OPTION_VAL_130_CS NULL
+#define OPTION_VAL_140_CS NULL
+#define OPTION_VAL_150_CS NULL
+#define OPTION_VAL_160_CS NULL
+#define OPTION_VAL_170_CS NULL
+#define OPTION_VAL_180_CS NULL
+#define OPTION_VAL_190_CS NULL
+#define OPTION_VAL_200_CS NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CS NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_CS NULL
+#define OPTION_VAL_100_O6_CS NULL
+#define OPTION_VAL_150_O6_CS NULL
 #define BSNES_PPU_FAST_LABEL_CS "PPU (Video) - Rychlý Režim"
 #define BSNES_PPU_FAST_LABEL_CAT_CS "PPU - Rychlý Režim"
 #define BSNES_PPU_FAST_INFO_0_CS "Umožňuje rychlejší emulaci PPU za cenu menšího snížení přesnosti. Doporučujeme ponechat tuto funkci zapnutou. POZNÁMKA: tato funkce musí být zapnutá, aby fungovaly možnosti \"Odstranění prokladu\", \"Žádný limit spritu\" a \"HD režim 7\"."
@@ -5762,26 +6407,6 @@ struct retro_core_options_v2 options_cht = {
 #define BSNES_CPU_OVERCLOCK_LABEL_CS "Přetaktování - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_CS NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_CS "Přetaktování nebo snížení taktu procesoru. Nastavení této hodnoty nad 100 % může zkrátit dobu načítání a odstranit zpomalení. Používejte s opatrností, protože může také způsobit pád některých her nebo jiné problémy."
-#define OPTION_VAL_10_CS NULL
-#define OPTION_VAL_20_CS NULL
-#define OPTION_VAL_30_CS NULL
-#define OPTION_VAL_40_CS NULL
-#define OPTION_VAL_50_CS NULL
-#define OPTION_VAL_60_CS NULL
-#define OPTION_VAL_70_CS NULL
-#define OPTION_VAL_80_CS NULL
-#define OPTION_VAL_90_CS NULL
-#define OPTION_VAL_100_CS "100% (výchozí)"
-#define OPTION_VAL_110_CS NULL
-#define OPTION_VAL_120_CS NULL
-#define OPTION_VAL_130_CS NULL
-#define OPTION_VAL_140_CS NULL
-#define OPTION_VAL_150_CS NULL
-#define OPTION_VAL_160_CS NULL
-#define OPTION_VAL_170_CS NULL
-#define OPTION_VAL_180_CS NULL
-#define OPTION_VAL_190_CS NULL
-#define OPTION_VAL_200_CS NULL
 #define OPTION_VAL_210_CS NULL
 #define OPTION_VAL_220_CS NULL
 #define OPTION_VAL_230_CS NULL
@@ -5960,6 +6585,85 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_CS,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_CS,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CS },
+         { "10", OPTION_VAL_10_CS },
+         { "20", OPTION_VAL_20_CS },
+         { "30", OPTION_VAL_30_CS },
+         { "40", OPTION_VAL_40_CS },
+         { "50", OPTION_VAL_50_CS },
+         { "60", OPTION_VAL_60_CS },
+         { "70", OPTION_VAL_70_CS },
+         { "80", OPTION_VAL_80_CS },
+         { "90", OPTION_VAL_90_CS },
+         { "100", OPTION_VAL_100_CS },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_CS,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_CS,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CS },
+         { "10", OPTION_VAL_10_CS },
+         { "20", OPTION_VAL_20_CS },
+         { "30", OPTION_VAL_30_CS },
+         { "40", OPTION_VAL_40_CS },
+         { "50", OPTION_VAL_50_CS },
+         { "60", OPTION_VAL_60_CS },
+         { "70", OPTION_VAL_70_CS },
+         { "80", OPTION_VAL_80_CS },
+         { "90", OPTION_VAL_90_CS },
+         { "100", OPTION_VAL_100_CS },
+         { "110", OPTION_VAL_110_CS },
+         { "120", OPTION_VAL_120_CS },
+         { "130", OPTION_VAL_130_CS },
+         { "140", OPTION_VAL_140_CS },
+         { "150", OPTION_VAL_150_CS },
+         { "160", OPTION_VAL_160_CS },
+         { "170", OPTION_VAL_170_CS },
+         { "180", OPTION_VAL_180_CS },
+         { "190", OPTION_VAL_190_CS },
+         { "200", OPTION_VAL_200_CS },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_CS,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_CS,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_CS },
+         { "110", OPTION_VAL_110_CS },
+         { "120", OPTION_VAL_120_CS },
+         { "130", OPTION_VAL_130_CS },
+         { "140", OPTION_VAL_140_CS },
+         { "150", OPTION_VAL_150_O6_CS },
+         { "160", OPTION_VAL_160_CS },
+         { "170", OPTION_VAL_170_CS },
+         { "180", OPTION_VAL_180_CS },
+         { "190", OPTION_VAL_190_CS },
+         { "200", OPTION_VAL_200_CS },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -6504,6 +7208,35 @@ struct retro_core_options_v2 options_cs = {
 #define OPTION_VAL_NTSC_COMPOSITE_CY NULL
 #define OPTION_VAL_NTSC_S_VIDEO_CY NULL
 #define OPTION_VAL_NTSC_RGB_CY NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CY NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CY NULL
+#define OPTION_VAL_0_CY NULL
+#define OPTION_VAL_10_CY NULL
+#define OPTION_VAL_20_CY NULL
+#define OPTION_VAL_30_CY NULL
+#define OPTION_VAL_40_CY NULL
+#define OPTION_VAL_50_CY NULL
+#define OPTION_VAL_60_CY NULL
+#define OPTION_VAL_70_CY NULL
+#define OPTION_VAL_80_CY NULL
+#define OPTION_VAL_90_CY NULL
+#define OPTION_VAL_100_CY NULL
+#define BSNES_VIDEO_SATURATION_LABEL_CY NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_CY NULL
+#define OPTION_VAL_110_CY NULL
+#define OPTION_VAL_120_CY NULL
+#define OPTION_VAL_130_CY NULL
+#define OPTION_VAL_140_CY NULL
+#define OPTION_VAL_150_CY NULL
+#define OPTION_VAL_160_CY NULL
+#define OPTION_VAL_170_CY NULL
+#define OPTION_VAL_180_CY NULL
+#define OPTION_VAL_190_CY NULL
+#define OPTION_VAL_200_CY NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CY NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_CY NULL
+#define OPTION_VAL_100_O6_CY NULL
+#define OPTION_VAL_150_O6_CY NULL
 #define BSNES_PPU_FAST_LABEL_CY NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CY NULL
 #define BSNES_PPU_FAST_INFO_0_CY NULL
@@ -6566,26 +7299,6 @@ struct retro_core_options_v2 options_cs = {
 #define BSNES_CPU_OVERCLOCK_LABEL_CY NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_CY NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_CY NULL
-#define OPTION_VAL_10_CY NULL
-#define OPTION_VAL_20_CY NULL
-#define OPTION_VAL_30_CY NULL
-#define OPTION_VAL_40_CY NULL
-#define OPTION_VAL_50_CY NULL
-#define OPTION_VAL_60_CY NULL
-#define OPTION_VAL_70_CY NULL
-#define OPTION_VAL_80_CY NULL
-#define OPTION_VAL_90_CY NULL
-#define OPTION_VAL_100_CY NULL
-#define OPTION_VAL_110_CY NULL
-#define OPTION_VAL_120_CY NULL
-#define OPTION_VAL_130_CY NULL
-#define OPTION_VAL_140_CY NULL
-#define OPTION_VAL_150_CY NULL
-#define OPTION_VAL_160_CY NULL
-#define OPTION_VAL_170_CY NULL
-#define OPTION_VAL_180_CY NULL
-#define OPTION_VAL_190_CY NULL
-#define OPTION_VAL_200_CY NULL
 #define OPTION_VAL_210_CY NULL
 #define OPTION_VAL_220_CY NULL
 #define OPTION_VAL_230_CY NULL
@@ -6764,6 +7477,85 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_CY,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_CY,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CY },
+         { "10", OPTION_VAL_10_CY },
+         { "20", OPTION_VAL_20_CY },
+         { "30", OPTION_VAL_30_CY },
+         { "40", OPTION_VAL_40_CY },
+         { "50", OPTION_VAL_50_CY },
+         { "60", OPTION_VAL_60_CY },
+         { "70", OPTION_VAL_70_CY },
+         { "80", OPTION_VAL_80_CY },
+         { "90", OPTION_VAL_90_CY },
+         { "100", OPTION_VAL_100_CY },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_CY,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_CY,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_CY },
+         { "10", OPTION_VAL_10_CY },
+         { "20", OPTION_VAL_20_CY },
+         { "30", OPTION_VAL_30_CY },
+         { "40", OPTION_VAL_40_CY },
+         { "50", OPTION_VAL_50_CY },
+         { "60", OPTION_VAL_60_CY },
+         { "70", OPTION_VAL_70_CY },
+         { "80", OPTION_VAL_80_CY },
+         { "90", OPTION_VAL_90_CY },
+         { "100", OPTION_VAL_100_CY },
+         { "110", OPTION_VAL_110_CY },
+         { "120", OPTION_VAL_120_CY },
+         { "130", OPTION_VAL_130_CY },
+         { "140", OPTION_VAL_140_CY },
+         { "150", OPTION_VAL_150_CY },
+         { "160", OPTION_VAL_160_CY },
+         { "170", OPTION_VAL_170_CY },
+         { "180", OPTION_VAL_180_CY },
+         { "190", OPTION_VAL_190_CY },
+         { "200", OPTION_VAL_200_CY },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_CY,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_CY,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_CY },
+         { "110", OPTION_VAL_110_CY },
+         { "120", OPTION_VAL_120_CY },
+         { "130", OPTION_VAL_130_CY },
+         { "140", OPTION_VAL_140_CY },
+         { "150", OPTION_VAL_150_O6_CY },
+         { "160", OPTION_VAL_160_CY },
+         { "170", OPTION_VAL_170_CY },
+         { "180", OPTION_VAL_180_CY },
+         { "190", OPTION_VAL_190_CY },
+         { "200", OPTION_VAL_200_CY },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -7308,6 +8100,35 @@ struct retro_core_options_v2 options_cy = {
 #define OPTION_VAL_NTSC_COMPOSITE_DA NULL
 #define OPTION_VAL_NTSC_S_VIDEO_DA NULL
 #define OPTION_VAL_NTSC_RGB_DA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_DA NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_DA NULL
+#define OPTION_VAL_0_DA NULL
+#define OPTION_VAL_10_DA NULL
+#define OPTION_VAL_20_DA NULL
+#define OPTION_VAL_30_DA NULL
+#define OPTION_VAL_40_DA NULL
+#define OPTION_VAL_50_DA NULL
+#define OPTION_VAL_60_DA NULL
+#define OPTION_VAL_70_DA NULL
+#define OPTION_VAL_80_DA NULL
+#define OPTION_VAL_90_DA NULL
+#define OPTION_VAL_100_DA NULL
+#define BSNES_VIDEO_SATURATION_LABEL_DA NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_DA NULL
+#define OPTION_VAL_110_DA NULL
+#define OPTION_VAL_120_DA NULL
+#define OPTION_VAL_130_DA NULL
+#define OPTION_VAL_140_DA NULL
+#define OPTION_VAL_150_DA NULL
+#define OPTION_VAL_160_DA NULL
+#define OPTION_VAL_170_DA NULL
+#define OPTION_VAL_180_DA NULL
+#define OPTION_VAL_190_DA NULL
+#define OPTION_VAL_200_DA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_DA NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_DA NULL
+#define OPTION_VAL_100_O6_DA NULL
+#define OPTION_VAL_150_O6_DA NULL
 #define BSNES_PPU_FAST_LABEL_DA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_DA NULL
 #define BSNES_PPU_FAST_INFO_0_DA NULL
@@ -7370,26 +8191,6 @@ struct retro_core_options_v2 options_cy = {
 #define BSNES_CPU_OVERCLOCK_LABEL_DA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_DA NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_DA NULL
-#define OPTION_VAL_10_DA NULL
-#define OPTION_VAL_20_DA NULL
-#define OPTION_VAL_30_DA NULL
-#define OPTION_VAL_40_DA NULL
-#define OPTION_VAL_50_DA NULL
-#define OPTION_VAL_60_DA NULL
-#define OPTION_VAL_70_DA NULL
-#define OPTION_VAL_80_DA NULL
-#define OPTION_VAL_90_DA NULL
-#define OPTION_VAL_100_DA NULL
-#define OPTION_VAL_110_DA NULL
-#define OPTION_VAL_120_DA NULL
-#define OPTION_VAL_130_DA NULL
-#define OPTION_VAL_140_DA NULL
-#define OPTION_VAL_150_DA NULL
-#define OPTION_VAL_160_DA NULL
-#define OPTION_VAL_170_DA NULL
-#define OPTION_VAL_180_DA NULL
-#define OPTION_VAL_190_DA NULL
-#define OPTION_VAL_200_DA NULL
 #define OPTION_VAL_210_DA NULL
 #define OPTION_VAL_220_DA NULL
 #define OPTION_VAL_230_DA NULL
@@ -7568,6 +8369,85 @@ struct retro_core_option_v2_definition option_defs_da[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_DA,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_DA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_DA },
+         { "10", OPTION_VAL_10_DA },
+         { "20", OPTION_VAL_20_DA },
+         { "30", OPTION_VAL_30_DA },
+         { "40", OPTION_VAL_40_DA },
+         { "50", OPTION_VAL_50_DA },
+         { "60", OPTION_VAL_60_DA },
+         { "70", OPTION_VAL_70_DA },
+         { "80", OPTION_VAL_80_DA },
+         { "90", OPTION_VAL_90_DA },
+         { "100", OPTION_VAL_100_DA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_DA,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_DA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_DA },
+         { "10", OPTION_VAL_10_DA },
+         { "20", OPTION_VAL_20_DA },
+         { "30", OPTION_VAL_30_DA },
+         { "40", OPTION_VAL_40_DA },
+         { "50", OPTION_VAL_50_DA },
+         { "60", OPTION_VAL_60_DA },
+         { "70", OPTION_VAL_70_DA },
+         { "80", OPTION_VAL_80_DA },
+         { "90", OPTION_VAL_90_DA },
+         { "100", OPTION_VAL_100_DA },
+         { "110", OPTION_VAL_110_DA },
+         { "120", OPTION_VAL_120_DA },
+         { "130", OPTION_VAL_130_DA },
+         { "140", OPTION_VAL_140_DA },
+         { "150", OPTION_VAL_150_DA },
+         { "160", OPTION_VAL_160_DA },
+         { "170", OPTION_VAL_170_DA },
+         { "180", OPTION_VAL_180_DA },
+         { "190", OPTION_VAL_190_DA },
+         { "200", OPTION_VAL_200_DA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_DA,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_DA,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_DA },
+         { "110", OPTION_VAL_110_DA },
+         { "120", OPTION_VAL_120_DA },
+         { "130", OPTION_VAL_130_DA },
+         { "140", OPTION_VAL_140_DA },
+         { "150", OPTION_VAL_150_O6_DA },
+         { "160", OPTION_VAL_160_DA },
+         { "170", OPTION_VAL_170_DA },
+         { "180", OPTION_VAL_180_DA },
+         { "190", OPTION_VAL_190_DA },
+         { "200", OPTION_VAL_200_DA },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -8112,6 +8992,35 @@ struct retro_core_options_v2 options_da = {
 #define OPTION_VAL_NTSC_COMPOSITE_DE NULL
 #define OPTION_VAL_NTSC_S_VIDEO_DE NULL
 #define OPTION_VAL_NTSC_RGB_DE NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_DE "Farbanpassung - Luminanz"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_DE "Luminanz anpassen"
+#define OPTION_VAL_0_DE "0 %"
+#define OPTION_VAL_10_DE "10 %"
+#define OPTION_VAL_20_DE "20 %"
+#define OPTION_VAL_30_DE "30 %"
+#define OPTION_VAL_40_DE "40 %"
+#define OPTION_VAL_50_DE "50 %"
+#define OPTION_VAL_60_DE "60 %"
+#define OPTION_VAL_70_DE "70 %"
+#define OPTION_VAL_80_DE "80 %"
+#define OPTION_VAL_90_DE "90 %"
+#define OPTION_VAL_100_DE "100 % (Standard)"
+#define BSNES_VIDEO_SATURATION_LABEL_DE "Farbanpassung - Sättigung"
+#define BSNES_VIDEO_SATURATION_INFO_0_DE "Sättigung anpassen"
+#define OPTION_VAL_110_DE "110 %"
+#define OPTION_VAL_120_DE "120 %"
+#define OPTION_VAL_130_DE "130 %"
+#define OPTION_VAL_140_DE "140 %"
+#define OPTION_VAL_150_DE "150 %"
+#define OPTION_VAL_160_DE "160 %"
+#define OPTION_VAL_170_DE "170 %"
+#define OPTION_VAL_180_DE "180 %"
+#define OPTION_VAL_190_DE "190 %"
+#define OPTION_VAL_200_DE "200 %"
+#define BSNES_VIDEO_GAMMA_LABEL_DE "Farbanpassung - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_DE "Gamma anpassen"
+#define OPTION_VAL_100_O6_DE "100 %"
+#define OPTION_VAL_150_O6_DE "150 % (Standard)"
 #define BSNES_PPU_FAST_LABEL_DE NULL
 #define BSNES_PPU_FAST_LABEL_CAT_DE NULL
 #define BSNES_PPU_FAST_INFO_0_DE "Aktiviert eine schnellere Emulation der PPU auf Kosten einer geringfügigen Reduktion der Genauigkeit. Es wird empfohlen, dies angeschaltet zu lassen. HINWEIS: Dies muss für die Optionen 'Deinterlace', 'Ohne Sprite-Begrenzung' und 'HD Modus 7' aktiviert sein."
@@ -8174,26 +9083,6 @@ struct retro_core_options_v2 options_da = {
 #define BSNES_CPU_OVERCLOCK_LABEL_DE "Übertaktung - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_DE "Prozessor"
 #define BSNES_CPU_OVERCLOCK_INFO_0_DE "Übertakten oder Heruntertakten der CPU. Wird dieser Wert auf über 100 % eingestellt, können sich Ladezeiten verkürzen und Verlangsamung beseitigen. Doch mit Vorsicht anwenden, da dies auch zum Absturz einiger Spiele oder zu anderen Problemen führen kann."
-#define OPTION_VAL_10_DE "10 %"
-#define OPTION_VAL_20_DE "20 %"
-#define OPTION_VAL_30_DE "30 %"
-#define OPTION_VAL_40_DE "40 %"
-#define OPTION_VAL_50_DE "50 %"
-#define OPTION_VAL_60_DE "60 %"
-#define OPTION_VAL_70_DE "70 %"
-#define OPTION_VAL_80_DE "80 %"
-#define OPTION_VAL_90_DE "90 %"
-#define OPTION_VAL_100_DE "100 % (Standard)"
-#define OPTION_VAL_110_DE "110 %"
-#define OPTION_VAL_120_DE "120 %"
-#define OPTION_VAL_130_DE "130 %"
-#define OPTION_VAL_140_DE "140 %"
-#define OPTION_VAL_150_DE "150 %"
-#define OPTION_VAL_160_DE "160 %"
-#define OPTION_VAL_170_DE "170 %"
-#define OPTION_VAL_180_DE "180 %"
-#define OPTION_VAL_190_DE "190 %"
-#define OPTION_VAL_200_DE "200 %"
 #define OPTION_VAL_210_DE "210 %"
 #define OPTION_VAL_220_DE "220 %"
 #define OPTION_VAL_230_DE "230 %"
@@ -8372,6 +9261,85 @@ struct retro_core_option_v2_definition option_defs_de[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_DE,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_DE,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_DE },
+         { "10", OPTION_VAL_10_DE },
+         { "20", OPTION_VAL_20_DE },
+         { "30", OPTION_VAL_30_DE },
+         { "40", OPTION_VAL_40_DE },
+         { "50", OPTION_VAL_50_DE },
+         { "60", OPTION_VAL_60_DE },
+         { "70", OPTION_VAL_70_DE },
+         { "80", OPTION_VAL_80_DE },
+         { "90", OPTION_VAL_90_DE },
+         { "100", OPTION_VAL_100_DE },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_DE,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_DE,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_DE },
+         { "10", OPTION_VAL_10_DE },
+         { "20", OPTION_VAL_20_DE },
+         { "30", OPTION_VAL_30_DE },
+         { "40", OPTION_VAL_40_DE },
+         { "50", OPTION_VAL_50_DE },
+         { "60", OPTION_VAL_60_DE },
+         { "70", OPTION_VAL_70_DE },
+         { "80", OPTION_VAL_80_DE },
+         { "90", OPTION_VAL_90_DE },
+         { "100", OPTION_VAL_100_DE },
+         { "110", OPTION_VAL_110_DE },
+         { "120", OPTION_VAL_120_DE },
+         { "130", OPTION_VAL_130_DE },
+         { "140", OPTION_VAL_140_DE },
+         { "150", OPTION_VAL_150_DE },
+         { "160", OPTION_VAL_160_DE },
+         { "170", OPTION_VAL_170_DE },
+         { "180", OPTION_VAL_180_DE },
+         { "190", OPTION_VAL_190_DE },
+         { "200", OPTION_VAL_200_DE },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_DE,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_DE,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_DE },
+         { "110", OPTION_VAL_110_DE },
+         { "120", OPTION_VAL_120_DE },
+         { "130", OPTION_VAL_130_DE },
+         { "140", OPTION_VAL_140_DE },
+         { "150", OPTION_VAL_150_O6_DE },
+         { "160", OPTION_VAL_160_DE },
+         { "170", OPTION_VAL_170_DE },
+         { "180", OPTION_VAL_180_DE },
+         { "190", OPTION_VAL_190_DE },
+         { "200", OPTION_VAL_200_DE },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -8916,6 +9884,35 @@ struct retro_core_options_v2 options_de = {
 #define OPTION_VAL_NTSC_COMPOSITE_EL NULL
 #define OPTION_VAL_NTSC_S_VIDEO_EL NULL
 #define OPTION_VAL_NTSC_RGB_EL NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_EL NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_EL NULL
+#define OPTION_VAL_0_EL NULL
+#define OPTION_VAL_10_EL NULL
+#define OPTION_VAL_20_EL NULL
+#define OPTION_VAL_30_EL NULL
+#define OPTION_VAL_40_EL NULL
+#define OPTION_VAL_50_EL NULL
+#define OPTION_VAL_60_EL NULL
+#define OPTION_VAL_70_EL NULL
+#define OPTION_VAL_80_EL "το 80%"
+#define OPTION_VAL_90_EL NULL
+#define OPTION_VAL_100_EL "100% (Προεπιλογή)"
+#define BSNES_VIDEO_SATURATION_LABEL_EL NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_EL NULL
+#define OPTION_VAL_110_EL NULL
+#define OPTION_VAL_120_EL NULL
+#define OPTION_VAL_130_EL NULL
+#define OPTION_VAL_140_EL NULL
+#define OPTION_VAL_150_EL NULL
+#define OPTION_VAL_160_EL NULL
+#define OPTION_VAL_170_EL NULL
+#define OPTION_VAL_180_EL NULL
+#define OPTION_VAL_190_EL NULL
+#define OPTION_VAL_200_EL NULL
+#define BSNES_VIDEO_GAMMA_LABEL_EL NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_EL NULL
+#define OPTION_VAL_100_O6_EL NULL
+#define OPTION_VAL_150_O6_EL NULL
 #define BSNES_PPU_FAST_LABEL_EL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_EL NULL
 #define BSNES_PPU_FAST_INFO_0_EL NULL
@@ -8978,26 +9975,6 @@ struct retro_core_options_v2 options_de = {
 #define BSNES_CPU_OVERCLOCK_LABEL_EL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_EL NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_EL NULL
-#define OPTION_VAL_10_EL NULL
-#define OPTION_VAL_20_EL NULL
-#define OPTION_VAL_30_EL NULL
-#define OPTION_VAL_40_EL NULL
-#define OPTION_VAL_50_EL NULL
-#define OPTION_VAL_60_EL NULL
-#define OPTION_VAL_70_EL NULL
-#define OPTION_VAL_80_EL "το 80%"
-#define OPTION_VAL_90_EL NULL
-#define OPTION_VAL_100_EL "100% (Προεπιλογή)"
-#define OPTION_VAL_110_EL NULL
-#define OPTION_VAL_120_EL NULL
-#define OPTION_VAL_130_EL NULL
-#define OPTION_VAL_140_EL NULL
-#define OPTION_VAL_150_EL NULL
-#define OPTION_VAL_160_EL NULL
-#define OPTION_VAL_170_EL NULL
-#define OPTION_VAL_180_EL NULL
-#define OPTION_VAL_190_EL NULL
-#define OPTION_VAL_200_EL NULL
 #define OPTION_VAL_210_EL NULL
 #define OPTION_VAL_220_EL NULL
 #define OPTION_VAL_230_EL NULL
@@ -9176,6 +10153,85 @@ struct retro_core_option_v2_definition option_defs_el[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_EL,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_EL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_EL },
+         { "10", OPTION_VAL_10_EL },
+         { "20", OPTION_VAL_20_EL },
+         { "30", OPTION_VAL_30_EL },
+         { "40", OPTION_VAL_40_EL },
+         { "50", OPTION_VAL_50_EL },
+         { "60", OPTION_VAL_60_EL },
+         { "70", OPTION_VAL_70_EL },
+         { "80", OPTION_VAL_80_EL },
+         { "90", OPTION_VAL_90_EL },
+         { "100", OPTION_VAL_100_EL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_EL,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_EL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_EL },
+         { "10", OPTION_VAL_10_EL },
+         { "20", OPTION_VAL_20_EL },
+         { "30", OPTION_VAL_30_EL },
+         { "40", OPTION_VAL_40_EL },
+         { "50", OPTION_VAL_50_EL },
+         { "60", OPTION_VAL_60_EL },
+         { "70", OPTION_VAL_70_EL },
+         { "80", OPTION_VAL_80_EL },
+         { "90", OPTION_VAL_90_EL },
+         { "100", OPTION_VAL_100_EL },
+         { "110", OPTION_VAL_110_EL },
+         { "120", OPTION_VAL_120_EL },
+         { "130", OPTION_VAL_130_EL },
+         { "140", OPTION_VAL_140_EL },
+         { "150", OPTION_VAL_150_EL },
+         { "160", OPTION_VAL_160_EL },
+         { "170", OPTION_VAL_170_EL },
+         { "180", OPTION_VAL_180_EL },
+         { "190", OPTION_VAL_190_EL },
+         { "200", OPTION_VAL_200_EL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_EL,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_EL,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_EL },
+         { "110", OPTION_VAL_110_EL },
+         { "120", OPTION_VAL_120_EL },
+         { "130", OPTION_VAL_130_EL },
+         { "140", OPTION_VAL_140_EL },
+         { "150", OPTION_VAL_150_O6_EL },
+         { "160", OPTION_VAL_160_EL },
+         { "170", OPTION_VAL_170_EL },
+         { "180", OPTION_VAL_180_EL },
+         { "190", OPTION_VAL_190_EL },
+         { "200", OPTION_VAL_200_EL },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -9720,6 +10776,35 @@ struct retro_core_options_v2 options_el = {
 #define OPTION_VAL_NTSC_COMPOSITE_EN NULL
 #define OPTION_VAL_NTSC_S_VIDEO_EN NULL
 #define OPTION_VAL_NTSC_RGB_EN NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_EN NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_EN NULL
+#define OPTION_VAL_0_EN NULL
+#define OPTION_VAL_10_EN NULL
+#define OPTION_VAL_20_EN NULL
+#define OPTION_VAL_30_EN NULL
+#define OPTION_VAL_40_EN NULL
+#define OPTION_VAL_50_EN NULL
+#define OPTION_VAL_60_EN NULL
+#define OPTION_VAL_70_EN NULL
+#define OPTION_VAL_80_EN NULL
+#define OPTION_VAL_90_EN NULL
+#define OPTION_VAL_100_EN NULL
+#define BSNES_VIDEO_SATURATION_LABEL_EN NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_EN NULL
+#define OPTION_VAL_110_EN NULL
+#define OPTION_VAL_120_EN NULL
+#define OPTION_VAL_130_EN NULL
+#define OPTION_VAL_140_EN NULL
+#define OPTION_VAL_150_EN NULL
+#define OPTION_VAL_160_EN NULL
+#define OPTION_VAL_170_EN NULL
+#define OPTION_VAL_180_EN NULL
+#define OPTION_VAL_190_EN NULL
+#define OPTION_VAL_200_EN NULL
+#define BSNES_VIDEO_GAMMA_LABEL_EN NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_EN NULL
+#define OPTION_VAL_100_O6_EN NULL
+#define OPTION_VAL_150_O6_EN NULL
 #define BSNES_PPU_FAST_LABEL_EN NULL
 #define BSNES_PPU_FAST_LABEL_CAT_EN NULL
 #define BSNES_PPU_FAST_INFO_0_EN NULL
@@ -9782,26 +10867,6 @@ struct retro_core_options_v2 options_el = {
 #define BSNES_CPU_OVERCLOCK_LABEL_EN "Over-clocking - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_EN NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_EN "Over-clock or down-clock the CPU. Setting this value above 100% may reduce loading times and remove slowdown. Use with caution as it may also cause some games to crash or exhibit other issues."
-#define OPTION_VAL_10_EN NULL
-#define OPTION_VAL_20_EN NULL
-#define OPTION_VAL_30_EN NULL
-#define OPTION_VAL_40_EN NULL
-#define OPTION_VAL_50_EN NULL
-#define OPTION_VAL_60_EN NULL
-#define OPTION_VAL_70_EN NULL
-#define OPTION_VAL_80_EN NULL
-#define OPTION_VAL_90_EN NULL
-#define OPTION_VAL_100_EN NULL
-#define OPTION_VAL_110_EN NULL
-#define OPTION_VAL_120_EN NULL
-#define OPTION_VAL_130_EN NULL
-#define OPTION_VAL_140_EN NULL
-#define OPTION_VAL_150_EN NULL
-#define OPTION_VAL_160_EN NULL
-#define OPTION_VAL_170_EN NULL
-#define OPTION_VAL_180_EN NULL
-#define OPTION_VAL_190_EN NULL
-#define OPTION_VAL_200_EN NULL
 #define OPTION_VAL_210_EN NULL
 #define OPTION_VAL_220_EN NULL
 #define OPTION_VAL_230_EN NULL
@@ -9980,6 +11045,85 @@ struct retro_core_option_v2_definition option_defs_en[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_EN,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_EN,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_EN },
+         { "10", OPTION_VAL_10_EN },
+         { "20", OPTION_VAL_20_EN },
+         { "30", OPTION_VAL_30_EN },
+         { "40", OPTION_VAL_40_EN },
+         { "50", OPTION_VAL_50_EN },
+         { "60", OPTION_VAL_60_EN },
+         { "70", OPTION_VAL_70_EN },
+         { "80", OPTION_VAL_80_EN },
+         { "90", OPTION_VAL_90_EN },
+         { "100", OPTION_VAL_100_EN },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_EN,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_EN,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_EN },
+         { "10", OPTION_VAL_10_EN },
+         { "20", OPTION_VAL_20_EN },
+         { "30", OPTION_VAL_30_EN },
+         { "40", OPTION_VAL_40_EN },
+         { "50", OPTION_VAL_50_EN },
+         { "60", OPTION_VAL_60_EN },
+         { "70", OPTION_VAL_70_EN },
+         { "80", OPTION_VAL_80_EN },
+         { "90", OPTION_VAL_90_EN },
+         { "100", OPTION_VAL_100_EN },
+         { "110", OPTION_VAL_110_EN },
+         { "120", OPTION_VAL_120_EN },
+         { "130", OPTION_VAL_130_EN },
+         { "140", OPTION_VAL_140_EN },
+         { "150", OPTION_VAL_150_EN },
+         { "160", OPTION_VAL_160_EN },
+         { "170", OPTION_VAL_170_EN },
+         { "180", OPTION_VAL_180_EN },
+         { "190", OPTION_VAL_190_EN },
+         { "200", OPTION_VAL_200_EN },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_EN,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_EN,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_EN },
+         { "110", OPTION_VAL_110_EN },
+         { "120", OPTION_VAL_120_EN },
+         { "130", OPTION_VAL_130_EN },
+         { "140", OPTION_VAL_140_EN },
+         { "150", OPTION_VAL_150_O6_EN },
+         { "160", OPTION_VAL_160_EN },
+         { "170", OPTION_VAL_170_EN },
+         { "180", OPTION_VAL_180_EN },
+         { "190", OPTION_VAL_190_EN },
+         { "200", OPTION_VAL_200_EN },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -10524,6 +11668,35 @@ struct retro_core_options_v2 options_en = {
 #define OPTION_VAL_NTSC_COMPOSITE_EO NULL
 #define OPTION_VAL_NTSC_S_VIDEO_EO NULL
 #define OPTION_VAL_NTSC_RGB_EO NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_EO NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_EO NULL
+#define OPTION_VAL_0_EO NULL
+#define OPTION_VAL_10_EO NULL
+#define OPTION_VAL_20_EO NULL
+#define OPTION_VAL_30_EO NULL
+#define OPTION_VAL_40_EO NULL
+#define OPTION_VAL_50_EO NULL
+#define OPTION_VAL_60_EO NULL
+#define OPTION_VAL_70_EO NULL
+#define OPTION_VAL_80_EO NULL
+#define OPTION_VAL_90_EO NULL
+#define OPTION_VAL_100_EO NULL
+#define BSNES_VIDEO_SATURATION_LABEL_EO NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_EO NULL
+#define OPTION_VAL_110_EO NULL
+#define OPTION_VAL_120_EO NULL
+#define OPTION_VAL_130_EO NULL
+#define OPTION_VAL_140_EO NULL
+#define OPTION_VAL_150_EO NULL
+#define OPTION_VAL_160_EO NULL
+#define OPTION_VAL_170_EO NULL
+#define OPTION_VAL_180_EO NULL
+#define OPTION_VAL_190_EO NULL
+#define OPTION_VAL_200_EO NULL
+#define BSNES_VIDEO_GAMMA_LABEL_EO NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_EO NULL
+#define OPTION_VAL_100_O6_EO NULL
+#define OPTION_VAL_150_O6_EO NULL
 #define BSNES_PPU_FAST_LABEL_EO NULL
 #define BSNES_PPU_FAST_LABEL_CAT_EO NULL
 #define BSNES_PPU_FAST_INFO_0_EO NULL
@@ -10586,26 +11759,6 @@ struct retro_core_options_v2 options_en = {
 #define BSNES_CPU_OVERCLOCK_LABEL_EO NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_EO NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_EO NULL
-#define OPTION_VAL_10_EO NULL
-#define OPTION_VAL_20_EO NULL
-#define OPTION_VAL_30_EO NULL
-#define OPTION_VAL_40_EO NULL
-#define OPTION_VAL_50_EO NULL
-#define OPTION_VAL_60_EO NULL
-#define OPTION_VAL_70_EO NULL
-#define OPTION_VAL_80_EO NULL
-#define OPTION_VAL_90_EO NULL
-#define OPTION_VAL_100_EO NULL
-#define OPTION_VAL_110_EO NULL
-#define OPTION_VAL_120_EO NULL
-#define OPTION_VAL_130_EO NULL
-#define OPTION_VAL_140_EO NULL
-#define OPTION_VAL_150_EO NULL
-#define OPTION_VAL_160_EO NULL
-#define OPTION_VAL_170_EO NULL
-#define OPTION_VAL_180_EO NULL
-#define OPTION_VAL_190_EO NULL
-#define OPTION_VAL_200_EO NULL
 #define OPTION_VAL_210_EO NULL
 #define OPTION_VAL_220_EO NULL
 #define OPTION_VAL_230_EO NULL
@@ -10784,6 +11937,85 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_EO,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_EO,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_EO },
+         { "10", OPTION_VAL_10_EO },
+         { "20", OPTION_VAL_20_EO },
+         { "30", OPTION_VAL_30_EO },
+         { "40", OPTION_VAL_40_EO },
+         { "50", OPTION_VAL_50_EO },
+         { "60", OPTION_VAL_60_EO },
+         { "70", OPTION_VAL_70_EO },
+         { "80", OPTION_VAL_80_EO },
+         { "90", OPTION_VAL_90_EO },
+         { "100", OPTION_VAL_100_EO },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_EO,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_EO,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_EO },
+         { "10", OPTION_VAL_10_EO },
+         { "20", OPTION_VAL_20_EO },
+         { "30", OPTION_VAL_30_EO },
+         { "40", OPTION_VAL_40_EO },
+         { "50", OPTION_VAL_50_EO },
+         { "60", OPTION_VAL_60_EO },
+         { "70", OPTION_VAL_70_EO },
+         { "80", OPTION_VAL_80_EO },
+         { "90", OPTION_VAL_90_EO },
+         { "100", OPTION_VAL_100_EO },
+         { "110", OPTION_VAL_110_EO },
+         { "120", OPTION_VAL_120_EO },
+         { "130", OPTION_VAL_130_EO },
+         { "140", OPTION_VAL_140_EO },
+         { "150", OPTION_VAL_150_EO },
+         { "160", OPTION_VAL_160_EO },
+         { "170", OPTION_VAL_170_EO },
+         { "180", OPTION_VAL_180_EO },
+         { "190", OPTION_VAL_190_EO },
+         { "200", OPTION_VAL_200_EO },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_EO,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_EO,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_EO },
+         { "110", OPTION_VAL_110_EO },
+         { "120", OPTION_VAL_120_EO },
+         { "130", OPTION_VAL_130_EO },
+         { "140", OPTION_VAL_140_EO },
+         { "150", OPTION_VAL_150_O6_EO },
+         { "160", OPTION_VAL_160_EO },
+         { "170", OPTION_VAL_170_EO },
+         { "180", OPTION_VAL_180_EO },
+         { "190", OPTION_VAL_190_EO },
+         { "200", OPTION_VAL_200_EO },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -11328,6 +12560,35 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_NTSC_COMPOSITE_ES "NTSC (Compuesto)"
 #define OPTION_VAL_NTSC_S_VIDEO_ES NULL
 #define OPTION_VAL_NTSC_RGB_ES NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_ES "Ajuste de color: luminosidad"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_ES "Ajustar luminosidad"
+#define OPTION_VAL_0_ES "0 %"
+#define OPTION_VAL_10_ES "10 %"
+#define OPTION_VAL_20_ES "20 %"
+#define OPTION_VAL_30_ES "30 %"
+#define OPTION_VAL_40_ES "40 %"
+#define OPTION_VAL_50_ES "50 %"
+#define OPTION_VAL_60_ES "60 %"
+#define OPTION_VAL_70_ES "70 %"
+#define OPTION_VAL_80_ES "80 %"
+#define OPTION_VAL_90_ES "90 %"
+#define OPTION_VAL_100_ES "100 % (por defecto)"
+#define BSNES_VIDEO_SATURATION_LABEL_ES "Ajuste de color: saturación"
+#define BSNES_VIDEO_SATURATION_INFO_0_ES "Ajustar saturación"
+#define OPTION_VAL_110_ES "110 %"
+#define OPTION_VAL_120_ES "120 %"
+#define OPTION_VAL_130_ES "130 %"
+#define OPTION_VAL_140_ES "140 %"
+#define OPTION_VAL_150_ES "150 %"
+#define OPTION_VAL_160_ES "160 %"
+#define OPTION_VAL_170_ES "170 %"
+#define OPTION_VAL_180_ES "180 %"
+#define OPTION_VAL_190_ES "190 %"
+#define OPTION_VAL_200_ES "200 %"
+#define BSNES_VIDEO_GAMMA_LABEL_ES "Ajuste de color: gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_ES "Ajustar gamma"
+#define OPTION_VAL_100_O6_ES "100 %"
+#define OPTION_VAL_150_O6_ES "150 % (valor predeterminado)"
 #define BSNES_PPU_FAST_LABEL_ES "PPU (vídeo): modo rápido"
 #define BSNES_PPU_FAST_LABEL_CAT_ES "PPU: modo rápido"
 #define BSNES_PPU_FAST_INFO_0_ES "Habilita una emulación más rápida de la PPU con una leve reducción de precisión. Se recomienda dejar esta opción activada. NOTA: esta opción debe estar activada para que funcionen las opciones «Desentrelazado», «Desactivar límite de sprites» y «Modo 7 en alta definición (HD)»."
@@ -11390,26 +12651,6 @@ struct retro_core_options_v2 options_eo = {
 #define BSNES_CPU_OVERCLOCK_LABEL_ES "Velocidad de la CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_ES NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_ES "Aumenta o disminuye la velocidad de la CPU. Un valor superior al 100 % podría reducir los tiempos de carga y las ralentizaciones. Utiliza esta opción con cuidado, ya que también podría provocar cuelgues u otros problemas en algunos juegos."
-#define OPTION_VAL_10_ES "10 %"
-#define OPTION_VAL_20_ES "20 %"
-#define OPTION_VAL_30_ES "30 %"
-#define OPTION_VAL_40_ES "40 %"
-#define OPTION_VAL_50_ES "50 %"
-#define OPTION_VAL_60_ES "60 %"
-#define OPTION_VAL_70_ES "70 %"
-#define OPTION_VAL_80_ES "80 %"
-#define OPTION_VAL_90_ES "90 %"
-#define OPTION_VAL_100_ES "100 % (por defecto)"
-#define OPTION_VAL_110_ES "110 %"
-#define OPTION_VAL_120_ES "120 %"
-#define OPTION_VAL_130_ES "130 %"
-#define OPTION_VAL_140_ES "140 %"
-#define OPTION_VAL_150_ES "150 %"
-#define OPTION_VAL_160_ES "160 %"
-#define OPTION_VAL_170_ES "170 %"
-#define OPTION_VAL_180_ES "180 %"
-#define OPTION_VAL_190_ES "190 %"
-#define OPTION_VAL_200_ES "200 %"
 #define OPTION_VAL_210_ES "210 %"
 #define OPTION_VAL_220_ES "220 %"
 #define OPTION_VAL_230_ES "230 %"
@@ -11588,6 +12829,85 @@ struct retro_core_option_v2_definition option_defs_es[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_ES,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_ES,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_ES },
+         { "10", OPTION_VAL_10_ES },
+         { "20", OPTION_VAL_20_ES },
+         { "30", OPTION_VAL_30_ES },
+         { "40", OPTION_VAL_40_ES },
+         { "50", OPTION_VAL_50_ES },
+         { "60", OPTION_VAL_60_ES },
+         { "70", OPTION_VAL_70_ES },
+         { "80", OPTION_VAL_80_ES },
+         { "90", OPTION_VAL_90_ES },
+         { "100", OPTION_VAL_100_ES },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_ES,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_ES,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_ES },
+         { "10", OPTION_VAL_10_ES },
+         { "20", OPTION_VAL_20_ES },
+         { "30", OPTION_VAL_30_ES },
+         { "40", OPTION_VAL_40_ES },
+         { "50", OPTION_VAL_50_ES },
+         { "60", OPTION_VAL_60_ES },
+         { "70", OPTION_VAL_70_ES },
+         { "80", OPTION_VAL_80_ES },
+         { "90", OPTION_VAL_90_ES },
+         { "100", OPTION_VAL_100_ES },
+         { "110", OPTION_VAL_110_ES },
+         { "120", OPTION_VAL_120_ES },
+         { "130", OPTION_VAL_130_ES },
+         { "140", OPTION_VAL_140_ES },
+         { "150", OPTION_VAL_150_ES },
+         { "160", OPTION_VAL_160_ES },
+         { "170", OPTION_VAL_170_ES },
+         { "180", OPTION_VAL_180_ES },
+         { "190", OPTION_VAL_190_ES },
+         { "200", OPTION_VAL_200_ES },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_ES,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_ES,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_ES },
+         { "110", OPTION_VAL_110_ES },
+         { "120", OPTION_VAL_120_ES },
+         { "130", OPTION_VAL_130_ES },
+         { "140", OPTION_VAL_140_ES },
+         { "150", OPTION_VAL_150_O6_ES },
+         { "160", OPTION_VAL_160_ES },
+         { "170", OPTION_VAL_170_ES },
+         { "180", OPTION_VAL_180_ES },
+         { "190", OPTION_VAL_190_ES },
+         { "200", OPTION_VAL_200_ES },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -12132,6 +13452,35 @@ struct retro_core_options_v2 options_es = {
 #define OPTION_VAL_NTSC_COMPOSITE_FA NULL
 #define OPTION_VAL_NTSC_S_VIDEO_FA NULL
 #define OPTION_VAL_NTSC_RGB_FA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_FA NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_FA NULL
+#define OPTION_VAL_0_FA NULL
+#define OPTION_VAL_10_FA NULL
+#define OPTION_VAL_20_FA NULL
+#define OPTION_VAL_30_FA NULL
+#define OPTION_VAL_40_FA NULL
+#define OPTION_VAL_50_FA NULL
+#define OPTION_VAL_60_FA NULL
+#define OPTION_VAL_70_FA NULL
+#define OPTION_VAL_80_FA NULL
+#define OPTION_VAL_90_FA NULL
+#define OPTION_VAL_100_FA NULL
+#define BSNES_VIDEO_SATURATION_LABEL_FA NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_FA NULL
+#define OPTION_VAL_110_FA NULL
+#define OPTION_VAL_120_FA NULL
+#define OPTION_VAL_130_FA NULL
+#define OPTION_VAL_140_FA NULL
+#define OPTION_VAL_150_FA NULL
+#define OPTION_VAL_160_FA NULL
+#define OPTION_VAL_170_FA NULL
+#define OPTION_VAL_180_FA NULL
+#define OPTION_VAL_190_FA NULL
+#define OPTION_VAL_200_FA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_FA NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_FA NULL
+#define OPTION_VAL_100_O6_FA NULL
+#define OPTION_VAL_150_O6_FA NULL
 #define BSNES_PPU_FAST_LABEL_FA NULL
 #define BSNES_PPU_FAST_LABEL_CAT_FA NULL
 #define BSNES_PPU_FAST_INFO_0_FA NULL
@@ -12194,26 +13543,6 @@ struct retro_core_options_v2 options_es = {
 #define BSNES_CPU_OVERCLOCK_LABEL_FA NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_FA NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_FA NULL
-#define OPTION_VAL_10_FA NULL
-#define OPTION_VAL_20_FA NULL
-#define OPTION_VAL_30_FA NULL
-#define OPTION_VAL_40_FA NULL
-#define OPTION_VAL_50_FA NULL
-#define OPTION_VAL_60_FA NULL
-#define OPTION_VAL_70_FA NULL
-#define OPTION_VAL_80_FA NULL
-#define OPTION_VAL_90_FA NULL
-#define OPTION_VAL_100_FA NULL
-#define OPTION_VAL_110_FA NULL
-#define OPTION_VAL_120_FA NULL
-#define OPTION_VAL_130_FA NULL
-#define OPTION_VAL_140_FA NULL
-#define OPTION_VAL_150_FA NULL
-#define OPTION_VAL_160_FA NULL
-#define OPTION_VAL_170_FA NULL
-#define OPTION_VAL_180_FA NULL
-#define OPTION_VAL_190_FA NULL
-#define OPTION_VAL_200_FA NULL
 #define OPTION_VAL_210_FA NULL
 #define OPTION_VAL_220_FA NULL
 #define OPTION_VAL_230_FA NULL
@@ -12392,6 +13721,85 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_FA,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_FA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_FA },
+         { "10", OPTION_VAL_10_FA },
+         { "20", OPTION_VAL_20_FA },
+         { "30", OPTION_VAL_30_FA },
+         { "40", OPTION_VAL_40_FA },
+         { "50", OPTION_VAL_50_FA },
+         { "60", OPTION_VAL_60_FA },
+         { "70", OPTION_VAL_70_FA },
+         { "80", OPTION_VAL_80_FA },
+         { "90", OPTION_VAL_90_FA },
+         { "100", OPTION_VAL_100_FA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_FA,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_FA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_FA },
+         { "10", OPTION_VAL_10_FA },
+         { "20", OPTION_VAL_20_FA },
+         { "30", OPTION_VAL_30_FA },
+         { "40", OPTION_VAL_40_FA },
+         { "50", OPTION_VAL_50_FA },
+         { "60", OPTION_VAL_60_FA },
+         { "70", OPTION_VAL_70_FA },
+         { "80", OPTION_VAL_80_FA },
+         { "90", OPTION_VAL_90_FA },
+         { "100", OPTION_VAL_100_FA },
+         { "110", OPTION_VAL_110_FA },
+         { "120", OPTION_VAL_120_FA },
+         { "130", OPTION_VAL_130_FA },
+         { "140", OPTION_VAL_140_FA },
+         { "150", OPTION_VAL_150_FA },
+         { "160", OPTION_VAL_160_FA },
+         { "170", OPTION_VAL_170_FA },
+         { "180", OPTION_VAL_180_FA },
+         { "190", OPTION_VAL_190_FA },
+         { "200", OPTION_VAL_200_FA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_FA,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_FA,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_FA },
+         { "110", OPTION_VAL_110_FA },
+         { "120", OPTION_VAL_120_FA },
+         { "130", OPTION_VAL_130_FA },
+         { "140", OPTION_VAL_140_FA },
+         { "150", OPTION_VAL_150_O6_FA },
+         { "160", OPTION_VAL_160_FA },
+         { "170", OPTION_VAL_170_FA },
+         { "180", OPTION_VAL_180_FA },
+         { "190", OPTION_VAL_190_FA },
+         { "200", OPTION_VAL_200_FA },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -12936,6 +14344,35 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_NTSC_COMPOSITE_FI "NTSC (komposiitti)"
 #define OPTION_VAL_NTSC_S_VIDEO_FI NULL
 #define OPTION_VAL_NTSC_RGB_FI NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_FI NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_FI NULL
+#define OPTION_VAL_0_FI NULL
+#define OPTION_VAL_10_FI "10 %"
+#define OPTION_VAL_20_FI "20 %"
+#define OPTION_VAL_30_FI "30 %"
+#define OPTION_VAL_40_FI "40 %"
+#define OPTION_VAL_50_FI "50 %"
+#define OPTION_VAL_60_FI "60 %"
+#define OPTION_VAL_70_FI "70 %"
+#define OPTION_VAL_80_FI "80 %"
+#define OPTION_VAL_90_FI "90 %"
+#define OPTION_VAL_100_FI "100 % (Oletus)"
+#define BSNES_VIDEO_SATURATION_LABEL_FI NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_FI NULL
+#define OPTION_VAL_110_FI "110 %"
+#define OPTION_VAL_120_FI "120 %"
+#define OPTION_VAL_130_FI "130 %"
+#define OPTION_VAL_140_FI "140 %"
+#define OPTION_VAL_150_FI "150 %"
+#define OPTION_VAL_160_FI "160 %"
+#define OPTION_VAL_170_FI "170 %"
+#define OPTION_VAL_180_FI "180 %"
+#define OPTION_VAL_190_FI "190 %"
+#define OPTION_VAL_200_FI "200 %"
+#define BSNES_VIDEO_GAMMA_LABEL_FI NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_FI NULL
+#define OPTION_VAL_100_O6_FI "100 %"
+#define OPTION_VAL_150_O6_FI NULL
 #define BSNES_PPU_FAST_LABEL_FI "PPU (video) - nopea tila"
 #define BSNES_PPU_FAST_LABEL_CAT_FI "PPU - nopea tila"
 #define BSNES_PPU_FAST_INFO_0_FI NULL
@@ -12998,26 +14435,6 @@ struct retro_core_options_v2 options_fa = {
 #define BSNES_CPU_OVERCLOCK_LABEL_FI NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_FI NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_FI NULL
-#define OPTION_VAL_10_FI "10 %"
-#define OPTION_VAL_20_FI "20 %"
-#define OPTION_VAL_30_FI "30 %"
-#define OPTION_VAL_40_FI "40 %"
-#define OPTION_VAL_50_FI "50 %"
-#define OPTION_VAL_60_FI "60 %"
-#define OPTION_VAL_70_FI "70 %"
-#define OPTION_VAL_80_FI "80 %"
-#define OPTION_VAL_90_FI "90 %"
-#define OPTION_VAL_100_FI "100 % (Oletus)"
-#define OPTION_VAL_110_FI "110 %"
-#define OPTION_VAL_120_FI "120 %"
-#define OPTION_VAL_130_FI "130 %"
-#define OPTION_VAL_140_FI "140 %"
-#define OPTION_VAL_150_FI "150 %"
-#define OPTION_VAL_160_FI "160 %"
-#define OPTION_VAL_170_FI "170 %"
-#define OPTION_VAL_180_FI "180 %"
-#define OPTION_VAL_190_FI "190 %"
-#define OPTION_VAL_200_FI "200 %"
 #define OPTION_VAL_210_FI "210 %"
 #define OPTION_VAL_220_FI "220 %"
 #define OPTION_VAL_230_FI "230 %"
@@ -13196,6 +14613,85 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_FI,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_FI,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_FI },
+         { "10", OPTION_VAL_10_FI },
+         { "20", OPTION_VAL_20_FI },
+         { "30", OPTION_VAL_30_FI },
+         { "40", OPTION_VAL_40_FI },
+         { "50", OPTION_VAL_50_FI },
+         { "60", OPTION_VAL_60_FI },
+         { "70", OPTION_VAL_70_FI },
+         { "80", OPTION_VAL_80_FI },
+         { "90", OPTION_VAL_90_FI },
+         { "100", OPTION_VAL_100_FI },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_FI,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_FI,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_FI },
+         { "10", OPTION_VAL_10_FI },
+         { "20", OPTION_VAL_20_FI },
+         { "30", OPTION_VAL_30_FI },
+         { "40", OPTION_VAL_40_FI },
+         { "50", OPTION_VAL_50_FI },
+         { "60", OPTION_VAL_60_FI },
+         { "70", OPTION_VAL_70_FI },
+         { "80", OPTION_VAL_80_FI },
+         { "90", OPTION_VAL_90_FI },
+         { "100", OPTION_VAL_100_FI },
+         { "110", OPTION_VAL_110_FI },
+         { "120", OPTION_VAL_120_FI },
+         { "130", OPTION_VAL_130_FI },
+         { "140", OPTION_VAL_140_FI },
+         { "150", OPTION_VAL_150_FI },
+         { "160", OPTION_VAL_160_FI },
+         { "170", OPTION_VAL_170_FI },
+         { "180", OPTION_VAL_180_FI },
+         { "190", OPTION_VAL_190_FI },
+         { "200", OPTION_VAL_200_FI },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_FI,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_FI,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_FI },
+         { "110", OPTION_VAL_110_FI },
+         { "120", OPTION_VAL_120_FI },
+         { "130", OPTION_VAL_130_FI },
+         { "140", OPTION_VAL_140_FI },
+         { "150", OPTION_VAL_150_O6_FI },
+         { "160", OPTION_VAL_160_FI },
+         { "170", OPTION_VAL_170_FI },
+         { "180", OPTION_VAL_180_FI },
+         { "190", OPTION_VAL_190_FI },
+         { "200", OPTION_VAL_200_FI },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -13740,6 +15236,35 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_NTSC_COMPOSITE_FR NULL
 #define OPTION_VAL_NTSC_S_VIDEO_FR "NTSC (S-Vidéo)"
 #define OPTION_VAL_NTSC_RGB_FR "NTSC (RVB)"
+#define BSNES_VIDEO_LUMINANCE_LABEL_FR "Ajustement couleur - Luminance"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_FR "Ajuste la luminance"
+#define OPTION_VAL_0_FR "0 %"
+#define OPTION_VAL_10_FR NULL
+#define OPTION_VAL_20_FR NULL
+#define OPTION_VAL_30_FR NULL
+#define OPTION_VAL_40_FR NULL
+#define OPTION_VAL_50_FR NULL
+#define OPTION_VAL_60_FR NULL
+#define OPTION_VAL_70_FR NULL
+#define OPTION_VAL_80_FR NULL
+#define OPTION_VAL_90_FR NULL
+#define OPTION_VAL_100_FR "100% (par défaut)"
+#define BSNES_VIDEO_SATURATION_LABEL_FR "Ajustement couleur - Saturation"
+#define BSNES_VIDEO_SATURATION_INFO_0_FR "Ajuste la saturation"
+#define OPTION_VAL_110_FR NULL
+#define OPTION_VAL_120_FR NULL
+#define OPTION_VAL_130_FR NULL
+#define OPTION_VAL_140_FR NULL
+#define OPTION_VAL_150_FR NULL
+#define OPTION_VAL_160_FR NULL
+#define OPTION_VAL_170_FR NULL
+#define OPTION_VAL_180_FR NULL
+#define OPTION_VAL_190_FR NULL
+#define OPTION_VAL_200_FR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_FR "Ajustement couleur - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_FR "Ajuste le gamma"
+#define OPTION_VAL_100_O6_FR "100 %"
+#define OPTION_VAL_150_O6_FR "150 % (par défaut)"
 #define BSNES_PPU_FAST_LABEL_FR "PPU (vidéo) - mode rapide"
 #define BSNES_PPU_FAST_LABEL_CAT_FR "PPU - mode rapide"
 #define BSNES_PPU_FAST_INFO_0_FR "Activer l'émulation plus rapide du PPU au prix d'une réduction mineure de la précision. Il est recommandé de laisser cette option activée. REMARQUE : ceci doit être activé pour que les options 'Désentrelacer', 'Aucune limite de sprites' et 'Mode 7 HD' puissent fonctionner."
@@ -13802,26 +15327,6 @@ struct retro_core_options_v2 options_fi = {
 #define BSNES_CPU_OVERCLOCK_LABEL_FR "Overclocking - processeur"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_FR "Processeur"
 #define BSNES_CPU_OVERCLOCK_INFO_0_FR "Overclocker ou underclocker le processeur. Définir cette valeur au-dessus de 100 % peut réduire les temps de chargement et supprimer les ralentissements. Utiliser avec précaution, car cela peut également causer le plantage de certains jeux ou exposer d'autres problèmes."
-#define OPTION_VAL_10_FR NULL
-#define OPTION_VAL_20_FR NULL
-#define OPTION_VAL_30_FR NULL
-#define OPTION_VAL_40_FR NULL
-#define OPTION_VAL_50_FR NULL
-#define OPTION_VAL_60_FR NULL
-#define OPTION_VAL_70_FR NULL
-#define OPTION_VAL_80_FR NULL
-#define OPTION_VAL_90_FR NULL
-#define OPTION_VAL_100_FR "100% (par défaut)"
-#define OPTION_VAL_110_FR NULL
-#define OPTION_VAL_120_FR NULL
-#define OPTION_VAL_130_FR NULL
-#define OPTION_VAL_140_FR NULL
-#define OPTION_VAL_150_FR NULL
-#define OPTION_VAL_160_FR NULL
-#define OPTION_VAL_170_FR NULL
-#define OPTION_VAL_180_FR NULL
-#define OPTION_VAL_190_FR NULL
-#define OPTION_VAL_200_FR NULL
 #define OPTION_VAL_210_FR NULL
 #define OPTION_VAL_220_FR NULL
 #define OPTION_VAL_230_FR NULL
@@ -14000,6 +15505,85 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_FR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_FR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_FR },
+         { "10", OPTION_VAL_10_FR },
+         { "20", OPTION_VAL_20_FR },
+         { "30", OPTION_VAL_30_FR },
+         { "40", OPTION_VAL_40_FR },
+         { "50", OPTION_VAL_50_FR },
+         { "60", OPTION_VAL_60_FR },
+         { "70", OPTION_VAL_70_FR },
+         { "80", OPTION_VAL_80_FR },
+         { "90", OPTION_VAL_90_FR },
+         { "100", OPTION_VAL_100_FR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_FR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_FR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_FR },
+         { "10", OPTION_VAL_10_FR },
+         { "20", OPTION_VAL_20_FR },
+         { "30", OPTION_VAL_30_FR },
+         { "40", OPTION_VAL_40_FR },
+         { "50", OPTION_VAL_50_FR },
+         { "60", OPTION_VAL_60_FR },
+         { "70", OPTION_VAL_70_FR },
+         { "80", OPTION_VAL_80_FR },
+         { "90", OPTION_VAL_90_FR },
+         { "100", OPTION_VAL_100_FR },
+         { "110", OPTION_VAL_110_FR },
+         { "120", OPTION_VAL_120_FR },
+         { "130", OPTION_VAL_130_FR },
+         { "140", OPTION_VAL_140_FR },
+         { "150", OPTION_VAL_150_FR },
+         { "160", OPTION_VAL_160_FR },
+         { "170", OPTION_VAL_170_FR },
+         { "180", OPTION_VAL_180_FR },
+         { "190", OPTION_VAL_190_FR },
+         { "200", OPTION_VAL_200_FR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_FR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_FR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_FR },
+         { "110", OPTION_VAL_110_FR },
+         { "120", OPTION_VAL_120_FR },
+         { "130", OPTION_VAL_130_FR },
+         { "140", OPTION_VAL_140_FR },
+         { "150", OPTION_VAL_150_O6_FR },
+         { "160", OPTION_VAL_160_FR },
+         { "170", OPTION_VAL_170_FR },
+         { "180", OPTION_VAL_180_FR },
+         { "190", OPTION_VAL_190_FR },
+         { "200", OPTION_VAL_200_FR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -14544,6 +16128,35 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_NTSC_COMPOSITE_GL "NTSC (composto)"
 #define OPTION_VAL_NTSC_S_VIDEO_GL NULL
 #define OPTION_VAL_NTSC_RGB_GL NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_GL NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_GL NULL
+#define OPTION_VAL_0_GL NULL
+#define OPTION_VAL_10_GL NULL
+#define OPTION_VAL_20_GL NULL
+#define OPTION_VAL_30_GL NULL
+#define OPTION_VAL_40_GL NULL
+#define OPTION_VAL_50_GL NULL
+#define OPTION_VAL_60_GL NULL
+#define OPTION_VAL_70_GL NULL
+#define OPTION_VAL_80_GL NULL
+#define OPTION_VAL_90_GL NULL
+#define OPTION_VAL_100_GL "100 % (predeterminado)"
+#define BSNES_VIDEO_SATURATION_LABEL_GL NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_GL NULL
+#define OPTION_VAL_110_GL NULL
+#define OPTION_VAL_120_GL NULL
+#define OPTION_VAL_130_GL NULL
+#define OPTION_VAL_140_GL NULL
+#define OPTION_VAL_150_GL NULL
+#define OPTION_VAL_160_GL NULL
+#define OPTION_VAL_170_GL NULL
+#define OPTION_VAL_180_GL NULL
+#define OPTION_VAL_190_GL NULL
+#define OPTION_VAL_200_GL NULL
+#define BSNES_VIDEO_GAMMA_LABEL_GL NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_GL NULL
+#define OPTION_VAL_100_O6_GL NULL
+#define OPTION_VAL_150_O6_GL NULL
 #define BSNES_PPU_FAST_LABEL_GL "PPU (vídeo) - Modo Rápido"
 #define BSNES_PPU_FAST_LABEL_CAT_GL "PPU - Modo Rápido"
 #define BSNES_PPU_FAST_INFO_0_GL "Permite unha emulación máis rápida da PPU a costa dunha pequena redución da precisión. Recoméndase deixar isto activado. NOTA: isto debe estar activado para que funcionen as opcións \"Desentrelazado\", \"Sen límite de Sprite\" e \"Modo HD 7\"."
@@ -14606,26 +16219,6 @@ struct retro_core_options_v2 options_fr = {
 #define BSNES_CPU_OVERCLOCK_LABEL_GL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_GL NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_GL "Overclock ou downclock da CPU. Establecer este valor por encima do 100 % pode reducir os tempos de carga e eliminar a ralentización. Use con precaución, xa que tamén pode provocar que algúns xogos se colapsen ou presenten outros problemas."
-#define OPTION_VAL_10_GL NULL
-#define OPTION_VAL_20_GL NULL
-#define OPTION_VAL_30_GL NULL
-#define OPTION_VAL_40_GL NULL
-#define OPTION_VAL_50_GL NULL
-#define OPTION_VAL_60_GL NULL
-#define OPTION_VAL_70_GL NULL
-#define OPTION_VAL_80_GL NULL
-#define OPTION_VAL_90_GL NULL
-#define OPTION_VAL_100_GL "100 % (predeterminado)"
-#define OPTION_VAL_110_GL NULL
-#define OPTION_VAL_120_GL NULL
-#define OPTION_VAL_130_GL NULL
-#define OPTION_VAL_140_GL NULL
-#define OPTION_VAL_150_GL NULL
-#define OPTION_VAL_160_GL NULL
-#define OPTION_VAL_170_GL NULL
-#define OPTION_VAL_180_GL NULL
-#define OPTION_VAL_190_GL NULL
-#define OPTION_VAL_200_GL NULL
 #define OPTION_VAL_210_GL NULL
 #define OPTION_VAL_220_GL NULL
 #define OPTION_VAL_230_GL NULL
@@ -14804,6 +16397,85 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_GL,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_GL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_GL },
+         { "10", OPTION_VAL_10_GL },
+         { "20", OPTION_VAL_20_GL },
+         { "30", OPTION_VAL_30_GL },
+         { "40", OPTION_VAL_40_GL },
+         { "50", OPTION_VAL_50_GL },
+         { "60", OPTION_VAL_60_GL },
+         { "70", OPTION_VAL_70_GL },
+         { "80", OPTION_VAL_80_GL },
+         { "90", OPTION_VAL_90_GL },
+         { "100", OPTION_VAL_100_GL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_GL,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_GL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_GL },
+         { "10", OPTION_VAL_10_GL },
+         { "20", OPTION_VAL_20_GL },
+         { "30", OPTION_VAL_30_GL },
+         { "40", OPTION_VAL_40_GL },
+         { "50", OPTION_VAL_50_GL },
+         { "60", OPTION_VAL_60_GL },
+         { "70", OPTION_VAL_70_GL },
+         { "80", OPTION_VAL_80_GL },
+         { "90", OPTION_VAL_90_GL },
+         { "100", OPTION_VAL_100_GL },
+         { "110", OPTION_VAL_110_GL },
+         { "120", OPTION_VAL_120_GL },
+         { "130", OPTION_VAL_130_GL },
+         { "140", OPTION_VAL_140_GL },
+         { "150", OPTION_VAL_150_GL },
+         { "160", OPTION_VAL_160_GL },
+         { "170", OPTION_VAL_170_GL },
+         { "180", OPTION_VAL_180_GL },
+         { "190", OPTION_VAL_190_GL },
+         { "200", OPTION_VAL_200_GL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_GL,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_GL,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_GL },
+         { "110", OPTION_VAL_110_GL },
+         { "120", OPTION_VAL_120_GL },
+         { "130", OPTION_VAL_130_GL },
+         { "140", OPTION_VAL_140_GL },
+         { "150", OPTION_VAL_150_O6_GL },
+         { "160", OPTION_VAL_160_GL },
+         { "170", OPTION_VAL_170_GL },
+         { "180", OPTION_VAL_180_GL },
+         { "190", OPTION_VAL_190_GL },
+         { "200", OPTION_VAL_200_GL },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -15348,6 +17020,35 @@ struct retro_core_options_v2 options_gl = {
 #define OPTION_VAL_NTSC_COMPOSITE_HE NULL
 #define OPTION_VAL_NTSC_S_VIDEO_HE NULL
 #define OPTION_VAL_NTSC_RGB_HE NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_HE NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_HE NULL
+#define OPTION_VAL_0_HE NULL
+#define OPTION_VAL_10_HE NULL
+#define OPTION_VAL_20_HE NULL
+#define OPTION_VAL_30_HE NULL
+#define OPTION_VAL_40_HE NULL
+#define OPTION_VAL_50_HE NULL
+#define OPTION_VAL_60_HE NULL
+#define OPTION_VAL_70_HE NULL
+#define OPTION_VAL_80_HE NULL
+#define OPTION_VAL_90_HE NULL
+#define OPTION_VAL_100_HE NULL
+#define BSNES_VIDEO_SATURATION_LABEL_HE NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_HE NULL
+#define OPTION_VAL_110_HE NULL
+#define OPTION_VAL_120_HE NULL
+#define OPTION_VAL_130_HE NULL
+#define OPTION_VAL_140_HE NULL
+#define OPTION_VAL_150_HE NULL
+#define OPTION_VAL_160_HE NULL
+#define OPTION_VAL_170_HE NULL
+#define OPTION_VAL_180_HE NULL
+#define OPTION_VAL_190_HE NULL
+#define OPTION_VAL_200_HE NULL
+#define BSNES_VIDEO_GAMMA_LABEL_HE NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_HE NULL
+#define OPTION_VAL_100_O6_HE NULL
+#define OPTION_VAL_150_O6_HE NULL
 #define BSNES_PPU_FAST_LABEL_HE NULL
 #define BSNES_PPU_FAST_LABEL_CAT_HE NULL
 #define BSNES_PPU_FAST_INFO_0_HE NULL
@@ -15410,26 +17111,6 @@ struct retro_core_options_v2 options_gl = {
 #define BSNES_CPU_OVERCLOCK_LABEL_HE NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_HE NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_HE NULL
-#define OPTION_VAL_10_HE NULL
-#define OPTION_VAL_20_HE NULL
-#define OPTION_VAL_30_HE NULL
-#define OPTION_VAL_40_HE NULL
-#define OPTION_VAL_50_HE NULL
-#define OPTION_VAL_60_HE NULL
-#define OPTION_VAL_70_HE NULL
-#define OPTION_VAL_80_HE NULL
-#define OPTION_VAL_90_HE NULL
-#define OPTION_VAL_100_HE NULL
-#define OPTION_VAL_110_HE NULL
-#define OPTION_VAL_120_HE NULL
-#define OPTION_VAL_130_HE NULL
-#define OPTION_VAL_140_HE NULL
-#define OPTION_VAL_150_HE NULL
-#define OPTION_VAL_160_HE NULL
-#define OPTION_VAL_170_HE NULL
-#define OPTION_VAL_180_HE NULL
-#define OPTION_VAL_190_HE NULL
-#define OPTION_VAL_200_HE NULL
 #define OPTION_VAL_210_HE NULL
 #define OPTION_VAL_220_HE NULL
 #define OPTION_VAL_230_HE NULL
@@ -15608,6 +17289,85 @@ struct retro_core_option_v2_definition option_defs_he[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_HE,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_HE,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_HE },
+         { "10", OPTION_VAL_10_HE },
+         { "20", OPTION_VAL_20_HE },
+         { "30", OPTION_VAL_30_HE },
+         { "40", OPTION_VAL_40_HE },
+         { "50", OPTION_VAL_50_HE },
+         { "60", OPTION_VAL_60_HE },
+         { "70", OPTION_VAL_70_HE },
+         { "80", OPTION_VAL_80_HE },
+         { "90", OPTION_VAL_90_HE },
+         { "100", OPTION_VAL_100_HE },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_HE,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_HE,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_HE },
+         { "10", OPTION_VAL_10_HE },
+         { "20", OPTION_VAL_20_HE },
+         { "30", OPTION_VAL_30_HE },
+         { "40", OPTION_VAL_40_HE },
+         { "50", OPTION_VAL_50_HE },
+         { "60", OPTION_VAL_60_HE },
+         { "70", OPTION_VAL_70_HE },
+         { "80", OPTION_VAL_80_HE },
+         { "90", OPTION_VAL_90_HE },
+         { "100", OPTION_VAL_100_HE },
+         { "110", OPTION_VAL_110_HE },
+         { "120", OPTION_VAL_120_HE },
+         { "130", OPTION_VAL_130_HE },
+         { "140", OPTION_VAL_140_HE },
+         { "150", OPTION_VAL_150_HE },
+         { "160", OPTION_VAL_160_HE },
+         { "170", OPTION_VAL_170_HE },
+         { "180", OPTION_VAL_180_HE },
+         { "190", OPTION_VAL_190_HE },
+         { "200", OPTION_VAL_200_HE },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_HE,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_HE,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_HE },
+         { "110", OPTION_VAL_110_HE },
+         { "120", OPTION_VAL_120_HE },
+         { "130", OPTION_VAL_130_HE },
+         { "140", OPTION_VAL_140_HE },
+         { "150", OPTION_VAL_150_O6_HE },
+         { "160", OPTION_VAL_160_HE },
+         { "170", OPTION_VAL_170_HE },
+         { "180", OPTION_VAL_180_HE },
+         { "190", OPTION_VAL_190_HE },
+         { "200", OPTION_VAL_200_HE },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -16152,6 +17912,35 @@ struct retro_core_options_v2 options_he = {
 #define OPTION_VAL_NTSC_COMPOSITE_HR NULL
 #define OPTION_VAL_NTSC_S_VIDEO_HR NULL
 #define OPTION_VAL_NTSC_RGB_HR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_HR NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_HR NULL
+#define OPTION_VAL_0_HR NULL
+#define OPTION_VAL_10_HR NULL
+#define OPTION_VAL_20_HR NULL
+#define OPTION_VAL_30_HR NULL
+#define OPTION_VAL_40_HR NULL
+#define OPTION_VAL_50_HR NULL
+#define OPTION_VAL_60_HR NULL
+#define OPTION_VAL_70_HR NULL
+#define OPTION_VAL_80_HR NULL
+#define OPTION_VAL_90_HR NULL
+#define OPTION_VAL_100_HR NULL
+#define BSNES_VIDEO_SATURATION_LABEL_HR NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_HR NULL
+#define OPTION_VAL_110_HR NULL
+#define OPTION_VAL_120_HR NULL
+#define OPTION_VAL_130_HR NULL
+#define OPTION_VAL_140_HR NULL
+#define OPTION_VAL_150_HR NULL
+#define OPTION_VAL_160_HR NULL
+#define OPTION_VAL_170_HR NULL
+#define OPTION_VAL_180_HR NULL
+#define OPTION_VAL_190_HR NULL
+#define OPTION_VAL_200_HR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_HR NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_HR NULL
+#define OPTION_VAL_100_O6_HR NULL
+#define OPTION_VAL_150_O6_HR NULL
 #define BSNES_PPU_FAST_LABEL_HR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_HR NULL
 #define BSNES_PPU_FAST_INFO_0_HR NULL
@@ -16214,26 +18003,6 @@ struct retro_core_options_v2 options_he = {
 #define BSNES_CPU_OVERCLOCK_LABEL_HR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_HR NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_HR NULL
-#define OPTION_VAL_10_HR NULL
-#define OPTION_VAL_20_HR NULL
-#define OPTION_VAL_30_HR NULL
-#define OPTION_VAL_40_HR NULL
-#define OPTION_VAL_50_HR NULL
-#define OPTION_VAL_60_HR NULL
-#define OPTION_VAL_70_HR NULL
-#define OPTION_VAL_80_HR NULL
-#define OPTION_VAL_90_HR NULL
-#define OPTION_VAL_100_HR NULL
-#define OPTION_VAL_110_HR NULL
-#define OPTION_VAL_120_HR NULL
-#define OPTION_VAL_130_HR NULL
-#define OPTION_VAL_140_HR NULL
-#define OPTION_VAL_150_HR NULL
-#define OPTION_VAL_160_HR NULL
-#define OPTION_VAL_170_HR NULL
-#define OPTION_VAL_180_HR NULL
-#define OPTION_VAL_190_HR NULL
-#define OPTION_VAL_200_HR NULL
 #define OPTION_VAL_210_HR NULL
 #define OPTION_VAL_220_HR NULL
 #define OPTION_VAL_230_HR NULL
@@ -16412,6 +18181,85 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_HR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_HR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_HR },
+         { "10", OPTION_VAL_10_HR },
+         { "20", OPTION_VAL_20_HR },
+         { "30", OPTION_VAL_30_HR },
+         { "40", OPTION_VAL_40_HR },
+         { "50", OPTION_VAL_50_HR },
+         { "60", OPTION_VAL_60_HR },
+         { "70", OPTION_VAL_70_HR },
+         { "80", OPTION_VAL_80_HR },
+         { "90", OPTION_VAL_90_HR },
+         { "100", OPTION_VAL_100_HR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_HR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_HR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_HR },
+         { "10", OPTION_VAL_10_HR },
+         { "20", OPTION_VAL_20_HR },
+         { "30", OPTION_VAL_30_HR },
+         { "40", OPTION_VAL_40_HR },
+         { "50", OPTION_VAL_50_HR },
+         { "60", OPTION_VAL_60_HR },
+         { "70", OPTION_VAL_70_HR },
+         { "80", OPTION_VAL_80_HR },
+         { "90", OPTION_VAL_90_HR },
+         { "100", OPTION_VAL_100_HR },
+         { "110", OPTION_VAL_110_HR },
+         { "120", OPTION_VAL_120_HR },
+         { "130", OPTION_VAL_130_HR },
+         { "140", OPTION_VAL_140_HR },
+         { "150", OPTION_VAL_150_HR },
+         { "160", OPTION_VAL_160_HR },
+         { "170", OPTION_VAL_170_HR },
+         { "180", OPTION_VAL_180_HR },
+         { "190", OPTION_VAL_190_HR },
+         { "200", OPTION_VAL_200_HR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_HR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_HR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_HR },
+         { "110", OPTION_VAL_110_HR },
+         { "120", OPTION_VAL_120_HR },
+         { "130", OPTION_VAL_130_HR },
+         { "140", OPTION_VAL_140_HR },
+         { "150", OPTION_VAL_150_O6_HR },
+         { "160", OPTION_VAL_160_HR },
+         { "170", OPTION_VAL_170_HR },
+         { "180", OPTION_VAL_180_HR },
+         { "190", OPTION_VAL_190_HR },
+         { "200", OPTION_VAL_200_HR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -16956,6 +18804,35 @@ struct retro_core_options_v2 options_hr = {
 #define OPTION_VAL_NTSC_COMPOSITE_HU "NTSC (Kompozit)"
 #define OPTION_VAL_NTSC_S_VIDEO_HU NULL
 #define OPTION_VAL_NTSC_RGB_HU NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_HU "Színbeállítás - Fényerő"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_HU "Fényerő beállítása"
+#define OPTION_VAL_0_HU NULL
+#define OPTION_VAL_10_HU NULL
+#define OPTION_VAL_20_HU NULL
+#define OPTION_VAL_30_HU NULL
+#define OPTION_VAL_40_HU NULL
+#define OPTION_VAL_50_HU NULL
+#define OPTION_VAL_60_HU NULL
+#define OPTION_VAL_70_HU NULL
+#define OPTION_VAL_80_HU NULL
+#define OPTION_VAL_90_HU NULL
+#define OPTION_VAL_100_HU "100% (alapértelmezett)"
+#define BSNES_VIDEO_SATURATION_LABEL_HU "Színbeállítás - Színtelítettség"
+#define BSNES_VIDEO_SATURATION_INFO_0_HU "Színtelítettség beállítása"
+#define OPTION_VAL_110_HU NULL
+#define OPTION_VAL_120_HU NULL
+#define OPTION_VAL_130_HU NULL
+#define OPTION_VAL_140_HU NULL
+#define OPTION_VAL_150_HU NULL
+#define OPTION_VAL_160_HU NULL
+#define OPTION_VAL_170_HU NULL
+#define OPTION_VAL_180_HU NULL
+#define OPTION_VAL_190_HU NULL
+#define OPTION_VAL_200_HU NULL
+#define BSNES_VIDEO_GAMMA_LABEL_HU "Színbeállítás - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_HU "Gamma érték beállítása"
+#define OPTION_VAL_100_O6_HU NULL
+#define OPTION_VAL_150_O6_HU "150% (alapértelmezett)"
 #define BSNES_PPU_FAST_LABEL_HU "PPU (Video) - gyors mód"
 #define BSNES_PPU_FAST_LABEL_CAT_HU "PPU - gyors mód"
 #define BSNES_PPU_FAST_INFO_0_HU "A PPU gyorsabb emulációja, a pontosság kis csökkenése árán. Ajánlott bekapcsolva hagyni. Figyelem: ez a beállítás szükséges a deinterlace, sprite limit eltávolítása, és a HD Mode 7 opciókhoz."
@@ -17018,26 +18895,6 @@ struct retro_core_options_v2 options_hr = {
 #define BSNES_CPU_OVERCLOCK_LABEL_HU "Túlhajtás - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_HU NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_HU "A CPU túlhajtása vagy alulhajtása. A 100% fölötti értékek csökkenthetik a töltési időket és a lassulást. Ajánlott óvatosan használni, mert néhány játék összeomolhat vagy más problémákat produkálhat."
-#define OPTION_VAL_10_HU NULL
-#define OPTION_VAL_20_HU NULL
-#define OPTION_VAL_30_HU NULL
-#define OPTION_VAL_40_HU NULL
-#define OPTION_VAL_50_HU NULL
-#define OPTION_VAL_60_HU NULL
-#define OPTION_VAL_70_HU NULL
-#define OPTION_VAL_80_HU NULL
-#define OPTION_VAL_90_HU NULL
-#define OPTION_VAL_100_HU "100% (alapértelmezett)"
-#define OPTION_VAL_110_HU NULL
-#define OPTION_VAL_120_HU NULL
-#define OPTION_VAL_130_HU NULL
-#define OPTION_VAL_140_HU NULL
-#define OPTION_VAL_150_HU NULL
-#define OPTION_VAL_160_HU NULL
-#define OPTION_VAL_170_HU NULL
-#define OPTION_VAL_180_HU NULL
-#define OPTION_VAL_190_HU NULL
-#define OPTION_VAL_200_HU NULL
 #define OPTION_VAL_210_HU NULL
 #define OPTION_VAL_220_HU NULL
 #define OPTION_VAL_230_HU NULL
@@ -17216,6 +19073,85 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_HU,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_HU,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_HU },
+         { "10", OPTION_VAL_10_HU },
+         { "20", OPTION_VAL_20_HU },
+         { "30", OPTION_VAL_30_HU },
+         { "40", OPTION_VAL_40_HU },
+         { "50", OPTION_VAL_50_HU },
+         { "60", OPTION_VAL_60_HU },
+         { "70", OPTION_VAL_70_HU },
+         { "80", OPTION_VAL_80_HU },
+         { "90", OPTION_VAL_90_HU },
+         { "100", OPTION_VAL_100_HU },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_HU,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_HU,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_HU },
+         { "10", OPTION_VAL_10_HU },
+         { "20", OPTION_VAL_20_HU },
+         { "30", OPTION_VAL_30_HU },
+         { "40", OPTION_VAL_40_HU },
+         { "50", OPTION_VAL_50_HU },
+         { "60", OPTION_VAL_60_HU },
+         { "70", OPTION_VAL_70_HU },
+         { "80", OPTION_VAL_80_HU },
+         { "90", OPTION_VAL_90_HU },
+         { "100", OPTION_VAL_100_HU },
+         { "110", OPTION_VAL_110_HU },
+         { "120", OPTION_VAL_120_HU },
+         { "130", OPTION_VAL_130_HU },
+         { "140", OPTION_VAL_140_HU },
+         { "150", OPTION_VAL_150_HU },
+         { "160", OPTION_VAL_160_HU },
+         { "170", OPTION_VAL_170_HU },
+         { "180", OPTION_VAL_180_HU },
+         { "190", OPTION_VAL_190_HU },
+         { "200", OPTION_VAL_200_HU },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_HU,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_HU,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_HU },
+         { "110", OPTION_VAL_110_HU },
+         { "120", OPTION_VAL_120_HU },
+         { "130", OPTION_VAL_130_HU },
+         { "140", OPTION_VAL_140_HU },
+         { "150", OPTION_VAL_150_O6_HU },
+         { "160", OPTION_VAL_160_HU },
+         { "170", OPTION_VAL_170_HU },
+         { "180", OPTION_VAL_180_HU },
+         { "190", OPTION_VAL_190_HU },
+         { "200", OPTION_VAL_200_HU },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -17760,6 +19696,35 @@ struct retro_core_options_v2 options_hu = {
 #define OPTION_VAL_NTSC_COMPOSITE_ID NULL
 #define OPTION_VAL_NTSC_S_VIDEO_ID NULL
 #define OPTION_VAL_NTSC_RGB_ID NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_ID "Penyesuaian Warna - Serian"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_ID "Sesuaikan Serian"
+#define OPTION_VAL_0_ID NULL
+#define OPTION_VAL_10_ID NULL
+#define OPTION_VAL_20_ID NULL
+#define OPTION_VAL_30_ID NULL
+#define OPTION_VAL_40_ID NULL
+#define OPTION_VAL_50_ID NULL
+#define OPTION_VAL_60_ID NULL
+#define OPTION_VAL_70_ID NULL
+#define OPTION_VAL_80_ID NULL
+#define OPTION_VAL_90_ID NULL
+#define OPTION_VAL_100_ID NULL
+#define BSNES_VIDEO_SATURATION_LABEL_ID "Penyesuaian Warna - Saturasi"
+#define BSNES_VIDEO_SATURATION_INFO_0_ID "Sesuaikan Saturasi"
+#define OPTION_VAL_110_ID NULL
+#define OPTION_VAL_120_ID NULL
+#define OPTION_VAL_130_ID NULL
+#define OPTION_VAL_140_ID NULL
+#define OPTION_VAL_150_ID NULL
+#define OPTION_VAL_160_ID NULL
+#define OPTION_VAL_170_ID NULL
+#define OPTION_VAL_180_ID NULL
+#define OPTION_VAL_190_ID NULL
+#define OPTION_VAL_200_ID NULL
+#define BSNES_VIDEO_GAMMA_LABEL_ID "Penyesuaian Warna - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_ID "Sesuaikan Gamma"
+#define OPTION_VAL_100_O6_ID NULL
+#define OPTION_VAL_150_O6_ID "150% (Bawaan)"
 #define BSNES_PPU_FAST_LABEL_ID NULL
 #define BSNES_PPU_FAST_LABEL_CAT_ID NULL
 #define BSNES_PPU_FAST_INFO_0_ID NULL
@@ -17822,26 +19787,6 @@ struct retro_core_options_v2 options_hu = {
 #define BSNES_CPU_OVERCLOCK_LABEL_ID NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_ID NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_ID NULL
-#define OPTION_VAL_10_ID NULL
-#define OPTION_VAL_20_ID NULL
-#define OPTION_VAL_30_ID NULL
-#define OPTION_VAL_40_ID NULL
-#define OPTION_VAL_50_ID NULL
-#define OPTION_VAL_60_ID NULL
-#define OPTION_VAL_70_ID NULL
-#define OPTION_VAL_80_ID NULL
-#define OPTION_VAL_90_ID NULL
-#define OPTION_VAL_100_ID NULL
-#define OPTION_VAL_110_ID NULL
-#define OPTION_VAL_120_ID NULL
-#define OPTION_VAL_130_ID NULL
-#define OPTION_VAL_140_ID NULL
-#define OPTION_VAL_150_ID NULL
-#define OPTION_VAL_160_ID NULL
-#define OPTION_VAL_170_ID NULL
-#define OPTION_VAL_180_ID NULL
-#define OPTION_VAL_190_ID NULL
-#define OPTION_VAL_200_ID NULL
 #define OPTION_VAL_210_ID NULL
 #define OPTION_VAL_220_ID NULL
 #define OPTION_VAL_230_ID NULL
@@ -18020,6 +19965,85 @@ struct retro_core_option_v2_definition option_defs_id[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_ID,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_ID,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_ID },
+         { "10", OPTION_VAL_10_ID },
+         { "20", OPTION_VAL_20_ID },
+         { "30", OPTION_VAL_30_ID },
+         { "40", OPTION_VAL_40_ID },
+         { "50", OPTION_VAL_50_ID },
+         { "60", OPTION_VAL_60_ID },
+         { "70", OPTION_VAL_70_ID },
+         { "80", OPTION_VAL_80_ID },
+         { "90", OPTION_VAL_90_ID },
+         { "100", OPTION_VAL_100_ID },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_ID,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_ID,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_ID },
+         { "10", OPTION_VAL_10_ID },
+         { "20", OPTION_VAL_20_ID },
+         { "30", OPTION_VAL_30_ID },
+         { "40", OPTION_VAL_40_ID },
+         { "50", OPTION_VAL_50_ID },
+         { "60", OPTION_VAL_60_ID },
+         { "70", OPTION_VAL_70_ID },
+         { "80", OPTION_VAL_80_ID },
+         { "90", OPTION_VAL_90_ID },
+         { "100", OPTION_VAL_100_ID },
+         { "110", OPTION_VAL_110_ID },
+         { "120", OPTION_VAL_120_ID },
+         { "130", OPTION_VAL_130_ID },
+         { "140", OPTION_VAL_140_ID },
+         { "150", OPTION_VAL_150_ID },
+         { "160", OPTION_VAL_160_ID },
+         { "170", OPTION_VAL_170_ID },
+         { "180", OPTION_VAL_180_ID },
+         { "190", OPTION_VAL_190_ID },
+         { "200", OPTION_VAL_200_ID },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_ID,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_ID,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_ID },
+         { "110", OPTION_VAL_110_ID },
+         { "120", OPTION_VAL_120_ID },
+         { "130", OPTION_VAL_130_ID },
+         { "140", OPTION_VAL_140_ID },
+         { "150", OPTION_VAL_150_O6_ID },
+         { "160", OPTION_VAL_160_ID },
+         { "170", OPTION_VAL_170_ID },
+         { "180", OPTION_VAL_180_ID },
+         { "190", OPTION_VAL_190_ID },
+         { "200", OPTION_VAL_200_ID },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -18564,6 +20588,35 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_NTSC_COMPOSITE_IT "NTSC Composito"
 #define OPTION_VAL_NTSC_S_VIDEO_IT NULL
 #define OPTION_VAL_NTSC_RGB_IT NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_IT NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_IT NULL
+#define OPTION_VAL_0_IT NULL
+#define OPTION_VAL_10_IT NULL
+#define OPTION_VAL_20_IT NULL
+#define OPTION_VAL_30_IT NULL
+#define OPTION_VAL_40_IT NULL
+#define OPTION_VAL_50_IT NULL
+#define OPTION_VAL_60_IT NULL
+#define OPTION_VAL_70_IT NULL
+#define OPTION_VAL_80_IT NULL
+#define OPTION_VAL_90_IT NULL
+#define OPTION_VAL_100_IT "100%"
+#define BSNES_VIDEO_SATURATION_LABEL_IT NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_IT NULL
+#define OPTION_VAL_110_IT NULL
+#define OPTION_VAL_120_IT NULL
+#define OPTION_VAL_130_IT NULL
+#define OPTION_VAL_140_IT NULL
+#define OPTION_VAL_150_IT NULL
+#define OPTION_VAL_160_IT NULL
+#define OPTION_VAL_170_IT NULL
+#define OPTION_VAL_180_IT NULL
+#define OPTION_VAL_190_IT NULL
+#define OPTION_VAL_200_IT NULL
+#define BSNES_VIDEO_GAMMA_LABEL_IT NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_IT NULL
+#define OPTION_VAL_100_O6_IT NULL
+#define OPTION_VAL_150_O6_IT NULL
 #define BSNES_PPU_FAST_LABEL_IT "PPU (Video) - Modalità Rapida"
 #define BSNES_PPU_FAST_LABEL_CAT_IT NULL
 #define BSNES_PPU_FAST_INFO_0_IT "Abilita l'emulazione più veloce della PPU al costo di una minore riduzione di accuratezza. Si consiglia di lasciarla accesa. NOTA: questo deve essere abilitato per le opzioni 'Deinterlace', 'No Sprite Limit' e 'HD Mode 7' per funzionare."
@@ -18626,26 +20679,6 @@ struct retro_core_options_v2 options_id = {
 #define BSNES_CPU_OVERCLOCK_LABEL_IT NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_IT NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_IT "Applica un overclock o downclock alla CPU. Impostare questo valore oltre il 100% può diminuire tempi di attesa e rallentamenti. Da usare con cautela, in quanto potrebbe causare in alcuni giochi delle anomalie o un blocco totale."
-#define OPTION_VAL_10_IT NULL
-#define OPTION_VAL_20_IT NULL
-#define OPTION_VAL_30_IT NULL
-#define OPTION_VAL_40_IT NULL
-#define OPTION_VAL_50_IT NULL
-#define OPTION_VAL_60_IT NULL
-#define OPTION_VAL_70_IT NULL
-#define OPTION_VAL_80_IT NULL
-#define OPTION_VAL_90_IT NULL
-#define OPTION_VAL_100_IT "100%"
-#define OPTION_VAL_110_IT NULL
-#define OPTION_VAL_120_IT NULL
-#define OPTION_VAL_130_IT NULL
-#define OPTION_VAL_140_IT NULL
-#define OPTION_VAL_150_IT NULL
-#define OPTION_VAL_160_IT NULL
-#define OPTION_VAL_170_IT NULL
-#define OPTION_VAL_180_IT NULL
-#define OPTION_VAL_190_IT NULL
-#define OPTION_VAL_200_IT NULL
 #define OPTION_VAL_210_IT NULL
 #define OPTION_VAL_220_IT NULL
 #define OPTION_VAL_230_IT NULL
@@ -18824,6 +20857,85 @@ struct retro_core_option_v2_definition option_defs_it[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_IT,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_IT,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_IT },
+         { "10", OPTION_VAL_10_IT },
+         { "20", OPTION_VAL_20_IT },
+         { "30", OPTION_VAL_30_IT },
+         { "40", OPTION_VAL_40_IT },
+         { "50", OPTION_VAL_50_IT },
+         { "60", OPTION_VAL_60_IT },
+         { "70", OPTION_VAL_70_IT },
+         { "80", OPTION_VAL_80_IT },
+         { "90", OPTION_VAL_90_IT },
+         { "100", OPTION_VAL_100_IT },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_IT,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_IT,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_IT },
+         { "10", OPTION_VAL_10_IT },
+         { "20", OPTION_VAL_20_IT },
+         { "30", OPTION_VAL_30_IT },
+         { "40", OPTION_VAL_40_IT },
+         { "50", OPTION_VAL_50_IT },
+         { "60", OPTION_VAL_60_IT },
+         { "70", OPTION_VAL_70_IT },
+         { "80", OPTION_VAL_80_IT },
+         { "90", OPTION_VAL_90_IT },
+         { "100", OPTION_VAL_100_IT },
+         { "110", OPTION_VAL_110_IT },
+         { "120", OPTION_VAL_120_IT },
+         { "130", OPTION_VAL_130_IT },
+         { "140", OPTION_VAL_140_IT },
+         { "150", OPTION_VAL_150_IT },
+         { "160", OPTION_VAL_160_IT },
+         { "170", OPTION_VAL_170_IT },
+         { "180", OPTION_VAL_180_IT },
+         { "190", OPTION_VAL_190_IT },
+         { "200", OPTION_VAL_200_IT },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_IT,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_IT,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_IT },
+         { "110", OPTION_VAL_110_IT },
+         { "120", OPTION_VAL_120_IT },
+         { "130", OPTION_VAL_130_IT },
+         { "140", OPTION_VAL_140_IT },
+         { "150", OPTION_VAL_150_O6_IT },
+         { "160", OPTION_VAL_160_IT },
+         { "170", OPTION_VAL_170_IT },
+         { "180", OPTION_VAL_180_IT },
+         { "190", OPTION_VAL_190_IT },
+         { "200", OPTION_VAL_200_IT },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -19368,6 +21480,35 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_NTSC_COMPOSITE_JA "NTSC (コンポジット)"
 #define OPTION_VAL_NTSC_S_VIDEO_JA "NTSC (S端子)"
 #define OPTION_VAL_NTSC_RGB_JA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_JA "色補正 - 輝度"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_JA "輝度を調整します。"
+#define OPTION_VAL_0_JA NULL
+#define OPTION_VAL_10_JA NULL
+#define OPTION_VAL_20_JA NULL
+#define OPTION_VAL_30_JA NULL
+#define OPTION_VAL_40_JA NULL
+#define OPTION_VAL_50_JA NULL
+#define OPTION_VAL_60_JA NULL
+#define OPTION_VAL_70_JA NULL
+#define OPTION_VAL_80_JA NULL
+#define OPTION_VAL_90_JA NULL
+#define OPTION_VAL_100_JA "100% (デフォルト)"
+#define BSNES_VIDEO_SATURATION_LABEL_JA "色補正 - 彩度"
+#define BSNES_VIDEO_SATURATION_INFO_0_JA "彩度を調整します。"
+#define OPTION_VAL_110_JA NULL
+#define OPTION_VAL_120_JA NULL
+#define OPTION_VAL_130_JA NULL
+#define OPTION_VAL_140_JA NULL
+#define OPTION_VAL_150_JA NULL
+#define OPTION_VAL_160_JA NULL
+#define OPTION_VAL_170_JA NULL
+#define OPTION_VAL_180_JA NULL
+#define OPTION_VAL_190_JA NULL
+#define OPTION_VAL_200_JA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_JA "色補正 - ガンマ"
+#define BSNES_VIDEO_GAMMA_INFO_0_JA "ガンマ値を調整します。"
+#define OPTION_VAL_100_O6_JA NULL
+#define OPTION_VAL_150_O6_JA "150% (デフォルト)"
 #define BSNES_PPU_FAST_LABEL_JA "PPU (ビデオ) - 高速モード"
 #define BSNES_PPU_FAST_LABEL_CAT_JA "PPU - 高速モード"
 #define BSNES_PPU_FAST_INFO_0_JA "精度をわずかに犠牲にして、PPU の高速エミュレーションを有効にします。オンのままにしておくことをお勧めします。注意: [インターレース解除]、[スプライト制限なし] および [HD モード7] を動作させるには、このオプションを有効にする必要があります。"
@@ -19430,26 +21571,6 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_CPU_OVERCLOCK_LABEL_JA "オーバークロック - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_JA NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_JA "CPU をオーバークロックまたはダウンクロックします。この値を 100% 以上に設定すると、読み込み速度や実行速度の低下が軽減される場合があります。ゲームがクラッシュしたり、その他の問題が発生する可能性があるため、注意して使用してください。"
-#define OPTION_VAL_10_JA NULL
-#define OPTION_VAL_20_JA NULL
-#define OPTION_VAL_30_JA NULL
-#define OPTION_VAL_40_JA NULL
-#define OPTION_VAL_50_JA NULL
-#define OPTION_VAL_60_JA NULL
-#define OPTION_VAL_70_JA NULL
-#define OPTION_VAL_80_JA NULL
-#define OPTION_VAL_90_JA NULL
-#define OPTION_VAL_100_JA "100% (デフォルト)"
-#define OPTION_VAL_110_JA NULL
-#define OPTION_VAL_120_JA NULL
-#define OPTION_VAL_130_JA NULL
-#define OPTION_VAL_140_JA NULL
-#define OPTION_VAL_150_JA NULL
-#define OPTION_VAL_160_JA NULL
-#define OPTION_VAL_170_JA NULL
-#define OPTION_VAL_180_JA NULL
-#define OPTION_VAL_190_JA NULL
-#define OPTION_VAL_200_JA NULL
 #define OPTION_VAL_210_JA NULL
 #define OPTION_VAL_220_JA NULL
 #define OPTION_VAL_230_JA NULL
@@ -19628,6 +21749,85 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_JA,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_JA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_JA },
+         { "10", OPTION_VAL_10_JA },
+         { "20", OPTION_VAL_20_JA },
+         { "30", OPTION_VAL_30_JA },
+         { "40", OPTION_VAL_40_JA },
+         { "50", OPTION_VAL_50_JA },
+         { "60", OPTION_VAL_60_JA },
+         { "70", OPTION_VAL_70_JA },
+         { "80", OPTION_VAL_80_JA },
+         { "90", OPTION_VAL_90_JA },
+         { "100", OPTION_VAL_100_JA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_JA,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_JA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_JA },
+         { "10", OPTION_VAL_10_JA },
+         { "20", OPTION_VAL_20_JA },
+         { "30", OPTION_VAL_30_JA },
+         { "40", OPTION_VAL_40_JA },
+         { "50", OPTION_VAL_50_JA },
+         { "60", OPTION_VAL_60_JA },
+         { "70", OPTION_VAL_70_JA },
+         { "80", OPTION_VAL_80_JA },
+         { "90", OPTION_VAL_90_JA },
+         { "100", OPTION_VAL_100_JA },
+         { "110", OPTION_VAL_110_JA },
+         { "120", OPTION_VAL_120_JA },
+         { "130", OPTION_VAL_130_JA },
+         { "140", OPTION_VAL_140_JA },
+         { "150", OPTION_VAL_150_JA },
+         { "160", OPTION_VAL_160_JA },
+         { "170", OPTION_VAL_170_JA },
+         { "180", OPTION_VAL_180_JA },
+         { "190", OPTION_VAL_190_JA },
+         { "200", OPTION_VAL_200_JA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_JA,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_JA,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_JA },
+         { "110", OPTION_VAL_110_JA },
+         { "120", OPTION_VAL_120_JA },
+         { "130", OPTION_VAL_130_JA },
+         { "140", OPTION_VAL_140_JA },
+         { "150", OPTION_VAL_150_O6_JA },
+         { "160", OPTION_VAL_160_JA },
+         { "170", OPTION_VAL_170_JA },
+         { "180", OPTION_VAL_180_JA },
+         { "190", OPTION_VAL_190_JA },
+         { "200", OPTION_VAL_200_JA },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -20172,6 +22372,35 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_NTSC_COMPOSITE_KO "NTSC (컴포지트)"
 #define OPTION_VAL_NTSC_S_VIDEO_KO NULL
 #define OPTION_VAL_NTSC_RGB_KO NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_KO "색상 조정 - 휘도"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_KO "휘도 조정"
+#define OPTION_VAL_0_KO NULL
+#define OPTION_VAL_10_KO NULL
+#define OPTION_VAL_20_KO NULL
+#define OPTION_VAL_30_KO NULL
+#define OPTION_VAL_40_KO NULL
+#define OPTION_VAL_50_KO NULL
+#define OPTION_VAL_60_KO NULL
+#define OPTION_VAL_70_KO NULL
+#define OPTION_VAL_80_KO NULL
+#define OPTION_VAL_90_KO NULL
+#define OPTION_VAL_100_KO "100% (기본)"
+#define BSNES_VIDEO_SATURATION_LABEL_KO "색상 조정 - 채도"
+#define BSNES_VIDEO_SATURATION_INFO_0_KO "채도 조정"
+#define OPTION_VAL_110_KO NULL
+#define OPTION_VAL_120_KO NULL
+#define OPTION_VAL_130_KO NULL
+#define OPTION_VAL_140_KO NULL
+#define OPTION_VAL_150_KO NULL
+#define OPTION_VAL_160_KO NULL
+#define OPTION_VAL_170_KO NULL
+#define OPTION_VAL_180_KO NULL
+#define OPTION_VAL_190_KO NULL
+#define OPTION_VAL_200_KO NULL
+#define BSNES_VIDEO_GAMMA_LABEL_KO "색상 조정 - 감마"
+#define BSNES_VIDEO_GAMMA_INFO_0_KO "감마 조정"
+#define OPTION_VAL_100_O6_KO NULL
+#define OPTION_VAL_150_O6_KO "150% (기본값)"
 #define BSNES_PPU_FAST_LABEL_KO "PPU (비디오) - 빠르게"
 #define BSNES_PPU_FAST_LABEL_CAT_KO "PPU - 빠르게"
 #define BSNES_PPU_FAST_INFO_0_KO "약간의 정확도를 희생하여 PPU 에뮬레이션을 좀 더 빠르게 실행합니다. 이 옵션은 활성화해두는 것이 권장됩니다. 주의: '디인터레이스', '스프라이트 제한 해제', 'HD Mode 7'을 사용하려면 이 옵션이 활성화되어 있어야 합니다."
@@ -20234,26 +22463,6 @@ struct retro_core_options_v2 options_ja = {
 #define BSNES_CPU_OVERCLOCK_LABEL_KO "오버클러킹 - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_KO NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_KO "CPU를 오버클럭 또는 다운클럭합니다. 이 값을 100% 넘게 설정할 경우 로딩 시간이 줄어들고 느려짐 현상이 줄어들 수 있습니다. 일부 게임에선 크래시나 다른 문제 증상이 발생할 수도 있으므로 주의하며 사용하십시오."
-#define OPTION_VAL_10_KO NULL
-#define OPTION_VAL_20_KO NULL
-#define OPTION_VAL_30_KO NULL
-#define OPTION_VAL_40_KO NULL
-#define OPTION_VAL_50_KO NULL
-#define OPTION_VAL_60_KO NULL
-#define OPTION_VAL_70_KO NULL
-#define OPTION_VAL_80_KO NULL
-#define OPTION_VAL_90_KO NULL
-#define OPTION_VAL_100_KO "100% (기본)"
-#define OPTION_VAL_110_KO NULL
-#define OPTION_VAL_120_KO NULL
-#define OPTION_VAL_130_KO NULL
-#define OPTION_VAL_140_KO NULL
-#define OPTION_VAL_150_KO NULL
-#define OPTION_VAL_160_KO NULL
-#define OPTION_VAL_170_KO NULL
-#define OPTION_VAL_180_KO NULL
-#define OPTION_VAL_190_KO NULL
-#define OPTION_VAL_200_KO NULL
 #define OPTION_VAL_210_KO NULL
 #define OPTION_VAL_220_KO NULL
 #define OPTION_VAL_230_KO NULL
@@ -20432,6 +22641,85 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_KO,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_KO,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_KO },
+         { "10", OPTION_VAL_10_KO },
+         { "20", OPTION_VAL_20_KO },
+         { "30", OPTION_VAL_30_KO },
+         { "40", OPTION_VAL_40_KO },
+         { "50", OPTION_VAL_50_KO },
+         { "60", OPTION_VAL_60_KO },
+         { "70", OPTION_VAL_70_KO },
+         { "80", OPTION_VAL_80_KO },
+         { "90", OPTION_VAL_90_KO },
+         { "100", OPTION_VAL_100_KO },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_KO,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_KO,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_KO },
+         { "10", OPTION_VAL_10_KO },
+         { "20", OPTION_VAL_20_KO },
+         { "30", OPTION_VAL_30_KO },
+         { "40", OPTION_VAL_40_KO },
+         { "50", OPTION_VAL_50_KO },
+         { "60", OPTION_VAL_60_KO },
+         { "70", OPTION_VAL_70_KO },
+         { "80", OPTION_VAL_80_KO },
+         { "90", OPTION_VAL_90_KO },
+         { "100", OPTION_VAL_100_KO },
+         { "110", OPTION_VAL_110_KO },
+         { "120", OPTION_VAL_120_KO },
+         { "130", OPTION_VAL_130_KO },
+         { "140", OPTION_VAL_140_KO },
+         { "150", OPTION_VAL_150_KO },
+         { "160", OPTION_VAL_160_KO },
+         { "170", OPTION_VAL_170_KO },
+         { "180", OPTION_VAL_180_KO },
+         { "190", OPTION_VAL_190_KO },
+         { "200", OPTION_VAL_200_KO },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_KO,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_KO,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_KO },
+         { "110", OPTION_VAL_110_KO },
+         { "120", OPTION_VAL_120_KO },
+         { "130", OPTION_VAL_130_KO },
+         { "140", OPTION_VAL_140_KO },
+         { "150", OPTION_VAL_150_O6_KO },
+         { "160", OPTION_VAL_160_KO },
+         { "170", OPTION_VAL_170_KO },
+         { "180", OPTION_VAL_180_KO },
+         { "190", OPTION_VAL_190_KO },
+         { "200", OPTION_VAL_200_KO },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -20976,6 +23264,35 @@ struct retro_core_options_v2 options_ko = {
 #define OPTION_VAL_NTSC_COMPOSITE_NL NULL
 #define OPTION_VAL_NTSC_S_VIDEO_NL NULL
 #define OPTION_VAL_NTSC_RGB_NL NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_NL NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_NL NULL
+#define OPTION_VAL_0_NL NULL
+#define OPTION_VAL_10_NL NULL
+#define OPTION_VAL_20_NL NULL
+#define OPTION_VAL_30_NL NULL
+#define OPTION_VAL_40_NL NULL
+#define OPTION_VAL_50_NL NULL
+#define OPTION_VAL_60_NL NULL
+#define OPTION_VAL_70_NL NULL
+#define OPTION_VAL_80_NL NULL
+#define OPTION_VAL_90_NL NULL
+#define OPTION_VAL_100_NL NULL
+#define BSNES_VIDEO_SATURATION_LABEL_NL NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_NL NULL
+#define OPTION_VAL_110_NL NULL
+#define OPTION_VAL_120_NL NULL
+#define OPTION_VAL_130_NL NULL
+#define OPTION_VAL_140_NL NULL
+#define OPTION_VAL_150_NL NULL
+#define OPTION_VAL_160_NL NULL
+#define OPTION_VAL_170_NL NULL
+#define OPTION_VAL_180_NL NULL
+#define OPTION_VAL_190_NL NULL
+#define OPTION_VAL_200_NL NULL
+#define BSNES_VIDEO_GAMMA_LABEL_NL NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_NL NULL
+#define OPTION_VAL_100_O6_NL NULL
+#define OPTION_VAL_150_O6_NL NULL
 #define BSNES_PPU_FAST_LABEL_NL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_NL NULL
 #define BSNES_PPU_FAST_INFO_0_NL NULL
@@ -21038,26 +23355,6 @@ struct retro_core_options_v2 options_ko = {
 #define BSNES_CPU_OVERCLOCK_LABEL_NL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_NL NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_NL NULL
-#define OPTION_VAL_10_NL NULL
-#define OPTION_VAL_20_NL NULL
-#define OPTION_VAL_30_NL NULL
-#define OPTION_VAL_40_NL NULL
-#define OPTION_VAL_50_NL NULL
-#define OPTION_VAL_60_NL NULL
-#define OPTION_VAL_70_NL NULL
-#define OPTION_VAL_80_NL NULL
-#define OPTION_VAL_90_NL NULL
-#define OPTION_VAL_100_NL NULL
-#define OPTION_VAL_110_NL NULL
-#define OPTION_VAL_120_NL NULL
-#define OPTION_VAL_130_NL NULL
-#define OPTION_VAL_140_NL NULL
-#define OPTION_VAL_150_NL NULL
-#define OPTION_VAL_160_NL NULL
-#define OPTION_VAL_170_NL NULL
-#define OPTION_VAL_180_NL NULL
-#define OPTION_VAL_190_NL NULL
-#define OPTION_VAL_200_NL NULL
 #define OPTION_VAL_210_NL NULL
 #define OPTION_VAL_220_NL NULL
 #define OPTION_VAL_230_NL NULL
@@ -21236,6 +23533,85 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_NL,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_NL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_NL },
+         { "10", OPTION_VAL_10_NL },
+         { "20", OPTION_VAL_20_NL },
+         { "30", OPTION_VAL_30_NL },
+         { "40", OPTION_VAL_40_NL },
+         { "50", OPTION_VAL_50_NL },
+         { "60", OPTION_VAL_60_NL },
+         { "70", OPTION_VAL_70_NL },
+         { "80", OPTION_VAL_80_NL },
+         { "90", OPTION_VAL_90_NL },
+         { "100", OPTION_VAL_100_NL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_NL,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_NL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_NL },
+         { "10", OPTION_VAL_10_NL },
+         { "20", OPTION_VAL_20_NL },
+         { "30", OPTION_VAL_30_NL },
+         { "40", OPTION_VAL_40_NL },
+         { "50", OPTION_VAL_50_NL },
+         { "60", OPTION_VAL_60_NL },
+         { "70", OPTION_VAL_70_NL },
+         { "80", OPTION_VAL_80_NL },
+         { "90", OPTION_VAL_90_NL },
+         { "100", OPTION_VAL_100_NL },
+         { "110", OPTION_VAL_110_NL },
+         { "120", OPTION_VAL_120_NL },
+         { "130", OPTION_VAL_130_NL },
+         { "140", OPTION_VAL_140_NL },
+         { "150", OPTION_VAL_150_NL },
+         { "160", OPTION_VAL_160_NL },
+         { "170", OPTION_VAL_170_NL },
+         { "180", OPTION_VAL_180_NL },
+         { "190", OPTION_VAL_190_NL },
+         { "200", OPTION_VAL_200_NL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_NL,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_NL,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_NL },
+         { "110", OPTION_VAL_110_NL },
+         { "120", OPTION_VAL_120_NL },
+         { "130", OPTION_VAL_130_NL },
+         { "140", OPTION_VAL_140_NL },
+         { "150", OPTION_VAL_150_O6_NL },
+         { "160", OPTION_VAL_160_NL },
+         { "170", OPTION_VAL_170_NL },
+         { "180", OPTION_VAL_180_NL },
+         { "190", OPTION_VAL_190_NL },
+         { "200", OPTION_VAL_200_NL },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -21780,6 +24156,35 @@ struct retro_core_options_v2 options_nl = {
 #define OPTION_VAL_NTSC_COMPOSITE_NO NULL
 #define OPTION_VAL_NTSC_S_VIDEO_NO NULL
 #define OPTION_VAL_NTSC_RGB_NO NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_NO NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_NO NULL
+#define OPTION_VAL_0_NO NULL
+#define OPTION_VAL_10_NO NULL
+#define OPTION_VAL_20_NO NULL
+#define OPTION_VAL_30_NO NULL
+#define OPTION_VAL_40_NO NULL
+#define OPTION_VAL_50_NO NULL
+#define OPTION_VAL_60_NO NULL
+#define OPTION_VAL_70_NO NULL
+#define OPTION_VAL_80_NO NULL
+#define OPTION_VAL_90_NO NULL
+#define OPTION_VAL_100_NO NULL
+#define BSNES_VIDEO_SATURATION_LABEL_NO NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_NO NULL
+#define OPTION_VAL_110_NO NULL
+#define OPTION_VAL_120_NO NULL
+#define OPTION_VAL_130_NO NULL
+#define OPTION_VAL_140_NO NULL
+#define OPTION_VAL_150_NO NULL
+#define OPTION_VAL_160_NO NULL
+#define OPTION_VAL_170_NO NULL
+#define OPTION_VAL_180_NO NULL
+#define OPTION_VAL_190_NO NULL
+#define OPTION_VAL_200_NO NULL
+#define BSNES_VIDEO_GAMMA_LABEL_NO NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_NO NULL
+#define OPTION_VAL_100_O6_NO NULL
+#define OPTION_VAL_150_O6_NO NULL
 #define BSNES_PPU_FAST_LABEL_NO NULL
 #define BSNES_PPU_FAST_LABEL_CAT_NO NULL
 #define BSNES_PPU_FAST_INFO_0_NO NULL
@@ -21842,26 +24247,6 @@ struct retro_core_options_v2 options_nl = {
 #define BSNES_CPU_OVERCLOCK_LABEL_NO NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_NO NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_NO NULL
-#define OPTION_VAL_10_NO NULL
-#define OPTION_VAL_20_NO NULL
-#define OPTION_VAL_30_NO NULL
-#define OPTION_VAL_40_NO NULL
-#define OPTION_VAL_50_NO NULL
-#define OPTION_VAL_60_NO NULL
-#define OPTION_VAL_70_NO NULL
-#define OPTION_VAL_80_NO NULL
-#define OPTION_VAL_90_NO NULL
-#define OPTION_VAL_100_NO NULL
-#define OPTION_VAL_110_NO NULL
-#define OPTION_VAL_120_NO NULL
-#define OPTION_VAL_130_NO NULL
-#define OPTION_VAL_140_NO NULL
-#define OPTION_VAL_150_NO NULL
-#define OPTION_VAL_160_NO NULL
-#define OPTION_VAL_170_NO NULL
-#define OPTION_VAL_180_NO NULL
-#define OPTION_VAL_190_NO NULL
-#define OPTION_VAL_200_NO NULL
 #define OPTION_VAL_210_NO NULL
 #define OPTION_VAL_220_NO NULL
 #define OPTION_VAL_230_NO NULL
@@ -22040,6 +24425,85 @@ struct retro_core_option_v2_definition option_defs_no[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_NO,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_NO,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_NO },
+         { "10", OPTION_VAL_10_NO },
+         { "20", OPTION_VAL_20_NO },
+         { "30", OPTION_VAL_30_NO },
+         { "40", OPTION_VAL_40_NO },
+         { "50", OPTION_VAL_50_NO },
+         { "60", OPTION_VAL_60_NO },
+         { "70", OPTION_VAL_70_NO },
+         { "80", OPTION_VAL_80_NO },
+         { "90", OPTION_VAL_90_NO },
+         { "100", OPTION_VAL_100_NO },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_NO,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_NO,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_NO },
+         { "10", OPTION_VAL_10_NO },
+         { "20", OPTION_VAL_20_NO },
+         { "30", OPTION_VAL_30_NO },
+         { "40", OPTION_VAL_40_NO },
+         { "50", OPTION_VAL_50_NO },
+         { "60", OPTION_VAL_60_NO },
+         { "70", OPTION_VAL_70_NO },
+         { "80", OPTION_VAL_80_NO },
+         { "90", OPTION_VAL_90_NO },
+         { "100", OPTION_VAL_100_NO },
+         { "110", OPTION_VAL_110_NO },
+         { "120", OPTION_VAL_120_NO },
+         { "130", OPTION_VAL_130_NO },
+         { "140", OPTION_VAL_140_NO },
+         { "150", OPTION_VAL_150_NO },
+         { "160", OPTION_VAL_160_NO },
+         { "170", OPTION_VAL_170_NO },
+         { "180", OPTION_VAL_180_NO },
+         { "190", OPTION_VAL_190_NO },
+         { "200", OPTION_VAL_200_NO },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_NO,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_NO,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_NO },
+         { "110", OPTION_VAL_110_NO },
+         { "120", OPTION_VAL_120_NO },
+         { "130", OPTION_VAL_130_NO },
+         { "140", OPTION_VAL_140_NO },
+         { "150", OPTION_VAL_150_O6_NO },
+         { "160", OPTION_VAL_160_NO },
+         { "170", OPTION_VAL_170_NO },
+         { "180", OPTION_VAL_180_NO },
+         { "190", OPTION_VAL_190_NO },
+         { "200", OPTION_VAL_200_NO },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -22584,6 +25048,35 @@ struct retro_core_options_v2 options_no = {
 #define OPTION_VAL_NTSC_COMPOSITE_OR NULL
 #define OPTION_VAL_NTSC_S_VIDEO_OR NULL
 #define OPTION_VAL_NTSC_RGB_OR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_OR NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_OR NULL
+#define OPTION_VAL_0_OR NULL
+#define OPTION_VAL_10_OR NULL
+#define OPTION_VAL_20_OR NULL
+#define OPTION_VAL_30_OR NULL
+#define OPTION_VAL_40_OR NULL
+#define OPTION_VAL_50_OR NULL
+#define OPTION_VAL_60_OR NULL
+#define OPTION_VAL_70_OR NULL
+#define OPTION_VAL_80_OR NULL
+#define OPTION_VAL_90_OR NULL
+#define OPTION_VAL_100_OR NULL
+#define BSNES_VIDEO_SATURATION_LABEL_OR NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_OR NULL
+#define OPTION_VAL_110_OR NULL
+#define OPTION_VAL_120_OR NULL
+#define OPTION_VAL_130_OR NULL
+#define OPTION_VAL_140_OR NULL
+#define OPTION_VAL_150_OR NULL
+#define OPTION_VAL_160_OR NULL
+#define OPTION_VAL_170_OR NULL
+#define OPTION_VAL_180_OR NULL
+#define OPTION_VAL_190_OR NULL
+#define OPTION_VAL_200_OR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_OR NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_OR NULL
+#define OPTION_VAL_100_O6_OR NULL
+#define OPTION_VAL_150_O6_OR NULL
 #define BSNES_PPU_FAST_LABEL_OR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_OR NULL
 #define BSNES_PPU_FAST_INFO_0_OR NULL
@@ -22646,26 +25139,6 @@ struct retro_core_options_v2 options_no = {
 #define BSNES_CPU_OVERCLOCK_LABEL_OR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_OR NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_OR NULL
-#define OPTION_VAL_10_OR NULL
-#define OPTION_VAL_20_OR NULL
-#define OPTION_VAL_30_OR NULL
-#define OPTION_VAL_40_OR NULL
-#define OPTION_VAL_50_OR NULL
-#define OPTION_VAL_60_OR NULL
-#define OPTION_VAL_70_OR NULL
-#define OPTION_VAL_80_OR NULL
-#define OPTION_VAL_90_OR NULL
-#define OPTION_VAL_100_OR NULL
-#define OPTION_VAL_110_OR NULL
-#define OPTION_VAL_120_OR NULL
-#define OPTION_VAL_130_OR NULL
-#define OPTION_VAL_140_OR NULL
-#define OPTION_VAL_150_OR NULL
-#define OPTION_VAL_160_OR NULL
-#define OPTION_VAL_170_OR NULL
-#define OPTION_VAL_180_OR NULL
-#define OPTION_VAL_190_OR NULL
-#define OPTION_VAL_200_OR NULL
 #define OPTION_VAL_210_OR NULL
 #define OPTION_VAL_220_OR NULL
 #define OPTION_VAL_230_OR NULL
@@ -22844,6 +25317,85 @@ struct retro_core_option_v2_definition option_defs_or[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_OR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_OR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_OR },
+         { "10", OPTION_VAL_10_OR },
+         { "20", OPTION_VAL_20_OR },
+         { "30", OPTION_VAL_30_OR },
+         { "40", OPTION_VAL_40_OR },
+         { "50", OPTION_VAL_50_OR },
+         { "60", OPTION_VAL_60_OR },
+         { "70", OPTION_VAL_70_OR },
+         { "80", OPTION_VAL_80_OR },
+         { "90", OPTION_VAL_90_OR },
+         { "100", OPTION_VAL_100_OR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_OR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_OR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_OR },
+         { "10", OPTION_VAL_10_OR },
+         { "20", OPTION_VAL_20_OR },
+         { "30", OPTION_VAL_30_OR },
+         { "40", OPTION_VAL_40_OR },
+         { "50", OPTION_VAL_50_OR },
+         { "60", OPTION_VAL_60_OR },
+         { "70", OPTION_VAL_70_OR },
+         { "80", OPTION_VAL_80_OR },
+         { "90", OPTION_VAL_90_OR },
+         { "100", OPTION_VAL_100_OR },
+         { "110", OPTION_VAL_110_OR },
+         { "120", OPTION_VAL_120_OR },
+         { "130", OPTION_VAL_130_OR },
+         { "140", OPTION_VAL_140_OR },
+         { "150", OPTION_VAL_150_OR },
+         { "160", OPTION_VAL_160_OR },
+         { "170", OPTION_VAL_170_OR },
+         { "180", OPTION_VAL_180_OR },
+         { "190", OPTION_VAL_190_OR },
+         { "200", OPTION_VAL_200_OR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_OR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_OR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_OR },
+         { "110", OPTION_VAL_110_OR },
+         { "120", OPTION_VAL_120_OR },
+         { "130", OPTION_VAL_130_OR },
+         { "140", OPTION_VAL_140_OR },
+         { "150", OPTION_VAL_150_O6_OR },
+         { "160", OPTION_VAL_160_OR },
+         { "170", OPTION_VAL_170_OR },
+         { "180", OPTION_VAL_180_OR },
+         { "190", OPTION_VAL_190_OR },
+         { "200", OPTION_VAL_200_OR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -23388,6 +25940,35 @@ struct retro_core_options_v2 options_or = {
 #define OPTION_VAL_NTSC_COMPOSITE_PL "NTSC (kompozyt)"
 #define OPTION_VAL_NTSC_S_VIDEO_PL "NTSC (S-wideo)"
 #define OPTION_VAL_NTSC_RGB_PL NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_PL "Regulacja koloru - luminancja"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_PL "Dostosuj luminancję"
+#define OPTION_VAL_0_PL NULL
+#define OPTION_VAL_10_PL NULL
+#define OPTION_VAL_20_PL NULL
+#define OPTION_VAL_30_PL "30 %"
+#define OPTION_VAL_40_PL NULL
+#define OPTION_VAL_50_PL "50 %"
+#define OPTION_VAL_60_PL "60 %"
+#define OPTION_VAL_70_PL NULL
+#define OPTION_VAL_80_PL "80 %"
+#define OPTION_VAL_90_PL NULL
+#define OPTION_VAL_100_PL NULL
+#define BSNES_VIDEO_SATURATION_LABEL_PL "Regulacja koloru - Nasycenie"
+#define BSNES_VIDEO_SATURATION_INFO_0_PL "Dostosuj nasycenie"
+#define OPTION_VAL_110_PL NULL
+#define OPTION_VAL_120_PL NULL
+#define OPTION_VAL_130_PL NULL
+#define OPTION_VAL_140_PL NULL
+#define OPTION_VAL_150_PL NULL
+#define OPTION_VAL_160_PL NULL
+#define OPTION_VAL_170_PL NULL
+#define OPTION_VAL_180_PL NULL
+#define OPTION_VAL_190_PL NULL
+#define OPTION_VAL_200_PL NULL
+#define BSNES_VIDEO_GAMMA_LABEL_PL "Regulacja koloru - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_PL "Dostosuj Gamma"
+#define OPTION_VAL_100_O6_PL NULL
+#define OPTION_VAL_150_O6_PL "150% (domyślnie)"
 #define BSNES_PPU_FAST_LABEL_PL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_PL NULL
 #define BSNES_PPU_FAST_INFO_0_PL "Włącz szybszą emulację PPU kosztem niewielkiego zmniejszenia dokładności. Zaleca się, aby to zostawić. UWAGA: to musi być włączone dla opcji 'Deinterlace', 'No Sprite Limit' i 'HD Mode 7' do działania."
@@ -23450,26 +26031,6 @@ struct retro_core_options_v2 options_or = {
 #define BSNES_CPU_OVERCLOCK_LABEL_PL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_PL NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_PL NULL
-#define OPTION_VAL_10_PL NULL
-#define OPTION_VAL_20_PL NULL
-#define OPTION_VAL_30_PL "30 %"
-#define OPTION_VAL_40_PL NULL
-#define OPTION_VAL_50_PL "50 %"
-#define OPTION_VAL_60_PL "60 %"
-#define OPTION_VAL_70_PL NULL
-#define OPTION_VAL_80_PL "80 %"
-#define OPTION_VAL_90_PL NULL
-#define OPTION_VAL_100_PL NULL
-#define OPTION_VAL_110_PL NULL
-#define OPTION_VAL_120_PL NULL
-#define OPTION_VAL_130_PL NULL
-#define OPTION_VAL_140_PL NULL
-#define OPTION_VAL_150_PL NULL
-#define OPTION_VAL_160_PL NULL
-#define OPTION_VAL_170_PL NULL
-#define OPTION_VAL_180_PL NULL
-#define OPTION_VAL_190_PL NULL
-#define OPTION_VAL_200_PL NULL
 #define OPTION_VAL_210_PL NULL
 #define OPTION_VAL_220_PL NULL
 #define OPTION_VAL_230_PL NULL
@@ -23648,6 +26209,85 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_PL,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_PL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_PL },
+         { "10", OPTION_VAL_10_PL },
+         { "20", OPTION_VAL_20_PL },
+         { "30", OPTION_VAL_30_PL },
+         { "40", OPTION_VAL_40_PL },
+         { "50", OPTION_VAL_50_PL },
+         { "60", OPTION_VAL_60_PL },
+         { "70", OPTION_VAL_70_PL },
+         { "80", OPTION_VAL_80_PL },
+         { "90", OPTION_VAL_90_PL },
+         { "100", OPTION_VAL_100_PL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_PL,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_PL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_PL },
+         { "10", OPTION_VAL_10_PL },
+         { "20", OPTION_VAL_20_PL },
+         { "30", OPTION_VAL_30_PL },
+         { "40", OPTION_VAL_40_PL },
+         { "50", OPTION_VAL_50_PL },
+         { "60", OPTION_VAL_60_PL },
+         { "70", OPTION_VAL_70_PL },
+         { "80", OPTION_VAL_80_PL },
+         { "90", OPTION_VAL_90_PL },
+         { "100", OPTION_VAL_100_PL },
+         { "110", OPTION_VAL_110_PL },
+         { "120", OPTION_VAL_120_PL },
+         { "130", OPTION_VAL_130_PL },
+         { "140", OPTION_VAL_140_PL },
+         { "150", OPTION_VAL_150_PL },
+         { "160", OPTION_VAL_160_PL },
+         { "170", OPTION_VAL_170_PL },
+         { "180", OPTION_VAL_180_PL },
+         { "190", OPTION_VAL_190_PL },
+         { "200", OPTION_VAL_200_PL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_PL,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_PL,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_PL },
+         { "110", OPTION_VAL_110_PL },
+         { "120", OPTION_VAL_120_PL },
+         { "130", OPTION_VAL_130_PL },
+         { "140", OPTION_VAL_140_PL },
+         { "150", OPTION_VAL_150_O6_PL },
+         { "160", OPTION_VAL_160_PL },
+         { "170", OPTION_VAL_170_PL },
+         { "180", OPTION_VAL_180_PL },
+         { "190", OPTION_VAL_190_PL },
+         { "200", OPTION_VAL_200_PL },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -24192,6 +26832,35 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_NTSC_COMPOSITE_PT_BR "NTSC (composto)"
 #define OPTION_VAL_NTSC_S_VIDEO_PT_BR NULL
 #define OPTION_VAL_NTSC_RGB_PT_BR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_PT_BR NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR NULL
+#define OPTION_VAL_0_PT_BR NULL
+#define OPTION_VAL_10_PT_BR NULL
+#define OPTION_VAL_20_PT_BR NULL
+#define OPTION_VAL_30_PT_BR NULL
+#define OPTION_VAL_40_PT_BR NULL
+#define OPTION_VAL_50_PT_BR NULL
+#define OPTION_VAL_60_PT_BR NULL
+#define OPTION_VAL_70_PT_BR NULL
+#define OPTION_VAL_80_PT_BR NULL
+#define OPTION_VAL_90_PT_BR NULL
+#define OPTION_VAL_100_PT_BR "100% (padrão)"
+#define BSNES_VIDEO_SATURATION_LABEL_PT_BR NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_PT_BR NULL
+#define OPTION_VAL_110_PT_BR NULL
+#define OPTION_VAL_120_PT_BR NULL
+#define OPTION_VAL_130_PT_BR NULL
+#define OPTION_VAL_140_PT_BR NULL
+#define OPTION_VAL_150_PT_BR NULL
+#define OPTION_VAL_160_PT_BR NULL
+#define OPTION_VAL_170_PT_BR NULL
+#define OPTION_VAL_180_PT_BR NULL
+#define OPTION_VAL_190_PT_BR NULL
+#define OPTION_VAL_200_PT_BR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_PT_BR NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_PT_BR NULL
+#define OPTION_VAL_100_O6_PT_BR NULL
+#define OPTION_VAL_150_O6_PT_BR "150% (padrão)"
 #define BSNES_PPU_FAST_LABEL_PT_BR "PPU (vídeo) — Modo rápido"
 #define BSNES_PPU_FAST_LABEL_CAT_PT_BR "PPU — Modo rápido"
 #define BSNES_PPU_FAST_INFO_0_PT_BR "Ativa uma emulação mais rápida do PPU ao custo de uma pequena redução de precisão.\nOBSERVAÇÃO: permite ativar \"Desentrelaçamento\", \"Sem limite de sprites\" e \"Mode 7 HD\"."
@@ -24254,26 +26923,6 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_CPU_OVERCLOCK_LABEL_PT_BR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_PT_BR NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_PT_BR "Faça o overclock ou o downclock da CPU. A definição deste valor acima de 100% pode reduzir os tempos de carregamento e remover a lentidão. Use com cautela, pois também pode causar o travamento de alguns jogos ou apresentar outros problemas."
-#define OPTION_VAL_10_PT_BR NULL
-#define OPTION_VAL_20_PT_BR NULL
-#define OPTION_VAL_30_PT_BR NULL
-#define OPTION_VAL_40_PT_BR NULL
-#define OPTION_VAL_50_PT_BR NULL
-#define OPTION_VAL_60_PT_BR NULL
-#define OPTION_VAL_70_PT_BR NULL
-#define OPTION_VAL_80_PT_BR NULL
-#define OPTION_VAL_90_PT_BR NULL
-#define OPTION_VAL_100_PT_BR "100% (padrão)"
-#define OPTION_VAL_110_PT_BR NULL
-#define OPTION_VAL_120_PT_BR NULL
-#define OPTION_VAL_130_PT_BR NULL
-#define OPTION_VAL_140_PT_BR NULL
-#define OPTION_VAL_150_PT_BR NULL
-#define OPTION_VAL_160_PT_BR NULL
-#define OPTION_VAL_170_PT_BR NULL
-#define OPTION_VAL_180_PT_BR NULL
-#define OPTION_VAL_190_PT_BR NULL
-#define OPTION_VAL_200_PT_BR NULL
 #define OPTION_VAL_210_PT_BR NULL
 #define OPTION_VAL_220_PT_BR NULL
 #define OPTION_VAL_230_PT_BR NULL
@@ -24452,6 +27101,85 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_PT_BR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_PT_BR },
+         { "10", OPTION_VAL_10_PT_BR },
+         { "20", OPTION_VAL_20_PT_BR },
+         { "30", OPTION_VAL_30_PT_BR },
+         { "40", OPTION_VAL_40_PT_BR },
+         { "50", OPTION_VAL_50_PT_BR },
+         { "60", OPTION_VAL_60_PT_BR },
+         { "70", OPTION_VAL_70_PT_BR },
+         { "80", OPTION_VAL_80_PT_BR },
+         { "90", OPTION_VAL_90_PT_BR },
+         { "100", OPTION_VAL_100_PT_BR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_PT_BR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_PT_BR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_PT_BR },
+         { "10", OPTION_VAL_10_PT_BR },
+         { "20", OPTION_VAL_20_PT_BR },
+         { "30", OPTION_VAL_30_PT_BR },
+         { "40", OPTION_VAL_40_PT_BR },
+         { "50", OPTION_VAL_50_PT_BR },
+         { "60", OPTION_VAL_60_PT_BR },
+         { "70", OPTION_VAL_70_PT_BR },
+         { "80", OPTION_VAL_80_PT_BR },
+         { "90", OPTION_VAL_90_PT_BR },
+         { "100", OPTION_VAL_100_PT_BR },
+         { "110", OPTION_VAL_110_PT_BR },
+         { "120", OPTION_VAL_120_PT_BR },
+         { "130", OPTION_VAL_130_PT_BR },
+         { "140", OPTION_VAL_140_PT_BR },
+         { "150", OPTION_VAL_150_PT_BR },
+         { "160", OPTION_VAL_160_PT_BR },
+         { "170", OPTION_VAL_170_PT_BR },
+         { "180", OPTION_VAL_180_PT_BR },
+         { "190", OPTION_VAL_190_PT_BR },
+         { "200", OPTION_VAL_200_PT_BR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_PT_BR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_PT_BR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_PT_BR },
+         { "110", OPTION_VAL_110_PT_BR },
+         { "120", OPTION_VAL_120_PT_BR },
+         { "130", OPTION_VAL_130_PT_BR },
+         { "140", OPTION_VAL_140_PT_BR },
+         { "150", OPTION_VAL_150_O6_PT_BR },
+         { "160", OPTION_VAL_160_PT_BR },
+         { "170", OPTION_VAL_170_PT_BR },
+         { "180", OPTION_VAL_180_PT_BR },
+         { "190", OPTION_VAL_190_PT_BR },
+         { "200", OPTION_VAL_200_PT_BR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -24996,6 +27724,35 @@ struct retro_core_options_v2 options_pt_br = {
 #define OPTION_VAL_NTSC_COMPOSITE_PT_PT NULL
 #define OPTION_VAL_NTSC_S_VIDEO_PT_PT NULL
 #define OPTION_VAL_NTSC_RGB_PT_PT NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_PT_PT NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_PT_PT NULL
+#define OPTION_VAL_0_PT_PT NULL
+#define OPTION_VAL_10_PT_PT NULL
+#define OPTION_VAL_20_PT_PT NULL
+#define OPTION_VAL_30_PT_PT NULL
+#define OPTION_VAL_40_PT_PT NULL
+#define OPTION_VAL_50_PT_PT NULL
+#define OPTION_VAL_60_PT_PT NULL
+#define OPTION_VAL_70_PT_PT NULL
+#define OPTION_VAL_80_PT_PT NULL
+#define OPTION_VAL_90_PT_PT NULL
+#define OPTION_VAL_100_PT_PT NULL
+#define BSNES_VIDEO_SATURATION_LABEL_PT_PT NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_PT_PT NULL
+#define OPTION_VAL_110_PT_PT NULL
+#define OPTION_VAL_120_PT_PT NULL
+#define OPTION_VAL_130_PT_PT NULL
+#define OPTION_VAL_140_PT_PT NULL
+#define OPTION_VAL_150_PT_PT NULL
+#define OPTION_VAL_160_PT_PT NULL
+#define OPTION_VAL_170_PT_PT NULL
+#define OPTION_VAL_180_PT_PT NULL
+#define OPTION_VAL_190_PT_PT NULL
+#define OPTION_VAL_200_PT_PT NULL
+#define BSNES_VIDEO_GAMMA_LABEL_PT_PT NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_PT_PT NULL
+#define OPTION_VAL_100_O6_PT_PT NULL
+#define OPTION_VAL_150_O6_PT_PT NULL
 #define BSNES_PPU_FAST_LABEL_PT_PT NULL
 #define BSNES_PPU_FAST_LABEL_CAT_PT_PT NULL
 #define BSNES_PPU_FAST_INFO_0_PT_PT NULL
@@ -25058,26 +27815,6 @@ struct retro_core_options_v2 options_pt_br = {
 #define BSNES_CPU_OVERCLOCK_LABEL_PT_PT NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_PT_PT NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_PT_PT NULL
-#define OPTION_VAL_10_PT_PT NULL
-#define OPTION_VAL_20_PT_PT NULL
-#define OPTION_VAL_30_PT_PT NULL
-#define OPTION_VAL_40_PT_PT NULL
-#define OPTION_VAL_50_PT_PT NULL
-#define OPTION_VAL_60_PT_PT NULL
-#define OPTION_VAL_70_PT_PT NULL
-#define OPTION_VAL_80_PT_PT NULL
-#define OPTION_VAL_90_PT_PT NULL
-#define OPTION_VAL_100_PT_PT NULL
-#define OPTION_VAL_110_PT_PT NULL
-#define OPTION_VAL_120_PT_PT NULL
-#define OPTION_VAL_130_PT_PT NULL
-#define OPTION_VAL_140_PT_PT NULL
-#define OPTION_VAL_150_PT_PT NULL
-#define OPTION_VAL_160_PT_PT NULL
-#define OPTION_VAL_170_PT_PT NULL
-#define OPTION_VAL_180_PT_PT NULL
-#define OPTION_VAL_190_PT_PT NULL
-#define OPTION_VAL_200_PT_PT NULL
 #define OPTION_VAL_210_PT_PT NULL
 #define OPTION_VAL_220_PT_PT NULL
 #define OPTION_VAL_230_PT_PT NULL
@@ -25256,6 +27993,85 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_PT_PT,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_PT_PT,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_PT_PT },
+         { "10", OPTION_VAL_10_PT_PT },
+         { "20", OPTION_VAL_20_PT_PT },
+         { "30", OPTION_VAL_30_PT_PT },
+         { "40", OPTION_VAL_40_PT_PT },
+         { "50", OPTION_VAL_50_PT_PT },
+         { "60", OPTION_VAL_60_PT_PT },
+         { "70", OPTION_VAL_70_PT_PT },
+         { "80", OPTION_VAL_80_PT_PT },
+         { "90", OPTION_VAL_90_PT_PT },
+         { "100", OPTION_VAL_100_PT_PT },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_PT_PT,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_PT_PT,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_PT_PT },
+         { "10", OPTION_VAL_10_PT_PT },
+         { "20", OPTION_VAL_20_PT_PT },
+         { "30", OPTION_VAL_30_PT_PT },
+         { "40", OPTION_VAL_40_PT_PT },
+         { "50", OPTION_VAL_50_PT_PT },
+         { "60", OPTION_VAL_60_PT_PT },
+         { "70", OPTION_VAL_70_PT_PT },
+         { "80", OPTION_VAL_80_PT_PT },
+         { "90", OPTION_VAL_90_PT_PT },
+         { "100", OPTION_VAL_100_PT_PT },
+         { "110", OPTION_VAL_110_PT_PT },
+         { "120", OPTION_VAL_120_PT_PT },
+         { "130", OPTION_VAL_130_PT_PT },
+         { "140", OPTION_VAL_140_PT_PT },
+         { "150", OPTION_VAL_150_PT_PT },
+         { "160", OPTION_VAL_160_PT_PT },
+         { "170", OPTION_VAL_170_PT_PT },
+         { "180", OPTION_VAL_180_PT_PT },
+         { "190", OPTION_VAL_190_PT_PT },
+         { "200", OPTION_VAL_200_PT_PT },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_PT_PT,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_PT_PT,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_PT_PT },
+         { "110", OPTION_VAL_110_PT_PT },
+         { "120", OPTION_VAL_120_PT_PT },
+         { "130", OPTION_VAL_130_PT_PT },
+         { "140", OPTION_VAL_140_PT_PT },
+         { "150", OPTION_VAL_150_O6_PT_PT },
+         { "160", OPTION_VAL_160_PT_PT },
+         { "170", OPTION_VAL_170_PT_PT },
+         { "180", OPTION_VAL_180_PT_PT },
+         { "190", OPTION_VAL_190_PT_PT },
+         { "200", OPTION_VAL_200_PT_PT },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -25800,6 +28616,35 @@ struct retro_core_options_v2 options_pt_pt = {
 #define OPTION_VAL_NTSC_COMPOSITE_RU "NTSC (композитный)"
 #define OPTION_VAL_NTSC_S_VIDEO_RU NULL
 #define OPTION_VAL_NTSC_RGB_RU NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_RU "Регулировка цвета - яркость"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_RU "Подстройка яркости"
+#define OPTION_VAL_0_RU NULL
+#define OPTION_VAL_10_RU NULL
+#define OPTION_VAL_20_RU NULL
+#define OPTION_VAL_30_RU NULL
+#define OPTION_VAL_40_RU NULL
+#define OPTION_VAL_50_RU NULL
+#define OPTION_VAL_60_RU NULL
+#define OPTION_VAL_70_RU NULL
+#define OPTION_VAL_80_RU NULL
+#define OPTION_VAL_90_RU NULL
+#define OPTION_VAL_100_RU "100% (по умолчанию)"
+#define BSNES_VIDEO_SATURATION_LABEL_RU "Регулировка цвета - насыщенность"
+#define BSNES_VIDEO_SATURATION_INFO_0_RU "Подстройка насыщенности"
+#define OPTION_VAL_110_RU NULL
+#define OPTION_VAL_120_RU NULL
+#define OPTION_VAL_130_RU NULL
+#define OPTION_VAL_140_RU NULL
+#define OPTION_VAL_150_RU NULL
+#define OPTION_VAL_160_RU NULL
+#define OPTION_VAL_170_RU NULL
+#define OPTION_VAL_180_RU NULL
+#define OPTION_VAL_190_RU NULL
+#define OPTION_VAL_200_RU NULL
+#define BSNES_VIDEO_GAMMA_LABEL_RU "Регулировка цвета - гамма"
+#define BSNES_VIDEO_GAMMA_INFO_0_RU "Подстройка гаммы"
+#define OPTION_VAL_100_O6_RU NULL
+#define OPTION_VAL_150_O6_RU "150% (по умолчанию)"
 #define BSNES_PPU_FAST_LABEL_RU "PPU (Видео) - Быстрый режим"
 #define BSNES_PPU_FAST_LABEL_CAT_RU "PPU - Быстрый режим"
 #define BSNES_PPU_FAST_INFO_0_RU "Ускоряет эмуляцию PPU, но незначительно снижает точность. Рекомендуется оставлять опцию включенной. Требуется для работы настроек 'Деинтерлейсинг', 'Без ограничения спрайтов' и 'HD Mode 7'."
@@ -25862,26 +28707,6 @@ struct retro_core_options_v2 options_pt_pt = {
 #define BSNES_CPU_OVERCLOCK_LABEL_RU "Разгон - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_RU NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_RU "Разгон или замедление CPU. Установка значения выше 100% позволяет снизить время загрузок и устранить замедления в играх. Используйте с осторожностью из-за возможных ошибок и сбоев."
-#define OPTION_VAL_10_RU NULL
-#define OPTION_VAL_20_RU NULL
-#define OPTION_VAL_30_RU NULL
-#define OPTION_VAL_40_RU NULL
-#define OPTION_VAL_50_RU NULL
-#define OPTION_VAL_60_RU NULL
-#define OPTION_VAL_70_RU NULL
-#define OPTION_VAL_80_RU NULL
-#define OPTION_VAL_90_RU NULL
-#define OPTION_VAL_100_RU "100% (по умолчанию)"
-#define OPTION_VAL_110_RU NULL
-#define OPTION_VAL_120_RU NULL
-#define OPTION_VAL_130_RU NULL
-#define OPTION_VAL_140_RU NULL
-#define OPTION_VAL_150_RU NULL
-#define OPTION_VAL_160_RU NULL
-#define OPTION_VAL_170_RU NULL
-#define OPTION_VAL_180_RU NULL
-#define OPTION_VAL_190_RU NULL
-#define OPTION_VAL_200_RU NULL
 #define OPTION_VAL_210_RU NULL
 #define OPTION_VAL_220_RU NULL
 #define OPTION_VAL_230_RU NULL
@@ -26060,6 +28885,85 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_RU,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_RU,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_RU },
+         { "10", OPTION_VAL_10_RU },
+         { "20", OPTION_VAL_20_RU },
+         { "30", OPTION_VAL_30_RU },
+         { "40", OPTION_VAL_40_RU },
+         { "50", OPTION_VAL_50_RU },
+         { "60", OPTION_VAL_60_RU },
+         { "70", OPTION_VAL_70_RU },
+         { "80", OPTION_VAL_80_RU },
+         { "90", OPTION_VAL_90_RU },
+         { "100", OPTION_VAL_100_RU },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_RU,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_RU,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_RU },
+         { "10", OPTION_VAL_10_RU },
+         { "20", OPTION_VAL_20_RU },
+         { "30", OPTION_VAL_30_RU },
+         { "40", OPTION_VAL_40_RU },
+         { "50", OPTION_VAL_50_RU },
+         { "60", OPTION_VAL_60_RU },
+         { "70", OPTION_VAL_70_RU },
+         { "80", OPTION_VAL_80_RU },
+         { "90", OPTION_VAL_90_RU },
+         { "100", OPTION_VAL_100_RU },
+         { "110", OPTION_VAL_110_RU },
+         { "120", OPTION_VAL_120_RU },
+         { "130", OPTION_VAL_130_RU },
+         { "140", OPTION_VAL_140_RU },
+         { "150", OPTION_VAL_150_RU },
+         { "160", OPTION_VAL_160_RU },
+         { "170", OPTION_VAL_170_RU },
+         { "180", OPTION_VAL_180_RU },
+         { "190", OPTION_VAL_190_RU },
+         { "200", OPTION_VAL_200_RU },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_RU,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_RU,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_RU },
+         { "110", OPTION_VAL_110_RU },
+         { "120", OPTION_VAL_120_RU },
+         { "130", OPTION_VAL_130_RU },
+         { "140", OPTION_VAL_140_RU },
+         { "150", OPTION_VAL_150_O6_RU },
+         { "160", OPTION_VAL_160_RU },
+         { "170", OPTION_VAL_170_RU },
+         { "180", OPTION_VAL_180_RU },
+         { "190", OPTION_VAL_190_RU },
+         { "200", OPTION_VAL_200_RU },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -26604,6 +29508,35 @@ struct retro_core_options_v2 options_ru = {
 #define OPTION_VAL_NTSC_COMPOSITE_SK "NTSC (kompozitné)"
 #define OPTION_VAL_NTSC_S_VIDEO_SK NULL
 #define OPTION_VAL_NTSC_RGB_SK NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_SK NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_SK NULL
+#define OPTION_VAL_0_SK NULL
+#define OPTION_VAL_10_SK NULL
+#define OPTION_VAL_20_SK NULL
+#define OPTION_VAL_30_SK NULL
+#define OPTION_VAL_40_SK NULL
+#define OPTION_VAL_50_SK NULL
+#define OPTION_VAL_60_SK NULL
+#define OPTION_VAL_70_SK NULL
+#define OPTION_VAL_80_SK NULL
+#define OPTION_VAL_90_SK NULL
+#define OPTION_VAL_100_SK "100% (predvolené)"
+#define BSNES_VIDEO_SATURATION_LABEL_SK NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_SK NULL
+#define OPTION_VAL_110_SK NULL
+#define OPTION_VAL_120_SK NULL
+#define OPTION_VAL_130_SK NULL
+#define OPTION_VAL_140_SK NULL
+#define OPTION_VAL_150_SK NULL
+#define OPTION_VAL_160_SK NULL
+#define OPTION_VAL_170_SK NULL
+#define OPTION_VAL_180_SK NULL
+#define OPTION_VAL_190_SK NULL
+#define OPTION_VAL_200_SK NULL
+#define BSNES_VIDEO_GAMMA_LABEL_SK NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_SK NULL
+#define OPTION_VAL_100_O6_SK NULL
+#define OPTION_VAL_150_O6_SK NULL
 #define BSNES_PPU_FAST_LABEL_SK NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SK NULL
 #define BSNES_PPU_FAST_INFO_0_SK NULL
@@ -26666,26 +29599,6 @@ struct retro_core_options_v2 options_ru = {
 #define BSNES_CPU_OVERCLOCK_LABEL_SK "Pretaktovanie - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SK NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SK NULL
-#define OPTION_VAL_10_SK NULL
-#define OPTION_VAL_20_SK NULL
-#define OPTION_VAL_30_SK NULL
-#define OPTION_VAL_40_SK NULL
-#define OPTION_VAL_50_SK NULL
-#define OPTION_VAL_60_SK NULL
-#define OPTION_VAL_70_SK NULL
-#define OPTION_VAL_80_SK NULL
-#define OPTION_VAL_90_SK NULL
-#define OPTION_VAL_100_SK "100% (predvolené)"
-#define OPTION_VAL_110_SK NULL
-#define OPTION_VAL_120_SK NULL
-#define OPTION_VAL_130_SK NULL
-#define OPTION_VAL_140_SK NULL
-#define OPTION_VAL_150_SK NULL
-#define OPTION_VAL_160_SK NULL
-#define OPTION_VAL_170_SK NULL
-#define OPTION_VAL_180_SK NULL
-#define OPTION_VAL_190_SK NULL
-#define OPTION_VAL_200_SK NULL
 #define OPTION_VAL_210_SK NULL
 #define OPTION_VAL_220_SK NULL
 #define OPTION_VAL_230_SK NULL
@@ -26864,6 +29777,85 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_SK,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_SK,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_SK },
+         { "10", OPTION_VAL_10_SK },
+         { "20", OPTION_VAL_20_SK },
+         { "30", OPTION_VAL_30_SK },
+         { "40", OPTION_VAL_40_SK },
+         { "50", OPTION_VAL_50_SK },
+         { "60", OPTION_VAL_60_SK },
+         { "70", OPTION_VAL_70_SK },
+         { "80", OPTION_VAL_80_SK },
+         { "90", OPTION_VAL_90_SK },
+         { "100", OPTION_VAL_100_SK },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_SK,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_SK,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_SK },
+         { "10", OPTION_VAL_10_SK },
+         { "20", OPTION_VAL_20_SK },
+         { "30", OPTION_VAL_30_SK },
+         { "40", OPTION_VAL_40_SK },
+         { "50", OPTION_VAL_50_SK },
+         { "60", OPTION_VAL_60_SK },
+         { "70", OPTION_VAL_70_SK },
+         { "80", OPTION_VAL_80_SK },
+         { "90", OPTION_VAL_90_SK },
+         { "100", OPTION_VAL_100_SK },
+         { "110", OPTION_VAL_110_SK },
+         { "120", OPTION_VAL_120_SK },
+         { "130", OPTION_VAL_130_SK },
+         { "140", OPTION_VAL_140_SK },
+         { "150", OPTION_VAL_150_SK },
+         { "160", OPTION_VAL_160_SK },
+         { "170", OPTION_VAL_170_SK },
+         { "180", OPTION_VAL_180_SK },
+         { "190", OPTION_VAL_190_SK },
+         { "200", OPTION_VAL_200_SK },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_SK,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_SK,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_SK },
+         { "110", OPTION_VAL_110_SK },
+         { "120", OPTION_VAL_120_SK },
+         { "130", OPTION_VAL_130_SK },
+         { "140", OPTION_VAL_140_SK },
+         { "150", OPTION_VAL_150_O6_SK },
+         { "160", OPTION_VAL_160_SK },
+         { "170", OPTION_VAL_170_SK },
+         { "180", OPTION_VAL_180_SK },
+         { "190", OPTION_VAL_190_SK },
+         { "200", OPTION_VAL_200_SK },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -27408,6 +30400,35 @@ struct retro_core_options_v2 options_sk = {
 #define OPTION_VAL_NTSC_COMPOSITE_SR NULL
 #define OPTION_VAL_NTSC_S_VIDEO_SR NULL
 #define OPTION_VAL_NTSC_RGB_SR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_SR NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_SR NULL
+#define OPTION_VAL_0_SR NULL
+#define OPTION_VAL_10_SR NULL
+#define OPTION_VAL_20_SR NULL
+#define OPTION_VAL_30_SR NULL
+#define OPTION_VAL_40_SR NULL
+#define OPTION_VAL_50_SR NULL
+#define OPTION_VAL_60_SR NULL
+#define OPTION_VAL_70_SR NULL
+#define OPTION_VAL_80_SR NULL
+#define OPTION_VAL_90_SR NULL
+#define OPTION_VAL_100_SR NULL
+#define BSNES_VIDEO_SATURATION_LABEL_SR NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_SR NULL
+#define OPTION_VAL_110_SR NULL
+#define OPTION_VAL_120_SR NULL
+#define OPTION_VAL_130_SR NULL
+#define OPTION_VAL_140_SR NULL
+#define OPTION_VAL_150_SR NULL
+#define OPTION_VAL_160_SR NULL
+#define OPTION_VAL_170_SR NULL
+#define OPTION_VAL_180_SR NULL
+#define OPTION_VAL_190_SR NULL
+#define OPTION_VAL_200_SR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_SR NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_SR NULL
+#define OPTION_VAL_100_O6_SR NULL
+#define OPTION_VAL_150_O6_SR NULL
 #define BSNES_PPU_FAST_LABEL_SR NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SR NULL
 #define BSNES_PPU_FAST_INFO_0_SR NULL
@@ -27470,26 +30491,6 @@ struct retro_core_options_v2 options_sk = {
 #define BSNES_CPU_OVERCLOCK_LABEL_SR NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SR NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SR NULL
-#define OPTION_VAL_10_SR NULL
-#define OPTION_VAL_20_SR NULL
-#define OPTION_VAL_30_SR NULL
-#define OPTION_VAL_40_SR NULL
-#define OPTION_VAL_50_SR NULL
-#define OPTION_VAL_60_SR NULL
-#define OPTION_VAL_70_SR NULL
-#define OPTION_VAL_80_SR NULL
-#define OPTION_VAL_90_SR NULL
-#define OPTION_VAL_100_SR NULL
-#define OPTION_VAL_110_SR NULL
-#define OPTION_VAL_120_SR NULL
-#define OPTION_VAL_130_SR NULL
-#define OPTION_VAL_140_SR NULL
-#define OPTION_VAL_150_SR NULL
-#define OPTION_VAL_160_SR NULL
-#define OPTION_VAL_170_SR NULL
-#define OPTION_VAL_180_SR NULL
-#define OPTION_VAL_190_SR NULL
-#define OPTION_VAL_200_SR NULL
 #define OPTION_VAL_210_SR NULL
 #define OPTION_VAL_220_SR NULL
 #define OPTION_VAL_230_SR NULL
@@ -27668,6 +30669,85 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_SR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_SR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_SR },
+         { "10", OPTION_VAL_10_SR },
+         { "20", OPTION_VAL_20_SR },
+         { "30", OPTION_VAL_30_SR },
+         { "40", OPTION_VAL_40_SR },
+         { "50", OPTION_VAL_50_SR },
+         { "60", OPTION_VAL_60_SR },
+         { "70", OPTION_VAL_70_SR },
+         { "80", OPTION_VAL_80_SR },
+         { "90", OPTION_VAL_90_SR },
+         { "100", OPTION_VAL_100_SR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_SR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_SR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_SR },
+         { "10", OPTION_VAL_10_SR },
+         { "20", OPTION_VAL_20_SR },
+         { "30", OPTION_VAL_30_SR },
+         { "40", OPTION_VAL_40_SR },
+         { "50", OPTION_VAL_50_SR },
+         { "60", OPTION_VAL_60_SR },
+         { "70", OPTION_VAL_70_SR },
+         { "80", OPTION_VAL_80_SR },
+         { "90", OPTION_VAL_90_SR },
+         { "100", OPTION_VAL_100_SR },
+         { "110", OPTION_VAL_110_SR },
+         { "120", OPTION_VAL_120_SR },
+         { "130", OPTION_VAL_130_SR },
+         { "140", OPTION_VAL_140_SR },
+         { "150", OPTION_VAL_150_SR },
+         { "160", OPTION_VAL_160_SR },
+         { "170", OPTION_VAL_170_SR },
+         { "180", OPTION_VAL_180_SR },
+         { "190", OPTION_VAL_190_SR },
+         { "200", OPTION_VAL_200_SR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_SR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_SR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_SR },
+         { "110", OPTION_VAL_110_SR },
+         { "120", OPTION_VAL_120_SR },
+         { "130", OPTION_VAL_130_SR },
+         { "140", OPTION_VAL_140_SR },
+         { "150", OPTION_VAL_150_O6_SR },
+         { "160", OPTION_VAL_160_SR },
+         { "170", OPTION_VAL_170_SR },
+         { "180", OPTION_VAL_180_SR },
+         { "190", OPTION_VAL_190_SR },
+         { "200", OPTION_VAL_200_SR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -28212,6 +31292,35 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_NTSC_COMPOSITE_SV "NTSC (Komposit)"
 #define OPTION_VAL_NTSC_S_VIDEO_SV NULL
 #define OPTION_VAL_NTSC_RGB_SV NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_SV NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_SV NULL
+#define OPTION_VAL_0_SV NULL
+#define OPTION_VAL_10_SV NULL
+#define OPTION_VAL_20_SV NULL
+#define OPTION_VAL_30_SV NULL
+#define OPTION_VAL_40_SV NULL
+#define OPTION_VAL_50_SV NULL
+#define OPTION_VAL_60_SV NULL
+#define OPTION_VAL_70_SV NULL
+#define OPTION_VAL_80_SV NULL
+#define OPTION_VAL_90_SV NULL
+#define OPTION_VAL_100_SV "100% (Standard)"
+#define BSNES_VIDEO_SATURATION_LABEL_SV NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_SV NULL
+#define OPTION_VAL_110_SV NULL
+#define OPTION_VAL_120_SV NULL
+#define OPTION_VAL_130_SV NULL
+#define OPTION_VAL_140_SV NULL
+#define OPTION_VAL_150_SV NULL
+#define OPTION_VAL_160_SV NULL
+#define OPTION_VAL_170_SV NULL
+#define OPTION_VAL_180_SV NULL
+#define OPTION_VAL_190_SV NULL
+#define OPTION_VAL_200_SV NULL
+#define BSNES_VIDEO_GAMMA_LABEL_SV NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_SV NULL
+#define OPTION_VAL_100_O6_SV NULL
+#define OPTION_VAL_150_O6_SV NULL
 #define BSNES_PPU_FAST_LABEL_SV NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SV NULL
 #define BSNES_PPU_FAST_INFO_0_SV "Möjliggör snabbare emulering av PPU till bekostnad av en mindre minskning av noggrannheten. Rekommenderas att låta detta vara kvar som aktiv. OBS: Detta måste vara aktiverat för att alternativen 'Deinterlace', 'Ingen blockfigursgräns' och 'HD-läge 7' ska fungera."
@@ -28274,26 +31383,6 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_CPU_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SV NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SV NULL
-#define OPTION_VAL_10_SV NULL
-#define OPTION_VAL_20_SV NULL
-#define OPTION_VAL_30_SV NULL
-#define OPTION_VAL_40_SV NULL
-#define OPTION_VAL_50_SV NULL
-#define OPTION_VAL_60_SV NULL
-#define OPTION_VAL_70_SV NULL
-#define OPTION_VAL_80_SV NULL
-#define OPTION_VAL_90_SV NULL
-#define OPTION_VAL_100_SV "100% (Standard)"
-#define OPTION_VAL_110_SV NULL
-#define OPTION_VAL_120_SV NULL
-#define OPTION_VAL_130_SV NULL
-#define OPTION_VAL_140_SV NULL
-#define OPTION_VAL_150_SV NULL
-#define OPTION_VAL_160_SV NULL
-#define OPTION_VAL_170_SV NULL
-#define OPTION_VAL_180_SV NULL
-#define OPTION_VAL_190_SV NULL
-#define OPTION_VAL_200_SV NULL
 #define OPTION_VAL_210_SV NULL
 #define OPTION_VAL_220_SV NULL
 #define OPTION_VAL_230_SV NULL
@@ -28472,6 +31561,85 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_SV,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_SV,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_SV },
+         { "10", OPTION_VAL_10_SV },
+         { "20", OPTION_VAL_20_SV },
+         { "30", OPTION_VAL_30_SV },
+         { "40", OPTION_VAL_40_SV },
+         { "50", OPTION_VAL_50_SV },
+         { "60", OPTION_VAL_60_SV },
+         { "70", OPTION_VAL_70_SV },
+         { "80", OPTION_VAL_80_SV },
+         { "90", OPTION_VAL_90_SV },
+         { "100", OPTION_VAL_100_SV },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_SV,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_SV,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_SV },
+         { "10", OPTION_VAL_10_SV },
+         { "20", OPTION_VAL_20_SV },
+         { "30", OPTION_VAL_30_SV },
+         { "40", OPTION_VAL_40_SV },
+         { "50", OPTION_VAL_50_SV },
+         { "60", OPTION_VAL_60_SV },
+         { "70", OPTION_VAL_70_SV },
+         { "80", OPTION_VAL_80_SV },
+         { "90", OPTION_VAL_90_SV },
+         { "100", OPTION_VAL_100_SV },
+         { "110", OPTION_VAL_110_SV },
+         { "120", OPTION_VAL_120_SV },
+         { "130", OPTION_VAL_130_SV },
+         { "140", OPTION_VAL_140_SV },
+         { "150", OPTION_VAL_150_SV },
+         { "160", OPTION_VAL_160_SV },
+         { "170", OPTION_VAL_170_SV },
+         { "180", OPTION_VAL_180_SV },
+         { "190", OPTION_VAL_190_SV },
+         { "200", OPTION_VAL_200_SV },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_SV,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_SV,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_SV },
+         { "110", OPTION_VAL_110_SV },
+         { "120", OPTION_VAL_120_SV },
+         { "130", OPTION_VAL_130_SV },
+         { "140", OPTION_VAL_140_SV },
+         { "150", OPTION_VAL_150_O6_SV },
+         { "160", OPTION_VAL_160_SV },
+         { "170", OPTION_VAL_170_SV },
+         { "180", OPTION_VAL_180_SV },
+         { "190", OPTION_VAL_190_SV },
+         { "200", OPTION_VAL_200_SV },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -29016,6 +32184,35 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_NTSC_COMPOSITE_TR "NTSC (Kompozit)"
 #define OPTION_VAL_NTSC_S_VIDEO_TR NULL
 #define OPTION_VAL_NTSC_RGB_TR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_TR "Renk Ayarı - Parlaklık"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_TR "Parlaklığı Ayarla"
+#define OPTION_VAL_0_TR "%0"
+#define OPTION_VAL_10_TR "%10"
+#define OPTION_VAL_20_TR "%20"
+#define OPTION_VAL_30_TR "%30"
+#define OPTION_VAL_40_TR "%40"
+#define OPTION_VAL_50_TR "%50"
+#define OPTION_VAL_60_TR "%60"
+#define OPTION_VAL_70_TR "%70"
+#define OPTION_VAL_80_TR "%80"
+#define OPTION_VAL_90_TR "%90"
+#define OPTION_VAL_100_TR "%100 (Varsayılan)"
+#define BSNES_VIDEO_SATURATION_LABEL_TR "Renk Ayarı - Doygunluk"
+#define BSNES_VIDEO_SATURATION_INFO_0_TR "Doygunluğu Ayarla"
+#define OPTION_VAL_110_TR "%110"
+#define OPTION_VAL_120_TR "%120"
+#define OPTION_VAL_130_TR "%130"
+#define OPTION_VAL_140_TR "%140"
+#define OPTION_VAL_150_TR "%150"
+#define OPTION_VAL_160_TR "%160"
+#define OPTION_VAL_170_TR "%170"
+#define OPTION_VAL_180_TR "%180"
+#define OPTION_VAL_190_TR "%190"
+#define OPTION_VAL_200_TR "%200"
+#define BSNES_VIDEO_GAMMA_LABEL_TR "Renk Ayarı - Gama"
+#define BSNES_VIDEO_GAMMA_INFO_0_TR "Gamayı Ayarla"
+#define OPTION_VAL_100_O6_TR "%100"
+#define OPTION_VAL_150_O6_TR "150% (Varsayılan)"
 #define BSNES_PPU_FAST_LABEL_TR "PPU (Video) - Hızlı Kip"
 #define BSNES_PPU_FAST_LABEL_CAT_TR "PPU - Hızlı Kip"
 #define BSNES_PPU_FAST_INFO_0_TR "Doğrulukta küçük bir sapma ile PPU daha hızlı taklit etmesini etkinleştirin. Bunu açık bırakmanız önerilir. NOT: 'Deinterlace', 'No Sprite Limit' ve 'HD Mode 7' seçeneklerinin çalışması için bu etkinleştirilmelidir."
@@ -29078,26 +32275,6 @@ struct retro_core_options_v2 options_sv = {
 #define BSNES_CPU_OVERCLOCK_LABEL_TR "Hız Aşırtma - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_TR NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_TR "CPU hızını aşırtın veya düşürün. Bu değeri %100'ün üzerine ayarlamak, yükleme sürelerini azaltabilir ve yavaşlamayı ortadan kaldırabilir. Bazı oyunların çökmesine veya başka sorunların ortaya çıkmasına neden olabileceğinden dikkatli kullanın."
-#define OPTION_VAL_10_TR "%10"
-#define OPTION_VAL_20_TR "%20"
-#define OPTION_VAL_30_TR "%30"
-#define OPTION_VAL_40_TR "%40"
-#define OPTION_VAL_50_TR "%50"
-#define OPTION_VAL_60_TR "%60"
-#define OPTION_VAL_70_TR "%70"
-#define OPTION_VAL_80_TR "%80"
-#define OPTION_VAL_90_TR "%90"
-#define OPTION_VAL_100_TR "%100 (Varsayılan)"
-#define OPTION_VAL_110_TR "%110"
-#define OPTION_VAL_120_TR "%120"
-#define OPTION_VAL_130_TR "%130"
-#define OPTION_VAL_140_TR "%140"
-#define OPTION_VAL_150_TR "%150"
-#define OPTION_VAL_160_TR "%160"
-#define OPTION_VAL_170_TR "%170"
-#define OPTION_VAL_180_TR "%180"
-#define OPTION_VAL_190_TR "%190"
-#define OPTION_VAL_200_TR "%200"
 #define OPTION_VAL_210_TR "%210"
 #define OPTION_VAL_220_TR "%220"
 #define OPTION_VAL_230_TR "%230"
@@ -29276,6 +32453,85 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_TR,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_TR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_TR },
+         { "10", OPTION_VAL_10_TR },
+         { "20", OPTION_VAL_20_TR },
+         { "30", OPTION_VAL_30_TR },
+         { "40", OPTION_VAL_40_TR },
+         { "50", OPTION_VAL_50_TR },
+         { "60", OPTION_VAL_60_TR },
+         { "70", OPTION_VAL_70_TR },
+         { "80", OPTION_VAL_80_TR },
+         { "90", OPTION_VAL_90_TR },
+         { "100", OPTION_VAL_100_TR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_TR,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_TR,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_TR },
+         { "10", OPTION_VAL_10_TR },
+         { "20", OPTION_VAL_20_TR },
+         { "30", OPTION_VAL_30_TR },
+         { "40", OPTION_VAL_40_TR },
+         { "50", OPTION_VAL_50_TR },
+         { "60", OPTION_VAL_60_TR },
+         { "70", OPTION_VAL_70_TR },
+         { "80", OPTION_VAL_80_TR },
+         { "90", OPTION_VAL_90_TR },
+         { "100", OPTION_VAL_100_TR },
+         { "110", OPTION_VAL_110_TR },
+         { "120", OPTION_VAL_120_TR },
+         { "130", OPTION_VAL_130_TR },
+         { "140", OPTION_VAL_140_TR },
+         { "150", OPTION_VAL_150_TR },
+         { "160", OPTION_VAL_160_TR },
+         { "170", OPTION_VAL_170_TR },
+         { "180", OPTION_VAL_180_TR },
+         { "190", OPTION_VAL_190_TR },
+         { "200", OPTION_VAL_200_TR },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_TR,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_TR,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_TR },
+         { "110", OPTION_VAL_110_TR },
+         { "120", OPTION_VAL_120_TR },
+         { "130", OPTION_VAL_130_TR },
+         { "140", OPTION_VAL_140_TR },
+         { "150", OPTION_VAL_150_O6_TR },
+         { "160", OPTION_VAL_160_TR },
+         { "170", OPTION_VAL_170_TR },
+         { "180", OPTION_VAL_180_TR },
+         { "190", OPTION_VAL_190_TR },
+         { "200", OPTION_VAL_200_TR },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -29820,6 +33076,35 @@ struct retro_core_options_v2 options_tr = {
 #define OPTION_VAL_NTSC_COMPOSITE_UK NULL
 #define OPTION_VAL_NTSC_S_VIDEO_UK NULL
 #define OPTION_VAL_NTSC_RGB_UK NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_UK NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_UK NULL
+#define OPTION_VAL_0_UK NULL
+#define OPTION_VAL_10_UK NULL
+#define OPTION_VAL_20_UK NULL
+#define OPTION_VAL_30_UK NULL
+#define OPTION_VAL_40_UK NULL
+#define OPTION_VAL_50_UK NULL
+#define OPTION_VAL_60_UK NULL
+#define OPTION_VAL_70_UK NULL
+#define OPTION_VAL_80_UK NULL
+#define OPTION_VAL_90_UK NULL
+#define OPTION_VAL_100_UK NULL
+#define BSNES_VIDEO_SATURATION_LABEL_UK NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_UK NULL
+#define OPTION_VAL_110_UK NULL
+#define OPTION_VAL_120_UK NULL
+#define OPTION_VAL_130_UK NULL
+#define OPTION_VAL_140_UK NULL
+#define OPTION_VAL_150_UK NULL
+#define OPTION_VAL_160_UK NULL
+#define OPTION_VAL_170_UK NULL
+#define OPTION_VAL_180_UK NULL
+#define OPTION_VAL_190_UK NULL
+#define OPTION_VAL_200_UK NULL
+#define BSNES_VIDEO_GAMMA_LABEL_UK NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_UK NULL
+#define OPTION_VAL_100_O6_UK NULL
+#define OPTION_VAL_150_O6_UK NULL
 #define BSNES_PPU_FAST_LABEL_UK NULL
 #define BSNES_PPU_FAST_LABEL_CAT_UK NULL
 #define BSNES_PPU_FAST_INFO_0_UK NULL
@@ -29882,26 +33167,6 @@ struct retro_core_options_v2 options_tr = {
 #define BSNES_CPU_OVERCLOCK_LABEL_UK NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_UK NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_UK NULL
-#define OPTION_VAL_10_UK NULL
-#define OPTION_VAL_20_UK NULL
-#define OPTION_VAL_30_UK NULL
-#define OPTION_VAL_40_UK NULL
-#define OPTION_VAL_50_UK NULL
-#define OPTION_VAL_60_UK NULL
-#define OPTION_VAL_70_UK NULL
-#define OPTION_VAL_80_UK NULL
-#define OPTION_VAL_90_UK NULL
-#define OPTION_VAL_100_UK NULL
-#define OPTION_VAL_110_UK NULL
-#define OPTION_VAL_120_UK NULL
-#define OPTION_VAL_130_UK NULL
-#define OPTION_VAL_140_UK NULL
-#define OPTION_VAL_150_UK NULL
-#define OPTION_VAL_160_UK NULL
-#define OPTION_VAL_170_UK NULL
-#define OPTION_VAL_180_UK NULL
-#define OPTION_VAL_190_UK NULL
-#define OPTION_VAL_200_UK NULL
 #define OPTION_VAL_210_UK NULL
 #define OPTION_VAL_220_UK NULL
 #define OPTION_VAL_230_UK NULL
@@ -30080,6 +33345,85 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_UK,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_UK,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_UK },
+         { "10", OPTION_VAL_10_UK },
+         { "20", OPTION_VAL_20_UK },
+         { "30", OPTION_VAL_30_UK },
+         { "40", OPTION_VAL_40_UK },
+         { "50", OPTION_VAL_50_UK },
+         { "60", OPTION_VAL_60_UK },
+         { "70", OPTION_VAL_70_UK },
+         { "80", OPTION_VAL_80_UK },
+         { "90", OPTION_VAL_90_UK },
+         { "100", OPTION_VAL_100_UK },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_UK,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_UK,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_UK },
+         { "10", OPTION_VAL_10_UK },
+         { "20", OPTION_VAL_20_UK },
+         { "30", OPTION_VAL_30_UK },
+         { "40", OPTION_VAL_40_UK },
+         { "50", OPTION_VAL_50_UK },
+         { "60", OPTION_VAL_60_UK },
+         { "70", OPTION_VAL_70_UK },
+         { "80", OPTION_VAL_80_UK },
+         { "90", OPTION_VAL_90_UK },
+         { "100", OPTION_VAL_100_UK },
+         { "110", OPTION_VAL_110_UK },
+         { "120", OPTION_VAL_120_UK },
+         { "130", OPTION_VAL_130_UK },
+         { "140", OPTION_VAL_140_UK },
+         { "150", OPTION_VAL_150_UK },
+         { "160", OPTION_VAL_160_UK },
+         { "170", OPTION_VAL_170_UK },
+         { "180", OPTION_VAL_180_UK },
+         { "190", OPTION_VAL_190_UK },
+         { "200", OPTION_VAL_200_UK },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_UK,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_UK,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_UK },
+         { "110", OPTION_VAL_110_UK },
+         { "120", OPTION_VAL_120_UK },
+         { "130", OPTION_VAL_130_UK },
+         { "140", OPTION_VAL_140_UK },
+         { "150", OPTION_VAL_150_O6_UK },
+         { "160", OPTION_VAL_160_UK },
+         { "170", OPTION_VAL_170_UK },
+         { "180", OPTION_VAL_180_UK },
+         { "190", OPTION_VAL_190_UK },
+         { "200", OPTION_VAL_200_UK },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -30624,6 +33968,35 @@ struct retro_core_options_v2 options_uk = {
 #define OPTION_VAL_NTSC_COMPOSITE_VAL NULL
 #define OPTION_VAL_NTSC_S_VIDEO_VAL NULL
 #define OPTION_VAL_NTSC_RGB_VAL NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_VAL NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_VAL NULL
+#define OPTION_VAL_0_VAL NULL
+#define OPTION_VAL_10_VAL NULL
+#define OPTION_VAL_20_VAL NULL
+#define OPTION_VAL_30_VAL NULL
+#define OPTION_VAL_40_VAL NULL
+#define OPTION_VAL_50_VAL NULL
+#define OPTION_VAL_60_VAL NULL
+#define OPTION_VAL_70_VAL NULL
+#define OPTION_VAL_80_VAL NULL
+#define OPTION_VAL_90_VAL NULL
+#define OPTION_VAL_100_VAL NULL
+#define BSNES_VIDEO_SATURATION_LABEL_VAL NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_VAL NULL
+#define OPTION_VAL_110_VAL NULL
+#define OPTION_VAL_120_VAL NULL
+#define OPTION_VAL_130_VAL NULL
+#define OPTION_VAL_140_VAL NULL
+#define OPTION_VAL_150_VAL NULL
+#define OPTION_VAL_160_VAL NULL
+#define OPTION_VAL_170_VAL NULL
+#define OPTION_VAL_180_VAL NULL
+#define OPTION_VAL_190_VAL NULL
+#define OPTION_VAL_200_VAL NULL
+#define BSNES_VIDEO_GAMMA_LABEL_VAL NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_VAL NULL
+#define OPTION_VAL_100_O6_VAL NULL
+#define OPTION_VAL_150_O6_VAL NULL
 #define BSNES_PPU_FAST_LABEL_VAL NULL
 #define BSNES_PPU_FAST_LABEL_CAT_VAL NULL
 #define BSNES_PPU_FAST_INFO_0_VAL NULL
@@ -30686,26 +34059,6 @@ struct retro_core_options_v2 options_uk = {
 #define BSNES_CPU_OVERCLOCK_LABEL_VAL NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_VAL NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_VAL NULL
-#define OPTION_VAL_10_VAL NULL
-#define OPTION_VAL_20_VAL NULL
-#define OPTION_VAL_30_VAL NULL
-#define OPTION_VAL_40_VAL NULL
-#define OPTION_VAL_50_VAL NULL
-#define OPTION_VAL_60_VAL NULL
-#define OPTION_VAL_70_VAL NULL
-#define OPTION_VAL_80_VAL NULL
-#define OPTION_VAL_90_VAL NULL
-#define OPTION_VAL_100_VAL NULL
-#define OPTION_VAL_110_VAL NULL
-#define OPTION_VAL_120_VAL NULL
-#define OPTION_VAL_130_VAL NULL
-#define OPTION_VAL_140_VAL NULL
-#define OPTION_VAL_150_VAL NULL
-#define OPTION_VAL_160_VAL NULL
-#define OPTION_VAL_170_VAL NULL
-#define OPTION_VAL_180_VAL NULL
-#define OPTION_VAL_190_VAL NULL
-#define OPTION_VAL_200_VAL NULL
 #define OPTION_VAL_210_VAL NULL
 #define OPTION_VAL_220_VAL NULL
 #define OPTION_VAL_230_VAL NULL
@@ -30884,6 +34237,85 @@ struct retro_core_option_v2_definition option_defs_val[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_VAL,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_VAL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_VAL },
+         { "10", OPTION_VAL_10_VAL },
+         { "20", OPTION_VAL_20_VAL },
+         { "30", OPTION_VAL_30_VAL },
+         { "40", OPTION_VAL_40_VAL },
+         { "50", OPTION_VAL_50_VAL },
+         { "60", OPTION_VAL_60_VAL },
+         { "70", OPTION_VAL_70_VAL },
+         { "80", OPTION_VAL_80_VAL },
+         { "90", OPTION_VAL_90_VAL },
+         { "100", OPTION_VAL_100_VAL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_VAL,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_VAL,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_VAL },
+         { "10", OPTION_VAL_10_VAL },
+         { "20", OPTION_VAL_20_VAL },
+         { "30", OPTION_VAL_30_VAL },
+         { "40", OPTION_VAL_40_VAL },
+         { "50", OPTION_VAL_50_VAL },
+         { "60", OPTION_VAL_60_VAL },
+         { "70", OPTION_VAL_70_VAL },
+         { "80", OPTION_VAL_80_VAL },
+         { "90", OPTION_VAL_90_VAL },
+         { "100", OPTION_VAL_100_VAL },
+         { "110", OPTION_VAL_110_VAL },
+         { "120", OPTION_VAL_120_VAL },
+         { "130", OPTION_VAL_130_VAL },
+         { "140", OPTION_VAL_140_VAL },
+         { "150", OPTION_VAL_150_VAL },
+         { "160", OPTION_VAL_160_VAL },
+         { "170", OPTION_VAL_170_VAL },
+         { "180", OPTION_VAL_180_VAL },
+         { "190", OPTION_VAL_190_VAL },
+         { "200", OPTION_VAL_200_VAL },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_VAL,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_VAL,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_VAL },
+         { "110", OPTION_VAL_110_VAL },
+         { "120", OPTION_VAL_120_VAL },
+         { "130", OPTION_VAL_130_VAL },
+         { "140", OPTION_VAL_140_VAL },
+         { "150", OPTION_VAL_150_O6_VAL },
+         { "160", OPTION_VAL_160_VAL },
+         { "170", OPTION_VAL_170_VAL },
+         { "180", OPTION_VAL_180_VAL },
+         { "190", OPTION_VAL_190_VAL },
+         { "200", OPTION_VAL_200_VAL },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
@@ -31428,6 +34860,35 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_NTSC_COMPOSITE_VN NULL
 #define OPTION_VAL_NTSC_S_VIDEO_VN NULL
 #define OPTION_VAL_NTSC_RGB_VN NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_VN NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_VN NULL
+#define OPTION_VAL_0_VN NULL
+#define OPTION_VAL_10_VN NULL
+#define OPTION_VAL_20_VN NULL
+#define OPTION_VAL_30_VN NULL
+#define OPTION_VAL_40_VN NULL
+#define OPTION_VAL_50_VN NULL
+#define OPTION_VAL_60_VN NULL
+#define OPTION_VAL_70_VN NULL
+#define OPTION_VAL_80_VN NULL
+#define OPTION_VAL_90_VN NULL
+#define OPTION_VAL_100_VN NULL
+#define BSNES_VIDEO_SATURATION_LABEL_VN NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_VN NULL
+#define OPTION_VAL_110_VN NULL
+#define OPTION_VAL_120_VN NULL
+#define OPTION_VAL_130_VN NULL
+#define OPTION_VAL_140_VN NULL
+#define OPTION_VAL_150_VN NULL
+#define OPTION_VAL_160_VN NULL
+#define OPTION_VAL_170_VN NULL
+#define OPTION_VAL_180_VN NULL
+#define OPTION_VAL_190_VN NULL
+#define OPTION_VAL_200_VN NULL
+#define BSNES_VIDEO_GAMMA_LABEL_VN NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_VN NULL
+#define OPTION_VAL_100_O6_VN NULL
+#define OPTION_VAL_150_O6_VN NULL
 #define BSNES_PPU_FAST_LABEL_VN NULL
 #define BSNES_PPU_FAST_LABEL_CAT_VN NULL
 #define BSNES_PPU_FAST_INFO_0_VN NULL
@@ -31490,26 +34951,6 @@ struct retro_core_options_v2 options_val = {
 #define BSNES_CPU_OVERCLOCK_LABEL_VN NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_VN NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_VN NULL
-#define OPTION_VAL_10_VN NULL
-#define OPTION_VAL_20_VN NULL
-#define OPTION_VAL_30_VN NULL
-#define OPTION_VAL_40_VN NULL
-#define OPTION_VAL_50_VN NULL
-#define OPTION_VAL_60_VN NULL
-#define OPTION_VAL_70_VN NULL
-#define OPTION_VAL_80_VN NULL
-#define OPTION_VAL_90_VN NULL
-#define OPTION_VAL_100_VN NULL
-#define OPTION_VAL_110_VN NULL
-#define OPTION_VAL_120_VN NULL
-#define OPTION_VAL_130_VN NULL
-#define OPTION_VAL_140_VN NULL
-#define OPTION_VAL_150_VN NULL
-#define OPTION_VAL_160_VN NULL
-#define OPTION_VAL_170_VN NULL
-#define OPTION_VAL_180_VN NULL
-#define OPTION_VAL_190_VN NULL
-#define OPTION_VAL_200_VN NULL
 #define OPTION_VAL_210_VN NULL
 #define OPTION_VAL_220_VN NULL
 #define OPTION_VAL_230_VN NULL
@@ -31688,6 +35129,85 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
          { NULL, NULL },
       },
       "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_VN,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_VN,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_VN },
+         { "10", OPTION_VAL_10_VN },
+         { "20", OPTION_VAL_20_VN },
+         { "30", OPTION_VAL_30_VN },
+         { "40", OPTION_VAL_40_VN },
+         { "50", OPTION_VAL_50_VN },
+         { "60", OPTION_VAL_60_VN },
+         { "70", OPTION_VAL_70_VN },
+         { "80", OPTION_VAL_80_VN },
+         { "90", OPTION_VAL_90_VN },
+         { "100", OPTION_VAL_100_VN },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_VN,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_VN,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_VN },
+         { "10", OPTION_VAL_10_VN },
+         { "20", OPTION_VAL_20_VN },
+         { "30", OPTION_VAL_30_VN },
+         { "40", OPTION_VAL_40_VN },
+         { "50", OPTION_VAL_50_VN },
+         { "60", OPTION_VAL_60_VN },
+         { "70", OPTION_VAL_70_VN },
+         { "80", OPTION_VAL_80_VN },
+         { "90", OPTION_VAL_90_VN },
+         { "100", OPTION_VAL_100_VN },
+         { "110", OPTION_VAL_110_VN },
+         { "120", OPTION_VAL_120_VN },
+         { "130", OPTION_VAL_130_VN },
+         { "140", OPTION_VAL_140_VN },
+         { "150", OPTION_VAL_150_VN },
+         { "160", OPTION_VAL_160_VN },
+         { "170", OPTION_VAL_170_VN },
+         { "180", OPTION_VAL_180_VN },
+         { "190", OPTION_VAL_190_VN },
+         { "200", OPTION_VAL_200_VN },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_VN,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_VN,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_VN },
+         { "110", OPTION_VAL_110_VN },
+         { "120", OPTION_VAL_120_VN },
+         { "130", OPTION_VAL_130_VN },
+         { "140", OPTION_VAL_140_VN },
+         { "150", OPTION_VAL_150_O6_VN },
+         { "160", OPTION_VAL_160_VN },
+         { "170", OPTION_VAL_170_VN },
+         { "180", OPTION_VAL_180_VN },
+         { "190", OPTION_VAL_190_VN },
+         { "200", OPTION_VAL_200_VN },
+         { NULL, NULL },
+      },
+      "150"
    },
    {
       "bsnes_ppu_fast",
