@@ -12626,7 +12626,7 @@ struct retro_core_options_v2 options_eo = {
 #define BSNES_MODE7_PERSPECTIVE_INFO_0_ES "Corrige la perspectiva de los gráficos en Modo 7 que utilizan ciertos juegos sorteando algunas de las limitaciones de los cálculos con números enteros que utiliza la SNES."
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_ES "Modo 7 en HD: supermuestreo"
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_ES "Supermuestreo"
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_ES "Supermuestrea los gráficos en Modo 7 que utilizan algunos juegos. Si se utiliza con una escala elevada para el Modo 7, producirá un efecto similar al suavizado de bordes."
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_ES "Supermuestrea los gráficos en Modo 7 que utilizan algunos juegos. Si se utiliza con un factor de escala elevado para el Modo 7, producirá un efecto similar al suavizado de bordes."
 #define BSNES_MODE7_MOSAIC_LABEL_ES "Modo 7 en alta definición: mosaico de alta a baja definición"
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_ES "Mosaico de alta a baja definición"
 #define BSNES_MODE7_MOSAIC_INFO_0_ES "Muestra el efecto de mosaico de los gráficos en Modo 7 al aumentar su escala."
@@ -14346,7 +14346,7 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_NTSC_RGB_FI NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_FI NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_FI NULL
-#define OPTION_VAL_0_FI NULL
+#define OPTION_VAL_0_FI "0 %"
 #define OPTION_VAL_10_FI "10 %"
 #define OPTION_VAL_20_FI "20 %"
 #define OPTION_VAL_30_FI "30 %"
