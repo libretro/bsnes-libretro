@@ -10776,7 +10776,7 @@ struct retro_core_options_v2 options_el = {
 #define OPTION_VAL_NTSC_COMPOSITE_EN NULL
 #define OPTION_VAL_NTSC_S_VIDEO_EN NULL
 #define OPTION_VAL_NTSC_RGB_EN NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_EN NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_EN "Colour Adjustment - Luminance"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_EN NULL
 #define OPTION_VAL_0_EN NULL
 #define OPTION_VAL_10_EN NULL
@@ -10789,7 +10789,7 @@ struct retro_core_options_v2 options_el = {
 #define OPTION_VAL_80_EN NULL
 #define OPTION_VAL_90_EN NULL
 #define OPTION_VAL_100_EN NULL
-#define BSNES_VIDEO_SATURATION_LABEL_EN NULL
+#define BSNES_VIDEO_SATURATION_LABEL_EN "Colour Adjustment - Saturation"
 #define BSNES_VIDEO_SATURATION_INFO_0_EN NULL
 #define OPTION_VAL_110_EN NULL
 #define OPTION_VAL_120_EN NULL
@@ -10801,7 +10801,7 @@ struct retro_core_options_v2 options_el = {
 #define OPTION_VAL_180_EN NULL
 #define OPTION_VAL_190_EN NULL
 #define OPTION_VAL_200_EN NULL
-#define BSNES_VIDEO_GAMMA_LABEL_EN NULL
+#define BSNES_VIDEO_GAMMA_LABEL_EN "Colour Adjustment - Gamma"
 #define BSNES_VIDEO_GAMMA_INFO_0_EN NULL
 #define OPTION_VAL_100_O6_EN NULL
 #define OPTION_VAL_150_O6_EN NULL
@@ -20588,8 +20588,8 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_NTSC_COMPOSITE_IT "NTSC Composito"
 #define OPTION_VAL_NTSC_S_VIDEO_IT NULL
 #define OPTION_VAL_NTSC_RGB_IT NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_IT NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_IT NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_IT "Regolazione Colore - Luminanza"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_IT "Regola Luminanza"
 #define OPTION_VAL_0_IT NULL
 #define OPTION_VAL_10_IT NULL
 #define OPTION_VAL_20_IT NULL
@@ -20601,8 +20601,8 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_80_IT NULL
 #define OPTION_VAL_90_IT NULL
 #define OPTION_VAL_100_IT "100%"
-#define BSNES_VIDEO_SATURATION_LABEL_IT NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_IT NULL
+#define BSNES_VIDEO_SATURATION_LABEL_IT "Regolazione Colore - Saturazione"
+#define BSNES_VIDEO_SATURATION_INFO_0_IT "Regola Saturazione"
 #define OPTION_VAL_110_IT NULL
 #define OPTION_VAL_120_IT NULL
 #define OPTION_VAL_130_IT NULL
@@ -20613,10 +20613,10 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_180_IT NULL
 #define OPTION_VAL_190_IT NULL
 #define OPTION_VAL_200_IT NULL
-#define BSNES_VIDEO_GAMMA_LABEL_IT NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_IT NULL
+#define BSNES_VIDEO_GAMMA_LABEL_IT "Regolazione Colore - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_IT "Regola Gamma"
 #define OPTION_VAL_100_O6_IT NULL
-#define OPTION_VAL_150_O6_IT NULL
+#define OPTION_VAL_150_O6_IT "150% (predefinito)"
 #define BSNES_PPU_FAST_LABEL_IT "PPU (Video) - Modalità Rapida"
 #define BSNES_PPU_FAST_LABEL_CAT_IT NULL
 #define BSNES_PPU_FAST_INFO_0_IT "Abilita l'emulazione più veloce della PPU al costo di una minore riduzione di accuratezza. Si consiglia di lasciarla accesa. NOTA: questo deve essere abilitato per le opzioni 'Deinterlace', 'No Sprite Limit' e 'HD Mode 7' per funzionare."
