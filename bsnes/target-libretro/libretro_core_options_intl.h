@@ -16128,8 +16128,8 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_NTSC_COMPOSITE_GL "NTSC (composto)"
 #define OPTION_VAL_NTSC_S_VIDEO_GL NULL
 #define OPTION_VAL_NTSC_RGB_GL NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_GL NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_GL NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_GL "Axuste de Cor - Luminancia"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_GL "Axustar a Luminancia"
 #define OPTION_VAL_0_GL NULL
 #define OPTION_VAL_10_GL NULL
 #define OPTION_VAL_20_GL NULL
@@ -16141,8 +16141,8 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_80_GL NULL
 #define OPTION_VAL_90_GL NULL
 #define OPTION_VAL_100_GL "100 % (predeterminado)"
-#define BSNES_VIDEO_SATURATION_LABEL_GL NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_GL NULL
+#define BSNES_VIDEO_SATURATION_LABEL_GL "Axuste de Cor - Saturación"
+#define BSNES_VIDEO_SATURATION_INFO_0_GL "Axustar a Saturación"
 #define OPTION_VAL_110_GL NULL
 #define OPTION_VAL_120_GL NULL
 #define OPTION_VAL_130_GL NULL
@@ -16153,10 +16153,10 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_180_GL NULL
 #define OPTION_VAL_190_GL NULL
 #define OPTION_VAL_200_GL NULL
-#define BSNES_VIDEO_GAMMA_LABEL_GL NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_GL NULL
+#define BSNES_VIDEO_GAMMA_LABEL_GL "Axuste de Cor - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_GL "Axustar Gamma"
 #define OPTION_VAL_100_O6_GL NULL
-#define OPTION_VAL_150_O6_GL NULL
+#define OPTION_VAL_150_O6_GL "150 % (predeterminado)"
 #define BSNES_PPU_FAST_LABEL_GL "PPU (vídeo) - Modo Rápido"
 #define BSNES_PPU_FAST_LABEL_CAT_GL "PPU - Modo Rápido"
 #define BSNES_PPU_FAST_INFO_0_GL "Permite unha emulación máis rápida da PPU a costa dunha pequena redución da precisión. Recoméndase deixar isto activado. NOTA: isto debe estar activado para que funcionen as opcións \"Desentrelazado\", \"Sen límite de Sprite\" e \"Modo HD 7\"."
@@ -26832,8 +26832,8 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_NTSC_COMPOSITE_PT_BR "NTSC (composto)"
 #define OPTION_VAL_NTSC_S_VIDEO_PT_BR NULL
 #define OPTION_VAL_NTSC_RGB_PT_BR NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_PT_BR NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_PT_BR "Ajuste de Cor - Luminosidade"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR "Ajustar Luminosidade"
 #define OPTION_VAL_0_PT_BR NULL
 #define OPTION_VAL_10_PT_BR NULL
 #define OPTION_VAL_20_PT_BR NULL
@@ -26845,8 +26845,8 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_80_PT_BR NULL
 #define OPTION_VAL_90_PT_BR NULL
 #define OPTION_VAL_100_PT_BR "100% (padrão)"
-#define BSNES_VIDEO_SATURATION_LABEL_PT_BR NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_PT_BR NULL
+#define BSNES_VIDEO_SATURATION_LABEL_PT_BR "Ajuste de Cor - Saturação"
+#define BSNES_VIDEO_SATURATION_INFO_0_PT_BR "Ajustar Saturação"
 #define OPTION_VAL_110_PT_BR NULL
 #define OPTION_VAL_120_PT_BR NULL
 #define OPTION_VAL_130_PT_BR NULL
@@ -26857,8 +26857,8 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_180_PT_BR NULL
 #define OPTION_VAL_190_PT_BR NULL
 #define OPTION_VAL_200_PT_BR NULL
-#define BSNES_VIDEO_GAMMA_LABEL_PT_BR NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_PT_BR NULL
+#define BSNES_VIDEO_GAMMA_LABEL_PT_BR "Ajuste de Cor - Gama"
+#define BSNES_VIDEO_GAMMA_INFO_0_PT_BR "Ajustar Gama"
 #define OPTION_VAL_100_O6_PT_BR NULL
 #define OPTION_VAL_150_O6_PT_BR "150% (padrão)"
 #define BSNES_PPU_FAST_LABEL_PT_BR "PPU (vídeo) — Modo rápido"
