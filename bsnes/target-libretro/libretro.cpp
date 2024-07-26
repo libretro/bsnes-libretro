@@ -898,6 +898,7 @@ bool retro_load_game(const retro_game_info *game)
 		return false;
 
 	emulator->configure("Audio/Frequency", SAMPLERATE);
+	emulator->configure("Video/ColorEmulation", false);
 	program->filterRender = &Filter::None::render;
 	program->filterSize = &Filter::None::size;
 
@@ -955,6 +956,7 @@ bool retro_load_game_special(unsigned game_type,
 		return false;
 
 	emulator->configure("Audio/Frequency", SAMPLERATE);
+	emulator->configure("Video/ColorEmulation", false);
 	program->filterRender = &Filter::None::render;
 	program->filterSize = &Filter::None::size;
 	program->updateVideoPalette();
