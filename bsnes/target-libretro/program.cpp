@@ -336,18 +336,19 @@ auto Program::load(uint id, string name, string type, vector<string> options) ->
 }
 
 auto Program::videoFrame(const uint16* data, uint pitch, uint width, uint height, uint scale) -> void {
-	uint multiplier = height / 240;
+	uint hmult = width / 256;
+	uint vmult = height / 240;
 
 	if (sgb_border_disabled && program->gameBoy.program) {
 		// Clean up these magic numbers one day: GB width/height is 160/144.
-		// GB content starts 47 lines from the top and 48 colums from the left
-		data += (47 * (pitch >> 1) + 48) * multiplier;
-		width = 160 * multiplier;
-		height = 144 * multiplier;
+		// GB content starts 47 lines from the top and 48 columns from the left
+		data += (47 * (pitch >> 1) + (48 * hmult)) * vmult;
+		width = 160 * hmult;
+		height = 144 * vmult;
 	}
 	else if (overscan) {
-		data += overscan * (pitch >> 1) * multiplier;
-		height -= (overscan << 1) * multiplier;
+		data += overscan * (pitch >> 1) * vmult;
+		height -= (overscan << 1) * vmult;
 	}
 
 	uint filterWidth = width, filterHeight = height;
