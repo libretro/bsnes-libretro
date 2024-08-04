@@ -164,14 +164,14 @@ static void update_variables(void)
 
 	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
 	{
-		if (strcmp(var.value, "16") == 0)
-			program->overscan = 16;
-		else if (strcmp(var.value, "12") == 0)
-			program->overscan = 12;
+		if (strcmp(var.value, "0") == 0)
+			program->overscan = 0;
 		else if (strcmp(var.value, "8") == 0)
 			program->overscan = 8;
-		else if (strcmp(var.value, "0") == 0)
-			program->overscan = 0;
+		else if (strcmp(var.value, "12") == 0)
+			program->overscan = 12;
+		else if (strcmp(var.value, "16") == 0)
+			program->overscan = 16;
 	}
 
 	var.key = "bsnes_blur_emulation";

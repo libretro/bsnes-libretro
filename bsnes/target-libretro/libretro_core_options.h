@@ -116,10 +116,10 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       NULL,
       "video",
       {
-         { "16", "16 Lines" },
-         { "12", "12 Lines" },
-         { "8",  "8 Lines" },
          { "0",  "0 Lines" },
+         { "8",  "8 Lines" },
+         { "12", "12 Lines" },
+         { "16", "16 Lines" },
          { NULL, NULL },
       },
       "8"
