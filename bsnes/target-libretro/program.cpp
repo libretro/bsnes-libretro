@@ -336,32 +336,18 @@ auto Program::load(uint id, string name, string type, vector<string> options) ->
 }
 
 auto Program::videoFrame(const uint16* data, uint pitch, uint width, uint height, uint scale) -> void {
-	if (!overscan)
-	{
-		uint multiplier = height / 240;
-		if ((sgb_border_disabled) && (program->gameBoy.program))
-		{
-			data += 47 * (pitch >> 1) * multiplier;
-		}
-		else
-		{
-			data += 8 * (pitch >> 1) * multiplier;
-		}
-		if (program->gameBoy.program)
-		{
-			height -= 16.1 * multiplier;
-		}
-		else
-		{
-			height -= 16 * multiplier;
-		}
-	}
+	uint multiplier = height / 240;
 
-	if ((!overscan) & (sgb_border_disabled) && (program->gameBoy.program))
-	{
-		data += 48;
-		width -= 96;
-		height -= 79;
+	if (sgb_border_disabled && program->gameBoy.program) {
+		// Clean up these magic numbers one day: GB width/height is 160/144.
+		// GB content starts 47 lines from the top and 48 colums from the left
+		data += (47 * (pitch >> 1) + 48) * multiplier;
+		width = 160 * multiplier;
+		height = 144 * multiplier;
+	}
+	else if (overscan) {
+		data += overscan * (pitch >> 1) * multiplier;
+		height -= (overscan << 1) * multiplier;
 	}
 
 	uint filterWidth = width, filterHeight = height;
@@ -369,9 +355,14 @@ auto Program::videoFrame(const uint16* data, uint pitch, uint width, uint height
 	filterSize(filterWidth, filterHeight);
 
 	// Scale the NTSC filter properly for HD Mode 7
-	if ((scale > 1) && (filterWidth == 602))
+	if (filterWidth == 602)
 	{
-		filterWidth = 301 * scale;
+		if (scale > 1) {
+			filterWidth = 301 * scale;
+		}
+		else if (sgb_border_disabled && program->gameBoy.program) {
+			filterWidth = 378 * scale;
+		}
 	}
 
 	filterRender(palette, videoOut, filterWidth << 2, (const uint16_t*)data, pitch, width, height);

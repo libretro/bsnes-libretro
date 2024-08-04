@@ -57,34 +57,42 @@ static bool ppu_fast_options = true;
 #define RETRO_MEMORY_GB_SRAM ((2 << 8) | RETRO_MEMORY_SAVE_RAM)
 #define RETRO_MEMORY_BSX_SRAM ((3 << 8) | RETRO_MEMORY_SAVE_RAM)
 
+#define ASPECT_NTSC 8.0 / 7.0
+#define ASPECT_PAL 7375000.0 / 5320342.5
+#define VIDEO_WIDTH 256
+#define VIDEO_HEIGHT 240
+
 static double get_aspect_ratio()
 {
 	double ratio;
 
-	if (aspect_ratio_mode == 0 && program->gameBoy.program && sgb_border_disabled == true && program->overscan == false)
-		ratio = 10.0/9.0;
-	else if (aspect_ratio_mode == 0 && program->superFamicom.region == "NTSC")
-		ratio = 1.306122;
-	else if (aspect_ratio_mode == 0 && program->superFamicom.region == "PAL")
-		ratio = 1.584216;
-	else if (aspect_ratio_mode == 1) // 8:7 or 10:9 depending on whenever the SGB border is shown
-		if (program->gameBoy.program && sgb_border_disabled == true && program->overscan == false)
-			ratio = 10.0/9.0;
-		else
-			ratio = 8.0/7.0;
-	else if (aspect_ratio_mode == 2) // 4:3
-		return 4.0/3.0;
-	else if (aspect_ratio_mode == 3) // NTSC
-		ratio = 1.306122;
-	else if (aspect_ratio_mode == 4) // PAL
-		ratio = 1.584216;
-	else
-		ratio = 8.0/7.0; // Default
+	switch (aspect_ratio_mode) {
+		default: case 0: { // Auto PAR
+			ratio = program->superFamicom.region == "PAL" ? ASPECT_PAL : ASPECT_NTSC;
+			break;
+		}
+		case 1: { // 1:1 PAR
+			ratio = 1.0;
+			break;
+		}
+		case 2: { // 4:3 DAR
+			return 4.0 / 3.0;
+		}
+		case 3: { // Force correct NTSC PAR
+			ratio = ASPECT_NTSC;
+			break;
+		}
+		case 4: { // Force correct PAL PAR
+			ratio = ASPECT_PAL;
+			break;
+		}
+	}
 
-	if (program->overscan)
-		return (ratio / 240) * 224;
-	else
-		return ratio;
+	if (sgb_border_disabled && program->gameBoy.program) {
+		return (160.0 * ratio) / 144.0;
+	}
+
+	return (VIDEO_WIDTH * ratio) / (double(VIDEO_HEIGHT) - (program->overscan << 1));
 }
 
 static bool update_option_visibility(void)
@@ -139,7 +147,7 @@ static void update_variables(void)
 
 	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
 	{
-		if (strcmp(var.value, "8:7") == 0)
+		if (strcmp(var.value, "1:1") == 0)
 			aspect_ratio_mode = 1;
 		else if (strcmp(var.value, "4:3") == 0)
 			aspect_ratio_mode = 2;
@@ -151,15 +159,19 @@ static void update_variables(void)
 			aspect_ratio_mode = 0;
 	}
 
-	var.key = "bsnes_ppu_show_overscan";
+	var.key = "bsnes_ppu_overscan_v";
 	var.value = NULL;
 
 	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var))
 	{
-		if (strcmp(var.value, "ON") == 0)
-			program->overscan = true;
-		else if (strcmp(var.value, "OFF") == 0)
-			program->overscan = false;
+		if (strcmp(var.value, "16") == 0)
+			program->overscan = 16;
+		else if (strcmp(var.value, "12") == 0)
+			program->overscan = 12;
+		else if (strcmp(var.value, "8") == 0)
+			program->overscan = 8;
+		else if (strcmp(var.value, "0") == 0)
+			program->overscan = 0;
 	}
 
 	var.key = "bsnes_blur_emulation";
@@ -738,11 +750,17 @@ void retro_get_system_info(retro_system_info *info)
 
 void retro_get_system_av_info(struct retro_system_av_info *info)
 {
-	info->geometry.base_width  = 512;   // accurate ppu
-	info->geometry.base_height = program->overscan ? 480 : 448; // accurate ppu
-	info->geometry.max_width   = 2048;  // 8x 256 for hd mode 7
-	info->geometry.max_height  = 1920;  // 8x 240
+	info->geometry.base_width  = VIDEO_WIDTH;
+	info->geometry.base_height = VIDEO_HEIGHT;
+	info->geometry.max_width   = VIDEO_WIDTH << 3;  // 8x 256 for hd mode 7
+	info->geometry.max_height  = VIDEO_HEIGHT << 3;  // 8x 240
+
+	if (!(sgb_border_disabled && program->gameBoy.program)) {
+		info->geometry.base_height -= program->overscan * 2;
+	}
+
 	info->geometry.aspect_ratio = get_aspect_ratio();
+
 	info->timing.sample_rate   = SAMPLERATE;
 
 	if (retro_get_region() == RETRO_REGION_NTSC) {

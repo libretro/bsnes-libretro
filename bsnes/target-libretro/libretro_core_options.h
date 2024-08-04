@@ -100,8 +100,8 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "video",
       {
          { "Auto", NULL },
-         { "8:7",  "Pixel Perfect" },
-         { "4:3",  NULL },
+         { "1:1",  "1:1 PAR (Pixel Perfect)" },
+         { "4:3",  "4:3 DAR" },
          { "NTSC", NULL },
          { "PAL",  NULL },
          { NULL, NULL },
@@ -109,18 +109,20 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      "Crop Overscan",
+      "bsnes_ppu_overscan_v",
+      "Crop Vertical Overscan",
       NULL,
-      "Remove the borders at the top and bottom of the screen, typically unused by games and hidden by the bezel of a standard-definition television.",
+      "Remove N lines from the top and bottom of the screen to simulate the bezel of a television of the SNES era.",
       NULL,
       "video",
       {
-         { "OFF", "8 Pixels" },
-         { "ON",  "disabled" },
+         { "16", "16 Lines" },
+         { "12", "12 Lines" },
+         { "8",  "8 Lines" },
+         { "0",  "0 Lines" },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -694,7 +696,7 @@ struct retro_core_option_v2_definition option_defs_us[] = {
       "bsnes_hide_sgb_border",
       "Hide SGB Border",
       NULL,
-      "Hide the border when playing Super Game Boy games. Only works when 'Crop Overscan' is enabled.",
+      "Hide the border when playing Super Game Boy games.",
       NULL,
       "sgb",
       {

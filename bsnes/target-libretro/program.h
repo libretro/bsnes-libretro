@@ -40,7 +40,7 @@ struct Program : Emulator::Platform
 
 	string base_name;
 
-	bool overscan{false};
+	int overscan{8};
 
 public:
 	struct Game {
