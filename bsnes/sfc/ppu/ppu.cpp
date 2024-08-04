@@ -196,7 +196,7 @@ auto PPU::refresh() -> void {
   auto output = this->output;
   auto pitch  = 512;
   auto width  = 512;
-  auto height = 480;
+  auto height = ppu.display.interlace ? 480 : 240;
   if(configuration.video.blurEmulation) {
     for(uint y : range(height)) {
       auto data = output + y * pitch;
