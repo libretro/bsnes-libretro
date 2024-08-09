@@ -56,13 +56,16 @@ extern "C" {
 #define BSNES_ASPECT_RATIO_LABEL_AR NULL
 #define BSNES_ASPECT_RATIO_INFO_0_AR NULL
 #define OPTION_VAL_AUTO_AR "تلقائي"
-#define OPTION_VAL_8_7_AR NULL
+#define OPTION_VAL_1_1_AR NULL
 #define OPTION_VAL_4_3_AR NULL
 #define OPTION_VAL_NTSC_AR NULL
 #define OPTION_VAL_PAL_AR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_AR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_AR NULL
-#define OPTION_VAL_OFF_AR NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_AR NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_AR NULL
+#define OPTION_VAL_0_AR NULL
+#define OPTION_VAL_8_AR NULL
+#define OPTION_VAL_12_AR NULL
+#define OPTION_VAL_16_AR NULL
 #define BSNES_BLUR_EMULATION_LABEL_AR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_AR NULL
 #define BSNES_VIDEO_FILTER_LABEL_AR "الفلتر"
@@ -74,7 +77,7 @@ extern "C" {
 #define OPTION_VAL_NTSC_RGB_AR NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_AR NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_AR NULL
-#define OPTION_VAL_0_AR NULL
+#define OPTION_VAL_0_O4_AR NULL
 #define OPTION_VAL_10_AR NULL
 #define OPTION_VAL_20_AR NULL
 #define OPTION_VAL_30_AR NULL
@@ -289,7 +292,7 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_AR },
-         { "8:7",  OPTION_VAL_8_7_AR },
+         { "1:1",  OPTION_VAL_1_1_AR },
          { "4:3",  OPTION_VAL_4_3_AR },
          { "NTSC", OPTION_VAL_NTSC_AR },
          { "PAL",  OPTION_VAL_PAL_AR },
@@ -298,18 +301,20 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_AR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_AR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_AR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_AR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_AR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_AR },
+         { "8",  OPTION_VAL_8_AR },
+         { "12", OPTION_VAL_12_AR },
+         { "16", OPTION_VAL_16_AR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -350,7 +355,7 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_AR },
+         { "0", OPTION_VAL_0_O4_AR },
          { "10", OPTION_VAL_10_AR },
          { "20", OPTION_VAL_20_AR },
          { "30", OPTION_VAL_30_AR },
@@ -373,7 +378,7 @@ struct retro_core_option_v2_definition option_defs_ar[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_AR },
+         { "0", OPTION_VAL_0_O4_AR },
          { "10", OPTION_VAL_10_AR },
          { "20", OPTION_VAL_20_AR },
          { "30", OPTION_VAL_30_AR },
@@ -948,13 +953,16 @@ struct retro_core_options_v2 options_ar = {
 #define BSNES_ASPECT_RATIO_LABEL_AST NULL
 #define BSNES_ASPECT_RATIO_INFO_0_AST NULL
 #define OPTION_VAL_AUTO_AST NULL
-#define OPTION_VAL_8_7_AST NULL
+#define OPTION_VAL_1_1_AST NULL
 #define OPTION_VAL_4_3_AST NULL
 #define OPTION_VAL_NTSC_AST NULL
 #define OPTION_VAL_PAL_AST NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_AST NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_AST NULL
-#define OPTION_VAL_OFF_AST "8 píxeles"
+#define BSNES_PPU_OVERSCAN_V_LABEL_AST NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_AST NULL
+#define OPTION_VAL_0_AST NULL
+#define OPTION_VAL_8_AST NULL
+#define OPTION_VAL_12_AST NULL
+#define OPTION_VAL_16_AST NULL
 #define BSNES_BLUR_EMULATION_LABEL_AST NULL
 #define BSNES_BLUR_EMULATION_INFO_0_AST NULL
 #define BSNES_VIDEO_FILTER_LABEL_AST NULL
@@ -966,7 +974,7 @@ struct retro_core_options_v2 options_ar = {
 #define OPTION_VAL_NTSC_RGB_AST NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_AST NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_AST NULL
-#define OPTION_VAL_0_AST NULL
+#define OPTION_VAL_0_O4_AST NULL
 #define OPTION_VAL_10_AST NULL
 #define OPTION_VAL_20_AST NULL
 #define OPTION_VAL_30_AST NULL
@@ -1181,7 +1189,7 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_AST },
-         { "8:7",  OPTION_VAL_8_7_AST },
+         { "1:1",  OPTION_VAL_1_1_AST },
          { "4:3",  OPTION_VAL_4_3_AST },
          { "NTSC", OPTION_VAL_NTSC_AST },
          { "PAL",  OPTION_VAL_PAL_AST },
@@ -1190,18 +1198,20 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_AST,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_AST,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_AST,
+      BSNES_PPU_OVERSCAN_V_INFO_0_AST,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_AST },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_AST },
+         { "8",  OPTION_VAL_8_AST },
+         { "12", OPTION_VAL_12_AST },
+         { "16", OPTION_VAL_16_AST },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -1242,7 +1252,7 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_AST },
+         { "0", OPTION_VAL_0_O4_AST },
          { "10", OPTION_VAL_10_AST },
          { "20", OPTION_VAL_20_AST },
          { "30", OPTION_VAL_30_AST },
@@ -1265,7 +1275,7 @@ struct retro_core_option_v2_definition option_defs_ast[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_AST },
+         { "0", OPTION_VAL_0_O4_AST },
          { "10", OPTION_VAL_10_AST },
          { "20", OPTION_VAL_20_AST },
          { "30", OPTION_VAL_30_AST },
@@ -1840,13 +1850,16 @@ struct retro_core_options_v2 options_ast = {
 #define BSNES_ASPECT_RATIO_LABEL_BE NULL
 #define BSNES_ASPECT_RATIO_INFO_0_BE NULL
 #define OPTION_VAL_AUTO_BE "Аўта"
-#define OPTION_VAL_8_7_BE NULL
+#define OPTION_VAL_1_1_BE NULL
 #define OPTION_VAL_4_3_BE NULL
 #define OPTION_VAL_NTSC_BE NULL
 #define OPTION_VAL_PAL_BE NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_BE NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_BE NULL
-#define OPTION_VAL_OFF_BE NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_BE NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_BE NULL
+#define OPTION_VAL_0_BE "0 радкоў"
+#define OPTION_VAL_8_BE "8 радкоў"
+#define OPTION_VAL_12_BE "12 радкоў"
+#define OPTION_VAL_16_BE "16 радкоў"
 #define BSNES_BLUR_EMULATION_LABEL_BE NULL
 #define BSNES_BLUR_EMULATION_INFO_0_BE NULL
 #define BSNES_VIDEO_FILTER_LABEL_BE "Фільтр"
@@ -1858,7 +1871,7 @@ struct retro_core_options_v2 options_ast = {
 #define OPTION_VAL_NTSC_RGB_BE NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_BE "Рэгуляванне колеру - яскравасць"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_BE "Рэгуляваць яскравасць"
-#define OPTION_VAL_0_BE "0 %"
+#define OPTION_VAL_0_O4_BE "0 %"
 #define OPTION_VAL_10_BE "10 %"
 #define OPTION_VAL_20_BE "20 %"
 #define OPTION_VAL_30_BE "30 %"
@@ -2073,7 +2086,7 @@ struct retro_core_option_v2_definition option_defs_be[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_BE },
-         { "8:7",  OPTION_VAL_8_7_BE },
+         { "1:1",  OPTION_VAL_1_1_BE },
          { "4:3",  OPTION_VAL_4_3_BE },
          { "NTSC", OPTION_VAL_NTSC_BE },
          { "PAL",  OPTION_VAL_PAL_BE },
@@ -2082,18 +2095,20 @@ struct retro_core_option_v2_definition option_defs_be[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_BE,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_BE,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_BE,
+      BSNES_PPU_OVERSCAN_V_INFO_0_BE,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_BE },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_BE },
+         { "8",  OPTION_VAL_8_BE },
+         { "12", OPTION_VAL_12_BE },
+         { "16", OPTION_VAL_16_BE },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -2134,7 +2149,7 @@ struct retro_core_option_v2_definition option_defs_be[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_BE },
+         { "0", OPTION_VAL_0_O4_BE },
          { "10", OPTION_VAL_10_BE },
          { "20", OPTION_VAL_20_BE },
          { "30", OPTION_VAL_30_BE },
@@ -2157,7 +2172,7 @@ struct retro_core_option_v2_definition option_defs_be[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_BE },
+         { "0", OPTION_VAL_0_O4_BE },
          { "10", OPTION_VAL_10_BE },
          { "20", OPTION_VAL_20_BE },
          { "30", OPTION_VAL_30_BE },
@@ -2732,13 +2747,16 @@ struct retro_core_options_v2 options_be = {
 #define BSNES_ASPECT_RATIO_LABEL_BG NULL
 #define BSNES_ASPECT_RATIO_INFO_0_BG NULL
 #define OPTION_VAL_AUTO_BG NULL
-#define OPTION_VAL_8_7_BG NULL
+#define OPTION_VAL_1_1_BG NULL
 #define OPTION_VAL_4_3_BG NULL
 #define OPTION_VAL_NTSC_BG NULL
 #define OPTION_VAL_PAL_BG NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_BG NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_BG NULL
-#define OPTION_VAL_OFF_BG NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_BG NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_BG NULL
+#define OPTION_VAL_0_BG NULL
+#define OPTION_VAL_8_BG NULL
+#define OPTION_VAL_12_BG NULL
+#define OPTION_VAL_16_BG NULL
 #define BSNES_BLUR_EMULATION_LABEL_BG NULL
 #define BSNES_BLUR_EMULATION_INFO_0_BG NULL
 #define BSNES_VIDEO_FILTER_LABEL_BG NULL
@@ -2750,7 +2768,7 @@ struct retro_core_options_v2 options_be = {
 #define OPTION_VAL_NTSC_RGB_BG NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_BG NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_BG NULL
-#define OPTION_VAL_0_BG NULL
+#define OPTION_VAL_0_O4_BG NULL
 #define OPTION_VAL_10_BG NULL
 #define OPTION_VAL_20_BG NULL
 #define OPTION_VAL_30_BG NULL
@@ -2965,7 +2983,7 @@ struct retro_core_option_v2_definition option_defs_bg[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_BG },
-         { "8:7",  OPTION_VAL_8_7_BG },
+         { "1:1",  OPTION_VAL_1_1_BG },
          { "4:3",  OPTION_VAL_4_3_BG },
          { "NTSC", OPTION_VAL_NTSC_BG },
          { "PAL",  OPTION_VAL_PAL_BG },
@@ -2974,18 +2992,20 @@ struct retro_core_option_v2_definition option_defs_bg[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_BG,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_BG,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_BG,
+      BSNES_PPU_OVERSCAN_V_INFO_0_BG,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_BG },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_BG },
+         { "8",  OPTION_VAL_8_BG },
+         { "12", OPTION_VAL_12_BG },
+         { "16", OPTION_VAL_16_BG },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -3026,7 +3046,7 @@ struct retro_core_option_v2_definition option_defs_bg[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_BG },
+         { "0", OPTION_VAL_0_O4_BG },
          { "10", OPTION_VAL_10_BG },
          { "20", OPTION_VAL_20_BG },
          { "30", OPTION_VAL_30_BG },
@@ -3049,7 +3069,7 @@ struct retro_core_option_v2_definition option_defs_bg[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_BG },
+         { "0", OPTION_VAL_0_O4_BG },
          { "10", OPTION_VAL_10_BG },
          { "20", OPTION_VAL_20_BG },
          { "30", OPTION_VAL_30_BG },
@@ -3624,13 +3644,16 @@ struct retro_core_options_v2 options_bg = {
 #define BSNES_ASPECT_RATIO_LABEL_CA NULL
 #define BSNES_ASPECT_RATIO_INFO_0_CA NULL
 #define OPTION_VAL_AUTO_CA "Automàtic"
-#define OPTION_VAL_8_7_CA NULL
+#define OPTION_VAL_1_1_CA NULL
 #define OPTION_VAL_4_3_CA NULL
 #define OPTION_VAL_NTSC_CA NULL
 #define OPTION_VAL_PAL_CA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_CA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_CA NULL
-#define OPTION_VAL_OFF_CA NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_CA NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CA NULL
+#define OPTION_VAL_0_CA NULL
+#define OPTION_VAL_8_CA NULL
+#define OPTION_VAL_12_CA NULL
+#define OPTION_VAL_16_CA NULL
 #define BSNES_BLUR_EMULATION_LABEL_CA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CA NULL
 #define BSNES_VIDEO_FILTER_LABEL_CA NULL
@@ -3642,7 +3665,7 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_NTSC_RGB_CA NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_CA NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_CA NULL
-#define OPTION_VAL_0_CA NULL
+#define OPTION_VAL_0_O4_CA NULL
 #define OPTION_VAL_10_CA NULL
 #define OPTION_VAL_20_CA NULL
 #define OPTION_VAL_30_CA NULL
@@ -3857,7 +3880,7 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_CA },
-         { "8:7",  OPTION_VAL_8_7_CA },
+         { "1:1",  OPTION_VAL_1_1_CA },
          { "4:3",  OPTION_VAL_4_3_CA },
          { "NTSC", OPTION_VAL_NTSC_CA },
          { "PAL",  OPTION_VAL_PAL_CA },
@@ -3866,18 +3889,20 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_CA,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_CA,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_CA,
+      BSNES_PPU_OVERSCAN_V_INFO_0_CA,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_CA },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_CA },
+         { "8",  OPTION_VAL_8_CA },
+         { "12", OPTION_VAL_12_CA },
+         { "16", OPTION_VAL_16_CA },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -3918,7 +3943,7 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CA },
+         { "0", OPTION_VAL_0_O4_CA },
          { "10", OPTION_VAL_10_CA },
          { "20", OPTION_VAL_20_CA },
          { "30", OPTION_VAL_30_CA },
@@ -3941,7 +3966,7 @@ struct retro_core_option_v2_definition option_defs_ca[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CA },
+         { "0", OPTION_VAL_0_O4_CA },
          { "10", OPTION_VAL_10_CA },
          { "20", OPTION_VAL_20_CA },
          { "30", OPTION_VAL_30_CA },
@@ -4516,13 +4541,16 @@ struct retro_core_options_v2 options_ca = {
 #define BSNES_ASPECT_RATIO_LABEL_CHS NULL
 #define BSNES_ASPECT_RATIO_INFO_0_CHS "选择首选内容宽高比。这只适用于RetroArch的宽高比设置为视频设置中的“核心提供”。"
 #define OPTION_VAL_AUTO_CHS "自动"
-#define OPTION_VAL_8_7_CHS NULL
+#define OPTION_VAL_1_1_CHS NULL
 #define OPTION_VAL_4_3_CHS NULL
 #define OPTION_VAL_NTSC_CHS NULL
 #define OPTION_VAL_PAL_CHS NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_CHS NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_CHS NULL
-#define OPTION_VAL_OFF_CHS NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_CHS NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CHS NULL
+#define OPTION_VAL_0_CHS NULL
+#define OPTION_VAL_8_CHS NULL
+#define OPTION_VAL_12_CHS NULL
+#define OPTION_VAL_16_CHS NULL
 #define BSNES_BLUR_EMULATION_LABEL_CHS NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CHS NULL
 #define BSNES_VIDEO_FILTER_LABEL_CHS "过滤器"
@@ -4534,7 +4562,7 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_NTSC_RGB_CHS NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_CHS NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_CHS NULL
-#define OPTION_VAL_0_CHS NULL
+#define OPTION_VAL_0_O4_CHS NULL
 #define OPTION_VAL_10_CHS NULL
 #define OPTION_VAL_20_CHS NULL
 #define OPTION_VAL_30_CHS NULL
@@ -4749,7 +4777,7 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_CHS },
-         { "8:7",  OPTION_VAL_8_7_CHS },
+         { "1:1",  OPTION_VAL_1_1_CHS },
          { "4:3",  OPTION_VAL_4_3_CHS },
          { "NTSC", OPTION_VAL_NTSC_CHS },
          { "PAL",  OPTION_VAL_PAL_CHS },
@@ -4758,18 +4786,20 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_CHS,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_CHS,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_CHS,
+      BSNES_PPU_OVERSCAN_V_INFO_0_CHS,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_CHS },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_CHS },
+         { "8",  OPTION_VAL_8_CHS },
+         { "12", OPTION_VAL_12_CHS },
+         { "16", OPTION_VAL_16_CHS },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -4810,7 +4840,7 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CHS },
+         { "0", OPTION_VAL_0_O4_CHS },
          { "10", OPTION_VAL_10_CHS },
          { "20", OPTION_VAL_20_CHS },
          { "30", OPTION_VAL_30_CHS },
@@ -4833,7 +4863,7 @@ struct retro_core_option_v2_definition option_defs_chs[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CHS },
+         { "0", OPTION_VAL_0_O4_CHS },
          { "10", OPTION_VAL_10_CHS },
          { "20", OPTION_VAL_20_CHS },
          { "30", OPTION_VAL_30_CHS },
@@ -5408,13 +5438,16 @@ struct retro_core_options_v2 options_chs = {
 #define BSNES_ASPECT_RATIO_LABEL_CHT NULL
 #define BSNES_ASPECT_RATIO_INFO_0_CHT "設定畫面的寬高比, 僅限「設定/顯示/縮放」選項中, 設定「寬高比」為<核心參數>時使用。"
 #define OPTION_VAL_AUTO_CHT "自動"
-#define OPTION_VAL_8_7_CHT "完美像素"
+#define OPTION_VAL_1_1_CHT NULL
 #define OPTION_VAL_4_3_CHT NULL
 #define OPTION_VAL_NTSC_CHT NULL
 #define OPTION_VAL_PAL_CHT NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_CHT "裁剪過度掃描"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_CHT NULL
-#define OPTION_VAL_OFF_CHT "8像素"
+#define BSNES_PPU_OVERSCAN_V_LABEL_CHT "裁剪垂直過度掃描"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CHT NULL
+#define OPTION_VAL_0_CHT NULL
+#define OPTION_VAL_8_CHT NULL
+#define OPTION_VAL_12_CHT NULL
+#define OPTION_VAL_16_CHT NULL
 #define BSNES_BLUR_EMULATION_LABEL_CHT NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CHT NULL
 #define BSNES_VIDEO_FILTER_LABEL_CHT "過濾器"
@@ -5426,7 +5459,7 @@ struct retro_core_options_v2 options_chs = {
 #define OPTION_VAL_NTSC_RGB_CHT NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_CHT NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_CHT NULL
-#define OPTION_VAL_0_CHT NULL
+#define OPTION_VAL_0_O4_CHT NULL
 #define OPTION_VAL_10_CHT NULL
 #define OPTION_VAL_20_CHT NULL
 #define OPTION_VAL_30_CHT NULL
@@ -5641,7 +5674,7 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_CHT },
-         { "8:7",  OPTION_VAL_8_7_CHT },
+         { "1:1",  OPTION_VAL_1_1_CHT },
          { "4:3",  OPTION_VAL_4_3_CHT },
          { "NTSC", OPTION_VAL_NTSC_CHT },
          { "PAL",  OPTION_VAL_PAL_CHT },
@@ -5650,18 +5683,20 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_CHT,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_CHT,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_CHT,
+      BSNES_PPU_OVERSCAN_V_INFO_0_CHT,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_CHT },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_CHT },
+         { "8",  OPTION_VAL_8_CHT },
+         { "12", OPTION_VAL_12_CHT },
+         { "16", OPTION_VAL_16_CHT },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -5702,7 +5737,7 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CHT },
+         { "0", OPTION_VAL_0_O4_CHT },
          { "10", OPTION_VAL_10_CHT },
          { "20", OPTION_VAL_20_CHT },
          { "30", OPTION_VAL_30_CHT },
@@ -5725,7 +5760,7 @@ struct retro_core_option_v2_definition option_defs_cht[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CHT },
+         { "0", OPTION_VAL_0_O4_CHT },
          { "10", OPTION_VAL_10_CHT },
          { "20", OPTION_VAL_20_CHT },
          { "30", OPTION_VAL_30_CHT },
@@ -6300,13 +6335,16 @@ struct retro_core_options_v2 options_cht = {
 #define BSNES_ASPECT_RATIO_LABEL_CS "Preferovaný Poměr Stran"
 #define BSNES_ASPECT_RATIO_INFO_0_CS "Zvolte preferovaný poměr stran obsahu. To se použije pouze v případě, že je poměr stran aplikace RetroArch v nastavení videa nastaven na hodnotu 'Poskytnuté Jádro'."
 #define OPTION_VAL_AUTO_CS "Automatické"
-#define OPTION_VAL_8_7_CS "Perfektní Pixel"
+#define OPTION_VAL_1_1_CS NULL
 #define OPTION_VAL_4_3_CS NULL
 #define OPTION_VAL_NTSC_CS NULL
 #define OPTION_VAL_PAL_CS NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_CS "Overscan Oříznutí"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_CS "Odstraňte okraje v horní a dolní části obrazovky, které se obvykle nepoužívají ve hrách a jsou skryty rámečkem televizoru se standardním rozlišením."
-#define OPTION_VAL_OFF_CS "8 Pixelu"
+#define BSNES_PPU_OVERSCAN_V_LABEL_CS "Oříznutí Vertikálního Přesahu"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CS NULL
+#define OPTION_VAL_0_CS NULL
+#define OPTION_VAL_8_CS NULL
+#define OPTION_VAL_12_CS NULL
+#define OPTION_VAL_16_CS NULL
 #define BSNES_BLUR_EMULATION_LABEL_CS "Emulace Rozostření"
 #define BSNES_BLUR_EMULATION_INFO_0_CS "Simuluje omezené horizontální rozlišení televizorů SDTV rozmazáním horizontálně sousedících pixelů. Některé hry na tom závisejí, aby napodobily efekt průhlednosti."
 #define BSNES_VIDEO_FILTER_LABEL_CS "Filtr"
@@ -6318,7 +6356,7 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_NTSC_RGB_CS NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_CS NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_CS NULL
-#define OPTION_VAL_0_CS NULL
+#define OPTION_VAL_0_O4_CS NULL
 #define OPTION_VAL_10_CS NULL
 #define OPTION_VAL_20_CS NULL
 #define OPTION_VAL_30_CS NULL
@@ -6478,7 +6516,7 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_SGB1_SFC_CS NULL
 #define OPTION_VAL_SGB2_SFC_CS NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_CS "Skrýt Hranici SGB"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_CS "Při hraní her pro Super Game Boy skryjte okraj. Funguje pouze při zapnuté funkci 'Overscan Oříznutí'."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_CS NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_CS "Světelná Pistole s Dotykovou Obrazovkou"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_CS "Povolit vstup Super Scope pro dotyková zařízení."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_CS "Obrácení Tlačítek Střelby Super Scope"
@@ -6533,7 +6571,7 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_CS },
-         { "8:7",  OPTION_VAL_8_7_CS },
+         { "1:1",  OPTION_VAL_1_1_CS },
          { "4:3",  OPTION_VAL_4_3_CS },
          { "NTSC", OPTION_VAL_NTSC_CS },
          { "PAL",  OPTION_VAL_PAL_CS },
@@ -6542,18 +6580,20 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_CS,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_CS,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_CS,
+      BSNES_PPU_OVERSCAN_V_INFO_0_CS,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_CS },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_CS },
+         { "8",  OPTION_VAL_8_CS },
+         { "12", OPTION_VAL_12_CS },
+         { "16", OPTION_VAL_16_CS },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -6594,7 +6634,7 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CS },
+         { "0", OPTION_VAL_0_O4_CS },
          { "10", OPTION_VAL_10_CS },
          { "20", OPTION_VAL_20_CS },
          { "30", OPTION_VAL_30_CS },
@@ -6617,7 +6657,7 @@ struct retro_core_option_v2_definition option_defs_cs[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CS },
+         { "0", OPTION_VAL_0_O4_CS },
          { "10", OPTION_VAL_10_CS },
          { "20", OPTION_VAL_20_CS },
          { "30", OPTION_VAL_30_CS },
@@ -7192,13 +7232,16 @@ struct retro_core_options_v2 options_cs = {
 #define BSNES_ASPECT_RATIO_LABEL_CY NULL
 #define BSNES_ASPECT_RATIO_INFO_0_CY NULL
 #define OPTION_VAL_AUTO_CY NULL
-#define OPTION_VAL_8_7_CY NULL
+#define OPTION_VAL_1_1_CY NULL
 #define OPTION_VAL_4_3_CY NULL
 #define OPTION_VAL_NTSC_CY NULL
 #define OPTION_VAL_PAL_CY NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_CY NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_CY NULL
-#define OPTION_VAL_OFF_CY NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_CY NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CY NULL
+#define OPTION_VAL_0_CY NULL
+#define OPTION_VAL_8_CY NULL
+#define OPTION_VAL_12_CY NULL
+#define OPTION_VAL_16_CY NULL
 #define BSNES_BLUR_EMULATION_LABEL_CY NULL
 #define BSNES_BLUR_EMULATION_INFO_0_CY NULL
 #define BSNES_VIDEO_FILTER_LABEL_CY NULL
@@ -7210,7 +7253,7 @@ struct retro_core_options_v2 options_cs = {
 #define OPTION_VAL_NTSC_RGB_CY NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_CY NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_CY NULL
-#define OPTION_VAL_0_CY NULL
+#define OPTION_VAL_0_O4_CY NULL
 #define OPTION_VAL_10_CY NULL
 #define OPTION_VAL_20_CY NULL
 #define OPTION_VAL_30_CY NULL
@@ -7425,7 +7468,7 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_CY },
-         { "8:7",  OPTION_VAL_8_7_CY },
+         { "1:1",  OPTION_VAL_1_1_CY },
          { "4:3",  OPTION_VAL_4_3_CY },
          { "NTSC", OPTION_VAL_NTSC_CY },
          { "PAL",  OPTION_VAL_PAL_CY },
@@ -7434,18 +7477,20 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_CY,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_CY,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_CY,
+      BSNES_PPU_OVERSCAN_V_INFO_0_CY,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_CY },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_CY },
+         { "8",  OPTION_VAL_8_CY },
+         { "12", OPTION_VAL_12_CY },
+         { "16", OPTION_VAL_16_CY },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -7486,7 +7531,7 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CY },
+         { "0", OPTION_VAL_0_O4_CY },
          { "10", OPTION_VAL_10_CY },
          { "20", OPTION_VAL_20_CY },
          { "30", OPTION_VAL_30_CY },
@@ -7509,7 +7554,7 @@ struct retro_core_option_v2_definition option_defs_cy[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_CY },
+         { "0", OPTION_VAL_0_O4_CY },
          { "10", OPTION_VAL_10_CY },
          { "20", OPTION_VAL_20_CY },
          { "30", OPTION_VAL_30_CY },
@@ -8084,13 +8129,16 @@ struct retro_core_options_v2 options_cy = {
 #define BSNES_ASPECT_RATIO_LABEL_DA NULL
 #define BSNES_ASPECT_RATIO_INFO_0_DA NULL
 #define OPTION_VAL_AUTO_DA NULL
-#define OPTION_VAL_8_7_DA NULL
+#define OPTION_VAL_1_1_DA NULL
 #define OPTION_VAL_4_3_DA NULL
 #define OPTION_VAL_NTSC_DA NULL
 #define OPTION_VAL_PAL_DA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_DA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_DA NULL
-#define OPTION_VAL_OFF_DA NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_DA NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_DA NULL
+#define OPTION_VAL_0_DA NULL
+#define OPTION_VAL_8_DA NULL
+#define OPTION_VAL_12_DA NULL
+#define OPTION_VAL_16_DA NULL
 #define BSNES_BLUR_EMULATION_LABEL_DA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_DA NULL
 #define BSNES_VIDEO_FILTER_LABEL_DA NULL
@@ -8102,7 +8150,7 @@ struct retro_core_options_v2 options_cy = {
 #define OPTION_VAL_NTSC_RGB_DA NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_DA NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_DA NULL
-#define OPTION_VAL_0_DA NULL
+#define OPTION_VAL_0_O4_DA NULL
 #define OPTION_VAL_10_DA NULL
 #define OPTION_VAL_20_DA NULL
 #define OPTION_VAL_30_DA NULL
@@ -8317,7 +8365,7 @@ struct retro_core_option_v2_definition option_defs_da[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_DA },
-         { "8:7",  OPTION_VAL_8_7_DA },
+         { "1:1",  OPTION_VAL_1_1_DA },
          { "4:3",  OPTION_VAL_4_3_DA },
          { "NTSC", OPTION_VAL_NTSC_DA },
          { "PAL",  OPTION_VAL_PAL_DA },
@@ -8326,18 +8374,20 @@ struct retro_core_option_v2_definition option_defs_da[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_DA,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_DA,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_DA,
+      BSNES_PPU_OVERSCAN_V_INFO_0_DA,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_DA },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_DA },
+         { "8",  OPTION_VAL_8_DA },
+         { "12", OPTION_VAL_12_DA },
+         { "16", OPTION_VAL_16_DA },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -8378,7 +8428,7 @@ struct retro_core_option_v2_definition option_defs_da[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_DA },
+         { "0", OPTION_VAL_0_O4_DA },
          { "10", OPTION_VAL_10_DA },
          { "20", OPTION_VAL_20_DA },
          { "30", OPTION_VAL_30_DA },
@@ -8401,7 +8451,7 @@ struct retro_core_option_v2_definition option_defs_da[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_DA },
+         { "0", OPTION_VAL_0_O4_DA },
          { "10", OPTION_VAL_10_DA },
          { "20", OPTION_VAL_20_DA },
          { "30", OPTION_VAL_30_DA },
@@ -8976,13 +9026,16 @@ struct retro_core_options_v2 options_da = {
 #define BSNES_ASPECT_RATIO_LABEL_DE "Bevorzugtes Seitenverhältnis"
 #define BSNES_ASPECT_RATIO_INFO_0_DE "Das bevorzugte Seitenverhältnis des Inhalts auswählen. Dies wird nur angewendet, wenn das Seitenverhältnis von RetroArch in den Videoeinstellungen auf \"Wie von Core vorgesehen\" eingestellt ist."
 #define OPTION_VAL_AUTO_DE "Automatisch"
-#define OPTION_VAL_8_7_DE "Pixelgenau"
+#define OPTION_VAL_1_1_DE "1:1 PAR (Pixelgetreu)"
 #define OPTION_VAL_4_3_DE NULL
 #define OPTION_VAL_NTSC_DE NULL
 #define OPTION_VAL_PAL_DE NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_DE "Overscan zuschneiden"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_DE "Die Ränder am oberen und unteren Rand des Bildschirms entfernen, die in der Regel von Spielen nicht genutzt werden und von der Einfassung eines Fernsehers mit Standardauflösung verdeckt werden."
-#define OPTION_VAL_OFF_DE "8 Pixel"
+#define BSNES_PPU_OVERSCAN_V_LABEL_DE "Vertikalen Overscan zuschneiden"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_DE "N Zeilen oben und unten am Bildschirm entfernen, um die Umrandung eines Fernsehers aus der SNES-Zeit zu simulieren."
+#define OPTION_VAL_0_DE "0 Zeilen"
+#define OPTION_VAL_8_DE "8 Zeilen"
+#define OPTION_VAL_12_DE "12 Zeilen"
+#define OPTION_VAL_16_DE "16 Zeilen"
 #define BSNES_BLUR_EMULATION_LABEL_DE "Unschärfe-Emulation"
 #define BSNES_BLUR_EMULATION_INFO_0_DE "Die begrenzte horizontale Auflösung von SDTVs simulieren, indem horizontal benachbarte Pixel miteinander verwischt werden. Einige Spiele nutzen das, um einen Transparenzeffekt zu simulieren."
 #define BSNES_VIDEO_FILTER_LABEL_DE NULL
@@ -8994,7 +9047,7 @@ struct retro_core_options_v2 options_da = {
 #define OPTION_VAL_NTSC_RGB_DE NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_DE "Farbanpassung - Luminanz"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_DE "Luminanz anpassen"
-#define OPTION_VAL_0_DE "0 %"
+#define OPTION_VAL_0_O4_DE "0 %"
 #define OPTION_VAL_10_DE "10 %"
 #define OPTION_VAL_20_DE "20 %"
 #define OPTION_VAL_30_DE "30 %"
@@ -9154,7 +9207,7 @@ struct retro_core_options_v2 options_da = {
 #define OPTION_VAL_SGB1_SFC_DE NULL
 #define OPTION_VAL_SGB2_SFC_DE NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_DE "SGB-Rand ausblenden"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_DE "Den Rand ausblenden, wenn Super Game Boy-Spiele gespielt werden. Funktioniert nur, wenn „Overscan zuschneiden“ aktiviert ist."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_DE "Den Rand beim Spielen von „Super Game Boy“-Spielen ausblenden."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_DE "Touchscreen-Lightgun"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_DE "Eingabegerät Super Scope für Touchscreen-Geräte akrtivieren."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_DE "Super-Scope-Triggertasten tauschen"
@@ -9209,7 +9262,7 @@ struct retro_core_option_v2_definition option_defs_de[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_DE },
-         { "8:7",  OPTION_VAL_8_7_DE },
+         { "1:1",  OPTION_VAL_1_1_DE },
          { "4:3",  OPTION_VAL_4_3_DE },
          { "NTSC", OPTION_VAL_NTSC_DE },
          { "PAL",  OPTION_VAL_PAL_DE },
@@ -9218,18 +9271,20 @@ struct retro_core_option_v2_definition option_defs_de[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_DE,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_DE,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_DE,
+      BSNES_PPU_OVERSCAN_V_INFO_0_DE,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_DE },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_DE },
+         { "8",  OPTION_VAL_8_DE },
+         { "12", OPTION_VAL_12_DE },
+         { "16", OPTION_VAL_16_DE },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -9270,7 +9325,7 @@ struct retro_core_option_v2_definition option_defs_de[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_DE },
+         { "0", OPTION_VAL_0_O4_DE },
          { "10", OPTION_VAL_10_DE },
          { "20", OPTION_VAL_20_DE },
          { "30", OPTION_VAL_30_DE },
@@ -9293,7 +9348,7 @@ struct retro_core_option_v2_definition option_defs_de[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_DE },
+         { "0", OPTION_VAL_0_O4_DE },
          { "10", OPTION_VAL_10_DE },
          { "20", OPTION_VAL_20_DE },
          { "30", OPTION_VAL_30_DE },
@@ -9868,13 +9923,16 @@ struct retro_core_options_v2 options_de = {
 #define BSNES_ASPECT_RATIO_LABEL_EL NULL
 #define BSNES_ASPECT_RATIO_INFO_0_EL NULL
 #define OPTION_VAL_AUTO_EL "Αυτόματο"
-#define OPTION_VAL_8_7_EL NULL
+#define OPTION_VAL_1_1_EL NULL
 #define OPTION_VAL_4_3_EL NULL
 #define OPTION_VAL_NTSC_EL NULL
 #define OPTION_VAL_PAL_EL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_EL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_EL NULL
-#define OPTION_VAL_OFF_EL NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_EL NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_EL NULL
+#define OPTION_VAL_0_EL NULL
+#define OPTION_VAL_8_EL NULL
+#define OPTION_VAL_12_EL NULL
+#define OPTION_VAL_16_EL NULL
 #define BSNES_BLUR_EMULATION_LABEL_EL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_EL NULL
 #define BSNES_VIDEO_FILTER_LABEL_EL "Φίλτρα"
@@ -9886,7 +9944,7 @@ struct retro_core_options_v2 options_de = {
 #define OPTION_VAL_NTSC_RGB_EL NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_EL NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_EL NULL
-#define OPTION_VAL_0_EL NULL
+#define OPTION_VAL_0_O4_EL NULL
 #define OPTION_VAL_10_EL NULL
 #define OPTION_VAL_20_EL NULL
 #define OPTION_VAL_30_EL NULL
@@ -10101,7 +10159,7 @@ struct retro_core_option_v2_definition option_defs_el[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_EL },
-         { "8:7",  OPTION_VAL_8_7_EL },
+         { "1:1",  OPTION_VAL_1_1_EL },
          { "4:3",  OPTION_VAL_4_3_EL },
          { "NTSC", OPTION_VAL_NTSC_EL },
          { "PAL",  OPTION_VAL_PAL_EL },
@@ -10110,18 +10168,20 @@ struct retro_core_option_v2_definition option_defs_el[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_EL,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_EL,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_EL,
+      BSNES_PPU_OVERSCAN_V_INFO_0_EL,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_EL },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_EL },
+         { "8",  OPTION_VAL_8_EL },
+         { "12", OPTION_VAL_12_EL },
+         { "16", OPTION_VAL_16_EL },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -10162,7 +10222,7 @@ struct retro_core_option_v2_definition option_defs_el[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_EL },
+         { "0", OPTION_VAL_0_O4_EL },
          { "10", OPTION_VAL_10_EL },
          { "20", OPTION_VAL_20_EL },
          { "30", OPTION_VAL_30_EL },
@@ -10185,7 +10245,7 @@ struct retro_core_option_v2_definition option_defs_el[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_EL },
+         { "0", OPTION_VAL_0_O4_EL },
          { "10", OPTION_VAL_10_EL },
          { "20", OPTION_VAL_20_EL },
          { "30", OPTION_VAL_30_EL },
@@ -10760,13 +10820,16 @@ struct retro_core_options_v2 options_el = {
 #define BSNES_ASPECT_RATIO_LABEL_EN NULL
 #define BSNES_ASPECT_RATIO_INFO_0_EN NULL
 #define OPTION_VAL_AUTO_EN NULL
-#define OPTION_VAL_8_7_EN NULL
+#define OPTION_VAL_1_1_EN NULL
 #define OPTION_VAL_4_3_EN NULL
 #define OPTION_VAL_NTSC_EN NULL
 #define OPTION_VAL_PAL_EN NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_EN NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_EN NULL
-#define OPTION_VAL_OFF_EN NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_EN NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_EN NULL
+#define OPTION_VAL_0_EN NULL
+#define OPTION_VAL_8_EN NULL
+#define OPTION_VAL_12_EN NULL
+#define OPTION_VAL_16_EN NULL
 #define BSNES_BLUR_EMULATION_LABEL_EN NULL
 #define BSNES_BLUR_EMULATION_INFO_0_EN "Simulate the limited horizontal resolution of SD-TVs by blurring together horizontally-adjacent pixels. Some games depend on this to emulate a transparency effect."
 #define BSNES_VIDEO_FILTER_LABEL_EN NULL
@@ -10778,7 +10841,7 @@ struct retro_core_options_v2 options_el = {
 #define OPTION_VAL_NTSC_RGB_EN NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_EN "Colour Adjustment - Luminance"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_EN NULL
-#define OPTION_VAL_0_EN NULL
+#define OPTION_VAL_0_O4_EN NULL
 #define OPTION_VAL_10_EN NULL
 #define OPTION_VAL_20_EN NULL
 #define OPTION_VAL_30_EN NULL
@@ -10993,7 +11056,7 @@ struct retro_core_option_v2_definition option_defs_en[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_EN },
-         { "8:7",  OPTION_VAL_8_7_EN },
+         { "1:1",  OPTION_VAL_1_1_EN },
          { "4:3",  OPTION_VAL_4_3_EN },
          { "NTSC", OPTION_VAL_NTSC_EN },
          { "PAL",  OPTION_VAL_PAL_EN },
@@ -11002,18 +11065,20 @@ struct retro_core_option_v2_definition option_defs_en[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_EN,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_EN,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_EN,
+      BSNES_PPU_OVERSCAN_V_INFO_0_EN,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_EN },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_EN },
+         { "8",  OPTION_VAL_8_EN },
+         { "12", OPTION_VAL_12_EN },
+         { "16", OPTION_VAL_16_EN },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -11054,7 +11119,7 @@ struct retro_core_option_v2_definition option_defs_en[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_EN },
+         { "0", OPTION_VAL_0_O4_EN },
          { "10", OPTION_VAL_10_EN },
          { "20", OPTION_VAL_20_EN },
          { "30", OPTION_VAL_30_EN },
@@ -11077,7 +11142,7 @@ struct retro_core_option_v2_definition option_defs_en[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_EN },
+         { "0", OPTION_VAL_0_O4_EN },
          { "10", OPTION_VAL_10_EN },
          { "20", OPTION_VAL_20_EN },
          { "30", OPTION_VAL_30_EN },
@@ -11652,13 +11717,16 @@ struct retro_core_options_v2 options_en = {
 #define BSNES_ASPECT_RATIO_LABEL_EO NULL
 #define BSNES_ASPECT_RATIO_INFO_0_EO NULL
 #define OPTION_VAL_AUTO_EO NULL
-#define OPTION_VAL_8_7_EO NULL
+#define OPTION_VAL_1_1_EO NULL
 #define OPTION_VAL_4_3_EO NULL
 #define OPTION_VAL_NTSC_EO NULL
 #define OPTION_VAL_PAL_EO NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_EO NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_EO NULL
-#define OPTION_VAL_OFF_EO NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_EO NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_EO NULL
+#define OPTION_VAL_0_EO NULL
+#define OPTION_VAL_8_EO NULL
+#define OPTION_VAL_12_EO NULL
+#define OPTION_VAL_16_EO NULL
 #define BSNES_BLUR_EMULATION_LABEL_EO NULL
 #define BSNES_BLUR_EMULATION_INFO_0_EO NULL
 #define BSNES_VIDEO_FILTER_LABEL_EO NULL
@@ -11670,7 +11738,7 @@ struct retro_core_options_v2 options_en = {
 #define OPTION_VAL_NTSC_RGB_EO NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_EO NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_EO NULL
-#define OPTION_VAL_0_EO NULL
+#define OPTION_VAL_0_O4_EO NULL
 #define OPTION_VAL_10_EO NULL
 #define OPTION_VAL_20_EO NULL
 #define OPTION_VAL_30_EO NULL
@@ -11885,7 +11953,7 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_EO },
-         { "8:7",  OPTION_VAL_8_7_EO },
+         { "1:1",  OPTION_VAL_1_1_EO },
          { "4:3",  OPTION_VAL_4_3_EO },
          { "NTSC", OPTION_VAL_NTSC_EO },
          { "PAL",  OPTION_VAL_PAL_EO },
@@ -11894,18 +11962,20 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_EO,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_EO,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_EO,
+      BSNES_PPU_OVERSCAN_V_INFO_0_EO,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_EO },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_EO },
+         { "8",  OPTION_VAL_8_EO },
+         { "12", OPTION_VAL_12_EO },
+         { "16", OPTION_VAL_16_EO },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -11946,7 +12016,7 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_EO },
+         { "0", OPTION_VAL_0_O4_EO },
          { "10", OPTION_VAL_10_EO },
          { "20", OPTION_VAL_20_EO },
          { "30", OPTION_VAL_30_EO },
@@ -11969,7 +12039,7 @@ struct retro_core_option_v2_definition option_defs_eo[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_EO },
+         { "0", OPTION_VAL_0_O4_EO },
          { "10", OPTION_VAL_10_EO },
          { "20", OPTION_VAL_20_EO },
          { "30", OPTION_VAL_30_EO },
@@ -12544,13 +12614,16 @@ struct retro_core_options_v2 options_eo = {
 #define BSNES_ASPECT_RATIO_LABEL_ES "Relación de aspecto preferida"
 #define BSNES_ASPECT_RATIO_INFO_0_ES "Selecciona la relación de aspecto del contenido. Esta opción solo surtirá efecto cuando la relación de aspecto de RetroArch, en el apartado de ajustes de Vídeo, esté configurada como «Asignada por el núcleo»."
 #define OPTION_VAL_AUTO_ES "Selección automática"
-#define OPTION_VAL_8_7_ES "Píxeles perfectos"
-#define OPTION_VAL_4_3_ES NULL
+#define OPTION_VAL_1_1_ES "PAR 1:1 (píxeles perfectos)"
+#define OPTION_VAL_4_3_ES "DAR 4:3"
 #define OPTION_VAL_NTSC_ES NULL
 #define OPTION_VAL_PAL_ES NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_ES "Recortar sobrebarrido"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_ES "Elimina los bordes superior e inferior de la pantalla, que normalmente no son utilizados por los juegos y son ocultados por el marco de un televisor de definición estándar."
-#define OPTION_VAL_OFF_ES "8 píxeles"
+#define BSNES_PPU_OVERSCAN_V_LABEL_ES "Recortar sobrebarrido vertical"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_ES "Elimina una cantidad concreta de líneas en las partes superior e inferior de la pantalla para simular el marco de un televisor usado en la época de SNES."
+#define OPTION_VAL_0_ES "0 líneas"
+#define OPTION_VAL_8_ES "8 líneas"
+#define OPTION_VAL_12_ES "12 líneas"
+#define OPTION_VAL_16_ES "16 líneas"
 #define BSNES_BLUR_EMULATION_LABEL_ES "Emular difuminado"
 #define BSNES_BLUR_EMULATION_INFO_0_ES "Simula la limitación de la resolución horizontal de un televisor SD difuminando los píxeles que sean adyacentes horizontalmente. Algunos juegos necesitan este efecto para simular un efecto de transparencia."
 #define BSNES_VIDEO_FILTER_LABEL_ES "Filtro"
@@ -12562,7 +12635,7 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_NTSC_RGB_ES NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_ES "Ajuste de color: luminosidad"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_ES "Ajustar luminosidad"
-#define OPTION_VAL_0_ES "0 %"
+#define OPTION_VAL_0_O4_ES "0 %"
 #define OPTION_VAL_10_ES "10 %"
 #define OPTION_VAL_20_ES "20 %"
 #define OPTION_VAL_30_ES "30 %"
@@ -12722,7 +12795,7 @@ struct retro_core_options_v2 options_eo = {
 #define OPTION_VAL_SGB1_SFC_ES NULL
 #define OPTION_VAL_SGB2_SFC_ES NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_ES "Ocultar borde del Super Game Boy"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_ES "Oculta el borde mientras se ejecuten juegos para Super Game Boy. Esta opción solo funcionará si «Recortar sobrebarrido» también está activada."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_ES "Oculta el borde al ejecutar juegos con Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_ES "Usar la pantalla táctil como pistola de luz"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_ES "Permite utilizar los dispositivos táctiles como método de entrada del Super Scope."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_ES "Invertir gatillos del Super Scope"
@@ -12777,7 +12850,7 @@ struct retro_core_option_v2_definition option_defs_es[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_ES },
-         { "8:7",  OPTION_VAL_8_7_ES },
+         { "1:1",  OPTION_VAL_1_1_ES },
          { "4:3",  OPTION_VAL_4_3_ES },
          { "NTSC", OPTION_VAL_NTSC_ES },
          { "PAL",  OPTION_VAL_PAL_ES },
@@ -12786,18 +12859,20 @@ struct retro_core_option_v2_definition option_defs_es[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_ES,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_ES,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_ES,
+      BSNES_PPU_OVERSCAN_V_INFO_0_ES,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_ES },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_ES },
+         { "8",  OPTION_VAL_8_ES },
+         { "12", OPTION_VAL_12_ES },
+         { "16", OPTION_VAL_16_ES },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -12838,7 +12913,7 @@ struct retro_core_option_v2_definition option_defs_es[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_ES },
+         { "0", OPTION_VAL_0_O4_ES },
          { "10", OPTION_VAL_10_ES },
          { "20", OPTION_VAL_20_ES },
          { "30", OPTION_VAL_30_ES },
@@ -12861,7 +12936,7 @@ struct retro_core_option_v2_definition option_defs_es[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_ES },
+         { "0", OPTION_VAL_0_O4_ES },
          { "10", OPTION_VAL_10_ES },
          { "20", OPTION_VAL_20_ES },
          { "30", OPTION_VAL_30_ES },
@@ -13436,13 +13511,16 @@ struct retro_core_options_v2 options_es = {
 #define BSNES_ASPECT_RATIO_LABEL_FA NULL
 #define BSNES_ASPECT_RATIO_INFO_0_FA NULL
 #define OPTION_VAL_AUTO_FA "خودکار"
-#define OPTION_VAL_8_7_FA NULL
+#define OPTION_VAL_1_1_FA NULL
 #define OPTION_VAL_4_3_FA NULL
 #define OPTION_VAL_NTSC_FA NULL
 #define OPTION_VAL_PAL_FA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_FA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_FA NULL
-#define OPTION_VAL_OFF_FA NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_FA NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_FA NULL
+#define OPTION_VAL_0_FA NULL
+#define OPTION_VAL_8_FA NULL
+#define OPTION_VAL_12_FA NULL
+#define OPTION_VAL_16_FA NULL
 #define BSNES_BLUR_EMULATION_LABEL_FA NULL
 #define BSNES_BLUR_EMULATION_INFO_0_FA NULL
 #define BSNES_VIDEO_FILTER_LABEL_FA "فیلتر"
@@ -13454,7 +13532,7 @@ struct retro_core_options_v2 options_es = {
 #define OPTION_VAL_NTSC_RGB_FA NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_FA NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_FA NULL
-#define OPTION_VAL_0_FA NULL
+#define OPTION_VAL_0_O4_FA NULL
 #define OPTION_VAL_10_FA NULL
 #define OPTION_VAL_20_FA NULL
 #define OPTION_VAL_30_FA NULL
@@ -13669,7 +13747,7 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_FA },
-         { "8:7",  OPTION_VAL_8_7_FA },
+         { "1:1",  OPTION_VAL_1_1_FA },
          { "4:3",  OPTION_VAL_4_3_FA },
          { "NTSC", OPTION_VAL_NTSC_FA },
          { "PAL",  OPTION_VAL_PAL_FA },
@@ -13678,18 +13756,20 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_FA,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_FA,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_FA,
+      BSNES_PPU_OVERSCAN_V_INFO_0_FA,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_FA },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_FA },
+         { "8",  OPTION_VAL_8_FA },
+         { "12", OPTION_VAL_12_FA },
+         { "16", OPTION_VAL_16_FA },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -13730,7 +13810,7 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_FA },
+         { "0", OPTION_VAL_0_O4_FA },
          { "10", OPTION_VAL_10_FA },
          { "20", OPTION_VAL_20_FA },
          { "30", OPTION_VAL_30_FA },
@@ -13753,7 +13833,7 @@ struct retro_core_option_v2_definition option_defs_fa[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_FA },
+         { "0", OPTION_VAL_0_O4_FA },
          { "10", OPTION_VAL_10_FA },
          { "20", OPTION_VAL_20_FA },
          { "30", OPTION_VAL_30_FA },
@@ -14328,13 +14408,16 @@ struct retro_core_options_v2 options_fa = {
 #define BSNES_ASPECT_RATIO_LABEL_FI "Ensisijainen kuvasuhde"
 #define BSNES_ASPECT_RATIO_INFO_0_FI NULL
 #define OPTION_VAL_AUTO_FI "Automaattinen"
-#define OPTION_VAL_8_7_FI NULL
+#define OPTION_VAL_1_1_FI NULL
 #define OPTION_VAL_4_3_FI NULL
 #define OPTION_VAL_NTSC_FI NULL
 #define OPTION_VAL_PAL_FI NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_FI NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_FI NULL
-#define OPTION_VAL_OFF_FI "8 pikseliä"
+#define BSNES_PPU_OVERSCAN_V_LABEL_FI NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_FI NULL
+#define OPTION_VAL_0_FI NULL
+#define OPTION_VAL_8_FI NULL
+#define OPTION_VAL_12_FI NULL
+#define OPTION_VAL_16_FI NULL
 #define BSNES_BLUR_EMULATION_LABEL_FI NULL
 #define BSNES_BLUR_EMULATION_INFO_0_FI NULL
 #define BSNES_VIDEO_FILTER_LABEL_FI "Suodatin"
@@ -14346,7 +14429,7 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_NTSC_RGB_FI NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_FI NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_FI NULL
-#define OPTION_VAL_0_FI "0 %"
+#define OPTION_VAL_0_O4_FI "0 %"
 #define OPTION_VAL_10_FI "10 %"
 #define OPTION_VAL_20_FI "20 %"
 #define OPTION_VAL_30_FI "30 %"
@@ -14561,7 +14644,7 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_FI },
-         { "8:7",  OPTION_VAL_8_7_FI },
+         { "1:1",  OPTION_VAL_1_1_FI },
          { "4:3",  OPTION_VAL_4_3_FI },
          { "NTSC", OPTION_VAL_NTSC_FI },
          { "PAL",  OPTION_VAL_PAL_FI },
@@ -14570,18 +14653,20 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_FI,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_FI,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_FI,
+      BSNES_PPU_OVERSCAN_V_INFO_0_FI,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_FI },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_FI },
+         { "8",  OPTION_VAL_8_FI },
+         { "12", OPTION_VAL_12_FI },
+         { "16", OPTION_VAL_16_FI },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -14622,7 +14707,7 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_FI },
+         { "0", OPTION_VAL_0_O4_FI },
          { "10", OPTION_VAL_10_FI },
          { "20", OPTION_VAL_20_FI },
          { "30", OPTION_VAL_30_FI },
@@ -14645,7 +14730,7 @@ struct retro_core_option_v2_definition option_defs_fi[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_FI },
+         { "0", OPTION_VAL_0_O4_FI },
          { "10", OPTION_VAL_10_FI },
          { "20", OPTION_VAL_20_FI },
          { "30", OPTION_VAL_30_FI },
@@ -15220,13 +15305,16 @@ struct retro_core_options_v2 options_fi = {
 #define BSNES_ASPECT_RATIO_LABEL_FR "Rapport d'aspect préféré"
 #define BSNES_ASPECT_RATIO_INFO_0_FR "Choisir le rapport d'aspect préféré pour le contenu. Cela ne s'applique que lorsque le rapport d'aspect de RetroArch est réglé sur 'Fourni par le cœur' (Core provided) dans les paramètres vidéo."
 #define OPTION_VAL_AUTO_FR NULL
-#define OPTION_VAL_8_7_FR "Pixels parfaits à l'échelle"
-#define OPTION_VAL_4_3_FR NULL
+#define OPTION_VAL_1_1_FR "PAR 1:1 (Pixels entiers)"
+#define OPTION_VAL_4_3_FR "4:3 DAR (Rapport d'aspect écran)"
 #define OPTION_VAL_NTSC_FR NULL
 #define OPTION_VAL_PAL_FR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_FR "Recadrage du surbalayage"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_FR "Supprimer les bordures en haut et en bas de l'écran, généralement inutilisées par les jeux et cachées par le biseau autour du bord d'une télévision définition standard."
-#define OPTION_VAL_OFF_FR "8 pixels"
+#define BSNES_PPU_OVERSCAN_V_LABEL_FR "Recadrer le surbalayage vertical"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_FR "Supprimer N lignes du haut et du bas de l'écran pour simuler le biseau d'une télévision de l'ère SNES."
+#define OPTION_VAL_0_FR "0 lignes"
+#define OPTION_VAL_8_FR "8 lignes"
+#define OPTION_VAL_12_FR "12 lignes"
+#define OPTION_VAL_16_FR "16 lignes"
 #define BSNES_BLUR_EMULATION_LABEL_FR "Émulation du flou"
 #define BSNES_BLUR_EMULATION_INFO_0_FR "Simuler la résolution horizontale limitée des télévisions définition SD en floutant les pixels horizontalement adjacents. Certains jeux dépendent de cela pour émuler un effet de transparence."
 #define BSNES_VIDEO_FILTER_LABEL_FR "Filtre"
@@ -15238,7 +15326,7 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_NTSC_RGB_FR "NTSC (RVB)"
 #define BSNES_VIDEO_LUMINANCE_LABEL_FR "Ajustement couleur - Luminance"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_FR "Ajuste la luminance"
-#define OPTION_VAL_0_FR "0 %"
+#define OPTION_VAL_0_O4_FR "0 %"
 #define OPTION_VAL_10_FR NULL
 #define OPTION_VAL_20_FR NULL
 #define OPTION_VAL_30_FR NULL
@@ -15398,7 +15486,7 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_SGB1_SFC_FR NULL
 #define OPTION_VAL_SGB2_SFC_FR NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_FR "Masquer la bordure du SGB"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_FR "Masquer la bordure lorsque vous jouez à des jeux de Super Game Boy. Ne fonctionne que lorsque le 'Recadrage du surbalayage' est activé."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_FR "Masquer la bordure lorsque vous jouez à des jeux Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_FR "Pistolet écran tactile"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_FR "Activer l'entrée du Super Scope pour les appareils à écran tactile."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_FR "Inverser les touches de tir du Super Scope"
@@ -15453,7 +15541,7 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_FR },
-         { "8:7",  OPTION_VAL_8_7_FR },
+         { "1:1",  OPTION_VAL_1_1_FR },
          { "4:3",  OPTION_VAL_4_3_FR },
          { "NTSC", OPTION_VAL_NTSC_FR },
          { "PAL",  OPTION_VAL_PAL_FR },
@@ -15462,18 +15550,20 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_FR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_FR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_FR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_FR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_FR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_FR },
+         { "8",  OPTION_VAL_8_FR },
+         { "12", OPTION_VAL_12_FR },
+         { "16", OPTION_VAL_16_FR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -15514,7 +15604,7 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_FR },
+         { "0", OPTION_VAL_0_O4_FR },
          { "10", OPTION_VAL_10_FR },
          { "20", OPTION_VAL_20_FR },
          { "30", OPTION_VAL_30_FR },
@@ -15537,7 +15627,7 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_FR },
+         { "0", OPTION_VAL_0_O4_FR },
          { "10", OPTION_VAL_10_FR },
          { "20", OPTION_VAL_20_FR },
          { "30", OPTION_VAL_30_FR },
@@ -16112,13 +16202,16 @@ struct retro_core_options_v2 options_fr = {
 #define BSNES_ASPECT_RATIO_LABEL_GL "Relación de aspecto preferida"
 #define BSNES_ASPECT_RATIO_INFO_0_GL "Escolla a relación de aspecto do contido preferida. Isto só se aplicará cando a relación de aspecto de RetroArch estea definida como \"Núcleo proporcionado\" na configuración de vídeo."
 #define OPTION_VAL_AUTO_GL NULL
-#define OPTION_VAL_8_7_GL NULL
+#define OPTION_VAL_1_1_GL NULL
 #define OPTION_VAL_4_3_GL NULL
 #define OPTION_VAL_NTSC_GL NULL
 #define OPTION_VAL_PAL_GL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_GL "Recortar Overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_GL "Elimina os bordos da parte superior e inferior da pantalla, normalmente non utilizados polos xogos e ocultos polo bisel dun televisor de definición estándar."
-#define OPTION_VAL_OFF_GL "8 píxels"
+#define BSNES_PPU_OVERSCAN_V_LABEL_GL "Recortar Overscan vertical"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_GL NULL
+#define OPTION_VAL_0_GL NULL
+#define OPTION_VAL_8_GL NULL
+#define OPTION_VAL_12_GL NULL
+#define OPTION_VAL_16_GL NULL
 #define BSNES_BLUR_EMULATION_LABEL_GL "Emulación de desenfoque"
 #define BSNES_BLUR_EMULATION_INFO_0_GL "Simula a resolución horizontal limitada dos SDTV difuminando os píxeles adxacentes horizontalmente. Algúns xogos dependen diso para emular un efecto de transparencia."
 #define BSNES_VIDEO_FILTER_LABEL_GL "Filtro"
@@ -16130,7 +16223,7 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_NTSC_RGB_GL NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_GL "Axuste de Cor - Luminancia"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_GL "Axustar a Luminancia"
-#define OPTION_VAL_0_GL NULL
+#define OPTION_VAL_0_O4_GL NULL
 #define OPTION_VAL_10_GL NULL
 #define OPTION_VAL_20_GL NULL
 #define OPTION_VAL_30_GL NULL
@@ -16290,7 +16383,7 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_SGB1_SFC_GL NULL
 #define OPTION_VAL_SGB2_SFC_GL NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_GL "Ocultar o bordo SGB"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_GL "Oculta o bordo cando xogas a xogos de Super Game Boy. Só funciona cando está activado \"Recortar sobreescaneo\"."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_GL NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_GL "Pistola de luz con pantalla táctil"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_GL "Activa a entrada de Super Scope para dispositivos con pantalla táctil."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_GL "Botóns de disparo inverso de Super Scope"
@@ -16345,7 +16438,7 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_GL },
-         { "8:7",  OPTION_VAL_8_7_GL },
+         { "1:1",  OPTION_VAL_1_1_GL },
          { "4:3",  OPTION_VAL_4_3_GL },
          { "NTSC", OPTION_VAL_NTSC_GL },
          { "PAL",  OPTION_VAL_PAL_GL },
@@ -16354,18 +16447,20 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_GL,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_GL,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_GL,
+      BSNES_PPU_OVERSCAN_V_INFO_0_GL,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_GL },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_GL },
+         { "8",  OPTION_VAL_8_GL },
+         { "12", OPTION_VAL_12_GL },
+         { "16", OPTION_VAL_16_GL },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -16406,7 +16501,7 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_GL },
+         { "0", OPTION_VAL_0_O4_GL },
          { "10", OPTION_VAL_10_GL },
          { "20", OPTION_VAL_20_GL },
          { "30", OPTION_VAL_30_GL },
@@ -16429,7 +16524,7 @@ struct retro_core_option_v2_definition option_defs_gl[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_GL },
+         { "0", OPTION_VAL_0_O4_GL },
          { "10", OPTION_VAL_10_GL },
          { "20", OPTION_VAL_20_GL },
          { "30", OPTION_VAL_30_GL },
@@ -17004,13 +17099,16 @@ struct retro_core_options_v2 options_gl = {
 #define BSNES_ASPECT_RATIO_LABEL_HE NULL
 #define BSNES_ASPECT_RATIO_INFO_0_HE NULL
 #define OPTION_VAL_AUTO_HE NULL
-#define OPTION_VAL_8_7_HE NULL
+#define OPTION_VAL_1_1_HE NULL
 #define OPTION_VAL_4_3_HE NULL
 #define OPTION_VAL_NTSC_HE NULL
 #define OPTION_VAL_PAL_HE NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_HE NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_HE NULL
-#define OPTION_VAL_OFF_HE NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_HE NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_HE NULL
+#define OPTION_VAL_0_HE NULL
+#define OPTION_VAL_8_HE NULL
+#define OPTION_VAL_12_HE NULL
+#define OPTION_VAL_16_HE NULL
 #define BSNES_BLUR_EMULATION_LABEL_HE NULL
 #define BSNES_BLUR_EMULATION_INFO_0_HE NULL
 #define BSNES_VIDEO_FILTER_LABEL_HE NULL
@@ -17022,7 +17120,7 @@ struct retro_core_options_v2 options_gl = {
 #define OPTION_VAL_NTSC_RGB_HE NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_HE NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_HE NULL
-#define OPTION_VAL_0_HE NULL
+#define OPTION_VAL_0_O4_HE NULL
 #define OPTION_VAL_10_HE NULL
 #define OPTION_VAL_20_HE NULL
 #define OPTION_VAL_30_HE NULL
@@ -17237,7 +17335,7 @@ struct retro_core_option_v2_definition option_defs_he[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_HE },
-         { "8:7",  OPTION_VAL_8_7_HE },
+         { "1:1",  OPTION_VAL_1_1_HE },
          { "4:3",  OPTION_VAL_4_3_HE },
          { "NTSC", OPTION_VAL_NTSC_HE },
          { "PAL",  OPTION_VAL_PAL_HE },
@@ -17246,18 +17344,20 @@ struct retro_core_option_v2_definition option_defs_he[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_HE,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_HE,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_HE,
+      BSNES_PPU_OVERSCAN_V_INFO_0_HE,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_HE },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_HE },
+         { "8",  OPTION_VAL_8_HE },
+         { "12", OPTION_VAL_12_HE },
+         { "16", OPTION_VAL_16_HE },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -17298,7 +17398,7 @@ struct retro_core_option_v2_definition option_defs_he[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_HE },
+         { "0", OPTION_VAL_0_O4_HE },
          { "10", OPTION_VAL_10_HE },
          { "20", OPTION_VAL_20_HE },
          { "30", OPTION_VAL_30_HE },
@@ -17321,7 +17421,7 @@ struct retro_core_option_v2_definition option_defs_he[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_HE },
+         { "0", OPTION_VAL_0_O4_HE },
          { "10", OPTION_VAL_10_HE },
          { "20", OPTION_VAL_20_HE },
          { "30", OPTION_VAL_30_HE },
@@ -17896,13 +17996,16 @@ struct retro_core_options_v2 options_he = {
 #define BSNES_ASPECT_RATIO_LABEL_HR NULL
 #define BSNES_ASPECT_RATIO_INFO_0_HR NULL
 #define OPTION_VAL_AUTO_HR NULL
-#define OPTION_VAL_8_7_HR NULL
+#define OPTION_VAL_1_1_HR NULL
 #define OPTION_VAL_4_3_HR NULL
 #define OPTION_VAL_NTSC_HR NULL
 #define OPTION_VAL_PAL_HR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_HR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_HR NULL
-#define OPTION_VAL_OFF_HR "8 piksela"
+#define BSNES_PPU_OVERSCAN_V_LABEL_HR NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_HR NULL
+#define OPTION_VAL_0_HR NULL
+#define OPTION_VAL_8_HR NULL
+#define OPTION_VAL_12_HR NULL
+#define OPTION_VAL_16_HR NULL
 #define BSNES_BLUR_EMULATION_LABEL_HR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_HR NULL
 #define BSNES_VIDEO_FILTER_LABEL_HR NULL
@@ -17914,7 +18017,7 @@ struct retro_core_options_v2 options_he = {
 #define OPTION_VAL_NTSC_RGB_HR NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_HR NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_HR NULL
-#define OPTION_VAL_0_HR NULL
+#define OPTION_VAL_0_O4_HR NULL
 #define OPTION_VAL_10_HR NULL
 #define OPTION_VAL_20_HR NULL
 #define OPTION_VAL_30_HR NULL
@@ -18129,7 +18232,7 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_HR },
-         { "8:7",  OPTION_VAL_8_7_HR },
+         { "1:1",  OPTION_VAL_1_1_HR },
          { "4:3",  OPTION_VAL_4_3_HR },
          { "NTSC", OPTION_VAL_NTSC_HR },
          { "PAL",  OPTION_VAL_PAL_HR },
@@ -18138,18 +18241,20 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_HR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_HR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_HR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_HR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_HR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_HR },
+         { "8",  OPTION_VAL_8_HR },
+         { "12", OPTION_VAL_12_HR },
+         { "16", OPTION_VAL_16_HR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -18190,7 +18295,7 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_HR },
+         { "0", OPTION_VAL_0_O4_HR },
          { "10", OPTION_VAL_10_HR },
          { "20", OPTION_VAL_20_HR },
          { "30", OPTION_VAL_30_HR },
@@ -18213,7 +18318,7 @@ struct retro_core_option_v2_definition option_defs_hr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_HR },
+         { "0", OPTION_VAL_0_O4_HR },
          { "10", OPTION_VAL_10_HR },
          { "20", OPTION_VAL_20_HR },
          { "30", OPTION_VAL_30_HR },
@@ -18788,13 +18893,16 @@ struct retro_core_options_v2 options_hr = {
 #define BSNES_ASPECT_RATIO_LABEL_HU "Kívánt képarány"
 #define BSNES_ASPECT_RATIO_INFO_0_HU "A tartalom kívánt képaránya. Csak akkor lép életbe, ha a RetroArch saját képarány beállítása \"Mag által meghatározott\" értékre van állítva a kép beállításainál."
 #define OPTION_VAL_AUTO_HU "Automatikus"
-#define OPTION_VAL_8_7_HU NULL
+#define OPTION_VAL_1_1_HU NULL
 #define OPTION_VAL_4_3_HU NULL
 #define OPTION_VAL_NTSC_HU NULL
 #define OPTION_VAL_PAL_HU NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_HU "Overscan levágása"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_HU "A képernyő alsó és felső keretének eltávolítása. Ezt játékok rendszerint nem használják és egy standard felbontású tévékészülék kávája eltakarja."
-#define OPTION_VAL_OFF_HU "8 pixel"
+#define BSNES_PPU_OVERSCAN_V_LABEL_HU "Függőleges overscan levágása"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_HU NULL
+#define OPTION_VAL_0_HU NULL
+#define OPTION_VAL_8_HU NULL
+#define OPTION_VAL_12_HU NULL
+#define OPTION_VAL_16_HU NULL
 #define BSNES_BLUR_EMULATION_LABEL_HU "Elmosás emulálása"
 #define BSNES_BLUR_EMULATION_INFO_0_HU "Az SDTV korlátozott vízszintes felbontásának szimulálása a vízszintesen szomszédos képpontok összemosásával. Néhány játék hagyatkozik erre átlátszósági effektek céljából."
 #define BSNES_VIDEO_FILTER_LABEL_HU "Szűrő"
@@ -18806,7 +18914,7 @@ struct retro_core_options_v2 options_hr = {
 #define OPTION_VAL_NTSC_RGB_HU NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_HU "Színbeállítás - Fényerő"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_HU "Fényerő beállítása"
-#define OPTION_VAL_0_HU NULL
+#define OPTION_VAL_0_O4_HU NULL
 #define OPTION_VAL_10_HU NULL
 #define OPTION_VAL_20_HU NULL
 #define OPTION_VAL_30_HU NULL
@@ -18966,7 +19074,7 @@ struct retro_core_options_v2 options_hr = {
 #define OPTION_VAL_SGB1_SFC_HU NULL
 #define OPTION_VAL_SGB2_SFC_HU NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_HU "SGB keret elrejtése"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_HU "A keret elrejtése Super Game Boy játékoknál. Csak az overscan levágásával együtt működik."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_HU NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_HU "Érintőképernyős fénypisztoly"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_HU "A Super Scope bemenet engedélyezése érintőképernyős eszközökön."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_HU "Super Scope ravaszgombok megfordítása"
@@ -19021,7 +19129,7 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_HU },
-         { "8:7",  OPTION_VAL_8_7_HU },
+         { "1:1",  OPTION_VAL_1_1_HU },
          { "4:3",  OPTION_VAL_4_3_HU },
          { "NTSC", OPTION_VAL_NTSC_HU },
          { "PAL",  OPTION_VAL_PAL_HU },
@@ -19030,18 +19138,20 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_HU,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_HU,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_HU,
+      BSNES_PPU_OVERSCAN_V_INFO_0_HU,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_HU },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_HU },
+         { "8",  OPTION_VAL_8_HU },
+         { "12", OPTION_VAL_12_HU },
+         { "16", OPTION_VAL_16_HU },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -19082,7 +19192,7 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_HU },
+         { "0", OPTION_VAL_0_O4_HU },
          { "10", OPTION_VAL_10_HU },
          { "20", OPTION_VAL_20_HU },
          { "30", OPTION_VAL_30_HU },
@@ -19105,7 +19215,7 @@ struct retro_core_option_v2_definition option_defs_hu[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_HU },
+         { "0", OPTION_VAL_0_O4_HU },
          { "10", OPTION_VAL_10_HU },
          { "20", OPTION_VAL_20_HU },
          { "30", OPTION_VAL_30_HU },
@@ -19680,13 +19790,16 @@ struct retro_core_options_v2 options_hu = {
 #define BSNES_ASPECT_RATIO_LABEL_ID NULL
 #define BSNES_ASPECT_RATIO_INFO_0_ID NULL
 #define OPTION_VAL_AUTO_ID "Otomatis"
-#define OPTION_VAL_8_7_ID NULL
+#define OPTION_VAL_1_1_ID "1:1 PAR (Piksel Sempurna)"
 #define OPTION_VAL_4_3_ID NULL
 #define OPTION_VAL_NTSC_ID NULL
 #define OPTION_VAL_PAL_ID NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_ID NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_ID NULL
-#define OPTION_VAL_OFF_ID NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_ID "Pangkas Lebihan Pindai Menegak"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_ID NULL
+#define OPTION_VAL_0_ID "0 Garis"
+#define OPTION_VAL_8_ID "8 Garis"
+#define OPTION_VAL_12_ID "12 Garis"
+#define OPTION_VAL_16_ID "16 Garis"
 #define BSNES_BLUR_EMULATION_LABEL_ID NULL
 #define BSNES_BLUR_EMULATION_INFO_0_ID NULL
 #define BSNES_VIDEO_FILTER_LABEL_ID NULL
@@ -19698,7 +19811,7 @@ struct retro_core_options_v2 options_hu = {
 #define OPTION_VAL_NTSC_RGB_ID NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_ID "Penyesuaian Warna - Serian"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_ID "Sesuaikan Serian"
-#define OPTION_VAL_0_ID NULL
+#define OPTION_VAL_0_O4_ID NULL
 #define OPTION_VAL_10_ID NULL
 #define OPTION_VAL_20_ID NULL
 #define OPTION_VAL_30_ID NULL
@@ -19758,7 +19871,7 @@ struct retro_core_options_v2 options_hu = {
 #define OPTION_VAL_7X_ID NULL
 #define OPTION_VAL_8X_ID NULL
 #define BSNES_MODE7_PERSPECTIVE_LABEL_ID NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_ID NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_ID "Betulkan Perspektif"
 #define BSNES_MODE7_PERSPECTIVE_INFO_0_ID NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_ID NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_ID NULL
@@ -19913,7 +20026,7 @@ struct retro_core_option_v2_definition option_defs_id[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_ID },
-         { "8:7",  OPTION_VAL_8_7_ID },
+         { "1:1",  OPTION_VAL_1_1_ID },
          { "4:3",  OPTION_VAL_4_3_ID },
          { "NTSC", OPTION_VAL_NTSC_ID },
          { "PAL",  OPTION_VAL_PAL_ID },
@@ -19922,18 +20035,20 @@ struct retro_core_option_v2_definition option_defs_id[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_ID,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_ID,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_ID,
+      BSNES_PPU_OVERSCAN_V_INFO_0_ID,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_ID },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_ID },
+         { "8",  OPTION_VAL_8_ID },
+         { "12", OPTION_VAL_12_ID },
+         { "16", OPTION_VAL_16_ID },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -19974,7 +20089,7 @@ struct retro_core_option_v2_definition option_defs_id[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_ID },
+         { "0", OPTION_VAL_0_O4_ID },
          { "10", OPTION_VAL_10_ID },
          { "20", OPTION_VAL_20_ID },
          { "30", OPTION_VAL_30_ID },
@@ -19997,7 +20112,7 @@ struct retro_core_option_v2_definition option_defs_id[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_ID },
+         { "0", OPTION_VAL_0_O4_ID },
          { "10", OPTION_VAL_10_ID },
          { "20", OPTION_VAL_20_ID },
          { "30", OPTION_VAL_30_ID },
@@ -20572,13 +20687,16 @@ struct retro_core_options_v2 options_id = {
 #define BSNES_ASPECT_RATIO_LABEL_IT "Rapporto D'Aspetto (Aspect Ratio)"
 #define BSNES_ASPECT_RATIO_INFO_0_IT "Definisce la proporzione scelta per il rapporto d'aspetto. Questo valore viene applicato correttamente solo se il rapporto d'aspetto nelle Impostazioni Video di RetroArch è configurato su 'Fornito dal Core'."
 #define OPTION_VAL_AUTO_IT "Automatico"
-#define OPTION_VAL_8_7_IT "8:7"
+#define OPTION_VAL_1_1_IT NULL
 #define OPTION_VAL_4_3_IT NULL
 #define OPTION_VAL_NTSC_IT NULL
 #define OPTION_VAL_PAL_IT NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_IT "Taglia Bordi dell'Overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_IT "Rimuove i bordi dell'immagine in alto e in basso, zona che nei giochi è tipicamente inutilizzata e viene nascosta dalle cornici dei televisori a definizione standard."
-#define OPTION_VAL_OFF_IT "8 Pixel"
+#define BSNES_PPU_OVERSCAN_V_LABEL_IT "Ritaglia Overscan Verticale"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_IT "Rimuovere N linee dalla parte superiore e inferiore dello schermo per simulare la lunetta di un televisore dell'era SNES."
+#define OPTION_VAL_0_IT "0 Linee"
+#define OPTION_VAL_8_IT "8 Linee"
+#define OPTION_VAL_12_IT "12 Linee"
+#define OPTION_VAL_16_IT "16 Linee"
 #define BSNES_BLUR_EMULATION_LABEL_IT "Emulazione della Sfocatura"
 #define BSNES_BLUR_EMULATION_INFO_0_IT "Simula la risoluzione orizzontale limitata dei televisori a definizione standard, sfumando i pixel adiacenti. Alcuni giochi dipendono da questa opzione per poter riprodurre un effetto trasparenza."
 #define BSNES_VIDEO_FILTER_LABEL_IT "Filtra"
@@ -20590,7 +20708,7 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_NTSC_RGB_IT NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_IT "Regolazione Colore - Luminanza"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_IT "Regola Luminanza"
-#define OPTION_VAL_0_IT NULL
+#define OPTION_VAL_0_O4_IT NULL
 #define OPTION_VAL_10_IT NULL
 #define OPTION_VAL_20_IT NULL
 #define OPTION_VAL_30_IT NULL
@@ -20750,7 +20868,7 @@ struct retro_core_options_v2 options_id = {
 #define OPTION_VAL_SGB1_SFC_IT NULL
 #define OPTION_VAL_SGB2_SFC_IT NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_IT "Nascondi Bordo SGB"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_IT "Nascondi il bordo durante la riproduzione di giochi Super Game Boy. Funziona solo quando 'Crop Overscan' è abilitato."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_IT "Nascondi il bordo durante la riproduzione dei giochi Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_IT "Emulazione Pistola su Touchscreen"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_IT "Consente il controllo della pistola Super Scope per dispositivi muniti di touchscreen."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_IT "Inverti Pulsanti di Grilletto e Cursore per la Pistola"
@@ -20805,7 +20923,7 @@ struct retro_core_option_v2_definition option_defs_it[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_IT },
-         { "8:7",  OPTION_VAL_8_7_IT },
+         { "1:1",  OPTION_VAL_1_1_IT },
          { "4:3",  OPTION_VAL_4_3_IT },
          { "NTSC", OPTION_VAL_NTSC_IT },
          { "PAL",  OPTION_VAL_PAL_IT },
@@ -20814,18 +20932,20 @@ struct retro_core_option_v2_definition option_defs_it[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_IT,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_IT,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_IT,
+      BSNES_PPU_OVERSCAN_V_INFO_0_IT,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_IT },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_IT },
+         { "8",  OPTION_VAL_8_IT },
+         { "12", OPTION_VAL_12_IT },
+         { "16", OPTION_VAL_16_IT },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -20866,7 +20986,7 @@ struct retro_core_option_v2_definition option_defs_it[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_IT },
+         { "0", OPTION_VAL_0_O4_IT },
          { "10", OPTION_VAL_10_IT },
          { "20", OPTION_VAL_20_IT },
          { "30", OPTION_VAL_30_IT },
@@ -20889,7 +21009,7 @@ struct retro_core_option_v2_definition option_defs_it[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_IT },
+         { "0", OPTION_VAL_0_O4_IT },
          { "10", OPTION_VAL_10_IT },
          { "20", OPTION_VAL_20_IT },
          { "30", OPTION_VAL_30_IT },
@@ -21464,13 +21584,16 @@ struct retro_core_options_v2 options_it = {
 #define BSNES_ASPECT_RATIO_LABEL_JA "優先アスペクト比"
 #define BSNES_ASPECT_RATIO_INFO_0_JA "コンテンツの優先アスペクト比を選択します。RetroArch のアスペクト比がビデオ設定で [コア提供] に設定されている場合にのみ適用されます。"
 #define OPTION_VAL_AUTO_JA "自動"
-#define OPTION_VAL_8_7_JA "ピクセルパーフェクト"
+#define OPTION_VAL_1_1_JA "1:1 PAR (ピクセルパーフェクト)"
 #define OPTION_VAL_4_3_JA NULL
 #define OPTION_VAL_NTSC_JA NULL
 #define OPTION_VAL_PAL_JA NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_JA "オーバースキャンをトリミング"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_JA "標準画質テレビのベゼルで隠された、ゲームでは通常使用されることのない画面上下の外枠を削除します。"
-#define OPTION_VAL_OFF_JA "8 ピクセル"
+#define BSNES_PPU_OVERSCAN_V_LABEL_JA "垂直オーバースキャンをトリミング"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_JA "スーパーファミコン時代のテレビを再現するために、画面の上下から指定した行数を削除します。"
+#define OPTION_VAL_0_JA "0 行"
+#define OPTION_VAL_8_JA "8 行"
+#define OPTION_VAL_12_JA "12 行"
+#define OPTION_VAL_16_JA "16 行"
 #define BSNES_BLUR_EMULATION_LABEL_JA "ぼかしエミュレーション"
 #define BSNES_BLUR_EMULATION_INFO_0_JA "水平方向に隣接するピクセルをぼかすことで、標準画質テレビの限られた水平解像度をシミュレートします。ゲームによっては、透明効果をエミュレートするためにこのオプションを有効にする必要があります。"
 #define BSNES_VIDEO_FILTER_LABEL_JA "フィルター"
@@ -21482,7 +21605,7 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_NTSC_RGB_JA NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_JA "色補正 - 輝度"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_JA "輝度を調整します。"
-#define OPTION_VAL_0_JA NULL
+#define OPTION_VAL_0_O4_JA NULL
 #define OPTION_VAL_10_JA NULL
 #define OPTION_VAL_20_JA NULL
 #define OPTION_VAL_30_JA NULL
@@ -21642,7 +21765,7 @@ struct retro_core_options_v2 options_it = {
 #define OPTION_VAL_SGB1_SFC_JA "スーパーゲームボーイ (SGB1.sfc)"
 #define OPTION_VAL_SGB2_SFC_JA "スーパーゲームボーイ 2 (SGB2.sfc)"
 #define BSNES_HIDE_SGB_BORDER_LABEL_JA "SGB 外枠を隠す"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_JA "スーパーゲームボーイゲームをプレイ中に外枠を非表示にします。[オーバースキャンをトリミング] が有効化されている場合にのみ動作します。"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_JA "スーパーゲームボーイ対応ゲームをプレイする際に外枠を非表示にします。"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_JA "タッチスクリーンライトガン"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_JA "タッチスクリーンデバイスでスーパースコープ入力を有効にします。"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_JA "スーパースコープのトリガーボタンを反転"
@@ -21697,7 +21820,7 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_JA },
-         { "8:7",  OPTION_VAL_8_7_JA },
+         { "1:1",  OPTION_VAL_1_1_JA },
          { "4:3",  OPTION_VAL_4_3_JA },
          { "NTSC", OPTION_VAL_NTSC_JA },
          { "PAL",  OPTION_VAL_PAL_JA },
@@ -21706,18 +21829,20 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_JA,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_JA,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_JA,
+      BSNES_PPU_OVERSCAN_V_INFO_0_JA,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_JA },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_JA },
+         { "8",  OPTION_VAL_8_JA },
+         { "12", OPTION_VAL_12_JA },
+         { "16", OPTION_VAL_16_JA },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -21758,7 +21883,7 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_JA },
+         { "0", OPTION_VAL_0_O4_JA },
          { "10", OPTION_VAL_10_JA },
          { "20", OPTION_VAL_20_JA },
          { "30", OPTION_VAL_30_JA },
@@ -21781,7 +21906,7 @@ struct retro_core_option_v2_definition option_defs_ja[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_JA },
+         { "0", OPTION_VAL_0_O4_JA },
          { "10", OPTION_VAL_10_JA },
          { "20", OPTION_VAL_20_JA },
          { "30", OPTION_VAL_30_JA },
@@ -22356,13 +22481,16 @@ struct retro_core_options_v2 options_ja = {
 #define BSNES_ASPECT_RATIO_LABEL_KO "선호하는 화면비"
 #define BSNES_ASPECT_RATIO_INFO_0_KO "선호하는 컨텐츠 화면비를 선택합니다. RetroArch의 비디오 설정에서 화면비가 'Core provided'로 설정되어 있어야 적용됩니다."
 #define OPTION_VAL_AUTO_KO "자동"
-#define OPTION_VAL_8_7_KO "픽셀 퍼펙트"
+#define OPTION_VAL_1_1_KO "1:1 PAR (픽셀 퍼펙트)"
 #define OPTION_VAL_4_3_KO NULL
 #define OPTION_VAL_NTSC_KO NULL
 #define OPTION_VAL_PAL_KO NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_KO "오버스캔 잘라내기"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_KO "화면의 위 및 아래 테두리를 잘라냅니다. 이 부분은 일반적으로 텔레비전의 베젤에 가려져 표시되지 않으며 따라서 잘 사용되지 않습니다."
-#define OPTION_VAL_OFF_KO "8 픽셀"
+#define BSNES_PPU_OVERSCAN_V_LABEL_KO "세로 오버스캔 잘라내기"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_KO "화면 위아래에서 N개의 줄을 가려 SNES 시절 TV의 베젤 효과를 흉내냅니다."
+#define OPTION_VAL_0_KO "0줄"
+#define OPTION_VAL_8_KO "8줄"
+#define OPTION_VAL_12_KO "12줄"
+#define OPTION_VAL_16_KO "16줄"
 #define BSNES_BLUR_EMULATION_LABEL_KO "블러 에뮬레이션"
 #define BSNES_BLUR_EMULATION_INFO_0_KO "오래된 TV의 낮은 가로 해상도로 인해 발생하는 가로로 인접한 픽셀들 사이의 흐림 효과를 흉내냅니다. 일부 게임은 이 기능을 활용해 반투명 효과를 구현합니다."
 #define BSNES_VIDEO_FILTER_LABEL_KO "필터"
@@ -22374,7 +22502,7 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_NTSC_RGB_KO NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_KO "색상 조정 - 휘도"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_KO "휘도 조정"
-#define OPTION_VAL_0_KO NULL
+#define OPTION_VAL_0_O4_KO NULL
 #define OPTION_VAL_10_KO NULL
 #define OPTION_VAL_20_KO NULL
 #define OPTION_VAL_30_KO NULL
@@ -22534,7 +22662,7 @@ struct retro_core_options_v2 options_ja = {
 #define OPTION_VAL_SGB1_SFC_KO NULL
 #define OPTION_VAL_SGB2_SFC_KO NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_KO "SGB 보더 숨기기"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_KO "Super Game Boy 게임을 플레이할 때 보더를 숨깁니다. '오버스캔 잘라내기'가 활성화되어 있어야 합니다."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_KO "Super Game Boy 게임을 플레이할 때 보더를 숨깁니다."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_KO "터치스크린 라이트 건"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_KO "터치스크린 기기에서 Super Scope 입력을 활성화합니다."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_KO "Super Scope 트리거 버튼 전환"
@@ -22589,7 +22717,7 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_KO },
-         { "8:7",  OPTION_VAL_8_7_KO },
+         { "1:1",  OPTION_VAL_1_1_KO },
          { "4:3",  OPTION_VAL_4_3_KO },
          { "NTSC", OPTION_VAL_NTSC_KO },
          { "PAL",  OPTION_VAL_PAL_KO },
@@ -22598,18 +22726,20 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_KO,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_KO,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_KO,
+      BSNES_PPU_OVERSCAN_V_INFO_0_KO,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_KO },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_KO },
+         { "8",  OPTION_VAL_8_KO },
+         { "12", OPTION_VAL_12_KO },
+         { "16", OPTION_VAL_16_KO },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -22650,7 +22780,7 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_KO },
+         { "0", OPTION_VAL_0_O4_KO },
          { "10", OPTION_VAL_10_KO },
          { "20", OPTION_VAL_20_KO },
          { "30", OPTION_VAL_30_KO },
@@ -22673,7 +22803,7 @@ struct retro_core_option_v2_definition option_defs_ko[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_KO },
+         { "0", OPTION_VAL_0_O4_KO },
          { "10", OPTION_VAL_10_KO },
          { "20", OPTION_VAL_20_KO },
          { "30", OPTION_VAL_30_KO },
@@ -23248,13 +23378,16 @@ struct retro_core_options_v2 options_ko = {
 #define BSNES_ASPECT_RATIO_LABEL_NL NULL
 #define BSNES_ASPECT_RATIO_INFO_0_NL NULL
 #define OPTION_VAL_AUTO_NL "Automatisch"
-#define OPTION_VAL_8_7_NL NULL
+#define OPTION_VAL_1_1_NL NULL
 #define OPTION_VAL_4_3_NL NULL
 #define OPTION_VAL_NTSC_NL NULL
 #define OPTION_VAL_PAL_NL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_NL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_NL NULL
-#define OPTION_VAL_OFF_NL NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_NL NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_NL NULL
+#define OPTION_VAL_0_NL NULL
+#define OPTION_VAL_8_NL NULL
+#define OPTION_VAL_12_NL NULL
+#define OPTION_VAL_16_NL NULL
 #define BSNES_BLUR_EMULATION_LABEL_NL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_NL NULL
 #define BSNES_VIDEO_FILTER_LABEL_NL NULL
@@ -23266,7 +23399,7 @@ struct retro_core_options_v2 options_ko = {
 #define OPTION_VAL_NTSC_RGB_NL NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_NL NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_NL NULL
-#define OPTION_VAL_0_NL NULL
+#define OPTION_VAL_0_O4_NL NULL
 #define OPTION_VAL_10_NL NULL
 #define OPTION_VAL_20_NL NULL
 #define OPTION_VAL_30_NL NULL
@@ -23481,7 +23614,7 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_NL },
-         { "8:7",  OPTION_VAL_8_7_NL },
+         { "1:1",  OPTION_VAL_1_1_NL },
          { "4:3",  OPTION_VAL_4_3_NL },
          { "NTSC", OPTION_VAL_NTSC_NL },
          { "PAL",  OPTION_VAL_PAL_NL },
@@ -23490,18 +23623,20 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_NL,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_NL,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_NL,
+      BSNES_PPU_OVERSCAN_V_INFO_0_NL,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_NL },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_NL },
+         { "8",  OPTION_VAL_8_NL },
+         { "12", OPTION_VAL_12_NL },
+         { "16", OPTION_VAL_16_NL },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -23542,7 +23677,7 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_NL },
+         { "0", OPTION_VAL_0_O4_NL },
          { "10", OPTION_VAL_10_NL },
          { "20", OPTION_VAL_20_NL },
          { "30", OPTION_VAL_30_NL },
@@ -23565,7 +23700,7 @@ struct retro_core_option_v2_definition option_defs_nl[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_NL },
+         { "0", OPTION_VAL_0_O4_NL },
          { "10", OPTION_VAL_10_NL },
          { "20", OPTION_VAL_20_NL },
          { "30", OPTION_VAL_30_NL },
@@ -24140,13 +24275,16 @@ struct retro_core_options_v2 options_nl = {
 #define BSNES_ASPECT_RATIO_LABEL_NO NULL
 #define BSNES_ASPECT_RATIO_INFO_0_NO NULL
 #define OPTION_VAL_AUTO_NO NULL
-#define OPTION_VAL_8_7_NO NULL
+#define OPTION_VAL_1_1_NO NULL
 #define OPTION_VAL_4_3_NO NULL
 #define OPTION_VAL_NTSC_NO NULL
 #define OPTION_VAL_PAL_NO NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_NO NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_NO NULL
-#define OPTION_VAL_OFF_NO NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_NO NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_NO NULL
+#define OPTION_VAL_0_NO NULL
+#define OPTION_VAL_8_NO NULL
+#define OPTION_VAL_12_NO NULL
+#define OPTION_VAL_16_NO NULL
 #define BSNES_BLUR_EMULATION_LABEL_NO NULL
 #define BSNES_BLUR_EMULATION_INFO_0_NO NULL
 #define BSNES_VIDEO_FILTER_LABEL_NO NULL
@@ -24158,7 +24296,7 @@ struct retro_core_options_v2 options_nl = {
 #define OPTION_VAL_NTSC_RGB_NO NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_NO NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_NO NULL
-#define OPTION_VAL_0_NO NULL
+#define OPTION_VAL_0_O4_NO NULL
 #define OPTION_VAL_10_NO NULL
 #define OPTION_VAL_20_NO NULL
 #define OPTION_VAL_30_NO NULL
@@ -24373,7 +24511,7 @@ struct retro_core_option_v2_definition option_defs_no[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_NO },
-         { "8:7",  OPTION_VAL_8_7_NO },
+         { "1:1",  OPTION_VAL_1_1_NO },
          { "4:3",  OPTION_VAL_4_3_NO },
          { "NTSC", OPTION_VAL_NTSC_NO },
          { "PAL",  OPTION_VAL_PAL_NO },
@@ -24382,18 +24520,20 @@ struct retro_core_option_v2_definition option_defs_no[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_NO,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_NO,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_NO,
+      BSNES_PPU_OVERSCAN_V_INFO_0_NO,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_NO },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_NO },
+         { "8",  OPTION_VAL_8_NO },
+         { "12", OPTION_VAL_12_NO },
+         { "16", OPTION_VAL_16_NO },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -24434,7 +24574,7 @@ struct retro_core_option_v2_definition option_defs_no[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_NO },
+         { "0", OPTION_VAL_0_O4_NO },
          { "10", OPTION_VAL_10_NO },
          { "20", OPTION_VAL_20_NO },
          { "30", OPTION_VAL_30_NO },
@@ -24457,7 +24597,7 @@ struct retro_core_option_v2_definition option_defs_no[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_NO },
+         { "0", OPTION_VAL_0_O4_NO },
          { "10", OPTION_VAL_10_NO },
          { "20", OPTION_VAL_20_NO },
          { "30", OPTION_VAL_30_NO },
@@ -25032,13 +25172,16 @@ struct retro_core_options_v2 options_no = {
 #define BSNES_ASPECT_RATIO_LABEL_OR NULL
 #define BSNES_ASPECT_RATIO_INFO_0_OR NULL
 #define OPTION_VAL_AUTO_OR NULL
-#define OPTION_VAL_8_7_OR NULL
+#define OPTION_VAL_1_1_OR NULL
 #define OPTION_VAL_4_3_OR NULL
 #define OPTION_VAL_NTSC_OR NULL
 #define OPTION_VAL_PAL_OR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_OR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_OR NULL
-#define OPTION_VAL_OFF_OR NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_OR NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_OR NULL
+#define OPTION_VAL_0_OR NULL
+#define OPTION_VAL_8_OR NULL
+#define OPTION_VAL_12_OR NULL
+#define OPTION_VAL_16_OR NULL
 #define BSNES_BLUR_EMULATION_LABEL_OR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_OR NULL
 #define BSNES_VIDEO_FILTER_LABEL_OR NULL
@@ -25050,7 +25193,7 @@ struct retro_core_options_v2 options_no = {
 #define OPTION_VAL_NTSC_RGB_OR NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_OR NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_OR NULL
-#define OPTION_VAL_0_OR NULL
+#define OPTION_VAL_0_O4_OR NULL
 #define OPTION_VAL_10_OR NULL
 #define OPTION_VAL_20_OR NULL
 #define OPTION_VAL_30_OR NULL
@@ -25265,7 +25408,7 @@ struct retro_core_option_v2_definition option_defs_or[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_OR },
-         { "8:7",  OPTION_VAL_8_7_OR },
+         { "1:1",  OPTION_VAL_1_1_OR },
          { "4:3",  OPTION_VAL_4_3_OR },
          { "NTSC", OPTION_VAL_NTSC_OR },
          { "PAL",  OPTION_VAL_PAL_OR },
@@ -25274,18 +25417,20 @@ struct retro_core_option_v2_definition option_defs_or[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_OR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_OR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_OR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_OR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_OR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_OR },
+         { "8",  OPTION_VAL_8_OR },
+         { "12", OPTION_VAL_12_OR },
+         { "16", OPTION_VAL_16_OR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -25326,7 +25471,7 @@ struct retro_core_option_v2_definition option_defs_or[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_OR },
+         { "0", OPTION_VAL_0_O4_OR },
          { "10", OPTION_VAL_10_OR },
          { "20", OPTION_VAL_20_OR },
          { "30", OPTION_VAL_30_OR },
@@ -25349,7 +25494,7 @@ struct retro_core_option_v2_definition option_defs_or[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_OR },
+         { "0", OPTION_VAL_0_O4_OR },
          { "10", OPTION_VAL_10_OR },
          { "20", OPTION_VAL_20_OR },
          { "30", OPTION_VAL_30_OR },
@@ -25924,13 +26069,16 @@ struct retro_core_options_v2 options_or = {
 #define BSNES_ASPECT_RATIO_LABEL_PL NULL
 #define BSNES_ASPECT_RATIO_INFO_0_PL NULL
 #define OPTION_VAL_AUTO_PL NULL
-#define OPTION_VAL_8_7_PL "Pikselowa perfekcja"
+#define OPTION_VAL_1_1_PL NULL
 #define OPTION_VAL_4_3_PL NULL
 #define OPTION_VAL_NTSC_PL NULL
 #define OPTION_VAL_PAL_PL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_PL "Przytnij overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_PL NULL
-#define OPTION_VAL_OFF_PL NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_PL "Przytnij pionowy overscan"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_PL NULL
+#define OPTION_VAL_0_PL "0 linii"
+#define OPTION_VAL_8_PL "8 linii"
+#define OPTION_VAL_12_PL "12 linii"
+#define OPTION_VAL_16_PL "16 Linii"
 #define BSNES_BLUR_EMULATION_LABEL_PL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_PL NULL
 #define BSNES_VIDEO_FILTER_LABEL_PL "Filtr"
@@ -25942,7 +26090,7 @@ struct retro_core_options_v2 options_or = {
 #define OPTION_VAL_NTSC_RGB_PL NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_PL "Regulacja koloru - luminancja"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_PL "Dostosuj luminancję"
-#define OPTION_VAL_0_PL NULL
+#define OPTION_VAL_0_O4_PL NULL
 #define OPTION_VAL_10_PL NULL
 #define OPTION_VAL_20_PL NULL
 #define OPTION_VAL_30_PL "30 %"
@@ -26102,7 +26250,7 @@ struct retro_core_options_v2 options_or = {
 #define OPTION_VAL_SGB1_SFC_PL NULL
 #define OPTION_VAL_SGB2_SFC_PL NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_PL NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_PL "Ukryj obramowanie podczas grania w Super Game Boy. Działa tylko wtedy, gdy 'Przytnij Przeskanowanie' jest włączone."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_PL "Ukryj obramowanie podczas grania w Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_PL NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_PL NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_PL NULL
@@ -26157,7 +26305,7 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_PL },
-         { "8:7",  OPTION_VAL_8_7_PL },
+         { "1:1",  OPTION_VAL_1_1_PL },
          { "4:3",  OPTION_VAL_4_3_PL },
          { "NTSC", OPTION_VAL_NTSC_PL },
          { "PAL",  OPTION_VAL_PAL_PL },
@@ -26166,18 +26314,20 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_PL,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_PL,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_PL,
+      BSNES_PPU_OVERSCAN_V_INFO_0_PL,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_PL },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_PL },
+         { "8",  OPTION_VAL_8_PL },
+         { "12", OPTION_VAL_12_PL },
+         { "16", OPTION_VAL_16_PL },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -26218,7 +26368,7 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_PL },
+         { "0", OPTION_VAL_0_O4_PL },
          { "10", OPTION_VAL_10_PL },
          { "20", OPTION_VAL_20_PL },
          { "30", OPTION_VAL_30_PL },
@@ -26241,7 +26391,7 @@ struct retro_core_option_v2_definition option_defs_pl[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_PL },
+         { "0", OPTION_VAL_0_O4_PL },
          { "10", OPTION_VAL_10_PL },
          { "20", OPTION_VAL_20_PL },
          { "30", OPTION_VAL_30_PL },
@@ -26816,13 +26966,16 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_ASPECT_RATIO_LABEL_PT_BR "Proporção de tela"
 #define BSNES_ASPECT_RATIO_INFO_0_PT_BR "Define a proporção de tela do conteúdo.\nOBSERVAÇÃO: requer \"Fornecida pelo núcleo\" ativada nas configurações de vídeo."
 #define OPTION_VAL_AUTO_PT_BR "Automática"
-#define OPTION_VAL_8_7_PT_BR "Pixel perfeito"
+#define OPTION_VAL_1_1_PT_BR NULL
 #define OPTION_VAL_4_3_PT_BR NULL
 #define OPTION_VAL_NTSC_PT_BR NULL
 #define OPTION_VAL_PAL_PT_BR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_PT_BR "Cortar overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_PT_BR "Remove a borda superior e inferior da tela. Em uma televisão clássica, essas bordas são ocultadas pela moldura de televisão."
-#define OPTION_VAL_OFF_PT_BR "8 píxeis"
+#define BSNES_PPU_OVERSCAN_V_LABEL_PT_BR "Cortar overscan vertical"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_PT_BR NULL
+#define OPTION_VAL_0_PT_BR "0 linhas"
+#define OPTION_VAL_8_PT_BR "8 linhas"
+#define OPTION_VAL_12_PT_BR "12 linhas"
+#define OPTION_VAL_16_PT_BR "16 linhas"
 #define BSNES_BLUR_EMULATION_LABEL_PT_BR "Emulação de desfoque"
 #define BSNES_BLUR_EMULATION_INFO_0_PT_BR "Simula a resolução horizontal limitada de uma SDTV, desfocando os píxeis horizontalmente adjacentes. Alguns jogos dependem do desfoque para emular um efeito de transparência."
 #define BSNES_VIDEO_FILTER_LABEL_PT_BR "Filtro"
@@ -26834,7 +26987,7 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_NTSC_RGB_PT_BR NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_PT_BR "Ajuste de Cor - Luminosidade"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR "Ajustar Luminosidade"
-#define OPTION_VAL_0_PT_BR NULL
+#define OPTION_VAL_0_O4_PT_BR NULL
 #define OPTION_VAL_10_PT_BR NULL
 #define OPTION_VAL_20_PT_BR NULL
 #define OPTION_VAL_30_PT_BR NULL
@@ -26994,7 +27147,7 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_SGB1_SFC_PT_BR NULL
 #define OPTION_VAL_SGB2_SFC_PT_BR NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_PT_BR "Ocultar bordas"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_PT_BR "Oculta a borda ao jogar jogos de Super Game Boy.\nOBSERVAÇÃO: requer \"Cortar overscan\" ativada."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_PT_BR NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_PT_BR "Tela sensível ao toque"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_PT_BR "Ativa a entrada do Super Scope em dispositivos com tela sensível ao toque."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_PT_BR "Inverter botões do Super Scope"
@@ -27049,7 +27202,7 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_PT_BR },
-         { "8:7",  OPTION_VAL_8_7_PT_BR },
+         { "1:1",  OPTION_VAL_1_1_PT_BR },
          { "4:3",  OPTION_VAL_4_3_PT_BR },
          { "NTSC", OPTION_VAL_NTSC_PT_BR },
          { "PAL",  OPTION_VAL_PAL_PT_BR },
@@ -27058,18 +27211,20 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_PT_BR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_PT_BR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_PT_BR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_PT_BR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_PT_BR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_PT_BR },
+         { "8",  OPTION_VAL_8_PT_BR },
+         { "12", OPTION_VAL_12_PT_BR },
+         { "16", OPTION_VAL_16_PT_BR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -27110,7 +27265,7 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_PT_BR },
+         { "0", OPTION_VAL_0_O4_PT_BR },
          { "10", OPTION_VAL_10_PT_BR },
          { "20", OPTION_VAL_20_PT_BR },
          { "30", OPTION_VAL_30_PT_BR },
@@ -27133,7 +27288,7 @@ struct retro_core_option_v2_definition option_defs_pt_br[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_PT_BR },
+         { "0", OPTION_VAL_0_O4_PT_BR },
          { "10", OPTION_VAL_10_PT_BR },
          { "20", OPTION_VAL_20_PT_BR },
          { "30", OPTION_VAL_30_PT_BR },
@@ -27708,13 +27863,16 @@ struct retro_core_options_v2 options_pt_br = {
 #define BSNES_ASPECT_RATIO_LABEL_PT_PT NULL
 #define BSNES_ASPECT_RATIO_INFO_0_PT_PT NULL
 #define OPTION_VAL_AUTO_PT_PT "Automático"
-#define OPTION_VAL_8_7_PT_PT NULL
+#define OPTION_VAL_1_1_PT_PT NULL
 #define OPTION_VAL_4_3_PT_PT NULL
 #define OPTION_VAL_NTSC_PT_PT NULL
 #define OPTION_VAL_PAL_PT_PT NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_PT_PT NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_PT_PT NULL
-#define OPTION_VAL_OFF_PT_PT NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_PT_PT NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_PT_PT NULL
+#define OPTION_VAL_0_PT_PT NULL
+#define OPTION_VAL_8_PT_PT NULL
+#define OPTION_VAL_12_PT_PT NULL
+#define OPTION_VAL_16_PT_PT NULL
 #define BSNES_BLUR_EMULATION_LABEL_PT_PT NULL
 #define BSNES_BLUR_EMULATION_INFO_0_PT_PT NULL
 #define BSNES_VIDEO_FILTER_LABEL_PT_PT "Filtro"
@@ -27726,7 +27884,7 @@ struct retro_core_options_v2 options_pt_br = {
 #define OPTION_VAL_NTSC_RGB_PT_PT NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_PT_PT NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_PT_PT NULL
-#define OPTION_VAL_0_PT_PT NULL
+#define OPTION_VAL_0_O4_PT_PT NULL
 #define OPTION_VAL_10_PT_PT NULL
 #define OPTION_VAL_20_PT_PT NULL
 #define OPTION_VAL_30_PT_PT NULL
@@ -27941,7 +28099,7 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_PT_PT },
-         { "8:7",  OPTION_VAL_8_7_PT_PT },
+         { "1:1",  OPTION_VAL_1_1_PT_PT },
          { "4:3",  OPTION_VAL_4_3_PT_PT },
          { "NTSC", OPTION_VAL_NTSC_PT_PT },
          { "PAL",  OPTION_VAL_PAL_PT_PT },
@@ -27950,18 +28108,20 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_PT_PT,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_PT_PT,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_PT_PT,
+      BSNES_PPU_OVERSCAN_V_INFO_0_PT_PT,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_PT_PT },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_PT_PT },
+         { "8",  OPTION_VAL_8_PT_PT },
+         { "12", OPTION_VAL_12_PT_PT },
+         { "16", OPTION_VAL_16_PT_PT },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -28002,7 +28162,7 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_PT_PT },
+         { "0", OPTION_VAL_0_O4_PT_PT },
          { "10", OPTION_VAL_10_PT_PT },
          { "20", OPTION_VAL_20_PT_PT },
          { "30", OPTION_VAL_30_PT_PT },
@@ -28025,7 +28185,7 @@ struct retro_core_option_v2_definition option_defs_pt_pt[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_PT_PT },
+         { "0", OPTION_VAL_0_O4_PT_PT },
          { "10", OPTION_VAL_10_PT_PT },
          { "20", OPTION_VAL_20_PT_PT },
          { "30", OPTION_VAL_30_PT_PT },
@@ -28600,13 +28760,16 @@ struct retro_core_options_v2 options_pt_pt = {
 #define BSNES_ASPECT_RATIO_LABEL_RU "Предпочтительное соотношение сторон"
 #define BSNES_ASPECT_RATIO_INFO_0_RU "Предпочтительное соотношение сторон. Учитывается, только если для соотношения сторон RetroArch в настройках видео задано значение 'По выбору ядра'."
 #define OPTION_VAL_AUTO_RU "Авто"
-#define OPTION_VAL_8_7_RU "Пиксель-в-пиксель"
+#define OPTION_VAL_1_1_RU "1:1 PAR (пиксель в пиксель)"
 #define OPTION_VAL_4_3_RU NULL
 #define OPTION_VAL_NTSC_RU NULL
 #define OPTION_VAL_PAL_RU NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_RU "Кадрирование вылетов развёртки"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_RU "Убирает полосы сверху и снизу экрана, которые обычно скрыты рамкой телевизора и не используются играми."
-#define OPTION_VAL_OFF_RU "8 пикселей"
+#define BSNES_PPU_OVERSCAN_V_LABEL_RU "Кадрирование по вертикали"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_RU "Убирает N строк сверху и снизу экрана для имитации телевизионной рамки эпохи SNES."
+#define OPTION_VAL_0_RU "0 строк"
+#define OPTION_VAL_8_RU "8 строк"
+#define OPTION_VAL_12_RU "12 строк"
+#define OPTION_VAL_16_RU "16 строк"
 #define BSNES_BLUR_EMULATION_LABEL_RU "Эмуляция размытия"
 #define BSNES_BLUR_EMULATION_INFO_0_RU "Имитирует ограниченное по горизонтали разрешение стандартных ТВ, размывая горизонтально примыкающие пиксели. Требуется для эмуляции эффекта прозрачности в некоторых играх."
 #define BSNES_VIDEO_FILTER_LABEL_RU "Фильтр"
@@ -28618,7 +28781,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define OPTION_VAL_NTSC_RGB_RU NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_RU "Регулировка цвета - яркость"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_RU "Подстройка яркости"
-#define OPTION_VAL_0_RU NULL
+#define OPTION_VAL_0_O4_RU NULL
 #define OPTION_VAL_10_RU NULL
 #define OPTION_VAL_20_RU NULL
 #define OPTION_VAL_30_RU NULL
@@ -28778,7 +28941,7 @@ struct retro_core_options_v2 options_pt_pt = {
 #define OPTION_VAL_SGB1_SFC_RU NULL
 #define OPTION_VAL_SGB2_SFC_RU NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_RU "Скрывать рамку SGB"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_RU "Скрывает рамку при запуске игр Super Game Boy. Работает только если вкл. 'Кадрирование вылетов развёртки'."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_RU "Скрывать рамку при запуске игр Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_RU "Сенсорный световой пистолет"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_RU "Вкл. эмуляцию Super Scope с помощью сенсорного экрана устройства."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_RU "Поменять кнопки курков Super Scope"
@@ -28833,7 +28996,7 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_RU },
-         { "8:7",  OPTION_VAL_8_7_RU },
+         { "1:1",  OPTION_VAL_1_1_RU },
          { "4:3",  OPTION_VAL_4_3_RU },
          { "NTSC", OPTION_VAL_NTSC_RU },
          { "PAL",  OPTION_VAL_PAL_RU },
@@ -28842,18 +29005,20 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_RU,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_RU,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_RU,
+      BSNES_PPU_OVERSCAN_V_INFO_0_RU,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_RU },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_RU },
+         { "8",  OPTION_VAL_8_RU },
+         { "12", OPTION_VAL_12_RU },
+         { "16", OPTION_VAL_16_RU },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -28894,7 +29059,7 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_RU },
+         { "0", OPTION_VAL_0_O4_RU },
          { "10", OPTION_VAL_10_RU },
          { "20", OPTION_VAL_20_RU },
          { "30", OPTION_VAL_30_RU },
@@ -28917,7 +29082,7 @@ struct retro_core_option_v2_definition option_defs_ru[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_RU },
+         { "0", OPTION_VAL_0_O4_RU },
          { "10", OPTION_VAL_10_RU },
          { "20", OPTION_VAL_20_RU },
          { "30", OPTION_VAL_30_RU },
@@ -29492,13 +29657,16 @@ struct retro_core_options_v2 options_ru = {
 #define BSNES_ASPECT_RATIO_LABEL_SK NULL
 #define BSNES_ASPECT_RATIO_INFO_0_SK NULL
 #define OPTION_VAL_AUTO_SK NULL
-#define OPTION_VAL_8_7_SK "Bodovo presné"
+#define OPTION_VAL_1_1_SK NULL
 #define OPTION_VAL_4_3_SK NULL
 #define OPTION_VAL_NTSC_SK NULL
 #define OPTION_VAL_PAL_SK NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_SK "Orezať overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_SK NULL
-#define OPTION_VAL_OFF_SK "8 bodov"
+#define BSNES_PPU_OVERSCAN_V_LABEL_SK NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_SK NULL
+#define OPTION_VAL_0_SK NULL
+#define OPTION_VAL_8_SK NULL
+#define OPTION_VAL_12_SK NULL
+#define OPTION_VAL_16_SK NULL
 #define BSNES_BLUR_EMULATION_LABEL_SK NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SK NULL
 #define BSNES_VIDEO_FILTER_LABEL_SK "Filtrovať"
@@ -29510,7 +29678,7 @@ struct retro_core_options_v2 options_ru = {
 #define OPTION_VAL_NTSC_RGB_SK NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_SK NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_SK NULL
-#define OPTION_VAL_0_SK NULL
+#define OPTION_VAL_0_O4_SK NULL
 #define OPTION_VAL_10_SK NULL
 #define OPTION_VAL_20_SK NULL
 #define OPTION_VAL_30_SK NULL
@@ -29725,7 +29893,7 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_SK },
-         { "8:7",  OPTION_VAL_8_7_SK },
+         { "1:1",  OPTION_VAL_1_1_SK },
          { "4:3",  OPTION_VAL_4_3_SK },
          { "NTSC", OPTION_VAL_NTSC_SK },
          { "PAL",  OPTION_VAL_PAL_SK },
@@ -29734,18 +29902,20 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_SK,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_SK,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_SK,
+      BSNES_PPU_OVERSCAN_V_INFO_0_SK,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_SK },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_SK },
+         { "8",  OPTION_VAL_8_SK },
+         { "12", OPTION_VAL_12_SK },
+         { "16", OPTION_VAL_16_SK },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -29786,7 +29956,7 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_SK },
+         { "0", OPTION_VAL_0_O4_SK },
          { "10", OPTION_VAL_10_SK },
          { "20", OPTION_VAL_20_SK },
          { "30", OPTION_VAL_30_SK },
@@ -29809,7 +29979,7 @@ struct retro_core_option_v2_definition option_defs_sk[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_SK },
+         { "0", OPTION_VAL_0_O4_SK },
          { "10", OPTION_VAL_10_SK },
          { "20", OPTION_VAL_20_SK },
          { "30", OPTION_VAL_30_SK },
@@ -30384,13 +30554,16 @@ struct retro_core_options_v2 options_sk = {
 #define BSNES_ASPECT_RATIO_LABEL_SR NULL
 #define BSNES_ASPECT_RATIO_INFO_0_SR NULL
 #define OPTION_VAL_AUTO_SR NULL
-#define OPTION_VAL_8_7_SR NULL
+#define OPTION_VAL_1_1_SR NULL
 #define OPTION_VAL_4_3_SR NULL
 #define OPTION_VAL_NTSC_SR NULL
 #define OPTION_VAL_PAL_SR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_SR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_SR NULL
-#define OPTION_VAL_OFF_SR NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_SR NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_SR NULL
+#define OPTION_VAL_0_SR NULL
+#define OPTION_VAL_8_SR NULL
+#define OPTION_VAL_12_SR NULL
+#define OPTION_VAL_16_SR NULL
 #define BSNES_BLUR_EMULATION_LABEL_SR NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SR NULL
 #define BSNES_VIDEO_FILTER_LABEL_SR NULL
@@ -30402,7 +30575,7 @@ struct retro_core_options_v2 options_sk = {
 #define OPTION_VAL_NTSC_RGB_SR NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_SR NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_SR NULL
-#define OPTION_VAL_0_SR NULL
+#define OPTION_VAL_0_O4_SR NULL
 #define OPTION_VAL_10_SR NULL
 #define OPTION_VAL_20_SR NULL
 #define OPTION_VAL_30_SR NULL
@@ -30617,7 +30790,7 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_SR },
-         { "8:7",  OPTION_VAL_8_7_SR },
+         { "1:1",  OPTION_VAL_1_1_SR },
          { "4:3",  OPTION_VAL_4_3_SR },
          { "NTSC", OPTION_VAL_NTSC_SR },
          { "PAL",  OPTION_VAL_PAL_SR },
@@ -30626,18 +30799,20 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_SR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_SR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_SR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_SR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_SR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_SR },
+         { "8",  OPTION_VAL_8_SR },
+         { "12", OPTION_VAL_12_SR },
+         { "16", OPTION_VAL_16_SR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -30678,7 +30853,7 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_SR },
+         { "0", OPTION_VAL_0_O4_SR },
          { "10", OPTION_VAL_10_SR },
          { "20", OPTION_VAL_20_SR },
          { "30", OPTION_VAL_30_SR },
@@ -30701,7 +30876,7 @@ struct retro_core_option_v2_definition option_defs_sr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_SR },
+         { "0", OPTION_VAL_0_O4_SR },
          { "10", OPTION_VAL_10_SR },
          { "20", OPTION_VAL_20_SR },
          { "30", OPTION_VAL_30_SR },
@@ -31276,13 +31451,16 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
 #define BSNES_ASPECT_RATIO_INFO_0_SV "Välj det föredragna bildformatet för Innehållet. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
 #define OPTION_VAL_AUTO_SV NULL
-#define OPTION_VAL_8_7_SV "Perfekta Pixlar"
+#define OPTION_VAL_1_1_SV NULL
 #define OPTION_VAL_4_3_SV NULL
 #define OPTION_VAL_NTSC_SV NULL
 #define OPTION_VAL_PAL_SV NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_SV "Beskär Overscan"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_SV NULL
-#define OPTION_VAL_OFF_SV "8 pixlar"
+#define BSNES_PPU_OVERSCAN_V_LABEL_SV NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_SV NULL
+#define OPTION_VAL_0_SV NULL
+#define OPTION_VAL_8_SV NULL
+#define OPTION_VAL_12_SV NULL
+#define OPTION_VAL_16_SV NULL
 #define BSNES_BLUR_EMULATION_LABEL_SV NULL
 #define BSNES_BLUR_EMULATION_INFO_0_SV NULL
 #define BSNES_VIDEO_FILTER_LABEL_SV NULL
@@ -31294,7 +31472,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_NTSC_RGB_SV NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_SV NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_SV NULL
-#define OPTION_VAL_0_SV NULL
+#define OPTION_VAL_0_O4_SV NULL
 #define OPTION_VAL_10_SV NULL
 #define OPTION_VAL_20_SV NULL
 #define OPTION_VAL_30_SV NULL
@@ -31509,7 +31687,7 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_SV },
-         { "8:7",  OPTION_VAL_8_7_SV },
+         { "1:1",  OPTION_VAL_1_1_SV },
          { "4:3",  OPTION_VAL_4_3_SV },
          { "NTSC", OPTION_VAL_NTSC_SV },
          { "PAL",  OPTION_VAL_PAL_SV },
@@ -31518,18 +31696,20 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_SV,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_SV,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_SV,
+      BSNES_PPU_OVERSCAN_V_INFO_0_SV,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_SV },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_SV },
+         { "8",  OPTION_VAL_8_SV },
+         { "12", OPTION_VAL_12_SV },
+         { "16", OPTION_VAL_16_SV },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -31570,7 +31750,7 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_SV },
+         { "0", OPTION_VAL_0_O4_SV },
          { "10", OPTION_VAL_10_SV },
          { "20", OPTION_VAL_20_SV },
          { "30", OPTION_VAL_30_SV },
@@ -31593,7 +31773,7 @@ struct retro_core_option_v2_definition option_defs_sv[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_SV },
+         { "0", OPTION_VAL_0_O4_SV },
          { "10", OPTION_VAL_10_SV },
          { "20", OPTION_VAL_20_SV },
          { "30", OPTION_VAL_30_SV },
@@ -32168,13 +32348,16 @@ struct retro_core_options_v2 options_sv = {
 #define BSNES_ASPECT_RATIO_LABEL_TR "Tercih Edilen En Boy Oranı"
 #define BSNES_ASPECT_RATIO_INFO_0_TR "Tercih edilen içerik en boy oranını seçin. Bu, yalnızca RetroArch en boy oranı Video ayarlarında 'Çekirdek Tarafından Sağlanan' olarak ayarlandığında uygulanacaktır."
 #define OPTION_VAL_AUTO_TR "Otomatik"
-#define OPTION_VAL_8_7_TR "Mükemmel Piksel"
+#define OPTION_VAL_1_1_TR "1:1 PAR (Mükemmel Piksel)"
 #define OPTION_VAL_4_3_TR NULL
 #define OPTION_VAL_NTSC_TR NULL
 #define OPTION_VAL_PAL_TR NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_TR "Aşırı Taramayı Kırp"
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_TR "Genellikle oyunlar tarafından kullanılmayan ve standart tanımlı bir televizyonun çerçevesiyle gizlenen ekranın üst ve alt kısmındaki kenarlıkları kaldırın."
-#define OPTION_VAL_OFF_TR "8 Piksel"
+#define BSNES_PPU_OVERSCAN_V_LABEL_TR "Dikey Aşırı Taramayı Kırp"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_TR "SNES dönemindeki bir televizyonun çerçevesini taklit etmek için ekranın üstünden ve altından N çizgiyi kaldırın."
+#define OPTION_VAL_0_TR "0 Çizgi"
+#define OPTION_VAL_8_TR "8 Çizgi"
+#define OPTION_VAL_12_TR "12 Çizgi"
+#define OPTION_VAL_16_TR "16 Çizgi"
 #define BSNES_BLUR_EMULATION_LABEL_TR "Bulanıklık Taklidi"
 #define BSNES_BLUR_EMULATION_INFO_0_TR "Yatay olarak bitişik pikselleri bulanıklaştırarak SDTV'lerin sınırlı yatay çözünürlüğünü taklit edin. Bazı oyunlar şeffaflık efektini taklit etmek için buna bağlıdır."
 #define BSNES_VIDEO_FILTER_LABEL_TR "Filtre"
@@ -32186,7 +32369,7 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_NTSC_RGB_TR NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_TR "Renk Ayarı - Parlaklık"
 #define BSNES_VIDEO_LUMINANCE_INFO_0_TR "Parlaklığı Ayarla"
-#define OPTION_VAL_0_TR "%0"
+#define OPTION_VAL_0_O4_TR "%0"
 #define OPTION_VAL_10_TR "%10"
 #define OPTION_VAL_20_TR "%20"
 #define OPTION_VAL_30_TR "%30"
@@ -32346,7 +32529,7 @@ struct retro_core_options_v2 options_sv = {
 #define OPTION_VAL_SGB1_SFC_TR NULL
 #define OPTION_VAL_SGB2_SFC_TR NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_TR "SGB ​​Sınırını Gizle"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_TR "Super Game Boy oyunları oynarken sınırı gizleyin. Yalnızca 'Aşırı Taramayı Kırp' seçeneği etkinleştirildiğinde çalışır."
+#define BSNES_HIDE_SGB_BORDER_INFO_0_TR "Super Game Boy oyunlarını oynarken kenarlığı gizleyin."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_TR "Dokunmatik Ekran Light Gun"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_TR "Dokunmatik ekranlı cihazlar için Super Scope girişini etkinleştirin."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_TR "Super Scope Ters Tetik Düğmeleri"
@@ -32401,7 +32584,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_TR },
-         { "8:7",  OPTION_VAL_8_7_TR },
+         { "1:1",  OPTION_VAL_1_1_TR },
          { "4:3",  OPTION_VAL_4_3_TR },
          { "NTSC", OPTION_VAL_NTSC_TR },
          { "PAL",  OPTION_VAL_PAL_TR },
@@ -32410,18 +32593,20 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_TR,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_TR,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_TR,
+      BSNES_PPU_OVERSCAN_V_INFO_0_TR,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_TR },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_TR },
+         { "8",  OPTION_VAL_8_TR },
+         { "12", OPTION_VAL_12_TR },
+         { "16", OPTION_VAL_16_TR },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -32462,7 +32647,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_TR },
+         { "0", OPTION_VAL_0_O4_TR },
          { "10", OPTION_VAL_10_TR },
          { "20", OPTION_VAL_20_TR },
          { "30", OPTION_VAL_30_TR },
@@ -32485,7 +32670,7 @@ struct retro_core_option_v2_definition option_defs_tr[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_TR },
+         { "0", OPTION_VAL_0_O4_TR },
          { "10", OPTION_VAL_10_TR },
          { "20", OPTION_VAL_20_TR },
          { "30", OPTION_VAL_30_TR },
@@ -33060,13 +33245,16 @@ struct retro_core_options_v2 options_tr = {
 #define BSNES_ASPECT_RATIO_LABEL_TT NULL
 #define BSNES_ASPECT_RATIO_INFO_0_TT NULL
 #define OPTION_VAL_AUTO_TT NULL
-#define OPTION_VAL_8_7_TT NULL
+#define OPTION_VAL_1_1_TT NULL
 #define OPTION_VAL_4_3_TT NULL
 #define OPTION_VAL_NTSC_TT NULL
 #define OPTION_VAL_PAL_TT NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_TT NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_TT NULL
-#define OPTION_VAL_OFF_TT NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_TT NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_TT NULL
+#define OPTION_VAL_0_TT NULL
+#define OPTION_VAL_8_TT NULL
+#define OPTION_VAL_12_TT NULL
+#define OPTION_VAL_16_TT NULL
 #define BSNES_BLUR_EMULATION_LABEL_TT NULL
 #define BSNES_BLUR_EMULATION_INFO_0_TT NULL
 #define BSNES_VIDEO_FILTER_LABEL_TT NULL
@@ -33078,7 +33266,7 @@ struct retro_core_options_v2 options_tr = {
 #define OPTION_VAL_NTSC_RGB_TT NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_TT NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_TT NULL
-#define OPTION_VAL_0_TT NULL
+#define OPTION_VAL_0_O4_TT NULL
 #define OPTION_VAL_10_TT NULL
 #define OPTION_VAL_20_TT NULL
 #define OPTION_VAL_30_TT NULL
@@ -33293,7 +33481,7 @@ struct retro_core_option_v2_definition option_defs_tt[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_TT },
-         { "8:7",  OPTION_VAL_8_7_TT },
+         { "1:1",  OPTION_VAL_1_1_TT },
          { "4:3",  OPTION_VAL_4_3_TT },
          { "NTSC", OPTION_VAL_NTSC_TT },
          { "PAL",  OPTION_VAL_PAL_TT },
@@ -33302,18 +33490,20 @@ struct retro_core_option_v2_definition option_defs_tt[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_TT,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_TT,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_TT,
+      BSNES_PPU_OVERSCAN_V_INFO_0_TT,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_TT },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_TT },
+         { "8",  OPTION_VAL_8_TT },
+         { "12", OPTION_VAL_12_TT },
+         { "16", OPTION_VAL_16_TT },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -33354,7 +33544,7 @@ struct retro_core_option_v2_definition option_defs_tt[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_TT },
+         { "0", OPTION_VAL_0_O4_TT },
          { "10", OPTION_VAL_10_TT },
          { "20", OPTION_VAL_20_TT },
          { "30", OPTION_VAL_30_TT },
@@ -33377,7 +33567,7 @@ struct retro_core_option_v2_definition option_defs_tt[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_TT },
+         { "0", OPTION_VAL_0_O4_TT },
          { "10", OPTION_VAL_10_TT },
          { "20", OPTION_VAL_20_TT },
          { "30", OPTION_VAL_30_TT },
@@ -33952,13 +34142,16 @@ struct retro_core_options_v2 options_tt = {
 #define BSNES_ASPECT_RATIO_LABEL_UK "Бажане співвідношення сторін"
 #define BSNES_ASPECT_RATIO_INFO_0_UK NULL
 #define OPTION_VAL_AUTO_UK "Авто"
-#define OPTION_VAL_8_7_UK NULL
+#define OPTION_VAL_1_1_UK NULL
 #define OPTION_VAL_4_3_UK NULL
 #define OPTION_VAL_NTSC_UK NULL
 #define OPTION_VAL_PAL_UK NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_UK NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_UK NULL
-#define OPTION_VAL_OFF_UK NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_UK NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_UK NULL
+#define OPTION_VAL_0_UK NULL
+#define OPTION_VAL_8_UK NULL
+#define OPTION_VAL_12_UK NULL
+#define OPTION_VAL_16_UK NULL
 #define BSNES_BLUR_EMULATION_LABEL_UK NULL
 #define BSNES_BLUR_EMULATION_INFO_0_UK NULL
 #define BSNES_VIDEO_FILTER_LABEL_UK "Фільтр"
@@ -33970,7 +34163,7 @@ struct retro_core_options_v2 options_tt = {
 #define OPTION_VAL_NTSC_RGB_UK NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_UK NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_UK NULL
-#define OPTION_VAL_0_UK NULL
+#define OPTION_VAL_0_O4_UK NULL
 #define OPTION_VAL_10_UK NULL
 #define OPTION_VAL_20_UK NULL
 #define OPTION_VAL_30_UK NULL
@@ -34185,7 +34378,7 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_UK },
-         { "8:7",  OPTION_VAL_8_7_UK },
+         { "1:1",  OPTION_VAL_1_1_UK },
          { "4:3",  OPTION_VAL_4_3_UK },
          { "NTSC", OPTION_VAL_NTSC_UK },
          { "PAL",  OPTION_VAL_PAL_UK },
@@ -34194,18 +34387,20 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_UK,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_UK,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_UK,
+      BSNES_PPU_OVERSCAN_V_INFO_0_UK,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_UK },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_UK },
+         { "8",  OPTION_VAL_8_UK },
+         { "12", OPTION_VAL_12_UK },
+         { "16", OPTION_VAL_16_UK },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -34246,7 +34441,7 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_UK },
+         { "0", OPTION_VAL_0_O4_UK },
          { "10", OPTION_VAL_10_UK },
          { "20", OPTION_VAL_20_UK },
          { "30", OPTION_VAL_30_UK },
@@ -34269,7 +34464,7 @@ struct retro_core_option_v2_definition option_defs_uk[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_UK },
+         { "0", OPTION_VAL_0_O4_UK },
          { "10", OPTION_VAL_10_UK },
          { "20", OPTION_VAL_20_UK },
          { "30", OPTION_VAL_30_UK },
@@ -34844,13 +35039,16 @@ struct retro_core_options_v2 options_uk = {
 #define BSNES_ASPECT_RATIO_LABEL_VAL NULL
 #define BSNES_ASPECT_RATIO_INFO_0_VAL NULL
 #define OPTION_VAL_AUTO_VAL "Selecció automàtica"
-#define OPTION_VAL_8_7_VAL NULL
+#define OPTION_VAL_1_1_VAL NULL
 #define OPTION_VAL_4_3_VAL NULL
 #define OPTION_VAL_NTSC_VAL NULL
 #define OPTION_VAL_PAL_VAL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_VAL NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_VAL NULL
-#define OPTION_VAL_OFF_VAL NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_VAL NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_VAL NULL
+#define OPTION_VAL_0_VAL NULL
+#define OPTION_VAL_8_VAL NULL
+#define OPTION_VAL_12_VAL NULL
+#define OPTION_VAL_16_VAL NULL
 #define BSNES_BLUR_EMULATION_LABEL_VAL NULL
 #define BSNES_BLUR_EMULATION_INFO_0_VAL NULL
 #define BSNES_VIDEO_FILTER_LABEL_VAL NULL
@@ -34862,7 +35060,7 @@ struct retro_core_options_v2 options_uk = {
 #define OPTION_VAL_NTSC_RGB_VAL NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_VAL NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_VAL NULL
-#define OPTION_VAL_0_VAL NULL
+#define OPTION_VAL_0_O4_VAL NULL
 #define OPTION_VAL_10_VAL NULL
 #define OPTION_VAL_20_VAL NULL
 #define OPTION_VAL_30_VAL NULL
@@ -35077,7 +35275,7 @@ struct retro_core_option_v2_definition option_defs_val[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_VAL },
-         { "8:7",  OPTION_VAL_8_7_VAL },
+         { "1:1",  OPTION_VAL_1_1_VAL },
          { "4:3",  OPTION_VAL_4_3_VAL },
          { "NTSC", OPTION_VAL_NTSC_VAL },
          { "PAL",  OPTION_VAL_PAL_VAL },
@@ -35086,18 +35284,20 @@ struct retro_core_option_v2_definition option_defs_val[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_VAL,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_VAL,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_VAL,
+      BSNES_PPU_OVERSCAN_V_INFO_0_VAL,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_VAL },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_VAL },
+         { "8",  OPTION_VAL_8_VAL },
+         { "12", OPTION_VAL_12_VAL },
+         { "16", OPTION_VAL_16_VAL },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -35138,7 +35338,7 @@ struct retro_core_option_v2_definition option_defs_val[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_VAL },
+         { "0", OPTION_VAL_0_O4_VAL },
          { "10", OPTION_VAL_10_VAL },
          { "20", OPTION_VAL_20_VAL },
          { "30", OPTION_VAL_30_VAL },
@@ -35161,7 +35361,7 @@ struct retro_core_option_v2_definition option_defs_val[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_VAL },
+         { "0", OPTION_VAL_0_O4_VAL },
          { "10", OPTION_VAL_10_VAL },
          { "20", OPTION_VAL_20_VAL },
          { "30", OPTION_VAL_30_VAL },
@@ -35736,13 +35936,16 @@ struct retro_core_options_v2 options_val = {
 #define BSNES_ASPECT_RATIO_LABEL_VN NULL
 #define BSNES_ASPECT_RATIO_INFO_0_VN NULL
 #define OPTION_VAL_AUTO_VN "Tự động"
-#define OPTION_VAL_8_7_VN NULL
+#define OPTION_VAL_1_1_VN NULL
 #define OPTION_VAL_4_3_VN NULL
 #define OPTION_VAL_NTSC_VN NULL
 #define OPTION_VAL_PAL_VN NULL
-#define BSNES_PPU_SHOW_OVERSCAN_LABEL_VN NULL
-#define BSNES_PPU_SHOW_OVERSCAN_INFO_0_VN NULL
-#define OPTION_VAL_OFF_VN NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_VN NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_VN NULL
+#define OPTION_VAL_0_VN NULL
+#define OPTION_VAL_8_VN NULL
+#define OPTION_VAL_12_VN NULL
+#define OPTION_VAL_16_VN NULL
 #define BSNES_BLUR_EMULATION_LABEL_VN NULL
 #define BSNES_BLUR_EMULATION_INFO_0_VN NULL
 #define BSNES_VIDEO_FILTER_LABEL_VN NULL
@@ -35754,7 +35957,7 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_NTSC_RGB_VN NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_VN NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_VN NULL
-#define OPTION_VAL_0_VN NULL
+#define OPTION_VAL_0_O4_VN NULL
 #define OPTION_VAL_10_VN NULL
 #define OPTION_VAL_20_VN NULL
 #define OPTION_VAL_30_VN NULL
@@ -35969,7 +36172,7 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
       "video",
       {
          { "Auto", OPTION_VAL_AUTO_VN },
-         { "8:7",  OPTION_VAL_8_7_VN },
+         { "1:1",  OPTION_VAL_1_1_VN },
          { "4:3",  OPTION_VAL_4_3_VN },
          { "NTSC", OPTION_VAL_NTSC_VN },
          { "PAL",  OPTION_VAL_PAL_VN },
@@ -35978,18 +36181,20 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
       "Auto"
    },
    {
-      "bsnes_ppu_show_overscan",
-      BSNES_PPU_SHOW_OVERSCAN_LABEL_VN,
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_VN,
       NULL,
-      BSNES_PPU_SHOW_OVERSCAN_INFO_0_VN,
+      BSNES_PPU_OVERSCAN_V_INFO_0_VN,
       NULL,
       "video",
       {
-         { "OFF", OPTION_VAL_OFF_VN },
-         { "ON",  "disabled" },
+         { "0",  OPTION_VAL_0_VN },
+         { "8",  OPTION_VAL_8_VN },
+         { "12", OPTION_VAL_12_VN },
+         { "16", OPTION_VAL_16_VN },
          { NULL, NULL },
       },
-      "OFF"
+      "8"
    },
    {
       "bsnes_blur_emulation",
@@ -36030,7 +36235,7 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_VN },
+         { "0", OPTION_VAL_0_O4_VN },
          { "10", OPTION_VAL_10_VN },
          { "20", OPTION_VAL_20_VN },
          { "30", OPTION_VAL_30_VN },
@@ -36053,7 +36258,7 @@ struct retro_core_option_v2_definition option_defs_vn[] = {
       NULL,
       "video",
       {
-         { "0", OPTION_VAL_0_VN },
+         { "0", OPTION_VAL_0_O4_VN },
          { "10", OPTION_VAL_10_VN },
          { "20", OPTION_VAL_20_VN },
          { "30", OPTION_VAL_30_VN },
