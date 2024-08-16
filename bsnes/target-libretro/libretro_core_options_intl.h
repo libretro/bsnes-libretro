@@ -1845,17 +1845,17 @@ struct retro_core_options_v2 options_ast = {
 #define CATEGORY_OVERCLOCK_INFO_0_BE NULL
 #define CATEGORY_SGB_LABEL_BE NULL
 #define CATEGORY_SGB_INFO_0_BE NULL
-#define CATEGORY_LIGHTGUN_LABEL_BE NULL
+#define CATEGORY_LIGHTGUN_LABEL_BE "Светлавы пісталет"
 #define CATEGORY_LIGHTGUN_INFO_0_BE NULL
 #define BSNES_ASPECT_RATIO_LABEL_BE NULL
 #define BSNES_ASPECT_RATIO_INFO_0_BE NULL
 #define OPTION_VAL_AUTO_BE "Аўта"
-#define OPTION_VAL_1_1_BE NULL
+#define OPTION_VAL_1_1_BE "1:1 PAR (рыхтык да пікселя)"
 #define OPTION_VAL_4_3_BE NULL
 #define OPTION_VAL_NTSC_BE NULL
 #define OPTION_VAL_PAL_BE NULL
 #define BSNES_PPU_OVERSCAN_V_LABEL_BE NULL
-#define BSNES_PPU_OVERSCAN_V_INFO_0_BE NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_BE "Прыбраць N радкоў зверху ды знізу экрана для імітавання рамкі тэлевізара эпохі SNES."
 #define OPTION_VAL_0_BE "0 радкоў"
 #define OPTION_VAL_8_BE "8 радкоў"
 #define OPTION_VAL_12_BE "12 радкоў"
@@ -2031,7 +2031,7 @@ struct retro_core_options_v2 options_ast = {
 #define OPTION_VAL_SGB1_SFC_BE NULL
 #define OPTION_VAL_SGB2_SFC_BE NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_BE NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_BE NULL
+#define BSNES_HIDE_SGB_BORDER_INFO_0_BE "Схаваць рамку пры запуску гульняў Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_BE NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_BE NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_BE NULL
