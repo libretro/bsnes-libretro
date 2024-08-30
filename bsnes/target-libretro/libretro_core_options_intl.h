@@ -26966,12 +26966,12 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_ASPECT_RATIO_LABEL_PT_BR "Proporção de tela"
 #define BSNES_ASPECT_RATIO_INFO_0_PT_BR "Define a proporção de tela do conteúdo.\nOBSERVAÇÃO: requer \"Fornecida pelo núcleo\" ativada nas configurações de vídeo."
 #define OPTION_VAL_AUTO_PT_BR "Automática"
-#define OPTION_VAL_1_1_PT_BR NULL
-#define OPTION_VAL_4_3_PT_BR NULL
+#define OPTION_VAL_1_1_PT_BR "PAR 1:1 (Pixel Perfect)"
+#define OPTION_VAL_4_3_PT_BR "DAR 4:3"
 #define OPTION_VAL_NTSC_PT_BR NULL
 #define OPTION_VAL_PAL_PT_BR NULL
 #define BSNES_PPU_OVERSCAN_V_LABEL_PT_BR "Cortar overscan vertical"
-#define BSNES_PPU_OVERSCAN_V_INFO_0_PT_BR NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_PT_BR "Remove uma quantidade de linhas da parte superior e inferior da tela para simular a moldura de uma TV da época do Super Nintendo (SNES)."
 #define OPTION_VAL_0_PT_BR "0 linhas"
 #define OPTION_VAL_8_PT_BR "8 linhas"
 #define OPTION_VAL_12_PT_BR "12 linhas"
@@ -26985,8 +26985,8 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_NTSC_COMPOSITE_PT_BR "NTSC (composto)"
 #define OPTION_VAL_NTSC_S_VIDEO_PT_BR NULL
 #define OPTION_VAL_NTSC_RGB_PT_BR NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_PT_BR "Ajuste de Cor - Luminosidade"
-#define BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR "Ajustar Luminosidade"
+#define BSNES_VIDEO_LUMINANCE_LABEL_PT_BR "Luminosidade"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_PT_BR "Ajusta a luminosidade."
 #define OPTION_VAL_0_O4_PT_BR NULL
 #define OPTION_VAL_10_PT_BR NULL
 #define OPTION_VAL_20_PT_BR NULL
@@ -26998,8 +26998,8 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_80_PT_BR NULL
 #define OPTION_VAL_90_PT_BR NULL
 #define OPTION_VAL_100_PT_BR "100% (padrão)"
-#define BSNES_VIDEO_SATURATION_LABEL_PT_BR "Ajuste de Cor - Saturação"
-#define BSNES_VIDEO_SATURATION_INFO_0_PT_BR "Ajustar Saturação"
+#define BSNES_VIDEO_SATURATION_LABEL_PT_BR "Saturação"
+#define BSNES_VIDEO_SATURATION_INFO_0_PT_BR "Ajusta a saturação."
 #define OPTION_VAL_110_PT_BR NULL
 #define OPTION_VAL_120_PT_BR NULL
 #define OPTION_VAL_130_PT_BR NULL
@@ -27010,8 +27010,8 @@ struct retro_core_options_v2 options_pl = {
 #define OPTION_VAL_180_PT_BR NULL
 #define OPTION_VAL_190_PT_BR NULL
 #define OPTION_VAL_200_PT_BR NULL
-#define BSNES_VIDEO_GAMMA_LABEL_PT_BR "Ajuste de Cor - Gama"
-#define BSNES_VIDEO_GAMMA_INFO_0_PT_BR "Ajustar Gama"
+#define BSNES_VIDEO_GAMMA_LABEL_PT_BR "Gama de cores"
+#define BSNES_VIDEO_GAMMA_INFO_0_PT_BR "Ajusta a gama de cores."
 #define OPTION_VAL_100_O6_PT_BR NULL
 #define OPTION_VAL_150_O6_PT_BR "150% (padrão)"
 #define BSNES_PPU_FAST_LABEL_PT_BR "PPU (vídeo) — Modo rápido"
@@ -33228,9 +33228,9 @@ struct retro_core_options_v2 options_tr = {
 
 /* RETRO_LANGUAGE_TT */
 
-#define CATEGORY_VIDEO_LABEL_TT NULL
+#define CATEGORY_VIDEO_LABEL_TT "Видео"
 #define CATEGORY_VIDEO_INFO_0_TT NULL
-#define CATEGORY_AUDIO_LABEL_TT NULL
+#define CATEGORY_AUDIO_LABEL_TT "Аудио"
 #define CATEGORY_AUDIO_INFO_0_TT NULL
 #define CATEGORY_MODE7_LABEL_TT NULL
 #define CATEGORY_MODE7_INFO_0_TT NULL
@@ -33244,7 +33244,7 @@ struct retro_core_options_v2 options_tr = {
 #define CATEGORY_LIGHTGUN_INFO_0_TT NULL
 #define BSNES_ASPECT_RATIO_LABEL_TT NULL
 #define BSNES_ASPECT_RATIO_INFO_0_TT NULL
-#define OPTION_VAL_AUTO_TT NULL
+#define OPTION_VAL_AUTO_TT "Автоматик"
 #define OPTION_VAL_1_1_TT NULL
 #define OPTION_VAL_4_3_TT NULL
 #define OPTION_VAL_NTSC_TT NULL
