@@ -1869,8 +1869,8 @@ struct retro_core_options_v2 options_ast = {
 #define OPTION_VAL_NTSC_COMPOSITE_BE "NTSC (кампазітны)"
 #define OPTION_VAL_NTSC_S_VIDEO_BE NULL
 #define OPTION_VAL_NTSC_RGB_BE NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_BE "Рэгуляванне колеру - яскравасць"
-#define BSNES_VIDEO_LUMINANCE_INFO_0_BE "Рэгуляваць яскравасць"
+#define BSNES_VIDEO_LUMINANCE_LABEL_BE "Рэгуляванне колеру - яркасць"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_BE "Рэгуляваць яркасць"
 #define OPTION_VAL_0_O4_BE "0 %"
 #define OPTION_VAL_10_BE "10 %"
 #define OPTION_VAL_20_BE "20 %"
@@ -1959,7 +1959,7 @@ struct retro_core_options_v2 options_ast = {
 #define BSNES_CPU_FASTMATH_INFO_0_BE "Забяспечвае неадкладныя вынікі вылічэнняў. Аперацыі складання і дзялення на рэальнай SNES займаюць вызначаны час. Састарэлыя эмулятары не імітавалі гэтыя затрымкі і таму раннія ROM хакі не чакаюць завяршэння матэматычных аперацый і патрабуюць уключэнні дадзенай налады."
 #define BSNES_CPU_OVERCLOCK_LABEL_BE "Разгон - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_BE NULL
-#define BSNES_CPU_OVERCLOCK_INFO_0_BE "Разгон або запаволенне CPU. Ўстаноўка значэння вышэй за 100% дазваляе зменшыць час загрузак і прыбраць запаволенні ў гульнях. Выкарыстоўвайце з асцярожнасцю з-за магчымых памылак і збояў."
+#define BSNES_CPU_OVERCLOCK_INFO_0_BE "Разгон або запаволенне CPU. Устаноўка значэння вышэй за 100% дазваляе зменшыць час загрузак і пазбавіцца запаволення ў гульнях. Выкарыстоўвайце з асцярожнасцю з прычыны выяўлення іншых памылак ці збояў."
 #define OPTION_VAL_210_BE "210 %"
 #define OPTION_VAL_220_BE "220 %"
 #define OPTION_VAL_230_BE "230 %"
@@ -1982,10 +1982,10 @@ struct retro_core_options_v2 options_ast = {
 #define OPTION_VAL_400_BE "400 %"
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_BE "Разгон - Супрацэсара SA-1"
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_BE "Супрацэсар SA-1"
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_BE "Разгон або запаволенне чыпа Super Accelerator (SA-1). Ўстаноўка значэння вышэй за 100% паляпшае прадукцыйнасць у гульнях з падтрымкай чыпа SA-1. Выкарыстоўвайце з асцярожнасцю з-за магчымых памылак і збояў."
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_BE "Разгон або запаволенне чыпа Super Accelerator (SA-1). Устаноўка значэння вышэй за 100% паляпшае прадукцыйнасць у гульнях з падтрымкай чыпа SA-1. Выкарыстоўвайце з асцярожнасцю з прычыны выяўлення іншых памылак ці збояў."
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_BE "Разгон - Супрацэсара SuperFX"
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_BE "Супрацэсар SuperFX"
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_BE "Разгон або запаволенне чыпа SuperFX. Ўстаноўка значэння вышэй за 100% паляпшае прадукцыйнасць у гульнях з падтрымкай чыпа SuperFX. Выкарыстоўвайце з асцярожнасцю з-за магчымых памылак і збояў."
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_BE "Разгон або запаволенне чыпа SuperFX. Устаноўка значэння вышэй за 100% паляпшае прадукцыйнасць у гульнях з падтрымкай чыпа SuperFX. Выкарыстоўвайце з асцярожнасцю з прычыны выяўлення іншых памылак ці збояў."
 #define OPTION_VAL_410_BE "410 %"
 #define OPTION_VAL_420_BE "420 %"
 #define OPTION_VAL_430_BE "430 %"
@@ -4533,12 +4533,12 @@ struct retro_core_options_v2 options_ca = {
 #define CATEGORY_HACK_LABEL_CHS NULL
 #define CATEGORY_HACK_INFO_0_CHS NULL
 #define CATEGORY_OVERCLOCK_LABEL_CHS NULL
-#define CATEGORY_OVERCLOCK_INFO_0_CHS NULL
+#define CATEGORY_OVERCLOCK_INFO_0_CHS "更改模拟硬件的速度。"
 #define CATEGORY_SGB_LABEL_CHS NULL
 #define CATEGORY_SGB_INFO_0_CHS NULL
-#define CATEGORY_LIGHTGUN_LABEL_CHS NULL
-#define CATEGORY_LIGHTGUN_INFO_0_CHS NULL
-#define BSNES_ASPECT_RATIO_LABEL_CHS NULL
+#define CATEGORY_LIGHTGUN_LABEL_CHS "光枪"
+#define CATEGORY_LIGHTGUN_INFO_0_CHS "更改 (触摸屏) 光枪设置。"
+#define BSNES_ASPECT_RATIO_LABEL_CHS "首选宽高比"
 #define BSNES_ASPECT_RATIO_INFO_0_CHS "选择首选内容宽高比。这只适用于RetroArch的宽高比设置为视频设置中的“核心提供”。"
 #define OPTION_VAL_AUTO_CHS "自动"
 #define OPTION_VAL_1_1_CHS NULL
@@ -4591,26 +4591,26 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_150_O6_CHS NULL
 #define BSNES_PPU_FAST_LABEL_CHS NULL
 #define BSNES_PPU_FAST_LABEL_CAT_CHS NULL
-#define BSNES_PPU_FAST_INFO_0_CHS NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_CHS NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_CAT_CHS NULL
-#define BSNES_PPU_DEINTERLACE_INFO_0_CHS NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CHS NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_CHS NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_CHS NULL
+#define BSNES_PPU_FAST_INFO_0_CHS "启用更快的 PPU 仿真，但精度会略有降低。建议打开此选项。注意：必须启用此选项，“反交错”、“无 Sprite 限制 ”和 “HD Mode 7 ”选项才能正常工作。"
+#define BSNES_PPU_DEINTERLACE_LABEL_CHS "PPU (视频) - 反交错"
+#define BSNES_PPU_DEINTERLACE_LABEL_CAT_CHS "PPU - 反交错"
+#define BSNES_PPU_DEINTERLACE_INFO_0_CHS "通过以 480p 进行内部渲染来消除所有游戏的隔行扫描。对性能的影响几乎不存在，因此建议开启。"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CHS "PPU (视频) - 无 Sprite 限制"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_CHS "PPU - 无 Sprite 限制"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_CHS "取消对屏幕上可同时绘制的 Sprite 数量的限制。可能会导致某些游戏出现问题。"
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CHS NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_CHS NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_CHS NULL
-#define BSNES_DSP_FAST_LABEL_CHS NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_CHS "模拟 ZSNES 和 Snes9x 旧版本中的一个错误，即未模拟 VRAM 阻塞。一些旧版本的 ROM hack 依赖于这种行为，如果不启用该选项，就会错误地渲染图形。该选项非常不准确，而且会损害 PPU 速度，因此建议禁用该选项，除非需要玩与该内核不兼容的游戏。"
+#define BSNES_DSP_FAST_LABEL_CHS "DSP (音频) - 快速模式"
 #define BSNES_DSP_FAST_LABEL_CAT_CHS NULL
 #define BSNES_DSP_FAST_INFO_0_CHS NULL
 #define BSNES_DSP_CUBIC_LABEL_CHS NULL
 #define BSNES_DSP_CUBIC_LABEL_CAT_CHS NULL
-#define BSNES_DSP_CUBIC_INFO_0_CHS NULL
+#define BSNES_DSP_CUBIC_INFO_0_CHS "对声音进行三次插值，保留更多的高音域。"
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CHS NULL
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_CHS NULL
 #define BSNES_DSP_ECHO_SHADOW_INFO_0_CHS NULL
-#define BSNES_MODE7_SCALE_LABEL_CHS NULL
+#define BSNES_MODE7_SCALE_LABEL_CHS "HD Mode 7 - 比例"
 #define BSNES_MODE7_SCALE_LABEL_CAT_CHS "比例"
 #define BSNES_MODE7_SCALE_INFO_0_CHS NULL
 #define OPTION_VAL_1X_CHS NULL
@@ -4621,36 +4621,36 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_6X_CHS NULL
 #define OPTION_VAL_7X_CHS NULL
 #define OPTION_VAL_8X_CHS NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CHS NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_CHS NULL
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_CHS NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CHS NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_CHS NULL
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_CHS NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CHS "HD Mode 7 - 透视修正"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_CHS "透视修正"
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_CHS "通过解决 SNES 使用的整数数学的一些限制，纠正某些游戏中使用的模式 7 图形的视角。"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CHS "HD Mode 7 - 超级采样"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_CHS "超级采样"
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_CHS "对某些游戏中使用的 Mode 7 图形进行超采样。结合更高的 Mode 7 比例系数，它能产生类似抗锯齿的效果。"
 #define BSNES_MODE7_MOSAIC_LABEL_CHS NULL
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_CHS NULL
-#define BSNES_MODE7_MOSAIC_INFO_0_CHS NULL
+#define BSNES_MODE7_MOSAIC_INFO_0_CHS "显示 Mode 7 图形的马赛克效果，即使在超采样时也是如此。"
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_CHS NULL
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_CHS NULL
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_CHS "提前模拟系统并回滚，以减少输入延迟。对系统要求非常高。"
 #define OPTION_VAL_1_CHS NULL
 #define OPTION_VAL_2_CHS NULL
 #define OPTION_VAL_3_CHS NULL
 #define OPTION_VAL_4_CHS NULL
 #define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_CHS NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_CHS NULL
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_CHS "使协处理器的仿真速度更快，但精度会略有降低。建议开启此项。"
 #define BSNES_COPROCESSOR_PREFER_HLE_LABEL_CHS NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_CHS NULL
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_CHS "启用该选项后，在可用时将始终使用精度较低的 HLE 仿真。如果禁用，只有在缺少 LLE 固件时才会使用 HLE。"
 #define BSNES_HOTFIXES_LABEL_CHS NULL
-#define BSNES_HOTFIXES_INFO_0_CHS NULL
+#define BSNES_HOTFIXES_INFO_0_CHS "即使是商业授权和官方发布的软件，有时也会带有错误。该选项可以纠正某些在真实硬件上出现的问题。"
 #define BSNES_ENTROPY_LABEL_CHS NULL
-#define BSNES_ENTROPY_INFO_0_CHS NULL
+#define BSNES_ENTROPY_INFO_0_CHS "选择内存和寄存器的随机化程度。如果设置为 “无”，则启动时所有内存和寄存器都将初始化为常量。低随机化能最准确地反映真实系统。高随机化程度则尽可能高。"
 #define OPTION_VAL_LOW_CHS "低"
 #define OPTION_VAL_HIGH_CHS "高"
 #define BSNES_CPU_FASTMATH_LABEL_CHS NULL
-#define BSNES_CPU_FASTMATH_INFO_0_CHS NULL
+#define BSNES_CPU_FASTMATH_INFO_0_CHS "立即提供计算结果。在真正的 SNES 上，CPU 的乘除运算需要一定时间才能完成。旧版模拟器无法模拟这些延迟，因此一些旧版 ROM hack 无法等待数学运算完成，需要使用此 hack。"
 #define BSNES_CPU_OVERCLOCK_LABEL_CHS NULL
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_CHS "处理器"
-#define BSNES_CPU_OVERCLOCK_INFO_0_CHS NULL
+#define BSNES_CPU_OVERCLOCK_INFO_0_CHS "超频或降频 CPU。将此值设置为 100% 以上可能会缩短加载时间并消除减速。请谨慎使用，因为这也可能导致某些游戏崩溃或出现其他问题。"
 #define OPTION_VAL_210_CHS NULL
 #define OPTION_VAL_220_CHS NULL
 #define OPTION_VAL_230_CHS NULL
@@ -4673,10 +4673,10 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_400_CHS NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CHS NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_CHS NULL
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_CHS NULL
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_CHS "超频或降频超级加速器 1 (SA-1) 芯片。将此值设置为 100% 以上可能会提高支持 SA-1 芯片的游戏的性能。请谨慎使用，因为这也可能导致某些游戏崩溃或出现其他问题。"
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_CHS NULL
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_CHS NULL
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_CHS NULL
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_CHS "超频或降频 SuperFX 协处理器。将此值设置为 100% 以上可能会提高支持 SuperFX 的游戏的性能。请谨慎使用，因为这也可能导致某些游戏崩溃或出现其他问题。"
 #define OPTION_VAL_410_CHS NULL
 #define OPTION_VAL_420_CHS NULL
 #define OPTION_VAL_430_CHS NULL
@@ -27025,16 +27025,16 @@ struct retro_core_options_v2 options_pl = {
 #define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_PT_BR "Remove qualquer limite para a quantidade de sprites que podem ser desenhados simultaneamente na tela.\nOBSERVAÇÃO: pode causar problemas em alguns jogos."
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_PT_BR "PPU (vídeo) — Sem bloqueio de VRAM"
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_PT_BR "PPU — Sem bloqueio de VRAM"
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_PT_BR "Emula um erro em versões antigas do ZSNES e do Snes9x, onde o bloqueio da VRAM não foi emulado. Alguns hacks mais antigos de ROMs se basearam neste comportamento e irão renderizar gráficos incorretamente se isto não for ativado. Esta opção é extremamente imprecisa e prejudica a velocidade da PPU, portanto é recomendável deixá-la desativada, a menos que você precise jogar um jogo que seja de outra forma incompatível com este núcleo."
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_PT_BR "Emula um erro de versões antigas do ZSNES e Snes9x, onde o bloqueio de VRAM não era emulado. Algumas ROMs hacks mais antigas dependem deste comportamento e renderizarão gráficos incorretamente se isto não for ativado. Esta opção é extremamente imprecisa e prejudica a velocidade do PPU, portanto é recomendável deixá-la desativada, a menos que você precise jogar um jogo que seja incompatível com este núcleo."
 #define BSNES_DSP_FAST_LABEL_PT_BR "DSP (áudio) — Modo rápido"
 #define BSNES_DSP_FAST_LABEL_CAT_PT_BR "DSP — Modo rápido"
-#define BSNES_DSP_FAST_INFO_0_PT_BR "Permite uma emulação mais rápida do DSP ao custo de uma pequena redução da precisão. É recomendável deixar isto ligado."
+#define BSNES_DSP_FAST_INFO_0_PT_BR "Permite uma emulação mais rápida do DSP ao custo de uma pequena redução da precisão. É recomendável deixá-la ligada."
 #define BSNES_DSP_CUBIC_LABEL_PT_BR "DSP (áudio) — Interpolação cúbica"
 #define BSNES_DSP_CUBIC_LABEL_CAT_PT_BR "DSP — Interpolação cúbica"
-#define BSNES_DSP_CUBIC_INFO_0_PT_BR "Aplica interpolação cúbica ao som, preservando mais a banda larga."
-#define BSNES_DSP_ECHO_SHADOW_LABEL_PT_BR "Sombra da RAM de eco - DSP (áudio)"
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_PT_BR "Sombra da RAM de eco - DSP"
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_PT_BR "Emula um erro no ZSNES onde a RAM de eco foi tratada como separada da RAM da APU. Muitos hacks antigos de ROMs para o Super Mario World confiaram neste comportamento e terão um travamento sem isto. Esta opção é extremamente imprecisa e não deve ser habilitada, a menos que seja necessária."
+#define BSNES_DSP_CUBIC_INFO_0_PT_BR "Aplica interpolação cúbica ao som, preservando mais a alta frequência."
+#define BSNES_DSP_ECHO_SHADOW_LABEL_PT_BR "DSP (áudio) — Sombra da RAM ecoada"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_PT_BR "DSP — Sombra da RAM ecoada"
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_PT_BR "Emula um erro do ZSNES, onde a RAM ecoada era separada da RAM do APU. Muitas ROMs hacks mais antigas de Super Mario World dependem deste comportamento e travarão sem isto. Esta opção é extremamente imprecisa e não deve ser usada, a menos que seja necessária."
 #define BSNES_MODE7_SCALE_LABEL_PT_BR "Mode 7 HD — Escala"
 #define BSNES_MODE7_SCALE_LABEL_CAT_PT_BR "Escala"
 #define BSNES_MODE7_SCALE_INFO_0_PT_BR "Aumenta a resolução horizontal e vertical dos gráficos do Mode 7 usado em alguns jogos."
