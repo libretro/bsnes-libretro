@@ -14455,7 +14455,7 @@ struct retro_core_options_v2 options_fa = {
 #define BSNES_VIDEO_GAMMA_LABEL_FI NULL
 #define BSNES_VIDEO_GAMMA_INFO_0_FI NULL
 #define OPTION_VAL_100_O6_FI "100 %"
-#define OPTION_VAL_150_O6_FI NULL
+#define OPTION_VAL_150_O6_FI "150 % (Oletus)"
 #define BSNES_PPU_FAST_LABEL_FI "PPU (video) - nopea tila"
 #define BSNES_PPU_FAST_LABEL_CAT_FI "PPU - nopea tila"
 #define BSNES_PPU_FAST_INFO_0_FI NULL
