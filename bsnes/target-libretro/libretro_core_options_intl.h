@@ -3641,7 +3641,7 @@ struct retro_core_options_v2 options_bg = {
 #define CATEGORY_SGB_INFO_0_CA NULL
 #define CATEGORY_LIGHTGUN_LABEL_CA "Pistola de llum"
 #define CATEGORY_LIGHTGUN_INFO_0_CA NULL
-#define BSNES_ASPECT_RATIO_LABEL_CA NULL
+#define BSNES_ASPECT_RATIO_LABEL_CA "Relació d'aspecte preferida"
 #define BSNES_ASPECT_RATIO_INFO_0_CA NULL
 #define OPTION_VAL_AUTO_CA "Automàtic"
 #define OPTION_VAL_1_1_CA NULL
@@ -34186,10 +34186,10 @@ struct retro_core_options_v2 options_tt = {
 #define OPTION_VAL_180_UK NULL
 #define OPTION_VAL_190_UK NULL
 #define OPTION_VAL_200_UK NULL
-#define BSNES_VIDEO_GAMMA_LABEL_UK NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_UK NULL
+#define BSNES_VIDEO_GAMMA_LABEL_UK "Регулювання кольору - Гамма"
+#define BSNES_VIDEO_GAMMA_INFO_0_UK "Регулювання гамми"
 #define OPTION_VAL_100_O6_UK NULL
-#define OPTION_VAL_150_O6_UK NULL
+#define OPTION_VAL_150_O6_UK "150% (За замовчуванням)"
 #define BSNES_PPU_FAST_LABEL_UK NULL
 #define BSNES_PPU_FAST_LABEL_CAT_UK NULL
 #define BSNES_PPU_FAST_INFO_0_UK NULL
