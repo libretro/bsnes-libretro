@@ -2730,9 +2730,9 @@ struct retro_core_options_v2 options_be = {
 
 /* RETRO_LANGUAGE_BG */
 
-#define CATEGORY_VIDEO_LABEL_BG NULL
+#define CATEGORY_VIDEO_LABEL_BG "Видео"
 #define CATEGORY_VIDEO_INFO_0_BG NULL
-#define CATEGORY_AUDIO_LABEL_BG NULL
+#define CATEGORY_AUDIO_LABEL_BG "Звук"
 #define CATEGORY_AUDIO_INFO_0_BG NULL
 #define CATEGORY_MODE7_LABEL_BG NULL
 #define CATEGORY_MODE7_INFO_0_BG NULL
@@ -3631,40 +3631,40 @@ struct retro_core_options_v2 options_bg = {
 #define CATEGORY_VIDEO_INFO_0_CA "Canviar opcions de sortida de vídeo."
 #define CATEGORY_AUDIO_LABEL_CA "Àudio"
 #define CATEGORY_AUDIO_INFO_0_CA "Canvia les opcions de sortida de l'àudio."
-#define CATEGORY_MODE7_LABEL_CA NULL
-#define CATEGORY_MODE7_INFO_0_CA NULL
-#define CATEGORY_HACK_LABEL_CA NULL
-#define CATEGORY_HACK_INFO_0_CA NULL
-#define CATEGORY_OVERCLOCK_LABEL_CA NULL
-#define CATEGORY_OVERCLOCK_INFO_0_CA NULL
+#define CATEGORY_MODE7_LABEL_CA "Mode HD 7"
+#define CATEGORY_MODE7_INFO_0_CA "Canvia la configuració relativa a l'emulació dels gràfics en Mode 7."
+#define CATEGORY_HACK_LABEL_CA "Correccions de l'emulació i optimitzacions"
+#define CATEGORY_HACK_INFO_0_CA "Aplica correccions de l'emulació, optimitzacions i revisions."
+#define CATEGORY_OVERCLOCK_LABEL_CA "Augmentar/Disminuir velocitat de la CPU"
+#define CATEGORY_OVERCLOCK_INFO_0_CA "Canvia la velocitat d'emulació del maquinari."
 #define CATEGORY_SGB_LABEL_CA NULL
-#define CATEGORY_SGB_INFO_0_CA NULL
+#define CATEGORY_SGB_INFO_0_CA "Canvia la configuració relativa a l'emulació de Super Game Boy."
 #define CATEGORY_LIGHTGUN_LABEL_CA "Pistola de llum"
-#define CATEGORY_LIGHTGUN_INFO_0_CA NULL
+#define CATEGORY_LIGHTGUN_INFO_0_CA "Canvia (pantalla tàctil) la configuració de la pistola de llum."
 #define BSNES_ASPECT_RATIO_LABEL_CA "Relació d'aspecte preferida"
-#define BSNES_ASPECT_RATIO_INFO_0_CA NULL
+#define BSNES_ASPECT_RATIO_INFO_0_CA "Escull la relació d'aspecte preferida. Aquesta relació d'aspecte només s'aplicarà si la relació d'aspecte a RetroArch està fixada a 'Core provided' en la configuració de vídeo."
 #define OPTION_VAL_AUTO_CA "Automàtic"
-#define OPTION_VAL_1_1_CA NULL
+#define OPTION_VAL_1_1_CA "1:1 PAR (Píxel perfecte)"
 #define OPTION_VAL_4_3_CA NULL
 #define OPTION_VAL_NTSC_CA NULL
 #define OPTION_VAL_PAL_CA NULL
-#define BSNES_PPU_OVERSCAN_V_LABEL_CA NULL
-#define BSNES_PPU_OVERSCAN_V_INFO_0_CA NULL
-#define OPTION_VAL_0_CA NULL
-#define OPTION_VAL_8_CA NULL
-#define OPTION_VAL_12_CA NULL
-#define OPTION_VAL_16_CA NULL
-#define BSNES_BLUR_EMULATION_LABEL_CA NULL
-#define BSNES_BLUR_EMULATION_INFO_0_CA NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_CA "Retallar sobreescombrat vertical"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CA "Elimina una quantitat concreta de línies de la part superior i inferior de la pantalla per emular el marc d'una televisió de l'època de la SNES."
+#define OPTION_VAL_0_CA "0 Línies"
+#define OPTION_VAL_8_CA "8 Línies"
+#define OPTION_VAL_12_CA "12 Línies"
+#define OPTION_VAL_16_CA "16 Línies"
+#define BSNES_BLUR_EMULATION_LABEL_CA "Emular el difuminat"
+#define BSNES_BLUR_EMULATION_INFO_0_CA "Simula la limitació de resolució horitzontal d'un televisor SD difuminant els píxels que estiguin adjacents horitzontalment. Certs jocs necessiten aquest efecte per simular la transparencia."
 #define BSNES_VIDEO_FILTER_LABEL_CA "Filtre"
-#define BSNES_VIDEO_FILTER_INFO_0_CA NULL
+#define BSNES_VIDEO_FILTER_INFO_0_CA "Selecciona entre cap filtre i el filtre NTSC de blargg amb opcions per RF, Composició, S-Video o RGB"
 #define OPTION_VAL_NONE_CA "Cap"
 #define OPTION_VAL_NTSC_RF_CA NULL
-#define OPTION_VAL_NTSC_COMPOSITE_CA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_CA "NTSC (Composició)"
 #define OPTION_VAL_NTSC_S_VIDEO_CA NULL
 #define OPTION_VAL_NTSC_RGB_CA NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_CA NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_CA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CA "Ajust de color - Brillantor"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CA "Ajustar brillantor"
 #define OPTION_VAL_0_O4_CA NULL
 #define OPTION_VAL_10_CA NULL
 #define OPTION_VAL_20_CA NULL
@@ -3676,8 +3676,8 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_80_CA NULL
 #define OPTION_VAL_90_CA NULL
 #define OPTION_VAL_100_CA "100% (Per defecte)"
-#define BSNES_VIDEO_SATURATION_LABEL_CA NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_CA NULL
+#define BSNES_VIDEO_SATURATION_LABEL_CA "Ajust de color - Saturació"
+#define BSNES_VIDEO_SATURATION_INFO_0_CA "Ajustar saturació"
 #define OPTION_VAL_110_CA NULL
 #define OPTION_VAL_120_CA NULL
 #define OPTION_VAL_130_CA NULL
@@ -3688,34 +3688,34 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_180_CA NULL
 #define OPTION_VAL_190_CA NULL
 #define OPTION_VAL_200_CA NULL
-#define BSNES_VIDEO_GAMMA_LABEL_CA NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_CA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CA "Ajust de color - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_CA "Ajustar el factor Gamma"
 #define OPTION_VAL_100_O6_CA NULL
-#define OPTION_VAL_150_O6_CA NULL
-#define BSNES_PPU_FAST_LABEL_CA NULL
-#define BSNES_PPU_FAST_LABEL_CAT_CA NULL
-#define BSNES_PPU_FAST_INFO_0_CA NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_CA NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_CAT_CA NULL
-#define BSNES_PPU_DEINTERLACE_INFO_0_CA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_CA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_CA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_CA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_CA NULL
-#define BSNES_DSP_FAST_LABEL_CA NULL
-#define BSNES_DSP_FAST_LABEL_CAT_CA NULL
-#define BSNES_DSP_FAST_INFO_0_CA NULL
-#define BSNES_DSP_CUBIC_LABEL_CA NULL
-#define BSNES_DSP_CUBIC_LABEL_CAT_CA NULL
-#define BSNES_DSP_CUBIC_INFO_0_CA NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CA NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_CA NULL
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_CA NULL
-#define BSNES_MODE7_SCALE_LABEL_CA NULL
+#define OPTION_VAL_150_O6_CA "150% (Per defecte)"
+#define BSNES_PPU_FAST_LABEL_CA "PPU (Vídeo) - Mode ràpid"
+#define BSNES_PPU_FAST_LABEL_CAT_CA "PPU - Mode ràpid"
+#define BSNES_PPU_FAST_INFO_0_CA "Activa l'emulació ràpida de la PPU a costa d'una reducció de la precisió. Es recomana deixar-ho activat. NOTA: Això ha d'estar activat perquè funcionin les opcions de desentrellaçament, desactivar límit de sprites i Mode 7 en alta resolució."
+#define BSNES_PPU_DEINTERLACE_LABEL_CA "PPU (Vídeo) - Desentrellaçament"
+#define BSNES_PPU_DEINTERLACE_LABEL_CAT_CA "Desentrellaçament PPU"
+#define BSNES_PPU_DEINTERLACE_INFO_0_CA "Desentrellaça tots els jocs renderitzant-los internament a 480p. No hi ha quasi cap afectació al rendiment, així que és recomanable deixar aquesta opció activada."
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CA "PPU (Vídeo) - Sense límit de fotogrames"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_CA "Sense límit de fotogrames - PPU"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_CA "Elimina tots els límits en el nombre de sprites que es poden mostrar en pantalla de manera simultània. Pot provocar problemes en alguns jocs."
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CA "PPU (Vídeo) - Eliminar bloqueig de VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_CA "PPU - Eliminar el bloqueig de VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_CA "Simula un error en versions anteriors de ZSNES i Snes9x en què no s'emulava el bloqueig de memòria VRAM. Alguns romhacks antics necessiten aquest error per funcionar i es mostraran incorrectament a nivell gràfic si no s'activa aquesta opció. És molt inexacta i afecta a la velocitat de la PPU, així que et recomanem mantenir-la desactivada a no ser que necessitis jugar a un joc que sigui incompatible amb aquest nucli sense aquesta opció."
+#define BSNES_DSP_FAST_LABEL_CA "DSP (Àudio) - Mode ràpid"
+#define BSNES_DSP_FAST_LABEL_CAT_CA "DSP - Mode ràpid"
+#define BSNES_DSP_FAST_INFO_0_CA "Habilita l'emulació ràpida del DSP a costa d'una petita reducció de la precisió. Es recomana deixar aquesta opció activada."
+#define BSNES_DSP_CUBIC_LABEL_CA "DSP (Àudio) - Interpolació cúbica"
+#define BSNES_DSP_CUBIC_LABEL_CAT_CA "DSP - Interpolació cúbica"
+#define BSNES_DSP_CUBIC_INFO_0_CA "Aplica interpolació cúbica al so, conservant més rang de freqüències agudes."
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CA "DSP (Àudio) - Duplicació de RAM per ecos"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_CA "DSP - Duplicació de memòria RAM per eco"
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_CA "Simula un error a ZSNES en el qual la memòria RAM per a ecos era tractada com una part independent de la RAM de la APU. Alguns romhacks antics de Super Mario Wolrd depenen d'aquest error per a funcionar. Aquesta opció és molt inestable i no s'ha d'activar a no ser que sigui imprescindible."
+#define BSNES_MODE7_SCALE_LABEL_CA "Mode 7 HD - Escala"
 #define BSNES_MODE7_SCALE_LABEL_CAT_CA "Escala"
-#define BSNES_MODE7_SCALE_INFO_0_CA NULL
+#define BSNES_MODE7_SCALE_INFO_0_CA "Augmenta la resolució horitzontal i vertical dels gràfics en el Mode 7 per certs jocs."
 #define OPTION_VAL_1X_CA NULL
 #define OPTION_VAL_2X_CA NULL
 #define OPTION_VAL_3X_CA NULL
@@ -3724,36 +3724,36 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_6X_CA NULL
 #define OPTION_VAL_7X_CA NULL
 #define OPTION_VAL_8X_CA NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CA NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_CA NULL
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_CA NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CA NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_CA NULL
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_CA NULL
-#define BSNES_MODE7_MOSAIC_LABEL_CA NULL
-#define BSNES_MODE7_MOSAIC_LABEL_CAT_CA NULL
-#define BSNES_MODE7_MOSAIC_INFO_0_CA NULL
-#define BSNES_RUN_AHEAD_FRAMES_LABEL_CA NULL
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_CA NULL
-#define OPTION_VAL_1_CA NULL
-#define OPTION_VAL_2_CA NULL
-#define OPTION_VAL_3_CA NULL
-#define OPTION_VAL_4_CA NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_CA NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_CA NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_CA NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_CA NULL
-#define BSNES_HOTFIXES_LABEL_CA NULL
-#define BSNES_HOTFIXES_INFO_0_CA NULL
-#define BSNES_ENTROPY_LABEL_CA NULL
-#define BSNES_ENTROPY_INFO_0_CA NULL
-#define OPTION_VAL_LOW_CA NULL
-#define OPTION_VAL_HIGH_CA NULL
-#define BSNES_CPU_FASTMATH_LABEL_CA NULL
-#define BSNES_CPU_FASTMATH_INFO_0_CA NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_CA NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_CAT_CA NULL
-#define BSNES_CPU_OVERCLOCK_INFO_0_CA NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CA "Mode HD 7 - Correcció de la perspectiva"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_CA "Correcció de perspectiva"
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_CA "Corregeix la perspectiva dels gràfics en el Mode 7 que s'utilitza en certs jocs, corregint les limitacions dels càlculs amb nombres enters que fa la SNES."
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CA "Mode HD 7 - Sobremostreig"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_CA "Sobre mostreig"
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_CA "Sobremostreig els gràfics en Mode 7 que fan servir certs jocs. Combinat amb un factor d'escala alt del Mode 7, produeix un efecte similar al suavitzat de vores."
+#define BSNES_MODE7_MOSAIC_LABEL_CA "Mode HD 7 - HD -> Mosaic SD"
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_CA "HD -> Mosaic SD"
+#define BSNES_MODE7_MOSAIC_INFO_0_CA "Mostra l'efecte de mosaic dels gràfics en el mode 7 si augmenta l'escala."
+#define BSNES_RUN_AHEAD_FRAMES_LABEL_CA "Reducció predictiva de la latència interna"
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_CA "Simula el sistema per avançat i després executa'l per reduir la latència d'entrada. Aquesta opció té requisits de sistema molt alts."
+#define OPTION_VAL_1_CA "1 fotograma"
+#define OPTION_VAL_2_CA "2 fotogrames"
+#define OPTION_VAL_3_CA "3 fotogrames"
+#define OPTION_VAL_4_CA "4 fotogrames"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_CA "Coprocessadors - Mode ràpid"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_CA "Habilitat l'emulació ràpida dels coprocessadors a costa d'una petita reducció de la precisió. Es recomana deixar aquesta opció activada."
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_CA "Coprocessadors - HLE preferit"
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_CA "Quan aquesta opció està activada, es farà servir una emulació d'alt nivell amb menys precisió si està disponible. En cas contrari, només es farà servir l'emulació d'alt nivell quan no es trobi dins del firmware."
+#define BSNES_HOTFIXES_LABEL_CA "Correccions"
+#define BSNES_HOTFIXES_INFO_0_CA "A vegades, els programes comercials també poden contenir errors. Aquesta opció corregeix certs problemes que també passen en el maquinari real."
+#define BSNES_ENTROPY_LABEL_CA "Entropía (aleatori)"
+#define BSNES_ENTROPY_INFO_0_CA "Selecciona el nivell d'aleatoritat de la memòria i els registres. Si selecciones 'cap', tota la memòria els registres s'iniciaran al principi amb uns valors constants. Si selecciones 'baixa', ofereix la representació més fidel al sistema real. Si selecciones 'alta' produeix uns valors que son el més aleatoris possibles."
+#define OPTION_VAL_LOW_CA "Baix"
+#define OPTION_VAL_HIGH_CA "Alt"
+#define BSNES_CPU_FASTMATH_LABEL_CA "Acceleració càlculs matemàtics a la CPU"
+#define BSNES_CPU_FASTMATH_INFO_0_CA "Produeix els resultats de la computació de forma inmediata. Les multiplicacions i quocients amb la CPU tarden un temps a fer-se a una SNES real. Els emuladors més antics simulaven aquests retards, així que alguns romhacks antics necessiten aquesta correcció per funcionar correctament."
+#define BSNES_CPU_OVERCLOCK_LABEL_CA "Augmentar velocitat de la CPU"
+#define BSNES_CPU_OVERCLOCK_LABEL_CAT_CA "CPU760%"
+#define BSNES_CPU_OVERCLOCK_INFO_0_CA "Augmentar o disminuir la velocitat de la CPU. Un valor més alt que el 100% pot reduir els temps de càrrega i entorpiments. Fes servir-ho amb precaució perquè també pot provocar bloquejos o altres problemes en alguns jocs."
 #define OPTION_VAL_210_CA NULL
 #define OPTION_VAL_220_CA NULL
 #define OPTION_VAL_230_CA NULL
@@ -3774,12 +3774,12 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_380_CA NULL
 #define OPTION_VAL_390_CA NULL
 #define OPTION_VAL_400_CA NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CA NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_CA NULL
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_CA NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CA NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_CA NULL
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_CA NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CA "Augmentar velocitat - Coprocessador SA-1"
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_CA "Coprocessador SA-1"
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_CA "Augmentar o disminuir la velocitat del Super Accelerator (SA-1) Un valor més alt que el 100% pot millorar el rendiment en jocs que tinguin suport de Super Accelerator (SA-1). Fes servir-ho amb precaució perquè també pot provocar bloquejos o altres problemes en alguns jocs."
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CA "Augmentar velocitat - Coprocessador SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_CA "Coprocessador SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_CA "Augmentar o disminuir la velocitat del coprocessador SuperFX. Un valor més alt que el 100% pot millorar el rendiment en jocs que tinguin suport de SuperFX. Fes servir-ho amb precaució perquè també pot provocar bloquejos o altres problemes en alguns jocs."
 #define OPTION_VAL_410_CA NULL
 #define OPTION_VAL_420_CA NULL
 #define OPTION_VAL_430_CA NULL
@@ -3820,16 +3820,16 @@ struct retro_core_options_v2 options_bg = {
 #define OPTION_VAL_780_CA NULL
 #define OPTION_VAL_790_CA NULL
 #define OPTION_VAL_800_CA NULL
-#define BSNES_SGB_BIOS_LABEL_CA NULL
-#define BSNES_SGB_BIOS_INFO_0_CA NULL
+#define BSNES_SGB_BIOS_LABEL_CA "BIOS de la Super Game Boy preferida (Es requereix reinici)"
+#define BSNES_SGB_BIOS_INFO_0_CA "Selecciona la BIOS preferida de Super Game Boy que s'utilitzarà amb els jocs compatibles."
 #define OPTION_VAL_SGB1_SFC_CA NULL
 #define OPTION_VAL_SGB2_SFC_CA NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_CA NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_CA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_CA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_CA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_CA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_CA NULL
+#define BSNES_HIDE_SGB_BORDER_LABEL_CA "Amaga vora SGB"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_CA "Amaga la vora en jugar a jocs de Super Game Boy."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_CA "Simular la pistola de llum amb la pantalla tàctil"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_CA "Activa l'entrada de Super Scope per dispositius tàctils."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_CA "Inverteix gatells del Super Scope"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_CA "Inverteix els botons de gatell i ratolí del Super Scope a la pantalla tàctil."
 
 struct retro_core_option_v2_category option_cats_ca[] = {
    {
