@@ -31440,13 +31440,13 @@ struct retro_core_options_v2 options_sr = {
 #define CATEGORY_AUDIO_INFO_0_SV "Ändra inställningar för ljudutgången."
 #define CATEGORY_MODE7_LABEL_SV NULL
 #define CATEGORY_MODE7_INFO_0_SV NULL
-#define CATEGORY_HACK_LABEL_SV NULL
+#define CATEGORY_HACK_LABEL_SV "Emuleringshack och förbättringar"
 #define CATEGORY_HACK_INFO_0_SV NULL
 #define CATEGORY_OVERCLOCK_LABEL_SV NULL
 #define CATEGORY_OVERCLOCK_INFO_0_SV NULL
 #define CATEGORY_SGB_LABEL_SV NULL
 #define CATEGORY_SGB_INFO_0_SV NULL
-#define CATEGORY_LIGHTGUN_LABEL_SV NULL
+#define CATEGORY_LIGHTGUN_LABEL_SV "Ljuspistol"
 #define CATEGORY_LIGHTGUN_INFO_0_SV NULL
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
 #define BSNES_ASPECT_RATIO_INFO_0_SV "Välj det föredragna bildformatet för Innehållet. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
@@ -31470,8 +31470,8 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_NTSC_COMPOSITE_SV "NTSC (Komposit)"
 #define OPTION_VAL_NTSC_S_VIDEO_SV NULL
 #define OPTION_VAL_NTSC_RGB_SV NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_SV NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_SV NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_SV "Färgjustering - Luminans"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_SV "Justera luminans"
 #define OPTION_VAL_0_O4_SV NULL
 #define OPTION_VAL_10_SV NULL
 #define OPTION_VAL_20_SV NULL
@@ -31483,8 +31483,8 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_80_SV NULL
 #define OPTION_VAL_90_SV NULL
 #define OPTION_VAL_100_SV "100% (Standard)"
-#define BSNES_VIDEO_SATURATION_LABEL_SV NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_SV NULL
+#define BSNES_VIDEO_SATURATION_LABEL_SV "Färgjustering - Färgmättnad"
+#define BSNES_VIDEO_SATURATION_INFO_0_SV "Justera färgmättnad"
 #define OPTION_VAL_110_SV NULL
 #define OPTION_VAL_120_SV NULL
 #define OPTION_VAL_130_SV NULL
@@ -31495,10 +31495,10 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_180_SV NULL
 #define OPTION_VAL_190_SV NULL
 #define OPTION_VAL_200_SV NULL
-#define BSNES_VIDEO_GAMMA_LABEL_SV NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_SV NULL
+#define BSNES_VIDEO_GAMMA_LABEL_SV "Färgjustering - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_SV "Justera gamma"
 #define OPTION_VAL_100_O6_SV NULL
-#define OPTION_VAL_150_O6_SV NULL
+#define OPTION_VAL_150_O6_SV "150% (standard)"
 #define BSNES_PPU_FAST_LABEL_SV NULL
 #define BSNES_PPU_FAST_LABEL_CAT_SV NULL
 #define BSNES_PPU_FAST_INFO_0_SV "Möjliggör snabbare emulering av PPU till bekostnad av en mindre minskning av noggrannheten. Rekommenderas att låta detta vara kvar som aktiv. OBS: Detta måste vara aktiverat för att alternativen 'Deinterlace', 'Ingen blockfigursgräns' och 'HD-läge 7' ska fungera."
@@ -31511,8 +31511,8 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_SV NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_SV NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_SV NULL
-#define BSNES_DSP_FAST_LABEL_SV NULL
-#define BSNES_DSP_FAST_LABEL_CAT_SV NULL
+#define BSNES_DSP_FAST_LABEL_SV "DSP (ljud) - Snabbt läge"
+#define BSNES_DSP_FAST_LABEL_CAT_SV "DSP - Snabbt läge"
 #define BSNES_DSP_FAST_INFO_0_SV NULL
 #define BSNES_DSP_CUBIC_LABEL_SV NULL
 #define BSNES_DSP_CUBIC_LABEL_CAT_SV NULL
@@ -31532,7 +31532,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_7X_SV NULL
 #define OPTION_VAL_8X_SV NULL
 #define BSNES_MODE7_PERSPECTIVE_LABEL_SV NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_SV NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_SV "Perspektivkorrigering"
 #define BSNES_MODE7_PERSPECTIVE_INFO_0_SV NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_SV NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_SV NULL
@@ -31627,7 +31627,7 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_780_SV "780 %"
 #define OPTION_VAL_790_SV "790 %"
 #define OPTION_VAL_800_SV "800 %"
-#define BSNES_SGB_BIOS_LABEL_SV NULL
+#define BSNES_SGB_BIOS_LABEL_SV "Föredraget Super Game Boy BIOS (omstart krävs)"
 #define BSNES_SGB_BIOS_INFO_0_SV NULL
 #define OPTION_VAL_SGB1_SFC_SV NULL
 #define OPTION_VAL_SGB2_SFC_SV NULL
@@ -34251,7 +34251,7 @@ struct retro_core_options_v2 options_tt = {
 #define BSNES_CPU_FASTMATH_INFO_0_UK "Негайно надасте результат обчислення. множення та ділення процесора потребують часу, щоб завершити роботу на реальному SNES. Старіші емулятори не моделювали цих затримок, і таким чином деякі старі програми не чекають завершення математичних операцій і потребують цього хаку."
 #define BSNES_CPU_OVERCLOCK_LABEL_UK "Розкриття - ЦП"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_UK NULL
-#define BSNES_CPU_OVERCLOCK_INFO_0_UK "Параметр \\"overclock або зменьшення\\" ЦП. Налаштування цього значення вище 100% може зменшувати час завантаження і видаляти уповільнення. Використовуйте з обережністю, тому що це також може призвести до аварії або виявлення інших питань."
+#define BSNES_CPU_OVERCLOCK_INFO_0_UK "Розгін або уповільнення ЦП. Налаштування цього значення вище 100% може зменшувати час завантаження і видаляти уповільнення. Використовуйте з обережністю, тому що це також може призвести до аварії або виявлення інших проблем."
 #define OPTION_VAL_210_UK NULL
 #define OPTION_VAL_220_UK NULL
 #define OPTION_VAL_230_UK NULL
