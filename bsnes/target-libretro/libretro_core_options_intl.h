@@ -14429,7 +14429,7 @@ struct retro_core_options_v2 options_fa = {
 #define OPTION_VAL_NTSC_RGB_FI NULL
 #define BSNES_VIDEO_LUMINANCE_LABEL_FI NULL
 #define BSNES_VIDEO_LUMINANCE_INFO_0_FI NULL
-#define OPTION_VAL_0_O4_FI "0 %"
+#define OPTION_VAL_0_O4_FI NULL
 #define OPTION_VAL_10_FI "10 %"
 #define OPTION_VAL_20_FI "20 %"
 #define OPTION_VAL_30_FI "30 %"
