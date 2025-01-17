@@ -9026,7 +9026,7 @@ struct retro_core_options_v2 options_da = {
 #define BSNES_ASPECT_RATIO_LABEL_DE "Bevorzugtes Seitenverhältnis"
 #define BSNES_ASPECT_RATIO_INFO_0_DE "Das bevorzugte Seitenverhältnis des Inhalts auswählen. Dies wird nur angewendet, wenn das Seitenverhältnis von RetroArch in den Videoeinstellungen auf \"Wie von Core vorgesehen\" eingestellt ist."
 #define OPTION_VAL_AUTO_DE "Automatisch"
-#define OPTION_VAL_1_1_DE "1:1 PAR (Pixelgetreu)"
+#define OPTION_VAL_1_1_DE "1:1 PAR (Pixel Perfekt)"
 #define OPTION_VAL_4_3_DE NULL
 #define OPTION_VAL_NTSC_DE NULL
 #define OPTION_VAL_PAL_DE NULL
@@ -18893,16 +18893,16 @@ struct retro_core_options_v2 options_hr = {
 #define BSNES_ASPECT_RATIO_LABEL_HU "Kívánt képarány"
 #define BSNES_ASPECT_RATIO_INFO_0_HU "A tartalom kívánt képaránya. Csak akkor lép életbe, ha a RetroArch saját képarány beállítása \"Mag által meghatározott\" értékre van állítva a kép beállításainál."
 #define OPTION_VAL_AUTO_HU "Automatikus"
-#define OPTION_VAL_1_1_HU NULL
-#define OPTION_VAL_4_3_HU NULL
+#define OPTION_VAL_1_1_HU "1:1 pixelarány (pixelpontos)"
+#define OPTION_VAL_4_3_HU "4:3 kijelzőarány"
 #define OPTION_VAL_NTSC_HU NULL
 #define OPTION_VAL_PAL_HU NULL
 #define BSNES_PPU_OVERSCAN_V_LABEL_HU "Függőleges overscan levágása"
-#define BSNES_PPU_OVERSCAN_V_INFO_0_HU NULL
-#define OPTION_VAL_0_HU NULL
-#define OPTION_VAL_8_HU NULL
-#define OPTION_VAL_12_HU NULL
-#define OPTION_VAL_16_HU NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_HU "N sor levágása a képernyő aljáról és tetejéről, az SNES korabeli televíziók kávájának szimulálásához."
+#define OPTION_VAL_0_HU "0 sor"
+#define OPTION_VAL_8_HU "8 sor"
+#define OPTION_VAL_12_HU "12 sor"
+#define OPTION_VAL_16_HU "16 sor"
 #define BSNES_BLUR_EMULATION_LABEL_HU "Elmosás emulálása"
 #define BSNES_BLUR_EMULATION_INFO_0_HU "Az SDTV korlátozott vízszintes felbontásának szimulálása a vízszintesen szomszédos képpontok összemosásával. Néhány játék hagyatkozik erre átlátszósági effektek céljából."
 #define BSNES_VIDEO_FILTER_LABEL_HU "Szűrő"
@@ -19074,7 +19074,7 @@ struct retro_core_options_v2 options_hr = {
 #define OPTION_VAL_SGB1_SFC_HU NULL
 #define OPTION_VAL_SGB2_SFC_HU NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_HU "SGB keret elrejtése"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_HU NULL
+#define BSNES_HIDE_SGB_BORDER_INFO_0_HU "A keret elrejtése Super Game Boy játékok esetén."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_HU "Érintőképernyős fénypisztoly"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_HU "A Super Scope bemenet engedélyezése érintőképernyős eszközökön."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_HU "Super Scope ravaszgombok megfordítása"
