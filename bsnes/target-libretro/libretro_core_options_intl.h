@@ -31510,7 +31510,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_SV "Ta bort alla begränsningar för antalet blockfigurer som kan ritas samtidigt på skärmen. Kan orsaka problem med vissa spel."
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_SV NULL
 #define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_SV NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_SV NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_SV "Emulerar ett fel i äldre versioner av ZSNES och Snes9x, där VRAM-blockering inte emulerades. Några äldre ROM-hack förlitade sig på detta beteende och kommer att rendera grafik felaktigt om detta inte är aktiverat. Det här alternativet är extremt felaktigt och skadar PPU-hastigheten, så det rekommenderas att du låter det vara avaktiverat om du inte behöver spela ett spel som annars är inkompatibelt med den här kärnan."
 #define BSNES_DSP_FAST_LABEL_SV "DSP (ljud) - Snabbt läge"
 #define BSNES_DSP_FAST_LABEL_CAT_SV "DSP - Snabbt läge"
 #define BSNES_DSP_FAST_INFO_0_SV NULL
@@ -31519,7 +31519,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_DSP_CUBIC_INFO_0_SV NULL
 #define BSNES_DSP_ECHO_SHADOW_LABEL_SV NULL
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_SV NULL
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_SV NULL
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_SV "Emulerar en bugg i ZSNES där echo RAM behandlades som separat från APU RAM. Många äldre ROM-hack för Super Mario World förlitade sig på detta beteende och kommer att krascha utan detta. Det här alternativet är extremt felaktigt och bör inte aktiveras om det inte behövs."
 #define BSNES_MODE7_SCALE_LABEL_SV NULL
 #define BSNES_MODE7_SCALE_LABEL_CAT_SV "Skala"
 #define BSNES_MODE7_SCALE_INFO_0_SV NULL
@@ -31553,11 +31553,11 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_HOTFIXES_LABEL_SV "Snabbfixar"
 #define BSNES_HOTFIXES_INFO_0_SV NULL
 #define BSNES_ENTROPY_LABEL_SV NULL
-#define BSNES_ENTROPY_INFO_0_SV NULL
+#define BSNES_ENTROPY_INFO_0_SV "Välj graden av randomisering av minnet och registren. Om inställningen är None initialiseras alla minnen och register till konstanta värden vid start. Låg randomisering ger den mest exakta representationen av ett verkligt system. High slumpas så mycket som möjligt."
 #define OPTION_VAL_LOW_SV "Låg"
 #define OPTION_VAL_HIGH_SV "Hög"
 #define BSNES_CPU_FASTMATH_LABEL_SV NULL
-#define BSNES_CPU_FASTMATH_INFO_0_SV NULL
+#define BSNES_CPU_FASTMATH_INFO_0_SV "Ge beräkningsresultat omedelbart. CPU-multiplikation och -division tar tid att slutföra på en riktig SNES. Äldre emulatorer simulerade inte dessa fördröjningar och därför väntar vissa äldre ROM-hack inte på att matematiska operationer ska slutföras och behöver detta hack."
 #define BSNES_CPU_OVERCLOCK_LABEL_SV "Överklockning - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_SV NULL
 #define BSNES_CPU_OVERCLOCK_INFO_0_SV "Överklockning eller nerklockning av CPUn. Inställning av värdet över 100% kan minska inläsningstider och ta bort långsamheter. Använd med försiktighet eftersom det kan orsaka att spel kraschar eller upplever andra problem."
@@ -31583,10 +31583,10 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_400_SV NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_SV NULL
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_SV NULL
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_SV "Överklocka eller nedklocka Super Accelerator 1 (SA-1)-chipet. Om du ställer in det här värdet på över 100 % kan det förbättra prestandan i spel som stöder SA-1-chippet. Använd det med försiktighet, eftersom det också kan leda till att vissa spel kraschar eller uppvisar andra problem."
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_SV NULL
 #define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_SV NULL
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_SV NULL
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_SV "Överklocka eller nedklocka SuperFX coprocessor. Om du ställer in det här värdet på över 100% kan det förbättra prestandan i spel som stöder SuperFX. Använd det med försiktighet, eftersom det också kan leda till att vissa spel kraschar eller uppvisar andra problem."
 #define OPTION_VAL_410_SV NULL
 #define OPTION_VAL_420_SV NULL
 #define OPTION_VAL_430_SV NULL
