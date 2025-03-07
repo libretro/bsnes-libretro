@@ -6340,11 +6340,11 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_NTSC_CS NULL
 #define OPTION_VAL_PAL_CS NULL
 #define BSNES_PPU_OVERSCAN_V_LABEL_CS "Oříznutí Vertikálního Přesahu"
-#define BSNES_PPU_OVERSCAN_V_INFO_0_CS NULL
-#define OPTION_VAL_0_CS NULL
-#define OPTION_VAL_8_CS NULL
-#define OPTION_VAL_12_CS NULL
-#define OPTION_VAL_16_CS NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CS "Odstraňte čáry N z horní a dolní části obrazovky, abyste simulovali rámeček televizoru z doby SNES."
+#define OPTION_VAL_0_CS "0 řádků"
+#define OPTION_VAL_8_CS "8 řádků"
+#define OPTION_VAL_12_CS "12 řádků"
+#define OPTION_VAL_16_CS "16 řádků"
 #define BSNES_BLUR_EMULATION_LABEL_CS "Emulace Rozostření"
 #define BSNES_BLUR_EMULATION_INFO_0_CS "Simuluje omezené horizontální rozlišení televizorů SDTV rozmazáním horizontálně sousedících pixelů. Některé hry na tom závisejí, aby napodobily efekt průhlednosti."
 #define BSNES_VIDEO_FILTER_LABEL_CS "Filtr"
@@ -6354,8 +6354,8 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_NTSC_COMPOSITE_CS "NTSC (Kompozitní)"
 #define OPTION_VAL_NTSC_S_VIDEO_CS NULL
 #define OPTION_VAL_NTSC_RGB_CS NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_CS NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_CS NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_CS "Úprava barev - Jas"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CS "Nastavení jasu"
 #define OPTION_VAL_0_O4_CS NULL
 #define OPTION_VAL_10_CS NULL
 #define OPTION_VAL_20_CS NULL
@@ -6367,8 +6367,8 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_80_CS NULL
 #define OPTION_VAL_90_CS NULL
 #define OPTION_VAL_100_CS "100% (výchozí)"
-#define BSNES_VIDEO_SATURATION_LABEL_CS NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_CS NULL
+#define BSNES_VIDEO_SATURATION_LABEL_CS "Úprava barev - Sytost"
+#define BSNES_VIDEO_SATURATION_INFO_0_CS "Nastavení sytosti"
 #define OPTION_VAL_110_CS NULL
 #define OPTION_VAL_120_CS NULL
 #define OPTION_VAL_130_CS NULL
@@ -6379,10 +6379,10 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_180_CS NULL
 #define OPTION_VAL_190_CS NULL
 #define OPTION_VAL_200_CS NULL
-#define BSNES_VIDEO_GAMMA_LABEL_CS NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_CS NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CS "Úprava barev - Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_CS "Nastavení gamma"
 #define OPTION_VAL_100_O6_CS NULL
-#define OPTION_VAL_150_O6_CS NULL
+#define OPTION_VAL_150_O6_CS "150 % (výchozí)"
 #define BSNES_PPU_FAST_LABEL_CS "PPU (Video) - Rychlý Režim"
 #define BSNES_PPU_FAST_LABEL_CAT_CS "PPU - Rychlý Režim"
 #define BSNES_PPU_FAST_INFO_0_CS "Umožňuje rychlejší emulaci PPU za cenu menšího snížení přesnosti. Doporučujeme ponechat tuto funkci zapnutou. POZNÁMKA: tato funkce musí být zapnutá, aby fungovaly možnosti \"Odstranění prokladu\", \"Žádný limit spritu\" a \"HD režim 7\"."
@@ -6516,7 +6516,7 @@ struct retro_core_options_v2 options_cht = {
 #define OPTION_VAL_SGB1_SFC_CS NULL
 #define OPTION_VAL_SGB2_SFC_CS NULL
 #define BSNES_HIDE_SGB_BORDER_LABEL_CS "Skrýt Hranici SGB"
-#define BSNES_HIDE_SGB_BORDER_INFO_0_CS NULL
+#define BSNES_HIDE_SGB_BORDER_INFO_0_CS "Skrýt okraj při hraní her pro Super Game Boy."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_CS "Světelná Pistole s Dotykovou Obrazovkou"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_CS "Povolit vstup Super Scope pro dotyková zařízení."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_CS "Obrácení Tlačítek Střelby Super Scope"
