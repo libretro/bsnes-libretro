@@ -31439,13 +31439,13 @@ struct retro_core_options_v2 options_sr = {
 #define CATEGORY_AUDIO_LABEL_SV "Ljud"
 #define CATEGORY_AUDIO_INFO_0_SV "Ändra inställningar för ljudutgången."
 #define CATEGORY_MODE7_LABEL_SV NULL
-#define CATEGORY_MODE7_INFO_0_SV NULL
+#define CATEGORY_MODE7_INFO_0_SV "Ändra inställningar för Mode 7-grafikemulering."
 #define CATEGORY_HACK_LABEL_SV "Emuleringshack och förbättringar"
-#define CATEGORY_HACK_INFO_0_SV NULL
-#define CATEGORY_OVERCLOCK_LABEL_SV NULL
-#define CATEGORY_OVERCLOCK_INFO_0_SV NULL
+#define CATEGORY_HACK_INFO_0_SV "Tillämpa emuleringshack, förbättringar och snabbkorrigeringar."
+#define CATEGORY_OVERCLOCK_LABEL_SV "Över-/nerklockning"
+#define CATEGORY_OVERCLOCK_INFO_0_SV "Ändra hastigheten på den emulerade hårdvaran."
 #define CATEGORY_SGB_LABEL_SV NULL
-#define CATEGORY_SGB_INFO_0_SV NULL
+#define CATEGORY_SGB_INFO_0_SV "Ändra inställningar för emuleringen av Super Game Boy."
 #define CATEGORY_LIGHTGUN_LABEL_SV "Ljuspistol"
 #define CATEGORY_LIGHTGUN_INFO_0_SV NULL
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
@@ -31455,16 +31455,16 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_4_3_SV NULL
 #define OPTION_VAL_NTSC_SV NULL
 #define OPTION_VAL_PAL_SV NULL
-#define BSNES_PPU_OVERSCAN_V_LABEL_SV NULL
-#define BSNES_PPU_OVERSCAN_V_INFO_0_SV NULL
-#define OPTION_VAL_0_SV NULL
-#define OPTION_VAL_8_SV NULL
-#define OPTION_VAL_12_SV NULL
-#define OPTION_VAL_16_SV NULL
-#define BSNES_BLUR_EMULATION_LABEL_SV NULL
-#define BSNES_BLUR_EMULATION_INFO_0_SV NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_SV "Beskär vertikal overscan"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_SV "Ta bort N linjer från skärmens över- och undersida för att simulera ramen på en TV från SNES-eran."
+#define OPTION_VAL_0_SV "0 linjer"
+#define OPTION_VAL_8_SV "8 linjer"
+#define OPTION_VAL_12_SV "12 linjer"
+#define OPTION_VAL_16_SV "16 linjer"
+#define BSNES_BLUR_EMULATION_LABEL_SV "Oskarp emulering"
+#define BSNES_BLUR_EMULATION_INFO_0_SV "Simulerar den begränsade horisontella upplösningen hos SDTV genom att sudda ihop horisontellt intilliggande bildpunkter. Vissa spel är beroende av detta för att emulera en transparenseffekt."
 #define BSNES_VIDEO_FILTER_LABEL_SV NULL
-#define BSNES_VIDEO_FILTER_INFO_0_SV NULL
+#define BSNES_VIDEO_FILTER_INFO_0_SV "Välj mellan ingen filtrering och blarggs NTSC-filter med alternativ för RF, Komposit, S-Video eller RGB"
 #define OPTION_VAL_NONE_SV "Ingen"
 #define OPTION_VAL_NTSC_RF_SV NULL
 #define OPTION_VAL_NTSC_COMPOSITE_SV "NTSC (Komposit)"
@@ -31516,13 +31516,13 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_DSP_FAST_INFO_0_SV NULL
 #define BSNES_DSP_CUBIC_LABEL_SV NULL
 #define BSNES_DSP_CUBIC_LABEL_CAT_SV NULL
-#define BSNES_DSP_CUBIC_INFO_0_SV NULL
+#define BSNES_DSP_CUBIC_INFO_0_SV "Tillämpa kubisk interpolering på ljudet, vilket bevarar mer av det höga omfånget."
 #define BSNES_DSP_ECHO_SHADOW_LABEL_SV NULL
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_SV NULL
 #define BSNES_DSP_ECHO_SHADOW_INFO_0_SV "Emulerar en bugg i ZSNES där echo RAM behandlades som separat från APU RAM. Många äldre ROM-hack för Super Mario World förlitade sig på detta beteende och kommer att krascha utan detta. Det här alternativet är extremt felaktigt och bör inte aktiveras om det inte behövs."
-#define BSNES_MODE7_SCALE_LABEL_SV NULL
+#define BSNES_MODE7_SCALE_LABEL_SV "HD Mode 7 - Skala"
 #define BSNES_MODE7_SCALE_LABEL_CAT_SV "Skala"
-#define BSNES_MODE7_SCALE_INFO_0_SV NULL
+#define BSNES_MODE7_SCALE_INFO_0_SV "Öka den horisontella och vertikala upplösningen för Mode 7-grafiken som används i vissa spel."
 #define OPTION_VAL_1X_SV NULL
 #define OPTION_VAL_2X_SV NULL
 #define OPTION_VAL_3X_SV NULL
@@ -31531,28 +31531,28 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_6X_SV NULL
 #define OPTION_VAL_7X_SV NULL
 #define OPTION_VAL_8X_SV NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_SV NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_SV "HD Mode 7 - Perspektivkorrigering"
 #define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_SV "Perspektivkorrigering"
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_SV NULL
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_SV "Korrigera perspektivet i Mode 7-grafiken som används i vissa spel genom att kringgå vissa begränsningar i den heltalsmatematik som används av SNES."
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_SV NULL
 #define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_SV NULL
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_SV NULL
-#define BSNES_MODE7_MOSAIC_LABEL_SV NULL
-#define BSNES_MODE7_MOSAIC_LABEL_CAT_SV NULL
-#define BSNES_MODE7_MOSAIC_INFO_0_SV NULL
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_SV "Supersamplar Mode 7-grafiken som används i vissa spel. I kombination med högre Mode 7-skalfaktorer ger det en effekt som liknar anti-aliasing."
+#define BSNES_MODE7_MOSAIC_LABEL_SV "HD Mode 7 - HD->SD-mosaik"
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_SV "HD->SD-mosaik"
+#define BSNES_MODE7_MOSAIC_INFO_0_SV "Visa mosaikeffekten av Mode 7-grafik även när du uppskalar den."
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_SV NULL
 #define BSNES_RUN_AHEAD_FRAMES_INFO_0_SV NULL
 #define OPTION_VAL_1_SV "1 bildruta"
 #define OPTION_VAL_2_SV "2 bildrutor"
 #define OPTION_VAL_3_SV "3 bildrutor"
 #define OPTION_VAL_4_SV "4 bildrutor"
-#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_SV NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_SV NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_SV NULL
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_SV "Co-processorer - Snabbt läge"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_SV "Möjliggör snabbare emulering av co-processorerna på bekostnad av en mindre minskning av noggrannheten. Vi rekommenderar att du låter detta vara aktiverat."
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_SV "Co-processorer - Föredra HLE"
 #define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_SV NULL
 #define BSNES_HOTFIXES_LABEL_SV "Snabbfixar"
 #define BSNES_HOTFIXES_INFO_0_SV NULL
-#define BSNES_ENTROPY_LABEL_SV NULL
+#define BSNES_ENTROPY_LABEL_SV "Entropi (slumpmässighet)"
 #define BSNES_ENTROPY_INFO_0_SV "Välj graden av randomisering av minnet och registren. Om inställningen är None initialiseras alla minnen och register till konstanta värden vid start. Låg randomisering ger den mest exakta representationen av ett verkligt system. High slumpas så mycket som möjligt."
 #define OPTION_VAL_LOW_SV "Låg"
 #define OPTION_VAL_HIGH_SV "Hög"
@@ -31581,11 +31581,11 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_380_SV NULL
 #define OPTION_VAL_390_SV NULL
 #define OPTION_VAL_400_SV NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_SV NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_SV NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_SV "Överklockning - SA-1-co-processor"
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_SV "SA-1-co-processor"
 #define BSNES_CPU_SA1_OVERCLOCK_INFO_0_SV "Överklocka eller nedklocka Super Accelerator 1 (SA-1)-chipet. Om du ställer in det här värdet på över 100 % kan det förbättra prestandan i spel som stöder SA-1-chippet. Använd det med försiktighet, eftersom det också kan leda till att vissa spel kraschar eller uppvisar andra problem."
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_SV NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_SV NULL
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_SV "Överklockning - SuperFX-co-processor"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_SV "SuperFX-co-processor"
 #define BSNES_CPU_SFX_OVERCLOCK_INFO_0_SV "Överklocka eller nedklocka SuperFX coprocessor. Om du ställer in det här värdet på över 100% kan det förbättra prestandan i spel som stöder SuperFX. Använd det med försiktighet, eftersom det också kan leda till att vissa spel kraschar eller uppvisar andra problem."
 #define OPTION_VAL_410_SV NULL
 #define OPTION_VAL_420_SV NULL
@@ -31628,13 +31628,13 @@ struct retro_core_options_v2 options_sr = {
 #define OPTION_VAL_790_SV "790 %"
 #define OPTION_VAL_800_SV "800 %"
 #define BSNES_SGB_BIOS_LABEL_SV "Föredraget Super Game Boy BIOS (omstart krävs)"
-#define BSNES_SGB_BIOS_INFO_0_SV NULL
+#define BSNES_SGB_BIOS_INFO_0_SV "Välj föredragen Super Game Boy BIOS som ska användas med kompatibla titlar."
 #define OPTION_VAL_SGB1_SFC_SV NULL
 #define OPTION_VAL_SGB2_SFC_SV NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_SV NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_SV NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_SV NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_SV NULL
+#define BSNES_HIDE_SGB_BORDER_LABEL_SV "Dölj SGB-ram"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_SV "Dölj ramen när Super Game Boy-spel spelas."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_SV "Ljuspistol för pekskärm"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_SV "Aktivera Super Scope-inmatning för pekskärmsenheter."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_SV NULL
 #define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_SV NULL
 
