@@ -31447,7 +31447,7 @@ struct retro_core_options_v2 options_sr = {
 #define CATEGORY_SGB_LABEL_SV NULL
 #define CATEGORY_SGB_INFO_0_SV "Ändra inställningar för emuleringen av Super Game Boy."
 #define CATEGORY_LIGHTGUN_LABEL_SV "Ljuspistol"
-#define CATEGORY_LIGHTGUN_INFO_0_SV NULL
+#define CATEGORY_LIGHTGUN_INFO_0_SV "Ändra inställningar för ljuspistol (pekskärm)."
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
 #define BSNES_ASPECT_RATIO_INFO_0_SV "Välj det föredragna bildformatet för Innehållet. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
 #define OPTION_VAL_AUTO_SV NULL
@@ -31504,18 +31504,18 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_PPU_FAST_INFO_0_SV "Möjliggör snabbare emulering av PPU till bekostnad av en mindre minskning av noggrannheten. Rekommenderas att låta detta vara kvar som aktiv. OBS: Detta måste vara aktiverat för att alternativen 'Deinterlace', 'Ingen blockfigursgräns' och 'HD-läge 7' ska fungera."
 #define BSNES_PPU_DEINTERLACE_LABEL_SV NULL
 #define BSNES_PPU_DEINTERLACE_LABEL_CAT_SV NULL
-#define BSNES_PPU_DEINTERLACE_INFO_0_SV NULL
+#define BSNES_PPU_DEINTERLACE_INFO_0_SV "Använd deinterlace på alla spel genom att rendera internt i 480p. Prestandaförlusten är nästan obefintlig, så det rekommenderas att låta detta vara aktiverat."
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_SV "PPU (Video) - Ingen blockfigursgräns"
 #define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_SV "PPU - Ingen blockfigursgräns"
 #define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_SV "Ta bort alla begränsningar för antalet blockfigurer som kan ritas samtidigt på skärmen. Kan orsaka problem med vissa spel."
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_SV NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_SV NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_SV "PPU (Video) - Ingen VRAM-blockering"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_SV "PPU - Ingen VRAM-blockering"
 #define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_SV "Emulerar ett fel i äldre versioner av ZSNES och Snes9x, där VRAM-blockering inte emulerades. Några äldre ROM-hack förlitade sig på detta beteende och kommer att rendera grafik felaktigt om detta inte är aktiverat. Det här alternativet är extremt felaktigt och skadar PPU-hastigheten, så det rekommenderas att du låter det vara avaktiverat om du inte behöver spela ett spel som annars är inkompatibelt med den här kärnan."
 #define BSNES_DSP_FAST_LABEL_SV "DSP (ljud) - Snabbt läge"
 #define BSNES_DSP_FAST_LABEL_CAT_SV "DSP - Snabbt läge"
-#define BSNES_DSP_FAST_INFO_0_SV NULL
-#define BSNES_DSP_CUBIC_LABEL_SV NULL
-#define BSNES_DSP_CUBIC_LABEL_CAT_SV NULL
+#define BSNES_DSP_FAST_INFO_0_SV "Aktivera snabbare emulering av DSPn på bekostnad av en mindre minskning av noggrannheten. Vi rekommenderar att du låter detta vara aktiverat."
+#define BSNES_DSP_CUBIC_LABEL_SV "DSP (Ljud) - Kubisk interpolation"
+#define BSNES_DSP_CUBIC_LABEL_CAT_SV "DSP - Kubisk interpolation"
 #define BSNES_DSP_CUBIC_INFO_0_SV "Tillämpa kubisk interpolering på ljudet, vilket bevarar mer av det höga omfånget."
 #define BSNES_DSP_ECHO_SHADOW_LABEL_SV NULL
 #define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_SV NULL
@@ -31549,9 +31549,9 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_SV "Co-processorer - Snabbt läge"
 #define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_SV "Möjliggör snabbare emulering av co-processorerna på bekostnad av en mindre minskning av noggrannheten. Vi rekommenderar att du låter detta vara aktiverat."
 #define BSNES_COPROCESSOR_PREFER_HLE_LABEL_SV "Co-processorer - Föredra HLE"
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_SV NULL
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_SV "När detta alternativ är aktiverat kommer den mindre exakta HLE-emuleringen alltid att användas när den är tillgänglig. Om det är inaktiverat används HLE endast när LLE-firmware saknas."
 #define BSNES_HOTFIXES_LABEL_SV "Snabbfixar"
-#define BSNES_HOTFIXES_INFO_0_SV NULL
+#define BSNES_HOTFIXES_INFO_0_SV "Även kommersiellt licensierad och officiellt släppt programvara levereras ibland med buggar. Det här alternativet korrigerar vissa problem som uppstod även på riktig maskinvara."
 #define BSNES_ENTROPY_LABEL_SV "Entropi (slumpmässighet)"
 #define BSNES_ENTROPY_INFO_0_SV "Välj graden av randomisering av minnet och registren. Om inställningen är None initialiseras alla minnen och register till konstanta värden vid start. Låg randomisering ger den mest exakta representationen av ett verkligt system. High slumpas så mycket som möjligt."
 #define OPTION_VAL_LOW_SV "Låg"
