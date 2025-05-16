@@ -31541,7 +31541,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_SV "HD->SD-mosaik"
 #define BSNES_MODE7_MOSAIC_INFO_0_SV "Visa mosaikeffekten av Mode 7-grafik även när du uppskalar den."
 #define BSNES_RUN_AHEAD_FRAMES_LABEL_SV NULL
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_SV NULL
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_SV "Simulera systemet i förväg och återställ för att minska ingångsfördröjningen. Har mycket höga systemkrav."
 #define OPTION_VAL_1_SV "1 bildruta"
 #define OPTION_VAL_2_SV "2 bildrutor"
 #define OPTION_VAL_3_SV "3 bildrutor"
@@ -31635,8 +31635,8 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_HIDE_SGB_BORDER_INFO_0_SV "Dölj ramen när Super Game Boy-spel spelas."
 #define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_SV "Ljuspistol för pekskärm"
 #define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_SV "Aktivera Super Scope-inmatning för pekskärmsenheter."
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_SV NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_SV NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_SV "Omvända Super Scope-avtryckarknappar"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_SV "Vänd om Super Scope-avtryckaren och markörknapparna med pekskärmens ljuspistol."
 
 struct retro_core_option_v2_category option_cats_sv[] = {
    {
