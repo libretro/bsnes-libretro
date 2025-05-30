@@ -31451,7 +31451,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_ASPECT_RATIO_LABEL_SV "Föredraget bildformat"
 #define BSNES_ASPECT_RATIO_INFO_0_SV "Välj det föredragna bildformatet för Innehållet. Detta kommer endast att tillämpas när RetroArchs bildformat är inställt på \"Kärnspecifikt\" i Video-inställningarna."
 #define OPTION_VAL_AUTO_SV NULL
-#define OPTION_VAL_1_1_SV NULL
+#define OPTION_VAL_1_1_SV "1:1 PAR (bildpunktsperfekt)"
 #define OPTION_VAL_4_3_SV NULL
 #define OPTION_VAL_NTSC_SV NULL
 #define OPTION_VAL_PAL_SV NULL
