@@ -16183,6 +16183,903 @@ struct retro_core_options_v2 options_fr = {
    option_defs_fr
 };
 
+/* RETRO_LANGUAGE_GA */
+
+#define CATEGORY_VIDEO_LABEL_GA "Físeán"
+#define CATEGORY_VIDEO_INFO_0_GA "Athraigh socruithe aschuir físe."
+#define CATEGORY_AUDIO_LABEL_GA "Fuaim"
+#define CATEGORY_AUDIO_INFO_0_GA NULL
+#define CATEGORY_MODE7_LABEL_GA NULL
+#define CATEGORY_MODE7_INFO_0_GA NULL
+#define CATEGORY_HACK_LABEL_GA NULL
+#define CATEGORY_HACK_INFO_0_GA NULL
+#define CATEGORY_OVERCLOCK_LABEL_GA NULL
+#define CATEGORY_OVERCLOCK_INFO_0_GA NULL
+#define CATEGORY_SGB_LABEL_GA NULL
+#define CATEGORY_SGB_INFO_0_GA NULL
+#define CATEGORY_LIGHTGUN_LABEL_GA NULL
+#define CATEGORY_LIGHTGUN_INFO_0_GA NULL
+#define BSNES_ASPECT_RATIO_LABEL_GA NULL
+#define BSNES_ASPECT_RATIO_INFO_0_GA NULL
+#define OPTION_VAL_AUTO_GA NULL
+#define OPTION_VAL_1_1_GA NULL
+#define OPTION_VAL_4_3_GA NULL
+#define OPTION_VAL_NTSC_GA NULL
+#define OPTION_VAL_PAL_GA NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_GA NULL
+#define BSNES_PPU_OVERSCAN_V_INFO_0_GA NULL
+#define OPTION_VAL_0_GA NULL
+#define OPTION_VAL_8_GA NULL
+#define OPTION_VAL_12_GA NULL
+#define OPTION_VAL_16_GA NULL
+#define BSNES_BLUR_EMULATION_LABEL_GA NULL
+#define BSNES_BLUR_EMULATION_INFO_0_GA NULL
+#define BSNES_VIDEO_FILTER_LABEL_GA NULL
+#define BSNES_VIDEO_FILTER_INFO_0_GA NULL
+#define OPTION_VAL_NONE_GA NULL
+#define OPTION_VAL_NTSC_RF_GA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_GA NULL
+#define OPTION_VAL_NTSC_S_VIDEO_GA NULL
+#define OPTION_VAL_NTSC_RGB_GA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_GA NULL
+#define BSNES_VIDEO_LUMINANCE_INFO_0_GA NULL
+#define OPTION_VAL_0_O4_GA NULL
+#define OPTION_VAL_10_GA NULL
+#define OPTION_VAL_20_GA NULL
+#define OPTION_VAL_30_GA NULL
+#define OPTION_VAL_40_GA NULL
+#define OPTION_VAL_50_GA NULL
+#define OPTION_VAL_60_GA NULL
+#define OPTION_VAL_70_GA NULL
+#define OPTION_VAL_80_GA NULL
+#define OPTION_VAL_90_GA NULL
+#define OPTION_VAL_100_GA NULL
+#define BSNES_VIDEO_SATURATION_LABEL_GA NULL
+#define BSNES_VIDEO_SATURATION_INFO_0_GA NULL
+#define OPTION_VAL_110_GA NULL
+#define OPTION_VAL_120_GA NULL
+#define OPTION_VAL_130_GA NULL
+#define OPTION_VAL_140_GA NULL
+#define OPTION_VAL_150_GA NULL
+#define OPTION_VAL_160_GA NULL
+#define OPTION_VAL_170_GA NULL
+#define OPTION_VAL_180_GA NULL
+#define OPTION_VAL_190_GA NULL
+#define OPTION_VAL_200_GA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_GA NULL
+#define BSNES_VIDEO_GAMMA_INFO_0_GA NULL
+#define OPTION_VAL_100_O6_GA NULL
+#define OPTION_VAL_150_O6_GA NULL
+#define BSNES_PPU_FAST_LABEL_GA NULL
+#define BSNES_PPU_FAST_LABEL_CAT_GA NULL
+#define BSNES_PPU_FAST_INFO_0_GA NULL
+#define BSNES_PPU_DEINTERLACE_LABEL_GA NULL
+#define BSNES_PPU_DEINTERLACE_LABEL_CAT_GA NULL
+#define BSNES_PPU_DEINTERLACE_INFO_0_GA NULL
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_GA NULL
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_GA NULL
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_GA NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_GA NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_GA NULL
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_GA NULL
+#define BSNES_DSP_FAST_LABEL_GA NULL
+#define BSNES_DSP_FAST_LABEL_CAT_GA NULL
+#define BSNES_DSP_FAST_INFO_0_GA NULL
+#define BSNES_DSP_CUBIC_LABEL_GA NULL
+#define BSNES_DSP_CUBIC_LABEL_CAT_GA NULL
+#define BSNES_DSP_CUBIC_INFO_0_GA NULL
+#define BSNES_DSP_ECHO_SHADOW_LABEL_GA NULL
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_GA NULL
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_GA NULL
+#define BSNES_MODE7_SCALE_LABEL_GA NULL
+#define BSNES_MODE7_SCALE_LABEL_CAT_GA NULL
+#define BSNES_MODE7_SCALE_INFO_0_GA NULL
+#define OPTION_VAL_1X_GA NULL
+#define OPTION_VAL_2X_GA NULL
+#define OPTION_VAL_3X_GA NULL
+#define OPTION_VAL_4X_GA NULL
+#define OPTION_VAL_5X_GA NULL
+#define OPTION_VAL_6X_GA NULL
+#define OPTION_VAL_7X_GA NULL
+#define OPTION_VAL_8X_GA NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_GA NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_GA NULL
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_GA NULL
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_GA NULL
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_GA NULL
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_GA NULL
+#define BSNES_MODE7_MOSAIC_LABEL_GA NULL
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_GA NULL
+#define BSNES_MODE7_MOSAIC_INFO_0_GA NULL
+#define BSNES_RUN_AHEAD_FRAMES_LABEL_GA NULL
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_GA NULL
+#define OPTION_VAL_1_GA NULL
+#define OPTION_VAL_2_GA NULL
+#define OPTION_VAL_3_GA NULL
+#define OPTION_VAL_4_GA NULL
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_GA NULL
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_GA NULL
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_GA NULL
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_GA NULL
+#define BSNES_HOTFIXES_LABEL_GA NULL
+#define BSNES_HOTFIXES_INFO_0_GA NULL
+#define BSNES_ENTROPY_LABEL_GA NULL
+#define BSNES_ENTROPY_INFO_0_GA NULL
+#define OPTION_VAL_LOW_GA NULL
+#define OPTION_VAL_HIGH_GA NULL
+#define BSNES_CPU_FASTMATH_LABEL_GA NULL
+#define BSNES_CPU_FASTMATH_INFO_0_GA NULL
+#define BSNES_CPU_OVERCLOCK_LABEL_GA NULL
+#define BSNES_CPU_OVERCLOCK_LABEL_CAT_GA NULL
+#define BSNES_CPU_OVERCLOCK_INFO_0_GA NULL
+#define OPTION_VAL_210_GA NULL
+#define OPTION_VAL_220_GA NULL
+#define OPTION_VAL_230_GA NULL
+#define OPTION_VAL_240_GA NULL
+#define OPTION_VAL_250_GA NULL
+#define OPTION_VAL_260_GA NULL
+#define OPTION_VAL_270_GA NULL
+#define OPTION_VAL_280_GA NULL
+#define OPTION_VAL_290_GA NULL
+#define OPTION_VAL_300_GA NULL
+#define OPTION_VAL_310_GA NULL
+#define OPTION_VAL_320_GA NULL
+#define OPTION_VAL_330_GA NULL
+#define OPTION_VAL_340_GA NULL
+#define OPTION_VAL_350_GA NULL
+#define OPTION_VAL_360_GA NULL
+#define OPTION_VAL_370_GA NULL
+#define OPTION_VAL_380_GA NULL
+#define OPTION_VAL_390_GA NULL
+#define OPTION_VAL_400_GA NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_GA NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_GA NULL
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_GA NULL
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_GA NULL
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_GA NULL
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_GA NULL
+#define OPTION_VAL_410_GA NULL
+#define OPTION_VAL_420_GA NULL
+#define OPTION_VAL_430_GA NULL
+#define OPTION_VAL_440_GA NULL
+#define OPTION_VAL_450_GA NULL
+#define OPTION_VAL_460_GA NULL
+#define OPTION_VAL_470_GA NULL
+#define OPTION_VAL_480_GA NULL
+#define OPTION_VAL_490_GA NULL
+#define OPTION_VAL_500_GA NULL
+#define OPTION_VAL_510_GA NULL
+#define OPTION_VAL_520_GA NULL
+#define OPTION_VAL_530_GA NULL
+#define OPTION_VAL_540_GA NULL
+#define OPTION_VAL_550_GA NULL
+#define OPTION_VAL_560_GA NULL
+#define OPTION_VAL_570_GA NULL
+#define OPTION_VAL_580_GA NULL
+#define OPTION_VAL_590_GA NULL
+#define OPTION_VAL_600_GA NULL
+#define OPTION_VAL_610_GA NULL
+#define OPTION_VAL_620_GA NULL
+#define OPTION_VAL_630_GA NULL
+#define OPTION_VAL_640_GA NULL
+#define OPTION_VAL_650_GA NULL
+#define OPTION_VAL_660_GA NULL
+#define OPTION_VAL_670_GA NULL
+#define OPTION_VAL_680_GA NULL
+#define OPTION_VAL_690_GA NULL
+#define OPTION_VAL_700_GA NULL
+#define OPTION_VAL_710_GA NULL
+#define OPTION_VAL_720_GA NULL
+#define OPTION_VAL_730_GA NULL
+#define OPTION_VAL_740_GA NULL
+#define OPTION_VAL_750_GA NULL
+#define OPTION_VAL_760_GA NULL
+#define OPTION_VAL_770_GA NULL
+#define OPTION_VAL_780_GA NULL
+#define OPTION_VAL_790_GA NULL
+#define OPTION_VAL_800_GA NULL
+#define BSNES_SGB_BIOS_LABEL_GA NULL
+#define BSNES_SGB_BIOS_INFO_0_GA NULL
+#define OPTION_VAL_SGB1_SFC_GA NULL
+#define OPTION_VAL_SGB2_SFC_GA NULL
+#define BSNES_HIDE_SGB_BORDER_LABEL_GA NULL
+#define BSNES_HIDE_SGB_BORDER_INFO_0_GA NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_GA NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_GA NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_GA NULL
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_GA NULL
+
+struct retro_core_option_v2_category option_cats_ga[] = {
+   {
+      "video",
+      CATEGORY_VIDEO_LABEL_GA,
+      CATEGORY_VIDEO_INFO_0_GA
+   },
+   {
+      "audio",
+      CATEGORY_AUDIO_LABEL_GA,
+      CATEGORY_AUDIO_INFO_0_GA
+   },
+   {
+      "mode7",
+      CATEGORY_MODE7_LABEL_GA,
+      CATEGORY_MODE7_INFO_0_GA
+   },
+   {
+      "hack",
+      CATEGORY_HACK_LABEL_GA,
+      CATEGORY_HACK_INFO_0_GA
+   },
+   {
+      "overclock",
+      CATEGORY_OVERCLOCK_LABEL_GA,
+      CATEGORY_OVERCLOCK_INFO_0_GA
+   },
+   {
+      "sgb",
+      CATEGORY_SGB_LABEL_GA,
+      CATEGORY_SGB_INFO_0_GA
+   },
+   {
+      "lightgun",
+      CATEGORY_LIGHTGUN_LABEL_GA,
+      CATEGORY_LIGHTGUN_INFO_0_GA
+   },
+
+   { NULL, NULL, NULL },
+};
+struct retro_core_option_v2_definition option_defs_ga[] = {
+   {
+      "bsnes_aspect_ratio",
+      BSNES_ASPECT_RATIO_LABEL_GA,
+      NULL,
+      BSNES_ASPECT_RATIO_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "Auto", OPTION_VAL_AUTO_GA },
+         { "1:1",  OPTION_VAL_1_1_GA },
+         { "4:3",  OPTION_VAL_4_3_GA },
+         { "NTSC", OPTION_VAL_NTSC_GA },
+         { "PAL",  OPTION_VAL_PAL_GA },
+         { NULL, NULL },
+      },
+      "Auto"
+   },
+   {
+      "bsnes_ppu_overscan_v",
+      BSNES_PPU_OVERSCAN_V_LABEL_GA,
+      NULL,
+      BSNES_PPU_OVERSCAN_V_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "0",  OPTION_VAL_0_GA },
+         { "8",  OPTION_VAL_8_GA },
+         { "12", OPTION_VAL_12_GA },
+         { "16", OPTION_VAL_16_GA },
+         { NULL, NULL },
+      },
+      "8"
+   },
+   {
+      "bsnes_blur_emulation",
+      BSNES_BLUR_EMULATION_LABEL_GA,
+      NULL,
+      BSNES_BLUR_EMULATION_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_video_filter",
+      BSNES_VIDEO_FILTER_LABEL_GA,
+      BSNES_VIDEO_FILTER_LABEL_GA,
+      BSNES_VIDEO_FILTER_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "None", OPTION_VAL_NONE_GA },
+         { "NTSC (RF)", OPTION_VAL_NTSC_RF_GA },
+         { "NTSC (Composite)", OPTION_VAL_NTSC_COMPOSITE_GA },
+         { "NTSC (S-Video)", OPTION_VAL_NTSC_S_VIDEO_GA },
+         { "NTSC (RGB)", OPTION_VAL_NTSC_RGB_GA },
+         { NULL, NULL },
+      },
+      "None"
+   },
+   {
+      "bsnes_video_luminance",
+      BSNES_VIDEO_LUMINANCE_LABEL_GA,
+      NULL,
+      BSNES_VIDEO_LUMINANCE_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_O4_GA },
+         { "10", OPTION_VAL_10_GA },
+         { "20", OPTION_VAL_20_GA },
+         { "30", OPTION_VAL_30_GA },
+         { "40", OPTION_VAL_40_GA },
+         { "50", OPTION_VAL_50_GA },
+         { "60", OPTION_VAL_60_GA },
+         { "70", OPTION_VAL_70_GA },
+         { "80", OPTION_VAL_80_GA },
+         { "90", OPTION_VAL_90_GA },
+         { "100", OPTION_VAL_100_GA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_saturation",
+      BSNES_VIDEO_SATURATION_LABEL_GA,
+      NULL,
+      BSNES_VIDEO_SATURATION_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "0", OPTION_VAL_0_O4_GA },
+         { "10", OPTION_VAL_10_GA },
+         { "20", OPTION_VAL_20_GA },
+         { "30", OPTION_VAL_30_GA },
+         { "40", OPTION_VAL_40_GA },
+         { "50", OPTION_VAL_50_GA },
+         { "60", OPTION_VAL_60_GA },
+         { "70", OPTION_VAL_70_GA },
+         { "80", OPTION_VAL_80_GA },
+         { "90", OPTION_VAL_90_GA },
+         { "100", OPTION_VAL_100_GA },
+         { "110", OPTION_VAL_110_GA },
+         { "120", OPTION_VAL_120_GA },
+         { "130", OPTION_VAL_130_GA },
+         { "140", OPTION_VAL_140_GA },
+         { "150", OPTION_VAL_150_GA },
+         { "160", OPTION_VAL_160_GA },
+         { "170", OPTION_VAL_170_GA },
+         { "180", OPTION_VAL_180_GA },
+         { "190", OPTION_VAL_190_GA },
+         { "200", OPTION_VAL_200_GA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_video_gamma",
+      BSNES_VIDEO_GAMMA_LABEL_GA,
+      NULL,
+      BSNES_VIDEO_GAMMA_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "100", OPTION_VAL_100_O6_GA },
+         { "110", OPTION_VAL_110_GA },
+         { "120", OPTION_VAL_120_GA },
+         { "130", OPTION_VAL_130_GA },
+         { "140", OPTION_VAL_140_GA },
+         { "150", OPTION_VAL_150_O6_GA },
+         { "160", OPTION_VAL_160_GA },
+         { "170", OPTION_VAL_170_GA },
+         { "180", OPTION_VAL_180_GA },
+         { "190", OPTION_VAL_190_GA },
+         { "200", OPTION_VAL_200_GA },
+         { NULL, NULL },
+      },
+      "150"
+   },
+   {
+      "bsnes_ppu_fast",
+      BSNES_PPU_FAST_LABEL_GA,
+      BSNES_PPU_FAST_LABEL_CAT_GA,
+      BSNES_PPU_FAST_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_ppu_deinterlace",
+      BSNES_PPU_DEINTERLACE_LABEL_GA,
+      BSNES_PPU_DEINTERLACE_LABEL_CAT_GA,
+      BSNES_PPU_DEINTERLACE_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_ppu_no_sprite_limit",
+      BSNES_PPU_NO_SPRITE_LIMIT_LABEL_GA,
+      BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_GA,
+      BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_ppu_no_vram_blocking",
+      BSNES_PPU_NO_VRAM_BLOCKING_LABEL_GA,
+      BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_GA,
+      BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_GA,
+      NULL,
+      "video",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_dsp_fast",
+      BSNES_DSP_FAST_LABEL_GA,
+      BSNES_DSP_FAST_LABEL_CAT_GA,
+      BSNES_DSP_FAST_INFO_0_GA,
+      NULL,
+      "audio",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_dsp_cubic",
+      BSNES_DSP_CUBIC_LABEL_GA,
+      BSNES_DSP_CUBIC_LABEL_CAT_GA,
+      BSNES_DSP_CUBIC_INFO_0_GA,
+      NULL,
+      "audio",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_dsp_echo_shadow",
+      BSNES_DSP_ECHO_SHADOW_LABEL_GA,
+      BSNES_DSP_ECHO_SHADOW_LABEL_CAT_GA,
+      BSNES_DSP_ECHO_SHADOW_INFO_0_GA,
+      NULL,
+      "audio",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_mode7_scale",
+      BSNES_MODE7_SCALE_LABEL_GA,
+      BSNES_MODE7_SCALE_LABEL_CAT_GA,
+      BSNES_MODE7_SCALE_INFO_0_GA,
+      NULL,
+      "mode7",
+      {
+         { "1x", OPTION_VAL_1X_GA  },
+         { "2x", OPTION_VAL_2X_GA  },
+         { "3x", OPTION_VAL_3X_GA  },
+         { "4x", OPTION_VAL_4X_GA  },
+         { "5x", OPTION_VAL_5X_GA },
+         { "6x", OPTION_VAL_6X_GA },
+         { "7x", OPTION_VAL_7X_GA },
+         { "8x", OPTION_VAL_8X_GA },
+         { NULL, NULL },
+      },
+      "1x"
+   },
+   {
+      "bsnes_mode7_perspective",
+      BSNES_MODE7_PERSPECTIVE_LABEL_GA,
+      BSNES_MODE7_PERSPECTIVE_LABEL_CAT_GA,
+      BSNES_MODE7_PERSPECTIVE_INFO_0_GA,
+      NULL,
+      "mode7",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_mode7_supersample",
+      BSNES_MODE7_SUPERSAMPLE_LABEL_GA,
+      BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_GA,
+      BSNES_MODE7_SUPERSAMPLE_INFO_0_GA,
+      NULL,
+      "mode7",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_mode7_mosaic",
+      BSNES_MODE7_MOSAIC_LABEL_GA,
+      BSNES_MODE7_MOSAIC_LABEL_CAT_GA,
+      BSNES_MODE7_MOSAIC_INFO_0_GA,
+      NULL,
+      "mode7",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_run_ahead_frames",
+      BSNES_RUN_AHEAD_FRAMES_LABEL_GA,
+      NULL,
+      BSNES_RUN_AHEAD_FRAMES_INFO_0_GA,
+      NULL,
+      "hack",
+      {
+         { "OFF", "disabled" },
+         { "1",   OPTION_VAL_1_GA  },
+         { "2",   OPTION_VAL_2_GA },
+         { "3",   OPTION_VAL_3_GA },
+         { "4",   OPTION_VAL_4_GA },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_coprocessor_delayed_sync",
+      BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_GA,
+      NULL,
+      BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_GA,
+      NULL,
+      "hack",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_coprocessor_prefer_hle",
+      BSNES_COPROCESSOR_PREFER_HLE_LABEL_GA,
+      NULL,
+      BSNES_COPROCESSOR_PREFER_HLE_INFO_0_GA,
+      NULL,
+      "hack",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_hotfixes",
+      BSNES_HOTFIXES_LABEL_GA,
+      NULL,
+      BSNES_HOTFIXES_INFO_0_GA,
+      NULL,
+      "hack",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_entropy",
+      BSNES_ENTROPY_LABEL_GA,
+      NULL,
+      BSNES_ENTROPY_INFO_0_GA,
+      NULL,
+      "hack",
+      {
+         { "Low",  OPTION_VAL_LOW_GA },
+         { "High", OPTION_VAL_HIGH_GA },
+         { "None", OPTION_VAL_NONE_GA },
+         { NULL, NULL },
+      },
+      "Low"
+   },
+   {
+      "bsnes_cpu_fastmath",
+      BSNES_CPU_FASTMATH_LABEL_GA,
+      NULL,
+      BSNES_CPU_FASTMATH_INFO_0_GA,
+      NULL,
+      "hack",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_cpu_overclock",
+      BSNES_CPU_OVERCLOCK_LABEL_GA,
+      BSNES_CPU_OVERCLOCK_LABEL_CAT_GA,
+      BSNES_CPU_OVERCLOCK_INFO_0_GA,
+      NULL,
+      "overclock",
+      {
+         { "10",  OPTION_VAL_10_GA  },
+         { "20",  OPTION_VAL_20_GA  },
+         { "30",  OPTION_VAL_30_GA  },
+         { "40",  OPTION_VAL_40_GA  },
+         { "50",  OPTION_VAL_50_GA  },
+         { "60",  OPTION_VAL_60_GA  },
+         { "70",  OPTION_VAL_70_GA  },
+         { "80",  OPTION_VAL_80_GA  },
+         { "90",  OPTION_VAL_90_GA  },
+         { "100", OPTION_VAL_100_GA },
+         { "110", OPTION_VAL_110_GA },
+         { "120", OPTION_VAL_120_GA },
+         { "130", OPTION_VAL_130_GA },
+         { "140", OPTION_VAL_140_GA },
+         { "150", OPTION_VAL_150_GA },
+         { "160", OPTION_VAL_160_GA },
+         { "170", OPTION_VAL_170_GA },
+         { "180", OPTION_VAL_180_GA },
+         { "190", OPTION_VAL_190_GA },
+         { "200", OPTION_VAL_200_GA },
+         { "210", OPTION_VAL_210_GA },
+         { "220", OPTION_VAL_220_GA },
+         { "230", OPTION_VAL_230_GA },
+         { "240", OPTION_VAL_240_GA },
+         { "250", OPTION_VAL_250_GA },
+         { "260", OPTION_VAL_260_GA },
+         { "270", OPTION_VAL_270_GA },
+         { "280", OPTION_VAL_280_GA },
+         { "290", OPTION_VAL_290_GA },
+         { "300", OPTION_VAL_300_GA },
+         { "310", OPTION_VAL_310_GA },
+         { "320", OPTION_VAL_320_GA },
+         { "330", OPTION_VAL_330_GA },
+         { "340", OPTION_VAL_340_GA },
+         { "350", OPTION_VAL_350_GA },
+         { "360", OPTION_VAL_360_GA },
+         { "370", OPTION_VAL_370_GA },
+         { "380", OPTION_VAL_380_GA },
+         { "390", OPTION_VAL_390_GA },
+         { "400", OPTION_VAL_400_GA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_cpu_sa1_overclock",
+      BSNES_CPU_SA1_OVERCLOCK_LABEL_GA,
+      BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_GA,
+      BSNES_CPU_SA1_OVERCLOCK_INFO_0_GA,
+      NULL,
+      "overclock",
+      {
+         { "10",  OPTION_VAL_10_GA  },
+         { "20",  OPTION_VAL_20_GA  },
+         { "30",  OPTION_VAL_30_GA  },
+         { "40",  OPTION_VAL_40_GA  },
+         { "50",  OPTION_VAL_50_GA  },
+         { "60",  OPTION_VAL_60_GA  },
+         { "70",  OPTION_VAL_70_GA  },
+         { "80",  OPTION_VAL_80_GA  },
+         { "90",  OPTION_VAL_90_GA  },
+         { "100", OPTION_VAL_100_GA },
+         { "110", OPTION_VAL_110_GA },
+         { "120", OPTION_VAL_120_GA },
+         { "130", OPTION_VAL_130_GA },
+         { "140", OPTION_VAL_140_GA },
+         { "150", OPTION_VAL_150_GA },
+         { "160", OPTION_VAL_160_GA },
+         { "170", OPTION_VAL_170_GA },
+         { "180", OPTION_VAL_180_GA },
+         { "190", OPTION_VAL_190_GA },
+         { "200", OPTION_VAL_200_GA },
+         { "210", OPTION_VAL_210_GA },
+         { "220", OPTION_VAL_220_GA },
+         { "230", OPTION_VAL_230_GA },
+         { "240", OPTION_VAL_240_GA },
+         { "250", OPTION_VAL_250_GA },
+         { "260", OPTION_VAL_260_GA },
+         { "270", OPTION_VAL_270_GA },
+         { "280", OPTION_VAL_280_GA },
+         { "290", OPTION_VAL_290_GA },
+         { "300", OPTION_VAL_300_GA },
+         { "310", OPTION_VAL_310_GA },
+         { "320", OPTION_VAL_320_GA },
+         { "330", OPTION_VAL_330_GA },
+         { "340", OPTION_VAL_340_GA },
+         { "350", OPTION_VAL_350_GA },
+         { "360", OPTION_VAL_360_GA },
+         { "370", OPTION_VAL_370_GA },
+         { "380", OPTION_VAL_380_GA },
+         { "390", OPTION_VAL_390_GA },
+         { "400", OPTION_VAL_400_GA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_cpu_sfx_overclock",
+      BSNES_CPU_SFX_OVERCLOCK_LABEL_GA,
+      BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_GA,
+      BSNES_CPU_SFX_OVERCLOCK_INFO_0_GA,
+      NULL,
+      "overclock",
+      {
+         { "10",  OPTION_VAL_10_GA  },
+         { "20",  OPTION_VAL_20_GA  },
+         { "30",  OPTION_VAL_30_GA  },
+         { "40",  OPTION_VAL_40_GA  },
+         { "50",  OPTION_VAL_50_GA  },
+         { "60",  OPTION_VAL_60_GA  },
+         { "70",  OPTION_VAL_70_GA  },
+         { "80",  OPTION_VAL_80_GA  },
+         { "90",  OPTION_VAL_90_GA  },
+         { "100", OPTION_VAL_100_GA },
+         { "110", OPTION_VAL_110_GA },
+         { "120", OPTION_VAL_120_GA },
+         { "130", OPTION_VAL_130_GA },
+         { "140", OPTION_VAL_140_GA },
+         { "150", OPTION_VAL_150_GA },
+         { "160", OPTION_VAL_160_GA },
+         { "170", OPTION_VAL_170_GA },
+         { "180", OPTION_VAL_180_GA },
+         { "190", OPTION_VAL_190_GA },
+         { "200", OPTION_VAL_200_GA },
+         { "210", OPTION_VAL_210_GA },
+         { "220", OPTION_VAL_220_GA },
+         { "230", OPTION_VAL_230_GA },
+         { "240", OPTION_VAL_240_GA },
+         { "250", OPTION_VAL_250_GA },
+         { "260", OPTION_VAL_260_GA },
+         { "270", OPTION_VAL_270_GA },
+         { "280", OPTION_VAL_280_GA },
+         { "290", OPTION_VAL_290_GA },
+         { "300", OPTION_VAL_300_GA },
+         { "310", OPTION_VAL_310_GA },
+         { "320", OPTION_VAL_320_GA },
+         { "330", OPTION_VAL_330_GA },
+         { "340", OPTION_VAL_340_GA },
+         { "350", OPTION_VAL_350_GA },
+         { "360", OPTION_VAL_360_GA },
+         { "370", OPTION_VAL_370_GA },
+         { "380", OPTION_VAL_380_GA },
+         { "390", OPTION_VAL_390_GA },
+         { "400", OPTION_VAL_400_GA },
+         { "410", OPTION_VAL_410_GA },
+         { "420", OPTION_VAL_420_GA },
+         { "430", OPTION_VAL_430_GA },
+         { "440", OPTION_VAL_440_GA },
+         { "450", OPTION_VAL_450_GA },
+         { "460", OPTION_VAL_460_GA },
+         { "470", OPTION_VAL_470_GA },
+         { "480", OPTION_VAL_480_GA },
+         { "490", OPTION_VAL_490_GA },
+         { "500", OPTION_VAL_500_GA },
+         { "510", OPTION_VAL_510_GA },
+         { "520", OPTION_VAL_520_GA },
+         { "530", OPTION_VAL_530_GA },
+         { "540", OPTION_VAL_540_GA },
+         { "550", OPTION_VAL_550_GA },
+         { "560", OPTION_VAL_560_GA },
+         { "570", OPTION_VAL_570_GA },
+         { "580", OPTION_VAL_580_GA },
+         { "590", OPTION_VAL_590_GA },
+         { "600", OPTION_VAL_600_GA },
+         { "610", OPTION_VAL_610_GA },
+         { "620", OPTION_VAL_620_GA },
+         { "630", OPTION_VAL_630_GA },
+         { "640", OPTION_VAL_640_GA },
+         { "650", OPTION_VAL_650_GA },
+         { "660", OPTION_VAL_660_GA },
+         { "670", OPTION_VAL_670_GA },
+         { "680", OPTION_VAL_680_GA },
+         { "690", OPTION_VAL_690_GA },
+         { "700", OPTION_VAL_700_GA },
+         { "710", OPTION_VAL_710_GA },
+         { "720", OPTION_VAL_720_GA },
+         { "730", OPTION_VAL_730_GA },
+         { "740", OPTION_VAL_740_GA },
+         { "750", OPTION_VAL_750_GA },
+         { "760", OPTION_VAL_760_GA },
+         { "770", OPTION_VAL_770_GA },
+         { "780", OPTION_VAL_780_GA },
+         { "790", OPTION_VAL_790_GA },
+         { "800", OPTION_VAL_800_GA },
+         { NULL, NULL },
+      },
+      "100"
+   },
+   {
+      "bsnes_sgb_bios",
+      BSNES_SGB_BIOS_LABEL_GA,
+      NULL,
+      BSNES_SGB_BIOS_INFO_0_GA,
+      NULL,
+      "sgb",
+      {
+         { "SGB1.sfc", OPTION_VAL_SGB1_SFC_GA   },
+         { "SGB2.sfc", OPTION_VAL_SGB2_SFC_GA },
+         { NULL, NULL },
+      },
+      "SGB1.sfc"
+   },
+   {
+      "bsnes_hide_sgb_border",
+      BSNES_HIDE_SGB_BORDER_LABEL_GA,
+      NULL,
+      BSNES_HIDE_SGB_BORDER_INFO_0_GA,
+      NULL,
+      "sgb",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+   {
+      "bsnes_touchscreen_lightgun",
+      BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_GA,
+      NULL,
+      BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_GA,
+      NULL,
+      "lightgun",
+      {
+         { "ON",  "enabled"  },
+         { "OFF", "disabled" },
+         { NULL, NULL },
+      },
+      "ON"
+   },
+   {
+      "bsnes_touchscreen_lightgun_superscope_reverse",
+      BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_GA,
+      NULL,
+      BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_GA,
+      NULL,
+      "lightgun",
+      {
+         { "OFF", "disabled" },
+         { "ON",  "enabled"  },
+         { NULL, NULL },
+      },
+      "OFF"
+   },
+
+   { NULL, NULL, NULL, NULL, NULL, NULL, {{0}}, NULL },
+};
+struct retro_core_options_v2 options_ga = {
+   option_cats_ga,
+   option_defs_ga
+};
+
 /* RETRO_LANGUAGE_GL */
 
 #define CATEGORY_VIDEO_LABEL_GL "Vídeo"
