@@ -16188,41 +16188,41 @@ struct retro_core_options_v2 options_fr = {
 #define CATEGORY_VIDEO_LABEL_GA "Físeán"
 #define CATEGORY_VIDEO_INFO_0_GA "Athraigh socruithe aschuir físe."
 #define CATEGORY_AUDIO_LABEL_GA "Fuaim"
-#define CATEGORY_AUDIO_INFO_0_GA NULL
-#define CATEGORY_MODE7_LABEL_GA NULL
-#define CATEGORY_MODE7_INFO_0_GA NULL
-#define CATEGORY_HACK_LABEL_GA NULL
-#define CATEGORY_HACK_INFO_0_GA NULL
-#define CATEGORY_OVERCLOCK_LABEL_GA NULL
-#define CATEGORY_OVERCLOCK_INFO_0_GA NULL
+#define CATEGORY_AUDIO_INFO_0_GA "Athraigh socruithe aschuir fuaime."
+#define CATEGORY_MODE7_LABEL_GA "Mód HD 7"
+#define CATEGORY_MODE7_INFO_0_GA "Athraigh socruithe maidir le haithris grafaicí Mód 7."
+#define CATEGORY_HACK_LABEL_GA "Cleasanna agus Feabhsuithe Aithrise"
+#define CATEGORY_HACK_INFO_0_GA "Cuir cleasanna aithrise, feabhsuithe agus ceartúcháin the i bhfeidhm."
+#define CATEGORY_OVERCLOCK_LABEL_GA "Ró-/Síoschlogáil"
+#define CATEGORY_OVERCLOCK_INFO_0_GA "Athraigh luas na crua-earraí aithrisithe."
 #define CATEGORY_SGB_LABEL_GA NULL
-#define CATEGORY_SGB_INFO_0_GA NULL
-#define CATEGORY_LIGHTGUN_LABEL_GA NULL
-#define CATEGORY_LIGHTGUN_INFO_0_GA NULL
-#define BSNES_ASPECT_RATIO_LABEL_GA NULL
-#define BSNES_ASPECT_RATIO_INFO_0_GA NULL
-#define OPTION_VAL_AUTO_GA NULL
-#define OPTION_VAL_1_1_GA NULL
+#define CATEGORY_SGB_INFO_0_GA "Athraigh socruithe maidir le haithris an Super Game Boy."
+#define CATEGORY_LIGHTGUN_LABEL_GA "Gunna Solais"
+#define CATEGORY_LIGHTGUN_INFO_0_GA "Athraigh socruithe gunna solais (scáileáin tadhaill)."
+#define BSNES_ASPECT_RATIO_LABEL_GA "Cóimheas Gné is Fearr"
+#define BSNES_ASPECT_RATIO_INFO_0_GA "Roghnaigh an cóimheas gné ábhair is fearr leat. Ní bheidh feidhm ag seo ach amháin nuair a bheidh cóimheas gné RetroArch socraithe go 'Croílár curtha ar fáil' sna socruithe Físeáin."
+#define OPTION_VAL_AUTO_GA "Uathoibríoch"
+#define OPTION_VAL_1_1_GA "PAR 1:1 (Picteil Foirfe)"
 #define OPTION_VAL_4_3_GA NULL
 #define OPTION_VAL_NTSC_GA NULL
 #define OPTION_VAL_PAL_GA NULL
-#define BSNES_PPU_OVERSCAN_V_LABEL_GA NULL
-#define BSNES_PPU_OVERSCAN_V_INFO_0_GA NULL
-#define OPTION_VAL_0_GA NULL
-#define OPTION_VAL_8_GA NULL
-#define OPTION_VAL_12_GA NULL
-#define OPTION_VAL_16_GA NULL
-#define BSNES_BLUR_EMULATION_LABEL_GA NULL
-#define BSNES_BLUR_EMULATION_INFO_0_GA NULL
-#define BSNES_VIDEO_FILTER_LABEL_GA NULL
-#define BSNES_VIDEO_FILTER_INFO_0_GA NULL
-#define OPTION_VAL_NONE_GA NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_GA "Bearr Ró-scanadh Ingearach"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_GA "Bain línte N ó bharr agus bun an scáileáin chun bezel teilifíse ó ré an SNES a insamhladh."
+#define OPTION_VAL_0_GA "0 Línte"
+#define OPTION_VAL_8_GA "8 Líne"
+#define OPTION_VAL_12_GA "12 Líne"
+#define OPTION_VAL_16_GA "16 Líne"
+#define BSNES_BLUR_EMULATION_LABEL_GA "Aithris Doiléire"
+#define BSNES_BLUR_EMULATION_INFO_0_GA "Insamhlaigh an taifeach cothrománach teoranta de theilifíseáin SD trí phicteilíní atá cóngarach go cothrománach a dhoiléiriú le chéile. Braitheann roinnt cluichí ar seo chun éifeacht trédhearcachta a aithris."
+#define BSNES_VIDEO_FILTER_LABEL_GA "Scagaire"
+#define BSNES_VIDEO_FILTER_INFO_0_GA "Roghnaigh idir gan scagadh agus scagaire NTSC blargg le roghanna do RF, Ilchodach, S-Video, nó RGB"
+#define OPTION_VAL_NONE_GA "Dada"
 #define OPTION_VAL_NTSC_RF_GA NULL
-#define OPTION_VAL_NTSC_COMPOSITE_GA NULL
+#define OPTION_VAL_NTSC_COMPOSITE_GA "NTSC (Comhchodach)"
 #define OPTION_VAL_NTSC_S_VIDEO_GA NULL
 #define OPTION_VAL_NTSC_RGB_GA NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_GA NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_GA NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_GA "Coigeartú Datha - Lonrúlacht"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_GA "Coigeartaigh an Lonracht"
 #define OPTION_VAL_0_O4_GA NULL
 #define OPTION_VAL_10_GA NULL
 #define OPTION_VAL_20_GA NULL
@@ -16233,9 +16233,9 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_70_GA NULL
 #define OPTION_VAL_80_GA NULL
 #define OPTION_VAL_90_GA NULL
-#define OPTION_VAL_100_GA NULL
-#define BSNES_VIDEO_SATURATION_LABEL_GA NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_GA NULL
+#define OPTION_VAL_100_GA "100% (Réamhshocrú)"
+#define BSNES_VIDEO_SATURATION_LABEL_GA "Coigeartú Datha - Sáithiú"
+#define BSNES_VIDEO_SATURATION_INFO_0_GA "Coigeartaigh Sáithiú"
 #define OPTION_VAL_110_GA NULL
 #define OPTION_VAL_120_GA NULL
 #define OPTION_VAL_130_GA NULL
@@ -16246,34 +16246,34 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_180_GA NULL
 #define OPTION_VAL_190_GA NULL
 #define OPTION_VAL_200_GA NULL
-#define BSNES_VIDEO_GAMMA_LABEL_GA NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_GA NULL
+#define BSNES_VIDEO_GAMMA_LABEL_GA "Coigeartú Dath - Gama"
+#define BSNES_VIDEO_GAMMA_INFO_0_GA "Coigeartaigh Gama"
 #define OPTION_VAL_100_O6_GA NULL
-#define OPTION_VAL_150_O6_GA NULL
-#define BSNES_PPU_FAST_LABEL_GA NULL
-#define BSNES_PPU_FAST_LABEL_CAT_GA NULL
-#define BSNES_PPU_FAST_INFO_0_GA NULL
+#define OPTION_VAL_150_O6_GA "150% (Réamhshocrú)"
+#define BSNES_PPU_FAST_LABEL_GA "PPU (Físeán) - Mód Tapa"
+#define BSNES_PPU_FAST_LABEL_CAT_GA "PPU - Mód Tapaidh"
+#define BSNES_PPU_FAST_INFO_0_GA "Cumasaigh aithris níos tapúla ar an PPU ar chostas laghdú beag ar chruinneas. Moltar é seo a fhágáil ar siúl. TABHAIR FAOI DEARA: ní mór é seo a chumasú chun go n-oibreoidh na roghanna 'Deinterlace', 'No Sprite Limit' agus 'HD Mode 7'."
 #define BSNES_PPU_DEINTERLACE_LABEL_GA NULL
 #define BSNES_PPU_DEINTERLACE_LABEL_CAT_GA NULL
-#define BSNES_PPU_DEINTERLACE_INFO_0_GA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_GA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_GA NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_GA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_GA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_GA NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_GA NULL
-#define BSNES_DSP_FAST_LABEL_GA NULL
-#define BSNES_DSP_FAST_LABEL_CAT_GA NULL
-#define BSNES_DSP_FAST_INFO_0_GA NULL
-#define BSNES_DSP_CUBIC_LABEL_GA NULL
-#define BSNES_DSP_CUBIC_LABEL_CAT_GA NULL
-#define BSNES_DSP_CUBIC_INFO_0_GA NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_GA NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_GA NULL
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_GA NULL
-#define BSNES_MODE7_SCALE_LABEL_GA NULL
-#define BSNES_MODE7_SCALE_LABEL_CAT_GA NULL
-#define BSNES_MODE7_SCALE_INFO_0_GA NULL
+#define BSNES_PPU_DEINTERLACE_INFO_0_GA "Dí-idircheanglaítear gach cluiche trí rindreáil inmheánach ag 480p. Is ar éigean a bhíonn aon phionós feidhmíochta ann, mar sin moltar é seo a fhágáil ar siúl."
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_GA "PPU (Físeán) - Gan Teorainn Sprid"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_GA "PPU - Gan Teorainn Sprid"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_GA "Bain aon teorainn ar líon na sprites is féidir a tharraingt ag an am céanna ar an scáileán. D’fhéadfadh fadhbanna a bheith mar thoradh air sin le roinnt cluichí."
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_GA "PPU (Físeán) - Gan aon bhlocáil VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_GA "PPU - Gan aon bhlocáil VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_GA "Déan aithris ar fhabht i leaganacha níos sine de ZSNES agus Snes9x, áit nach ndearnadh aithris ar bhlocáil VRAM. Bhí roinnt sean-hacaí ROM ag brath ar an iompar seo agus rindreálfaidh siad grafaicí go mícheart mura bhfuil sé seo cumasaithe. Tá an rogha seo thar a bheith míchruinn agus déanann sé dochar do luas an PPU, mar sin moltar é a fhágáil díchumasaithe mura gá duit cluiche a imirt nach bhfuil comhoiriúnach leis an gcroílár seo ar shlí eile."
+#define BSNES_DSP_FAST_LABEL_GA "DSP (Fuaim) - Mód Tapa"
+#define BSNES_DSP_FAST_LABEL_CAT_GA "DSP - Mód Tapa"
+#define BSNES_DSP_FAST_INFO_0_GA "Cumasaigh aithris níos tapúla ar an DSP ar chostas laghdú beag ar chruinneas. Moltar é seo a fhágáil ar siúl."
+#define BSNES_DSP_CUBIC_LABEL_GA "DSP (Fuaim) - Idirshuíomh Ciúbach"
+#define BSNES_DSP_CUBIC_LABEL_CAT_GA "DSP - Idirshuíomh Ciúbach"
+#define BSNES_DSP_CUBIC_INFO_0_GA "Cuir idirshuíomh ciúbach i bhfeidhm ar an fhuaim, ag caomhnú níos mó den raon ard."
+#define BSNES_DSP_ECHO_SHADOW_LABEL_GA "DSP (Fuaim) - RAM Macalla Scáth"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_GA "DSP - Macalla Scáth RAM"
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_GA "Déan aithris ar fhabht i ZSNES inar caitheadh ​​le RAM macalla mar rud ar leithligh ó RAM APU. Bhí go leor sean-hacaí ROM do Super Mario World ag brath ar an iompar seo agus tuairteálfaidh siad gan é seo. Tá an rogha seo thar a bheith míchruinn agus níor cheart é a chumasú mura bhfuil gá leis."
+#define BSNES_MODE7_SCALE_LABEL_GA "Mód HD 7 - Scála"
+#define BSNES_MODE7_SCALE_LABEL_CAT_GA "Scála"
+#define BSNES_MODE7_SCALE_INFO_0_GA "Méadaigh taifeach cothrománach agus ingearach na ngrafaicí Mód 7 a úsáidtear i gcluichí áirithe."
 #define OPTION_VAL_1X_GA NULL
 #define OPTION_VAL_2X_GA NULL
 #define OPTION_VAL_3X_GA NULL
@@ -16282,36 +16282,36 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_6X_GA NULL
 #define OPTION_VAL_7X_GA NULL
 #define OPTION_VAL_8X_GA NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_GA NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_GA NULL
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_GA NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_GA NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_GA NULL
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_GA NULL
-#define BSNES_MODE7_MOSAIC_LABEL_GA NULL
-#define BSNES_MODE7_MOSAIC_LABEL_CAT_GA NULL
-#define BSNES_MODE7_MOSAIC_INFO_0_GA NULL
-#define BSNES_RUN_AHEAD_FRAMES_LABEL_GA NULL
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_GA NULL
-#define OPTION_VAL_1_GA NULL
-#define OPTION_VAL_2_GA NULL
-#define OPTION_VAL_3_GA NULL
-#define OPTION_VAL_4_GA NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_GA NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_GA NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_GA NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_GA NULL
-#define BSNES_HOTFIXES_LABEL_GA NULL
-#define BSNES_HOTFIXES_INFO_0_GA NULL
-#define BSNES_ENTROPY_LABEL_GA NULL
-#define BSNES_ENTROPY_INFO_0_GA NULL
-#define OPTION_VAL_LOW_GA NULL
-#define OPTION_VAL_HIGH_GA NULL
-#define BSNES_CPU_FASTMATH_LABEL_GA NULL
-#define BSNES_CPU_FASTMATH_INFO_0_GA NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_GA NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_CAT_GA NULL
-#define BSNES_CPU_OVERCLOCK_INFO_0_GA NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_GA "Mód HD 7 - Ceartú Peirspictíochta"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_GA "Ceartú Peirspictíochta"
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_GA "Ceartaigh peirspictíocht na ngrafaicí Mód 7 a úsáidtear i gcluichí áirithe trí roinnt teorainneacha a bhaineann leis an matamaitic slánuimhreach a úsáideann an SNES a sheachaint."
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_GA "Mód HD 7 - Supersampláil"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_GA "Super-sampláil"
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_GA "Sár-shampla de na grafaicí Mód 7 a úsáidtear i gcluichí áirithe. I dteannta fachtóirí scála Mód 7 níos airde, tá éifeacht cosúil le frith-ailiasú mar thoradh air."
+#define BSNES_MODE7_MOSAIC_LABEL_GA "Mód HD 7 - HD->SD Mósáic"
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_GA "Mósáic HD->SD"
+#define BSNES_MODE7_MOSAIC_INFO_0_GA "Taispeáin éifeacht mhósáice grafaicí Mód 7 fiú agus iad á n-uas-scálú."
+#define BSNES_RUN_AHEAD_FRAMES_LABEL_GA "Rith Chun Tosaigh Inmheánach"
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_GA "Insamhlaigh an córas roimh ré agus rolladh siar chun moill ionchuir a laghdú. Tá riachtanais chórais an-ard aige."
+#define OPTION_VAL_1_GA "1 fráma"
+#define OPTION_VAL_2_GA "2 fhráma"
+#define OPTION_VAL_3_GA "3 fhráma"
+#define OPTION_VAL_4_GA "4 fhráma"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_GA "Comhphróiseálaithe - Mód Tapa"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_GA "Cumasaigh aithris níos tapúla ar na comhphróiseálaithe ar chostas laghdú beag ar chruinneas. Moltar é seo a fhágáil ar siúl."
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_GA "Comhphróiseálaithe - Is fearr HLE"
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_GA "Nuair a bhíonn an rogha seo cumasaithe, úsáidfear aithris HLE nach bhfuil chomh cruinn i gcónaí nuair a bhíonn sé ar fáil. Mura bhfuil sé cumasaithe, ní úsáidfear HLE ach amháin nuair a bhíonn dochtearraí LLE ar iarraidh."
+#define BSNES_HOTFIXES_LABEL_GA "Socruithe Te"
+#define BSNES_HOTFIXES_INFO_0_GA "Bíonn fabhtanna ag baint le bogearraí atá ceadúnaithe go tráchtála agus a scaoiltear go hoifigiúil fiú. Ceartóidh an rogha seo fadhbanna áirithe a tharla fiú ar chrua-earraí fíor."
+#define BSNES_ENTROPY_LABEL_GA "Eintreapacht (randamú)"
+#define BSNES_ENTROPY_INFO_0_GA "Roghnaigh leibhéal randamaithe na cuimhne agus na gclár. Mura socraítear é seo, déantar luachanna tairiseacha a thosú ar an gcuimhne agus na cláir go léir ag an am tosaithe. Soláthraíonn randamú íseal an léiriú is cruinne ar chóras fíor. Déanann ard randamú a oiread agus is féidir."
+#define OPTION_VAL_LOW_GA "Íseal"
+#define OPTION_VAL_HIGH_GA "Ard"
+#define BSNES_CPU_FASTMATH_LABEL_GA "Matamaitic Thapa LAP"
+#define BSNES_CPU_FASTMATH_INFO_0_GA "Cuir torthaí ríomhaireachta ar fáil láithreach. Tógann sé tamall le hiolrú agus roinnt LAP a chríochnú ar SNES fíor. Níor insamhladh sean-aithriseoirí na moilleanna seo agus dá bhrí sin ní fhanann roinnt sean-hacanna ROM go dtí go gcríochnófar oibríochtaí matamaitice agus teastaíonn an haca seo uathu."
+#define BSNES_CPU_OVERCLOCK_LABEL_GA "Róchlogáil - LAP"
+#define BSNES_CPU_OVERCLOCK_LABEL_CAT_GA "LAP"
+#define BSNES_CPU_OVERCLOCK_INFO_0_GA "Róchlogáil nó ísliúchlogáil an LAP. Má shocraítear an luach seo os cionn 100%, d’fhéadfadh sé amanna lódála a laghdú agus moill a bhaint. Bí cúramach mar d’fhéadfadh sé go dtitfeadh roinnt cluichí nó go dtaispeánfadh sé fadhbanna eile."
 #define OPTION_VAL_210_GA NULL
 #define OPTION_VAL_220_GA NULL
 #define OPTION_VAL_230_GA NULL
@@ -16332,12 +16332,12 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_380_GA NULL
 #define OPTION_VAL_390_GA NULL
 #define OPTION_VAL_400_GA NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_GA NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_GA NULL
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_GA NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_GA NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_GA NULL
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_GA NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_GA "Róchlogáil - Comhphróiseálaí SA-1"
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_GA "Comhphróiseálaí SA-1"
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_GA "Róchlogáil nó síoschlogáil an tslis Super Accelerator 1 (SA-1). Má shocraítear an luach seo os cionn 100%, d’fhéadfadh sé feabhas a chur ar fheidhmíocht i gcluichí a thacaíonn leis an tslis SA-1. Bí cúramach, mar d’fhéadfadh sé tuairteanna a chur ar roinnt cluichí nó fadhbanna eile a thaispeáint dá bharr."
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_GA "Róchlogáil - Comhphróiseálaí SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_GA "Comhphróiseálaí SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_GA "Róchlogáil nó síoschlogáil an chomhphróiseálaí SuperFX. Má shocraítear an luach seo os cionn 100%, d’fhéadfadh sé feabhas a chur ar fheidhmíocht i gcluichí a thacaíonn leis an SuperFX. Bí cúramach, mar d’fhéadfadh sé tuairteanna a chur ar roinnt cluichí nó fadhbanna eile a thaispeáint."
 #define OPTION_VAL_410_GA NULL
 #define OPTION_VAL_420_GA NULL
 #define OPTION_VAL_430_GA NULL
@@ -16378,16 +16378,16 @@ struct retro_core_options_v2 options_fr = {
 #define OPTION_VAL_780_GA NULL
 #define OPTION_VAL_790_GA NULL
 #define OPTION_VAL_800_GA NULL
-#define BSNES_SGB_BIOS_LABEL_GA NULL
-#define BSNES_SGB_BIOS_INFO_0_GA NULL
+#define BSNES_SGB_BIOS_LABEL_GA "BIOS is fearr leat don Super Game Boy (Atosú Riachtanach)"
+#define BSNES_SGB_BIOS_INFO_0_GA "Roghnaigh an BIOS Super Game Boy is fearr leat le húsáid le teidil chomhoiriúnacha."
 #define OPTION_VAL_SGB1_SFC_GA NULL
 #define OPTION_VAL_SGB2_SFC_GA NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_GA NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_GA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_GA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_GA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_GA NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_GA NULL
+#define BSNES_HIDE_SGB_BORDER_LABEL_GA "Folaigh Teorainn SGB"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_GA "Folaigh an teorainn agus tú ag imirt cluichí Super Game Boy."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_GA "Gunna Solais Scáileáin Tadhaill"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_GA "Cumasaigh ionchur Super Scope le haghaidh gléasanna tadhaill."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_GA "Cnaipí Truicear Droim ar Ais Super Scope"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_GA "Droim ar ais na cnaipí truicear agus cúrsóra Super Scope leis an gunna solais ar an scáileán tadhaill."
 
 struct retro_core_option_v2_category option_cats_ga[] = {
    {
