@@ -32437,7 +32437,7 @@ struct retro_core_options_v2 options_sr = {
 #define BSNES_MODE7_MOSAIC_LABEL_SV "HD Mode 7 - HD->SD-mosaik"
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_SV "HD->SD-mosaik"
 #define BSNES_MODE7_MOSAIC_INFO_0_SV "Visa mosaikeffekten av Mode 7-grafik även när du uppskalar den."
-#define BSNES_RUN_AHEAD_FRAMES_LABEL_SV "Intern kör i förväg"
+#define BSNES_RUN_AHEAD_FRAMES_LABEL_SV "Intern Run-Ahead"
 #define BSNES_RUN_AHEAD_FRAMES_INFO_0_SV "Simulera systemet i förväg och återställ för att minska ingångsfördröjningen. Har mycket höga systemkrav."
 #define OPTION_VAL_1_SV "1 bildruta"
 #define OPTION_VAL_2_SV "2 bildrutor"
