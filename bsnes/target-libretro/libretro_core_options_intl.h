@@ -36817,7 +36817,7 @@ struct retro_core_options_v2 options_val = {
 /* RETRO_LANGUAGE_VN */
 
 #define CATEGORY_VIDEO_LABEL_VN "Hình ảnh"
-#define CATEGORY_VIDEO_INFO_0_VN "Điều chỉnh thiết lập cho video ra."
+#define CATEGORY_VIDEO_INFO_0_VN "Điều chỉnh thiết lập đầu ra cho video."
 #define CATEGORY_AUDIO_LABEL_VN "Âm thanh"
 #define CATEGORY_AUDIO_INFO_0_VN "Điều chỉnh thiết lập cho âm thanh ra."
 #define CATEGORY_MODE7_LABEL_VN NULL
@@ -36864,7 +36864,7 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_70_VN NULL
 #define OPTION_VAL_80_VN NULL
 #define OPTION_VAL_90_VN NULL
-#define OPTION_VAL_100_VN NULL
+#define OPTION_VAL_100_VN "100% (Mặc định)"
 #define BSNES_VIDEO_SATURATION_LABEL_VN NULL
 #define BSNES_VIDEO_SATURATION_INFO_0_VN NULL
 #define OPTION_VAL_110_VN NULL
