@@ -36816,44 +36816,44 @@ struct retro_core_options_v2 options_val = {
 
 /* RETRO_LANGUAGE_VN */
 
-#define CATEGORY_VIDEO_LABEL_VN "Hình ảnh"
+#define CATEGORY_VIDEO_LABEL_VN NULL
 #define CATEGORY_VIDEO_INFO_0_VN "Điều chỉnh thiết lập đầu ra cho video."
 #define CATEGORY_AUDIO_LABEL_VN "Âm thanh"
 #define CATEGORY_AUDIO_INFO_0_VN "Điều chỉnh thiết lập cho âm thanh ra."
-#define CATEGORY_MODE7_LABEL_VN NULL
-#define CATEGORY_MODE7_INFO_0_VN NULL
-#define CATEGORY_HACK_LABEL_VN NULL
-#define CATEGORY_HACK_INFO_0_VN NULL
-#define CATEGORY_OVERCLOCK_LABEL_VN NULL
-#define CATEGORY_OVERCLOCK_INFO_0_VN NULL
+#define CATEGORY_MODE7_LABEL_VN "Chế độ HD Mode 7"
+#define CATEGORY_MODE7_INFO_0_VN "Thay đổi các thiết lập liên quan đến mô phỏng đồ họa Mode 7."
+#define CATEGORY_HACK_LABEL_VN "Mẹo và cải tiến mô phỏng"
+#define CATEGORY_HACK_INFO_0_VN "Áp dụng các mẹo, cải tiến và sửa lỗi nhanh cho mô phỏng."
+#define CATEGORY_OVERCLOCK_LABEL_VN "Ép xung/Tụt xung"
+#define CATEGORY_OVERCLOCK_INFO_0_VN "Thay đổi tốc độ phần cứng được mô phỏng."
 #define CATEGORY_SGB_LABEL_VN NULL
-#define CATEGORY_SGB_INFO_0_VN NULL
-#define CATEGORY_LIGHTGUN_LABEL_VN NULL
-#define CATEGORY_LIGHTGUN_INFO_0_VN NULL
-#define BSNES_ASPECT_RATIO_LABEL_VN NULL
-#define BSNES_ASPECT_RATIO_INFO_0_VN NULL
+#define CATEGORY_SGB_INFO_0_VN "Cài đặt mô phỏng Super Game Boy."
+#define CATEGORY_LIGHTGUN_LABEL_VN "Súng ánh sáng"
+#define CATEGORY_LIGHTGUN_INFO_0_VN "Cài đặt súng ánh sáng (màn hình cảm ứng)."
+#define BSNES_ASPECT_RATIO_LABEL_VN "Tỷ lệ khung hình ưu tiên"
+#define BSNES_ASPECT_RATIO_INFO_0_VN "Chọn tỷ lệ khung hình ưu tiên cho nội dung. Tùy chọn này chỉ áp dụng khi tỷ lệ khung hình của RetroArch được đặt là “Do core cung cấp” trong cài đặt Video."
 #define OPTION_VAL_AUTO_VN "Tự động"
-#define OPTION_VAL_1_1_VN NULL
+#define OPTION_VAL_1_1_VN "1:1 PAR (Hoàn hảo từng điểm ảnh)"
 #define OPTION_VAL_4_3_VN NULL
 #define OPTION_VAL_NTSC_VN NULL
 #define OPTION_VAL_PAL_VN NULL
-#define BSNES_PPU_OVERSCAN_V_LABEL_VN NULL
-#define BSNES_PPU_OVERSCAN_V_INFO_0_VN NULL
-#define OPTION_VAL_0_VN NULL
-#define OPTION_VAL_8_VN NULL
-#define OPTION_VAL_12_VN NULL
-#define OPTION_VAL_16_VN NULL
-#define BSNES_BLUR_EMULATION_LABEL_VN NULL
-#define BSNES_BLUR_EMULATION_INFO_0_VN NULL
-#define BSNES_VIDEO_FILTER_LABEL_VN NULL
-#define BSNES_VIDEO_FILTER_INFO_0_VN NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_VN "Cắt vùng hiển thị thừa theo chiều dọc"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_VN "Loại bỏ N dòng từ trên và dưới màn hình để mô phỏng viền của TV thời SNES."
+#define OPTION_VAL_0_VN "0 dòng"
+#define OPTION_VAL_8_VN "8 dòng"
+#define OPTION_VAL_12_VN "12 dòng"
+#define OPTION_VAL_16_VN "16 dòng"
+#define BSNES_BLUR_EMULATION_LABEL_VN "Mô phỏng mờ"
+#define BSNES_BLUR_EMULATION_INFO_0_VN "Mô phỏng độ phân giải ngang hạn chế của TV SD bằng cách làm mờ các điểm ảnh kề nhau theo chiều ngang. Một số trò chơi dựa vào điều này để mô phỏng hiệu ứng trong suốt."
+#define BSNES_VIDEO_FILTER_LABEL_VN "Bộ lọc"
+#define BSNES_VIDEO_FILTER_INFO_0_VN "Chọn giữa không lọc hoặc bộ lọc NTSC của blargg với các tùy chọn RF, Composite, S-Video hoặc RGB"
 #define OPTION_VAL_NONE_VN "Không"
 #define OPTION_VAL_NTSC_RF_VN NULL
 #define OPTION_VAL_NTSC_COMPOSITE_VN NULL
 #define OPTION_VAL_NTSC_S_VIDEO_VN NULL
 #define OPTION_VAL_NTSC_RGB_VN NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_VN NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_VN NULL
+#define BSNES_VIDEO_LUMINANCE_LABEL_VN "Điều chỉnh màu sắc - Độ sáng"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_VN "Điều chỉnh độ sáng"
 #define OPTION_VAL_0_O4_VN NULL
 #define OPTION_VAL_10_VN NULL
 #define OPTION_VAL_20_VN NULL
@@ -36865,8 +36865,8 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_80_VN NULL
 #define OPTION_VAL_90_VN NULL
 #define OPTION_VAL_100_VN "100% (Mặc định)"
-#define BSNES_VIDEO_SATURATION_LABEL_VN NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_VN NULL
+#define BSNES_VIDEO_SATURATION_LABEL_VN "Điều chỉnh màu – Độ bão hòa"
+#define BSNES_VIDEO_SATURATION_INFO_0_VN "Điều chỉnh độ bão hòa"
 #define OPTION_VAL_110_VN NULL
 #define OPTION_VAL_120_VN NULL
 #define OPTION_VAL_130_VN NULL
@@ -36877,34 +36877,34 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_180_VN NULL
 #define OPTION_VAL_190_VN NULL
 #define OPTION_VAL_200_VN NULL
-#define BSNES_VIDEO_GAMMA_LABEL_VN NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_VN NULL
+#define BSNES_VIDEO_GAMMA_LABEL_VN "Điều chỉnh màu – Gamma"
+#define BSNES_VIDEO_GAMMA_INFO_0_VN "Điều chỉnh Gamma"
 #define OPTION_VAL_100_O6_VN NULL
-#define OPTION_VAL_150_O6_VN NULL
-#define BSNES_PPU_FAST_LABEL_VN NULL
-#define BSNES_PPU_FAST_LABEL_CAT_VN NULL
-#define BSNES_PPU_FAST_INFO_0_VN NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_VN NULL
-#define BSNES_PPU_DEINTERLACE_LABEL_CAT_VN NULL
-#define BSNES_PPU_DEINTERLACE_INFO_0_VN NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_VN NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_VN NULL
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_VN NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_VN NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_VN NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_VN NULL
-#define BSNES_DSP_FAST_LABEL_VN NULL
-#define BSNES_DSP_FAST_LABEL_CAT_VN NULL
-#define BSNES_DSP_FAST_INFO_0_VN NULL
-#define BSNES_DSP_CUBIC_LABEL_VN NULL
-#define BSNES_DSP_CUBIC_LABEL_CAT_VN NULL
-#define BSNES_DSP_CUBIC_INFO_0_VN NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_VN NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_VN NULL
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_VN NULL
-#define BSNES_MODE7_SCALE_LABEL_VN NULL
-#define BSNES_MODE7_SCALE_LABEL_CAT_VN NULL
-#define BSNES_MODE7_SCALE_INFO_0_VN NULL
+#define OPTION_VAL_150_O6_VN "150% (Mặc định)"
+#define BSNES_PPU_FAST_LABEL_VN "PPU (Video) – Chế độ nhanh"
+#define BSNES_PPU_FAST_LABEL_CAT_VN "PPU – Chế độ nhanh"
+#define BSNES_PPU_FAST_INFO_0_VN "Bật mô phỏng PPU nhanh hơn với một chút giảm độ chính xác. Khuyến nghị giữ bật. LƯU Ý: phải bật tùy chọn này để các tùy chọn 'Khử răng cưa', 'Không giới hạn sprite' và 'Chế độ HD Mode 7' hoạt động."
+#define BSNES_PPU_DEINTERLACE_LABEL_VN "PPU (Video) – Khử răng cưa"
+#define BSNES_PPU_DEINTERLACE_LABEL_CAT_VN "PPU – Khử răng cưa"
+#define BSNES_PPU_DEINTERLACE_INFO_0_VN "Khử răng cưa cho tất cả các trò chơi bằng cách hiển thị nội bộ ở 480p. Hầu như không ảnh hưởng hiệu suất, nên khuyến nghị giữ bật."
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_VN "PPU (Video) – Không giới hạn sprite"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_VN "PPU – Không giới hạn sprite"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_VN "Loại bỏ giới hạn số lượng sprite có thể hiển thị đồng thời trên màn hình. Có thể gây vấn đề với một số trò chơi."
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_VN "PPU (Video) - Không chặn VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_VN "PPU - Không chặn VRAM"
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_VN "Mô phỏng một lỗi trong các phiên bản cũ của ZSNES và Snes9x, nơi việc chặn VRAM không được mô phỏng. Một số bản ROM hack cũ dựa vào hành vi này và sẽ hiển thị đồ họa sai nếu tùy chọn này không được bật. Tùy chọn này rất không chính xác và làm giảm tốc độ PPU, nên khuyến nghị để tắt trừ khi bạn cần chơi một trò chơi không tương thích với core này."
+#define BSNES_DSP_FAST_LABEL_VN "DSP (Âm thanh) - Chế độ nhanh"
+#define BSNES_DSP_FAST_LABEL_CAT_VN "DSP - Chế độ nhanh"
+#define BSNES_DSP_FAST_INFO_0_VN "Bật mô phỏng DSP nhanh hơn với một chút giảm độ chính xác. Khuyến nghị nên bật."
+#define BSNES_DSP_CUBIC_LABEL_VN "DSP (Âm thanh) - Nội suy bậc ba"
+#define BSNES_DSP_CUBIC_LABEL_CAT_VN "DSP - Nội suy bậc ba"
+#define BSNES_DSP_CUBIC_INFO_0_VN "Áp dụng nội suy bậc ba cho âm thanh, giữ được nhiều dải cao hơn."
+#define BSNES_DSP_ECHO_SHADOW_LABEL_VN "DSP (Âm thanh) - RAM bóng Echo"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_VN "DSP - RAM bóng Echo"
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_VN "Mô phỏng một lỗi trong ZSNES, nơi RAM echo được coi là tách biệt với RAM APU. Nhiều ROM hack cũ của Super Mario World dựa vào hành vi này và sẽ bị treo nếu không có. Tùy chọn này rất không chính xác và không nên bật trừ khi cần thiết."
+#define BSNES_MODE7_SCALE_LABEL_VN "Chế độ HD 7 - Tỷ lệ"
+#define BSNES_MODE7_SCALE_LABEL_CAT_VN "Phóng to/thu nhỏ"
+#define BSNES_MODE7_SCALE_INFO_0_VN "Tăng độ phân giải ngang và dọc của đồ họa Mode 7 được sử dụng trong một số trò chơi."
 #define OPTION_VAL_1X_VN NULL
 #define OPTION_VAL_2X_VN NULL
 #define OPTION_VAL_3X_VN NULL
@@ -36913,36 +36913,36 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_6X_VN NULL
 #define OPTION_VAL_7X_VN NULL
 #define OPTION_VAL_8X_VN NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_VN NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_VN NULL
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_VN NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_VN NULL
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_VN NULL
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_VN NULL
-#define BSNES_MODE7_MOSAIC_LABEL_VN NULL
+#define BSNES_MODE7_PERSPECTIVE_LABEL_VN "Chế độ HD Mode 7 - Hiệu chỉnh phối cảnh"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_VN "Hiệu chỉnh phối cảnh"
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_VN "Hiệu chỉnh phối cảnh của đồ họa Mode 7 được sử dụng trong một số trò chơi bằng cách khắc phục một số giới hạn của phép toán số nguyên trên SNES."
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_VN "Chế độ HD Mode 7 - Siêu lấy mẫu"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_VN "Siêu lấy mẫu"
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_VN "Thực hiện siêu lấy mẫu cho đồ họa Mode 7 được sử dụng trong một số trò chơi. Kết hợp với hệ số tỉ lệ Mode 7 cao hơn, tạo ra hiệu ứng tương tự như khử răng cưa."
+#define BSNES_MODE7_MOSAIC_LABEL_VN "Chế độ HD Mode 7 - Gộp HD->SD"
 #define BSNES_MODE7_MOSAIC_LABEL_CAT_VN NULL
-#define BSNES_MODE7_MOSAIC_INFO_0_VN NULL
-#define BSNES_RUN_AHEAD_FRAMES_LABEL_VN NULL
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_VN NULL
-#define OPTION_VAL_1_VN NULL
-#define OPTION_VAL_2_VN NULL
-#define OPTION_VAL_3_VN NULL
-#define OPTION_VAL_4_VN NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_VN NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_VN NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_VN NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_VN NULL
-#define BSNES_HOTFIXES_LABEL_VN NULL
-#define BSNES_HOTFIXES_INFO_0_VN NULL
-#define BSNES_ENTROPY_LABEL_VN NULL
-#define BSNES_ENTROPY_INFO_0_VN NULL
-#define OPTION_VAL_LOW_VN NULL
-#define OPTION_VAL_HIGH_VN NULL
-#define BSNES_CPU_FASTMATH_LABEL_VN NULL
-#define BSNES_CPU_FASTMATH_INFO_0_VN NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_VN NULL
+#define BSNES_MODE7_MOSAIC_INFO_0_VN "Hiển thị hiệu ứng mosaic của đồ họa Mode 7 ngay cả khi phóng to."
+#define BSNES_RUN_AHEAD_FRAMES_LABEL_VN "Chạy Trước Nội Bộ"
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_VN "Mô phỏng hệ thống trước thời gian thực và quay lại để giảm độ trễ nhập liệu. Yêu cầu hệ thống rất cao."
+#define OPTION_VAL_1_VN "1 khung hình"
+#define OPTION_VAL_2_VN "2 khung hình"
+#define OPTION_VAL_3_VN "3 khung hình"
+#define OPTION_VAL_4_VN "4 khung hình"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_VN "Bộ xử lý phụ - Chế độ Nhanh"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_VN "Bật mô phỏng nhanh hơn các bộ xử lý phụ với một chút giảm độ chính xác. Khuyến nghị để tùy chọn này bật."
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_VN "Bộ xử lý phụ - Ưu tiên HLE"
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_VN "Khi bật tùy chọn này, mô phỏng HLE kém chính xác hơn sẽ luôn được sử dụng nếu có. Nếu tắt, HLE chỉ dùng khi thiếu firmware LLE."
+#define BSNES_HOTFIXES_LABEL_VN "Sửa Nhanh"
+#define BSNES_HOTFIXES_INFO_0_VN "Ngay cả phần mềm thương mại có giấy phép và phát hành chính thức đôi khi vẫn có lỗi. Tùy chọn này sẽ sửa một số vấn đề xảy ra ngay cả trên phần cứng thực."
+#define BSNES_ENTROPY_LABEL_VN "Entropy (ngẫu hóa)"
+#define BSNES_ENTROPY_INFO_0_VN "Chọn mức độ ngẫu nhiên của bộ nhớ và thanh ghi. Nếu đặt thành Không, tất cả bộ nhớ và thanh ghi sẽ được khởi tạo với giá trị cố định khi khởi động. Ngẫu nhiên thấp cung cấp mô phỏng chính xác nhất của hệ thống thực. Ngẫu nhiên cao làm ngẫu nhiên tối đa có thể."
+#define OPTION_VAL_LOW_VN "Thấp"
+#define OPTION_VAL_HIGH_VN "Cao"
+#define BSNES_CPU_FASTMATH_LABEL_VN "Tính toán nhanh CPU"
+#define BSNES_CPU_FASTMATH_INFO_0_VN "Cung cấp kết quả tính toán ngay lập tức. Phép nhân và chia của CPU cần thời gian để hoàn thành trên SNES thực. Các trình giả lập cũ không mô phỏng những độ trễ này, vì vậy một số ROM hack cũ không chờ các phép toán hoàn tất và cần thủ thuật này."
+#define BSNES_CPU_OVERCLOCK_LABEL_VN "Ép xung - CPU"
 #define BSNES_CPU_OVERCLOCK_LABEL_CAT_VN NULL
-#define BSNES_CPU_OVERCLOCK_INFO_0_VN NULL
+#define BSNES_CPU_OVERCLOCK_INFO_0_VN "Ép xung hoặc giảm xung CPU. Đặt giá trị này trên 100% có thể giảm thời gian tải và loại bỏ tình trạng chậm. Sử dụng cẩn thận vì có thể khiến một số trò chơi bị treo hoặc gặp vấn đề khác."
 #define OPTION_VAL_210_VN NULL
 #define OPTION_VAL_220_VN NULL
 #define OPTION_VAL_230_VN NULL
@@ -36963,12 +36963,12 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_380_VN NULL
 #define OPTION_VAL_390_VN NULL
 #define OPTION_VAL_400_VN NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_VN NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_VN NULL
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_VN NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_VN NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_VN NULL
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_VN NULL
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_VN "Ép xung - Bộ xử lý phụ SA-1"
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_VN "Bộ xử lý phụ SA-1"
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_VN "Ép xung hoặc giảm xung chip Super Accelerator 1 (SA-1). Đặt giá trị này trên 100% có thể cải thiện hiệu suất trong các trò chơi hỗ trợ chip SA-1. Sử dụng cẩn thận vì có thể khiến một số trò chơi bị treo hoặc gặp vấn đề khác."
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_VN "Ép xung - Bộ xử lý phụ SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_VN "Bộ xử lý phụ SuperFX"
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_VN "Ép xung hoặc giảm xung bộ xử lý phụ SuperFX. Đặt giá trị này trên 100% có thể cải thiện hiệu suất trong các trò chơi hỗ trợ SuperFX. Sử dụng cẩn thận vì có thể khiến một số trò chơi bị treo hoặc gặp vấn đề khác."
 #define OPTION_VAL_410_VN NULL
 #define OPTION_VAL_420_VN NULL
 #define OPTION_VAL_430_VN NULL
@@ -37009,16 +37009,16 @@ struct retro_core_options_v2 options_val = {
 #define OPTION_VAL_780_VN NULL
 #define OPTION_VAL_790_VN NULL
 #define OPTION_VAL_800_VN NULL
-#define BSNES_SGB_BIOS_LABEL_VN NULL
-#define BSNES_SGB_BIOS_INFO_0_VN NULL
+#define BSNES_SGB_BIOS_LABEL_VN "Chọn BIOS Super Game Boy Ưu Tiên (Cần Khởi Động Lại)"
+#define BSNES_SGB_BIOS_INFO_0_VN "Chọn BIOS Super Game Boy ưu tiên sẽ được sử dụng cho các trò chơi tương thích."
 #define OPTION_VAL_SGB1_SFC_VN NULL
 #define OPTION_VAL_SGB2_SFC_VN NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_VN NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_VN NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_VN NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_VN NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_VN NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_VN NULL
+#define BSNES_HIDE_SGB_BORDER_LABEL_VN "Ẩn Viền SGB"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_VN "Ẩn viền khi chơi các trò chơi Super Game Boy."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_VN "Súng Ánh Sáng Cảm Ứng"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_VN "Bật chế độ nhập liệu Super Scope cho các thiết bị màn hình cảm ứng."
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_VN "Đảo Nút Kích Hoạt Super Scope"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_VN "Đảo nút kích hoạt và nút con trỏ của Super Scope khi dùng súng ánh sáng trên màn hình cảm ứng."
 
 struct retro_core_option_v2_category option_cats_vn[] = {
    {
