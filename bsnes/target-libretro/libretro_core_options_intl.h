@@ -4528,40 +4528,40 @@ struct retro_core_options_v2 options_ca = {
 #define CATEGORY_VIDEO_INFO_0_CHS "更改视频输出设置。"
 #define CATEGORY_AUDIO_LABEL_CHS "音频"
 #define CATEGORY_AUDIO_INFO_0_CHS "更改音频输出设置。"
-#define CATEGORY_MODE7_LABEL_CHS NULL
-#define CATEGORY_MODE7_INFO_0_CHS NULL
-#define CATEGORY_HACK_LABEL_CHS NULL
-#define CATEGORY_HACK_INFO_0_CHS NULL
-#define CATEGORY_OVERCLOCK_LABEL_CHS NULL
+#define CATEGORY_MODE7_LABEL_CHS "HD 模式 7"
+#define CATEGORY_MODE7_INFO_0_CHS "更改关于模式 7 图形模拟的设置。"
+#define CATEGORY_HACK_LABEL_CHS "模拟破解与增强"
+#define CATEGORY_HACK_INFO_0_CHS "应用模拟破解、增强功能和热修复。"
+#define CATEGORY_OVERCLOCK_LABEL_CHS "超频/降频"
 #define CATEGORY_OVERCLOCK_INFO_0_CHS "更改模拟硬件的速度。"
 #define CATEGORY_SGB_LABEL_CHS NULL
-#define CATEGORY_SGB_INFO_0_CHS NULL
+#define CATEGORY_SGB_INFO_0_CHS "更改关于 Super Game Boy 模拟的设置。"
 #define CATEGORY_LIGHTGUN_LABEL_CHS "光枪"
-#define CATEGORY_LIGHTGUN_INFO_0_CHS "更改 (触摸屏) 光枪设置。"
+#define CATEGORY_LIGHTGUN_INFO_0_CHS "更改（触摸屏）光枪设置。"
 #define BSNES_ASPECT_RATIO_LABEL_CHS "首选宽高比"
-#define BSNES_ASPECT_RATIO_INFO_0_CHS "选择首选内容宽高比。这只适用于RetroArch的宽高比设置为视频设置中的“核心提供”。"
+#define BSNES_ASPECT_RATIO_INFO_0_CHS "选择首选的内容宽高比。此设置仅在 RetroArch 的宽高比设置为“核心提供”时生效。"
 #define OPTION_VAL_AUTO_CHS "自动"
-#define OPTION_VAL_1_1_CHS NULL
-#define OPTION_VAL_4_3_CHS NULL
+#define OPTION_VAL_1_1_CHS "1:1 像素宽高比（像素完美）"
+#define OPTION_VAL_4_3_CHS "4:3 显示宽高比"
 #define OPTION_VAL_NTSC_CHS NULL
 #define OPTION_VAL_PAL_CHS NULL
-#define BSNES_PPU_OVERSCAN_V_LABEL_CHS NULL
-#define BSNES_PPU_OVERSCAN_V_INFO_0_CHS NULL
-#define OPTION_VAL_0_CHS NULL
-#define OPTION_VAL_8_CHS NULL
-#define OPTION_VAL_12_CHS NULL
-#define OPTION_VAL_16_CHS NULL
-#define BSNES_BLUR_EMULATION_LABEL_CHS NULL
-#define BSNES_BLUR_EMULATION_INFO_0_CHS NULL
-#define BSNES_VIDEO_FILTER_LABEL_CHS "过滤器"
-#define BSNES_VIDEO_FILTER_INFO_0_CHS NULL
+#define BSNES_PPU_OVERSCAN_V_LABEL_CHS "裁剪垂直过扫描"
+#define BSNES_PPU_OVERSCAN_V_INFO_0_CHS "从屏幕顶部和底部移除 N 行，以模拟 SNES 时代的电视边框。"
+#define OPTION_VAL_0_CHS "0 行"
+#define OPTION_VAL_8_CHS "8 行"
+#define OPTION_VAL_12_CHS "12 行"
+#define OPTION_VAL_16_CHS "16 行"
+#define BSNES_BLUR_EMULATION_LABEL_CHS "模糊模拟"
+#define BSNES_BLUR_EMULATION_INFO_0_CHS "通过将水平相邻的像素模糊在一起，模拟标准清晰度电视 (SDTV) 有限的水平分辨率。某些游戏依赖此效果来实现透明效果。"
+#define BSNES_VIDEO_FILTER_LABEL_CHS "滤镜"
+#define BSNES_VIDEO_FILTER_INFO_0_CHS "选择无滤镜或 blargg 的 NTSC 滤镜，并可选择 RF、复合、S-Video 或 RGB 模式。"
 #define OPTION_VAL_NONE_CHS "无"
-#define OPTION_VAL_NTSC_RF_CHS NULL
-#define OPTION_VAL_NTSC_COMPOSITE_CHS NULL
-#define OPTION_VAL_NTSC_S_VIDEO_CHS NULL
-#define OPTION_VAL_NTSC_RGB_CHS NULL
-#define BSNES_VIDEO_LUMINANCE_LABEL_CHS NULL
-#define BSNES_VIDEO_LUMINANCE_INFO_0_CHS NULL
+#define OPTION_VAL_NTSC_RF_CHS "NTSC（RF）"
+#define OPTION_VAL_NTSC_COMPOSITE_CHS "NTSC（复合）"
+#define OPTION_VAL_NTSC_S_VIDEO_CHS "NTSC（S-视频）"
+#define OPTION_VAL_NTSC_RGB_CHS "NTSC（RGB）"
+#define BSNES_VIDEO_LUMINANCE_LABEL_CHS "色彩调整 - 亮度"
+#define BSNES_VIDEO_LUMINANCE_INFO_0_CHS "调整亮度"
 #define OPTION_VAL_0_O4_CHS NULL
 #define OPTION_VAL_10_CHS NULL
 #define OPTION_VAL_20_CHS NULL
@@ -4572,9 +4572,9 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_70_CHS NULL
 #define OPTION_VAL_80_CHS NULL
 #define OPTION_VAL_90_CHS NULL
-#define OPTION_VAL_100_CHS NULL
-#define BSNES_VIDEO_SATURATION_LABEL_CHS NULL
-#define BSNES_VIDEO_SATURATION_INFO_0_CHS NULL
+#define OPTION_VAL_100_CHS "100%（默认）"
+#define BSNES_VIDEO_SATURATION_LABEL_CHS "色彩调整 - 饱和度"
+#define BSNES_VIDEO_SATURATION_INFO_0_CHS "调整饱和度"
 #define OPTION_VAL_110_CHS NULL
 #define OPTION_VAL_120_CHS NULL
 #define OPTION_VAL_130_CHS NULL
@@ -4585,72 +4585,72 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_180_CHS NULL
 #define OPTION_VAL_190_CHS NULL
 #define OPTION_VAL_200_CHS NULL
-#define BSNES_VIDEO_GAMMA_LABEL_CHS NULL
-#define BSNES_VIDEO_GAMMA_INFO_0_CHS NULL
+#define BSNES_VIDEO_GAMMA_LABEL_CHS "色彩调整 - 伽马值"
+#define BSNES_VIDEO_GAMMA_INFO_0_CHS "调整伽马值"
 #define OPTION_VAL_100_O6_CHS NULL
-#define OPTION_VAL_150_O6_CHS NULL
-#define BSNES_PPU_FAST_LABEL_CHS NULL
-#define BSNES_PPU_FAST_LABEL_CAT_CHS NULL
-#define BSNES_PPU_FAST_INFO_0_CHS "启用更快的 PPU 仿真，但精度会略有降低。建议打开此选项。注意：必须启用此选项，“反交错”、“无 Sprite 限制 ”和 “HD Mode 7 ”选项才能正常工作。"
-#define BSNES_PPU_DEINTERLACE_LABEL_CHS "PPU (视频) - 反交错"
-#define BSNES_PPU_DEINTERLACE_LABEL_CAT_CHS "PPU - 反交错"
-#define BSNES_PPU_DEINTERLACE_INFO_0_CHS "通过以 480p 进行内部渲染来消除所有游戏的隔行扫描。对性能的影响几乎不存在，因此建议开启。"
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CHS "PPU (视频) - 无 Sprite 限制"
-#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_CHS "PPU - 无 Sprite 限制"
-#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_CHS "取消对屏幕上可同时绘制的 Sprite 数量的限制。可能会导致某些游戏出现问题。"
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CHS NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_CHS NULL
-#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_CHS "模拟 ZSNES 和 Snes9x 旧版本中的一个错误，即未模拟 VRAM 阻塞。一些旧版本的 ROM hack 依赖于这种行为，如果不启用该选项，就会错误地渲染图形。该选项非常不准确，而且会损害 PPU 速度，因此建议禁用该选项，除非需要玩与该内核不兼容的游戏。"
-#define BSNES_DSP_FAST_LABEL_CHS "DSP (音频) - 快速模式"
-#define BSNES_DSP_FAST_LABEL_CAT_CHS NULL
-#define BSNES_DSP_FAST_INFO_0_CHS NULL
-#define BSNES_DSP_CUBIC_LABEL_CHS NULL
-#define BSNES_DSP_CUBIC_LABEL_CAT_CHS NULL
-#define BSNES_DSP_CUBIC_INFO_0_CHS "对声音进行三次插值，保留更多的高音域。"
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CHS NULL
-#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_CHS NULL
-#define BSNES_DSP_ECHO_SHADOW_INFO_0_CHS NULL
-#define BSNES_MODE7_SCALE_LABEL_CHS "HD Mode 7 - 比例"
-#define BSNES_MODE7_SCALE_LABEL_CAT_CHS "比例"
-#define BSNES_MODE7_SCALE_INFO_0_CHS NULL
-#define OPTION_VAL_1X_CHS NULL
-#define OPTION_VAL_2X_CHS NULL
-#define OPTION_VAL_3X_CHS NULL
-#define OPTION_VAL_4X_CHS NULL
-#define OPTION_VAL_5X_CHS NULL
-#define OPTION_VAL_6X_CHS NULL
-#define OPTION_VAL_7X_CHS NULL
-#define OPTION_VAL_8X_CHS NULL
-#define BSNES_MODE7_PERSPECTIVE_LABEL_CHS "HD Mode 7 - 透视修正"
+#define OPTION_VAL_150_O6_CHS "150%（默认）"
+#define BSNES_PPU_FAST_LABEL_CHS "PPU（视频） - 快速模式"
+#define BSNES_PPU_FAST_LABEL_CAT_CHS "PPU - 快速模式"
+#define BSNES_PPU_FAST_INFO_0_CHS "在牺牲少量精度的前提下，实现更快的 PPU 模拟。建议保持开启。注意：必须开启此选项，“去隔行”、“无精灵限制”和“HD 模式 7”选项才能正常工作。"
+#define BSNES_PPU_DEINTERLACE_LABEL_CHS "PPU（视频）- 去隔行"
+#define BSNES_PPU_DEINTERLACE_LABEL_CAT_CHS "PPU - 去隔行"
+#define BSNES_PPU_DEINTERLACE_INFO_0_CHS "通过内部以 480p 渲染来对所有游戏进行去隔行处理。性能损耗几乎可以忽略不计，因此建议保持开启。"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CHS "PPU（视频）- 无精灵限制"
+#define BSNES_PPU_NO_SPRITE_LIMIT_LABEL_CAT_CHS "PPU - 无精灵限制"
+#define BSNES_PPU_NO_SPRITE_LIMIT_INFO_0_CHS "移除屏幕上可同时绘制的精灵数量限制。可能会导致某些游戏出现问题。"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CHS "PPU（视频）- 无 VRAM 阻塞"
+#define BSNES_PPU_NO_VRAM_BLOCKING_LABEL_CAT_CHS "PPU - 无 VRAM 阻塞"
+#define BSNES_PPU_NO_VRAM_BLOCKING_INFO_0_CHS "模拟 ZSNES 和 Snes9x 旧版本中的一个错误，其中未模拟 VRAM 阻塞。一些较老的 ROM 破解依赖于此行为，如果未启用，图形将渲染错误。此选项极不准确且会损害 PPU 速度，因此除非需要玩与该核心不兼容的游戏，否则建议禁用。"
+#define BSNES_DSP_FAST_LABEL_CHS "DSP（音频）- 快速模式"
+#define BSNES_DSP_FAST_LABEL_CAT_CHS "DSP - 快速模式"
+#define BSNES_DSP_FAST_INFO_0_CHS "在牺牲少量精度的前提下，实现更快的 DSP 模拟。建议保持开启。"
+#define BSNES_DSP_CUBIC_LABEL_CHS "DSP（音频）- 三次插值"
+#define BSNES_DSP_CUBIC_LABEL_CAT_CHS "DSP - 三次插值"
+#define BSNES_DSP_CUBIC_INFO_0_CHS "对声音应用三次插值，保留更多高频部分。"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CHS "DSP（音频）- 回声影子 RAM"
+#define BSNES_DSP_ECHO_SHADOW_LABEL_CAT_CHS "DSP - 回声影子 RAM"
+#define BSNES_DSP_ECHO_SHADOW_INFO_0_CHS "模拟 ZSNES 中的一个错误，其中回声 RAM 被视为与 APU RAM 分开。许多为《超级马力欧世界》设计的较老 ROM 破解依赖于此行为，如果没有此选项，游戏将会崩溃。此选项极不准确，除非必要，否则不应启用。"
+#define BSNES_MODE7_SCALE_LABEL_CHS "HD 模式 7 - 缩放"
+#define BSNES_MODE7_SCALE_LABEL_CAT_CHS "缩放"
+#define BSNES_MODE7_SCALE_INFO_0_CHS "提高某些游戏中使用的 HD 模式 7 图形的水平和垂直分辨率。"
+#define OPTION_VAL_1X_CHS "240p（1x）"
+#define OPTION_VAL_2X_CHS "480p（2x）"
+#define OPTION_VAL_3X_CHS "720p（3x）"
+#define OPTION_VAL_4X_CHS "960p（4x）"
+#define OPTION_VAL_5X_CHS "1200p（5x）"
+#define OPTION_VAL_6X_CHS "1440p（6x）"
+#define OPTION_VAL_7X_CHS "1680p（7x）"
+#define OPTION_VAL_8X_CHS "1920p（8x）"
+#define BSNES_MODE7_PERSPECTIVE_LABEL_CHS "高清模式 7 - 透视校正"
 #define BSNES_MODE7_PERSPECTIVE_LABEL_CAT_CHS "透视修正"
-#define BSNES_MODE7_PERSPECTIVE_INFO_0_CHS "通过解决 SNES 使用的整数数学的一些限制，纠正某些游戏中使用的模式 7 图形的视角。"
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CHS "HD Mode 7 - 超级采样"
-#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_CHS "超级采样"
-#define BSNES_MODE7_SUPERSAMPLE_INFO_0_CHS "对某些游戏中使用的 Mode 7 图形进行超采样。结合更高的 Mode 7 比例系数，它能产生类似抗锯齿的效果。"
-#define BSNES_MODE7_MOSAIC_LABEL_CHS NULL
-#define BSNES_MODE7_MOSAIC_LABEL_CAT_CHS NULL
-#define BSNES_MODE7_MOSAIC_INFO_0_CHS "显示 Mode 7 图形的马赛克效果，即使在超采样时也是如此。"
-#define BSNES_RUN_AHEAD_FRAMES_LABEL_CHS NULL
-#define BSNES_RUN_AHEAD_FRAMES_INFO_0_CHS "提前模拟系统并回滚，以减少输入延迟。对系统要求非常高。"
-#define OPTION_VAL_1_CHS NULL
-#define OPTION_VAL_2_CHS NULL
-#define OPTION_VAL_3_CHS NULL
-#define OPTION_VAL_4_CHS NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_CHS NULL
-#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_CHS "使协处理器的仿真速度更快，但精度会略有降低。建议开启此项。"
-#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_CHS NULL
-#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_CHS "启用该选项后，在可用时将始终使用精度较低的 HLE 仿真。如果禁用，只有在缺少 LLE 固件时才会使用 HLE。"
-#define BSNES_HOTFIXES_LABEL_CHS NULL
-#define BSNES_HOTFIXES_INFO_0_CHS "即使是商业授权和官方发布的软件，有时也会带有错误。该选项可以纠正某些在真实硬件上出现的问题。"
-#define BSNES_ENTROPY_LABEL_CHS NULL
-#define BSNES_ENTROPY_INFO_0_CHS "选择内存和寄存器的随机化程度。如果设置为 “无”，则启动时所有内存和寄存器都将初始化为常量。低随机化能最准确地反映真实系统。高随机化程度则尽可能高。"
+#define BSNES_MODE7_PERSPECTIVE_INFO_0_CHS "通过绕过 SNES 使用的整数数学运算的一些限制，校正某些游戏中使用的 高清模式 7 图形的透视效果。"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CHS "高清模式 7 - 超采样"
+#define BSNES_MODE7_SUPERSAMPLE_LABEL_CAT_CHS "超采样"
+#define BSNES_MODE7_SUPERSAMPLE_INFO_0_CHS "对某些游戏中使用的模式 7 图形进行超采样。结合更高的模式 7 缩放倍数，可产生类似抗锯齿的效果。"
+#define BSNES_MODE7_MOSAIC_LABEL_CHS "高清模式 7 - HD->SD 马赛克"
+#define BSNES_MODE7_MOSAIC_LABEL_CAT_CHS "HD->SD 马赛克"
+#define BSNES_MODE7_MOSAIC_INFO_0_CHS "即使在放大时，也显示模式 7 图形的马赛克效果。"
+#define BSNES_RUN_AHEAD_FRAMES_LABEL_CHS "内部预运行"
+#define BSNES_RUN_AHEAD_FRAMES_INFO_0_CHS "模拟系统提前运行并回滚，以减少输入延迟。此功能对系统要求非常高。"
+#define OPTION_VAL_1_CHS "1 帧"
+#define OPTION_VAL_2_CHS "2 帧"
+#define OPTION_VAL_3_CHS "3 帧"
+#define OPTION_VAL_4_CHS "4 帧"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_LABEL_CHS "协处理器 - 快速模式"
+#define BSNES_COPROCESSOR_DELAYED_SYNC_INFO_0_CHS "以轻微降低精度为代价，启用更快的协处理器模拟。建议保持开启。"
+#define BSNES_COPROCESSOR_PREFER_HLE_LABEL_CHS "协处理器 - 优先使用 HLE"
+#define BSNES_COPROCESSOR_PREFER_HLE_INFO_0_CHS "当此选项启用时，只要可用，将始终使用精度较低的 HLE 模拟。如果禁用，则仅在缺少 LLE 固件时才使用 HLE。"
+#define BSNES_HOTFIXES_LABEL_CHS "热修复"
+#define BSNES_HOTFIXES_INFO_0_CHS "即使是商业授权并正式发布的软件，有时也会带有错误。此选项将修正即使在真实硬件上也会出现的某些问题。"
+#define BSNES_ENTROPY_LABEL_CHS "熵（随机化）"
+#define BSNES_ENTROPY_INFO_0_CHS "选择内存和寄存器的随机化级别。如果设为“无”，所有内存和寄存器在启动时都将初始化为固定值。低随机化能最准确地模拟真实系统。高随机化则尽可能地进行随机化。"
 #define OPTION_VAL_LOW_CHS "低"
 #define OPTION_VAL_HIGH_CHS "高"
-#define BSNES_CPU_FASTMATH_LABEL_CHS NULL
-#define BSNES_CPU_FASTMATH_INFO_0_CHS "立即提供计算结果。在真正的 SNES 上，CPU 的乘除运算需要一定时间才能完成。旧版模拟器无法模拟这些延迟，因此一些旧版 ROM hack 无法等待数学运算完成，需要使用此 hack。"
-#define BSNES_CPU_OVERCLOCK_LABEL_CHS NULL
-#define BSNES_CPU_OVERCLOCK_LABEL_CAT_CHS "处理器"
-#define BSNES_CPU_OVERCLOCK_INFO_0_CHS "超频或降频 CPU。将此值设置为 100% 以上可能会缩短加载时间并消除减速。请谨慎使用，因为这也可能导致某些游戏崩溃或出现其他问题。"
+#define BSNES_CPU_FASTMATH_LABEL_CHS "CPU 快速数学"
+#define BSNES_CPU_FASTMATH_INFO_0_CHS "立即提供计算结果。在真实的 SNES 上，CPU 的乘法和除法运算需要时间才能完成。较旧的模拟器并未模拟这些延迟，因此一些较老的 ROM 破解程序不会等待数学运算完成，而需要此破解。"
+#define BSNES_CPU_OVERCLOCK_LABEL_CHS "超频 - CPU"
+#define BSNES_CPU_OVERCLOCK_LABEL_CAT_CHS NULL
+#define BSNES_CPU_OVERCLOCK_INFO_0_CHS "对 CPU 进行超频或降频。将此值设置为高于 100% 可能会缩短加载时间并消除卡顿。请谨慎使用，因为它也可能导致某些游戏崩溃或出现其他问题。"
 #define OPTION_VAL_210_CHS NULL
 #define OPTION_VAL_220_CHS NULL
 #define OPTION_VAL_230_CHS NULL
@@ -4671,12 +4671,12 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_380_CHS NULL
 #define OPTION_VAL_390_CHS NULL
 #define OPTION_VAL_400_CHS NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CHS NULL
-#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_CHS NULL
-#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_CHS "超频或降频超级加速器 1 (SA-1) 芯片。将此值设置为 100% 以上可能会提高支持 SA-1 芯片的游戏的性能。请谨慎使用，因为这也可能导致某些游戏崩溃或出现其他问题。"
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CHS NULL
-#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_CHS NULL
-#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_CHS "超频或降频 SuperFX 协处理器。将此值设置为 100% 以上可能会提高支持 SuperFX 的游戏的性能。请谨慎使用，因为这也可能导致某些游戏崩溃或出现其他问题。"
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CHS "超频 - SA-1 协处理器"
+#define BSNES_CPU_SA1_OVERCLOCK_LABEL_CAT_CHS "SA-1 协处理器"
+#define BSNES_CPU_SA1_OVERCLOCK_INFO_0_CHS "对超级加速器 1 (SA-1) 芯片进行超频或降频。将此值设置为高于 100% 可能会提升支持 SA-1 芯片的游戏性能。请谨慎使用，因为它也可能导致某些游戏崩溃或出现其他问题。"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CHS "超频 - SuperFX 协处理器"
+#define BSNES_CPU_SFX_OVERCLOCK_LABEL_CAT_CHS "SuperFX 协处理器"
+#define BSNES_CPU_SFX_OVERCLOCK_INFO_0_CHS "对 SuperFX 协处理器进行超频或降频。将此值设置为高于 100% 可能会提升支持 SuperFX 的游戏的性能。请谨慎使用，因为它也可能导致某些游戏崩溃或出现其他问题。"
 #define OPTION_VAL_410_CHS NULL
 #define OPTION_VAL_420_CHS NULL
 #define OPTION_VAL_430_CHS NULL
@@ -4717,16 +4717,16 @@ struct retro_core_options_v2 options_ca = {
 #define OPTION_VAL_780_CHS NULL
 #define OPTION_VAL_790_CHS NULL
 #define OPTION_VAL_800_CHS NULL
-#define BSNES_SGB_BIOS_LABEL_CHS NULL
-#define BSNES_SGB_BIOS_INFO_0_CHS NULL
-#define OPTION_VAL_SGB1_SFC_CHS NULL
-#define OPTION_VAL_SGB2_SFC_CHS NULL
-#define BSNES_HIDE_SGB_BORDER_LABEL_CHS NULL
-#define BSNES_HIDE_SGB_BORDER_INFO_0_CHS NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_CHS NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_CHS NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_CHS NULL
-#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_CHS NULL
+#define BSNES_SGB_BIOS_LABEL_CHS "首选 Super Game Boy BIOS（需要重启）"
+#define BSNES_SGB_BIOS_INFO_0_CHS "选择用于兼容游戏的首选 Super Game Boy BIOS。"
+#define OPTION_VAL_SGB1_SFC_CHS "超级游戏男孩（SGB1.sfc）"
+#define OPTION_VAL_SGB2_SFC_CHS "超级游戏男孩 2 (SGB2.sfc)"
+#define BSNES_HIDE_SGB_BORDER_LABEL_CHS "隐藏 SGB 边框"
+#define BSNES_HIDE_SGB_BORDER_INFO_0_CHS "在游玩超级游戏男孩游戏时隐藏边框。"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_LABEL_CHS "触摸屏光枪"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_INFO_0_CHS "为触摸屏设备启用 Super Scope 输入。"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_LABEL_CHS "Super Scope 反向扳机按钮"
+#define BSNES_TOUCHSCREEN_LIGHTGUN_SUPERSCOPE_REVERSE_INFO_0_CHS "使用触摸屏光枪时，反转 Super Scope 的扳机键和光标键。"
 
 struct retro_core_option_v2_category option_cats_chs[] = {
    {
