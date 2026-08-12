@@ -3,24 +3,23 @@
 namespace hiro {
 
 auto pMonitor::count() -> uint {
-  return QApplication::desktop()->screenCount();
+  return QApplication::screens().count();
 }
 
 auto pMonitor::dpi(uint monitor) -> Position {
-  //Qt does not support per-monitor DPI retrieval
   return {
-    QApplication::desktop()->logicalDpiX(),
-    QApplication::desktop()->logicalDpiY()
+    QApplication::screens().at(monitor)->logicalDotsPerInchX(),
+    QApplication::screens().at(monitor)->logicalDotsPerInchY()
   };
 }
 
 auto pMonitor::geometry(uint monitor) -> Geometry {
-  QRect rectangle = QApplication::desktop()->screenGeometry(monitor);
+  QRect rectangle = QApplication::screens()[monitor]->geometry();
   return {rectangle.x(), rectangle.y(), rectangle.width(), rectangle.height()};
 }
 
 auto pMonitor::primary() -> uint {
-  return QApplication::desktop()->primaryScreen();
+  return max(QApplication::screens().indexOf(QApplication::primaryScreen()), 0);
 }
 
 auto pMonitor::workspace(uint monitor) -> Geometry {

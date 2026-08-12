@@ -18,7 +18,7 @@ auto pWindow::construct() -> void {
   }
 
   qtLayout = new QVBoxLayout(qtWindow);
-  qtLayout->setMargin(0);
+  qtLayout->setContentsMargins(0, 0, 0, 0);
   qtLayout->setSpacing(0);
   qtWindow->setLayout(qtLayout);
 
@@ -83,9 +83,9 @@ auto pWindow::handle() const -> uintptr_t {
 }
 
 auto pWindow::monitor() const -> uint {
-  int monitor = QDesktopWidget().screenNumber(qtWindow);
-  if(monitor < 0) monitor = Monitor::primary();
-  return monitor;
+  auto screen = qtWindow->window()->windowHandle()->screen();
+  if(screen == nullptr) return Monitor::primary();
+  return max(QApplication::screens().indexOf(screen), 0);
 }
 
 auto pWindow::remove(sMenuBar menuBar) -> void {
@@ -101,10 +101,10 @@ auto pWindow::remove(sStatusBar statusBar) -> void {
 }
 
 auto pWindow::setBackgroundColor(Color color) -> void {
-  static auto defaultColor = qtContainer->palette().color(QPalette::Background);
+  static auto defaultColor = qtContainer->palette().color(QPalette::Window);
 
   auto palette = qtContainer->palette();
-  palette.setColor(QPalette::Background, CreateColor(color, defaultColor));
+  palette.setColor(QPalette::Window, CreateColor(color, defaultColor));
   qtContainer->setPalette(palette);
   qtContainer->setAutoFillBackground((bool)color);
   //translucency results are very unpleasant without a compositor; so disable for now
@@ -147,11 +147,7 @@ auto pWindow::setFullScreen(bool fullScreen) -> void {
 auto pWindow::setGeometry(Geometry geometry) -> void {
   auto lock = acquire();
   Application::processEvents();
-  #if HIRO_QT==4
-  QApplication::syncX();
-  #elif HIRO_QT==5
   QApplication::sync();
-  #endif
 
   setResizable(state().resizable);
   qtWindow->move(geometry.x() - frameMargin().x(), geometry.y() - frameMargin().y());

@@ -8,11 +8,6 @@ ifeq ($(platform),windows)
     hiro.options = -lkernel32 -luser32 -lgdi32 -ladvapi32 -lole32 -lcomctl32 -lcomdlg32 -luxtheme -lmsimg32 -lshlwapi -ldwmapi
   endif
 
-  ifeq ($(hiro),gtk2)
-    hiro.flags   = $(flags.cpp) -DHIRO_GTK=2 $(shell pkg-config --cflags gtk+-2.0) -Wno-deprecated-declarations
-    hiro.options = $(shell pkg-config --libs gtk+-2.0)
-  endif
-
   ifeq ($(hiro),gtk3)
     hiro.flags   = $(flags.cpp) -DHIRO_GTK=3 $(shell pkg-config --cflags gtk+-3.0) -Wno-deprecated-declarations
     hiro.options = $(shell pkg-config --libs gtk+-3.0)
@@ -35,17 +30,6 @@ ifneq ($(filter $(platform),linux bsd),)
     hiro := gtk3
   endif
 
-  ifeq ($(hiro),gtk2)
-    hiro.flags   = $(flags.cpp) -DHIRO_GTK=2 $(shell pkg-config --cflags gtk+-2.0) -Wno-deprecated-declarations
-    hiro.options = -L/usr/local/lib -lX11 $(shell pkg-config --libs gtk+-2.0)
-  endif
-
-  ifeq ($(hiro),gtk2-se)
-    flags       += -DHiro_SourceEdit
-    hiro.flags   = $(flags.cpp) -DHIRO_GTK=2 $(shell pkg-config --cflags gtk+-2.0 gtksourceview-2.0) -Wno-deprecated-declarations
-    hiro.options = -L/usr/local/lib -lX11 $(shell pkg-config --libs gtk+-2.0 gtksourceview-2.0)
-  endif
-
   ifeq ($(hiro),gtk3)
     hiro.flags   = $(flags.cpp) -DHIRO_GTK=3 $(shell pkg-config --cflags gtk+-3.0) -Wno-deprecated-declarations
     hiro.options = -L/usr/local/lib -lX11 $(shell pkg-config --libs gtk+-3.0)
@@ -57,10 +41,10 @@ ifneq ($(filter $(platform),linux bsd),)
     hiro.options = -L/usr/local/lib -lX11 $(shell pkg-config --libs gtk+-3.0 gtksourceview-3.0)
   endif
 
-  ifeq ($(hiro),qt4)
-    moc = /usr/local/lib/qt4/bin/moc
-    hiro.flags   = $(flags.cpp) -DHIRO_QT=4 $(shell pkg-config --cflags QtCore QtGui)
-    hiro.options = -L/usr/local/lib -lX11 $(shell pkg-config --libs QtCore QtGui)
+  ifeq ($(hiro),qt6)
+    moc = $(shell pkg-config --variable=libexecdir Qt6Core)/moc
+    hiro.flags   = $(flags.cpp) -DHIRO_QT=6 -fPIC $(shell pkg-config --cflags Qt6Core Qt6Gui Qt6Widgets)
+    hiro.options = -L/usr/local/lib -lX11 $(shell pkg-config --libs Qt6Core Qt6Gui Qt6Widgets)
   endif
 
   ifeq ($(hiro),qt5)

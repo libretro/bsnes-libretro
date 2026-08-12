@@ -34,16 +34,12 @@ auto pApplication::run() -> void {
   }
 }
 
-auto pApplication::pendingEvents() -> bool {
-  return gtk_events_pending();
-}
-
 auto pApplication::processEvents() -> void {
   //GTK can sometimes return gtk_pending_events() == true forever,
   //no matter how many times gtk_main_iteration_do() is called.
   //implement a timeout to prevent hiro from hanging forever in this case.
   auto time = chrono::millisecond();
-  while(pendingEvents() && chrono::millisecond() - time < 50) {
+  while(gtk_events_pending() && chrono::millisecond() - time < 50) {
     gtk_main_iteration_do(false);
   }
   for(auto& window : state().windows) window->_synchronizeGeometry();
@@ -145,32 +141,6 @@ auto pApplication::initialize() -> void {
   g_object_set(gtkSettings, "gtk-im-module", "gtk-im-context-simple", nullptr);
   #endif
 
-  #if HIRO_GTK==2
-  gtk_rc_parse_string(R"(
-    style "HiroWindow"
-    {
-      GtkWindow::resize-grip-width = 0
-      GtkWindow::resize-grip-height = 0
-    }
-    class "GtkWindow" style "HiroWindow"
-
-    style "HiroTreeView"
-    {
-      GtkTreeView::vertical-separator = 0
-    }
-    class "GtkTreeView" style "HiroTreeView"
-
-    style "HiroTabFrameCloseButton"
-    {
-      GtkWidget::focus-line-width = 0
-      GtkWidget::focus-padding = 0
-      GtkButton::default-border = {0, 0, 0, 0}
-      GtkButton::default-outer-border = {0, 0, 0, 0}
-      GtkButton::inner-border = {0, 1, 0, 0}
-    }
-    widget_class "*.<GtkNotebook>.<GtkHBox>.<GtkButton>" style "HiroTabFrameCloseButton"
-  )");
-  #elif HIRO_GTK==3
   GtkCssProvider *provider;
   GdkScreen *screen;
 
@@ -183,7 +153,6 @@ auto pApplication::initialize() -> void {
 
   screen = gdk_screen_get_default();
   gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER (provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-  #endif
 
   pKeyboard::initialize();
 }

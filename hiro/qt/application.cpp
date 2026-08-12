@@ -22,18 +22,19 @@ auto pApplication::run() -> void {
   }
 }
 
-auto pApplication::pendingEvents() -> bool {
-  return QApplication::hasPendingEvents();
-}
-
 auto pApplication::processEvents() -> void {
-  while(pendingEvents()) QApplication::processEvents();
+  //qt6 has no means to spin the event loop indefinitely
+  //this is likely to prevent bugs where events produced during the loop spin forever
+  //lets match hiro gtk and spin for a max of 50ms
+  //note that this overload of processEvents *will* spin, but it does exit if the queue is empty
+  QApplication::processEvents(QEventLoop::AllEvents, 50);
 }
 
 auto pApplication::quit() -> void {
   QApplication::quit();
   qtApplication = nullptr;  //note: deleting QApplication will crash libQtGui
 
+  #if defined(DISPLAY_XORG)
   if(state().display) {
     if(state().screenSaverXDG && state().screenSaverWindow) {
       //this needs to run synchronously, so that XUnmapWindow() won't happen before xdg-screensaver is finished
@@ -44,12 +45,26 @@ auto pApplication::quit() -> void {
     XCloseDisplay(state().display);
     state().display = nullptr;
   }
+  #endif
 }
 
 auto pApplication::setScreenSaver(bool screenSaver) -> void {
   #if defined(DISPLAY_XORG)
   if(state().screenSaverXDG && state().screenSaverWindow) {
+    //when invoking this command on Linux under Xfce, the follow message is written to the terminal:
+    //"org.freedesktop.DBus.Error.ServiceUnknown: The name org.gnome.SessionManager was not provided by any .service files"
+    //to silence this message, stdout and stderr are redirected to /dev/null while invoking this command.
+    auto fd = open("/dev/null", O_NONBLOCK);
+    auto fo = dup(STDOUT_FILENO);
+    auto fe = dup(STDERR_FILENO);
+    dup2(fd, STDOUT_FILENO);
+    dup2(fd, STDERR_FILENO);
     invoke("xdg-screensaver", screenSaver ? "resume" : "suspend", string{"0x", hex(state().screenSaverWindow)});
+    dup2(fo, STDOUT_FILENO);
+    dup2(fe, STDERR_FILENO);
+    close(fd);
+    close(fo);
+    close(fe);
   }
   #endif
 }
@@ -63,11 +78,7 @@ auto pApplication::state() -> State& {
 //obviously, it is used as sparingly as possible
 auto pApplication::synchronize() -> void {
   for(auto n : range(8)) {
-    #if HIRO_QT==4 && defined(DISPLAY_XORG)
-    QApplication::syncX();
-    #elif HIRO_QT==5
     QApplication::sync();
-    #endif
     Application::processEvents();
     usleep(2000);
   }
@@ -79,6 +90,7 @@ auto pApplication::initialize() -> void {
   #endif
 
   #if defined(DISPLAY_XORG)
+  XInitThreads();
   state().display = XOpenDisplay(nullptr);
   state().screenSaverXDG = (bool)execute("xdg-screensaver", "--version").output.find("xdg-screensaver");
 
@@ -94,7 +106,7 @@ auto pApplication::initialize() -> void {
       InputOutput, DefaultVisual(state().display, screen),
       CWBackPixel | CWBorderPixel | CWOverrideRedirect, &attributes
     );
-    XStoreName(state().display, state().screenSaverWindow, "hiro screensaver-prevention window");
+    XStoreName(state().display, state().screenSaverWindow, "hiro-screen-saver-window");
     XFlush(state().display);
   }
   #endif
@@ -107,6 +119,11 @@ auto pApplication::initialize() -> void {
   static char* argv[] = {name.get(), nullptr};
   static char** argvp = argv;
   qtApplication = new QApplication(argc, argvp);
+
+  // Creating the QApplication causes Qt to set the locale from the environment.
+  // Set the locale for LC_NUMERIC back to "C". It is expected to be "C" for
+  // the purpose of various string formatting and parsing operations.
+  setlocale(LC_NUMERIC, "C");
 
   pKeyboard::initialize();
 }

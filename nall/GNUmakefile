@@ -80,7 +80,7 @@ ifeq ($(compiler),)
     compiler.cpp = $(CXX) -std=gnu++17
     openmp = false
   else ifeq ($(platform),bsd)
-    compiler := g++8
+    compiler := g++14
   else
     compiler := g++
   endif
