@@ -512,7 +512,7 @@ auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_p
 		else
 			save_path = { base_name.trimRight(suffix, 1L), ".srm" };
 
-		return vfs::fs::file::open(save_path, mode);
+		return vfs::libretro::file::open(save_path, mode);
 	}
 	else if (name == "time.rtc") {
 		string time_path;
@@ -526,7 +526,7 @@ auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_p
 		else
 			time_path = { base_name.trimRight(suffix, 1L), ".rtc" };
 
-		return vfs::fs::file::open(time_path, mode);
+		return vfs::libretro::file::open(time_path, mode);
 	}
 	else if (name == "download.ram") {
 		string psr_path;
@@ -540,7 +540,7 @@ auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_p
 		else
 			psr_path = { base_name.trimRight(suffix, 1L), ".psr" };
 
-		return vfs::fs::file::open(psr_path, mode);
+		return vfs::libretro::file::open(psr_path, mode);
 	}
 	else if (name == "arm6.program.rom" && mode == vfs::file::mode::read) {
 		if (superFamicom.firmware.size() == 0x28000) {
@@ -604,9 +604,7 @@ auto Program::openRomSuperFamicom(string name, vfs::file::mode mode) -> shared_p
 		environ_cb(RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY, &system_dir);
 		string firmware_path = string(system_dir, '/', firmware).transform("\\", "/");
 
-		if (file::exists(firmware_path)) {
-			return vfs::fs::file::open(firmware_path, mode);
-		}
+		return vfs::libretro::file::open(firmware_path, mode);
 	}
 
 	return {};
@@ -631,7 +629,7 @@ auto Program::openRomGameBoy(string name, vfs::file::mode mode) -> shared_pointe
 		else
 			save_path = { base_name.trimRight(suffix, 1L), ".srm" };
 
-		return vfs::fs::file::open(save_path, mode);
+		return vfs::libretro::file::open(save_path, mode);
 	}
 
 	if(name == "time.rtc")
@@ -647,7 +645,7 @@ auto Program::openRomGameBoy(string name, vfs::file::mode mode) -> shared_pointe
 		else
 			save_path = { base_name.trimRight(suffix, 1L), ".rtc" };
 
-		return vfs::fs::file::open(save_path, mode);
+		return vfs::libretro::file::open(save_path, mode);
 	}
 
 	return {};
@@ -686,6 +684,9 @@ auto Program::loadFile(string location) -> vector<uint8_t>
 		return LZMA::extract(location);
 	}
 	else {
+		if(auto fp = vfs::libretro::file::openTyped(location, vfs::file::mode::read)) {
+			return fp->readAll();
+		}
 		return file::read(location);
 	}
 }

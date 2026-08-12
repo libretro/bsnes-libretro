@@ -10,6 +10,7 @@
 #include <nall/encode/zip.hpp>
 #include <nall/hash/crc16.hpp>
 #include "resources.hpp"
+#include "libretro_vfs.hpp"
 
 struct Program : Emulator::Platform
 {
