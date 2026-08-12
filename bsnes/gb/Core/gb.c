@@ -9,7 +9,9 @@
 #ifndef _WIN32
 #include <sys/select.h>
 #include <unistd.h>
+#include <alloca.h>
 #endif
+
 #include "random.h"
 #include "gb.h"
 
