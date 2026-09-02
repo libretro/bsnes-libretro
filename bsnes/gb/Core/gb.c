@@ -9,9 +9,16 @@
 #ifndef _WIN32
 #include <sys/select.h>
 #include <unistd.h>
+#if defined(__has_include)
+#if __has_include(<alloca.h>)
+#include <alloca.h>
+#else
+#include <stdlib.h>
+#endif
+#else
 #include <alloca.h>
 #endif
-
+#endif
 #include "random.h"
 #include "gb.h"
 
