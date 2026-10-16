@@ -733,6 +733,11 @@ void retro_init()
 {
 	emulator = new SuperFamicom::Interface;
 	program = new Program(emulator.data());
+
+	// Loading a state reinitializes the system, so a frontend that loads one every
+	// frame from power-on, as run-ahead does, keeps games from ever booting
+	uint64_t quirks = RETRO_SERIALIZATION_QUIRK_INCOMPLETE;
+	environ_cb(RETRO_ENVIRONMENT_SET_SERIALIZATION_QUIRKS, &quirks);
 }
 
 void retro_deinit()
