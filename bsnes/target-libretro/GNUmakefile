@@ -14,10 +14,28 @@ else ifeq ($(platform), libnx)
 	flags += -O2 -ftree-vectorize -ffast-math -funsafe-math-optimizations -fPIE -I$(PORTLIBS)/include/ -I$(LIBNX)/include/ -ffunction-sections -fdata-sections -ftls-model=local-exec
 	flags += -D__SWITCH__=1 -D__aarch64__=1 -DSWITCH -DHAVE_LIBNX
 	name := bsnes_libretro_libnx
+else ifeq ($(platform), libounce)
+	name := bsnes_libretro_libounce
+	flags += -DHAVE_POSIX_MEMALIGN -DHAVE_LIBNX
 endif
 
 objects := libretro program $(objects)
 objects := $(patsubst %,obj/%.o,$(objects))
+
+ifeq ($(platform),libounce)
+	TARGET := out/$(name).elf
+	OBJECTS := $(objects)
+	RM := rm -f
+	flags := $(filter-out -march=native -fopenmp,$(flags))
+	options := $(filter-out -fopenmp,$(options))
+	include $(DEVKITPRO)/libounce/libounce-module.mk
+	compiler := $(CXX)
+	flags += $(LIBOUNCE_MODULE_FLAGS)
+	options += $(LDFLAGS) $(LIBS) -Wl,--version-script=target-libretro/link.T
+
+$(TARGET): $(objects)
+	$(strip $(compiler) -o $@ $(objects) $(options))
+endif
 
 obj/libretro.o: target-libretro/libretro.cpp
 obj/program.o:  target-libretro/program.cpp
