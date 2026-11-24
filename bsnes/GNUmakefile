@@ -20,6 +20,10 @@ endif
 nall.path := ../nall
 include $(nall.path)/GNUmakefile
 
+ifeq ($(platform),libounce)
+  flags += -I$(DEVKITPRO)/libounce/include
+endif
+
 ifeq ($(platform),windows)
   ifeq ($(binary),application)
     options += -luuid -lkernel32 -luser32 -lgdi32 -lcomctl32 -lcomdlg32 -lshell32

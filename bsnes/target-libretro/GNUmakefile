@@ -16,25 +16,19 @@ else ifeq ($(platform), libnx)
 	name := bsnes_libretro_libnx
 else ifeq ($(platform), libounce)
 	name := bsnes_libretro_libounce
-	flags += -DHAVE_POSIX_MEMALIGN -DHAVE_LIBNX
+	flags += -D__SWITCH__=1 -D__aarch64__=1
 endif
 
 objects := libretro program $(objects)
 objects := $(patsubst %,obj/%.o,$(objects))
 
-ifeq ($(platform),libounce)
-	TARGET := out/$(name).elf
-	OBJECTS := $(objects)
-	RM := rm -f
+ifeq ($(platform), libounce)
 	flags := $(filter-out -march=native -fopenmp,$(flags))
 	options := $(filter-out -fopenmp,$(options))
-	include $(DEVKITPRO)/libounce/libounce-module.mk
-	compiler := $(CXX)
-	flags += $(LIBOUNCE_MODULE_FLAGS)
-	options += $(LDFLAGS) $(LIBS) -Wl,--version-script=target-libretro/link.T
+	include $(DEVKITPRO)/libounce/switch2_rules
 
-$(TARGET): $(objects)
-	$(strip $(compiler) -o $@ $(objects) $(options))
+	compiler := $(CXX)
+	options += $(LDFLAGS) $(LIBS)
 endif
 
 obj/libretro.o: target-libretro/libretro.cpp
@@ -49,6 +43,9 @@ else ifeq ($(platform),windows)
 	$(strip $(compiler) -o out/bsnes_libretro.dll -shared $(objects) -Wl,--no-undefined -Wl,--version-script=target-libretro/link.T -lgomp -Wl,-Bdynamic $(options))
 else ifeq ($(platform),libnx)
 	$(strip $(AR) rcs out/bsnes_libretro_libnx.a $(objects))
+else ifeq ($(platform),libounce)
+	$(strip $(compiler) -o out/bsnes_libretro_libounce.elf -shared $(objects) -Wl,-soname,bsnes_libretro_libounce.nro -Wl,--version-script=target-libretro/link.T $(options))
+	$(strip $(DEVKITPRO)/tools/bin/elf2nro out/bsnes_libretro_libounce.elf out/bsnes_libretro_libounce.nro)
 else ifeq ($(platform),macos)
 	$(strip $(compiler) -o out/bsnes_libretro.dylib -shared $(objects) -lpthread -ldl)
 else ifeq ($(platform),ios-arm64)
