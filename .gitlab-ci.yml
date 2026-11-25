@@ -227,6 +227,9 @@ libretro-build-libounce-aarch64:
   extends:
     - .libretro-libounce-make-aarch64
     - .core-defs
+  after_script:
+    - if [ ! -f "$LIBNAME" ]; then mv "${MAKEFILE_PATH}/out/$LIBNAME" "$LIBNAME"; fi
+    - if [ "$STRIP_CORE_LIB" -eq 1 ]; then "$STRIP" --strip-unneeded "$LIBNAME"; fi
 
 #################################### MISC ####################################
 # webOS 32-bit
